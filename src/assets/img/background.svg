@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 100 100">
+<defs>
+    <filter id="noise">
+    <feTurbulence type="fractalNoise" baseFrequency="0.5" result="noisy" />
+    <feColorMatrix
+        in="noisy"
+        type="matrix"
+        values="
+        0.4 0   0   0   0
+        0   0   0   0   0
+        0   0   0.4 0   0
+        0   0   0   0.2 0 "
+        result="noisy2"/>
+    <feBlend in="SourceGraphic" in2="noisy2" mode="multiply" />
+    </filter>
+</defs>
+<rect height="100" width="100" filter="url(#noise)" fill="rgba(233, 220, 255, 0.2)" />
+</svg>
