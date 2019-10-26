@@ -13,6 +13,7 @@ import SecondaryLayout from '~/layouts/Secondary.vue'
 // components
 import Header from '~/components/Header.vue';
 import HeaderSecondary from '~/components/HeaderSecondary.vue';
+import CallToAction from '~/components/CallToAction.vue';
 import Footer from '~/components/Footer.vue';
 
 export default function (Vue, { router, head, isClient }) {
@@ -22,6 +23,7 @@ export default function (Vue, { router, head, isClient }) {
 
   Vue.component('Header', Header);
   Vue.component('HeaderSecondary', HeaderSecondary);
+  Vue.component('CallToAction', CallToAction);
   Vue.component('Footer', Footer);
 
   Vue.config.productionTip = false
