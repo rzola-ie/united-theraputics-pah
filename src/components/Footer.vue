@@ -41,12 +41,12 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/_color-palette";
-@import "~/assets/styles/_breakpoints";
+@import "~/assets/styles/modules/_breakpoints";
+@import "~/assets/styles/modules/_cross-browser";
 
 .footer {
   min-height: 120px;
-  background-color: $purple;
+  background-color: var(--purple);
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -56,7 +56,7 @@ export default {};
   height: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  display: grid;
+  @include display-grid;
   grid-template-rows: 1fr auto;
   grid-gap: 0.5rem;
   justify-content: center;
@@ -69,7 +69,7 @@ export default {};
   font-size: 0.9rem;
 
   @include for-desktop-up {
-    display: grid;
+    @include display-grid;
     grid-template-columns: repeat(6, minmax(100px, 1fr));
     grid-gap: 0.2rem;
     align-items: center;

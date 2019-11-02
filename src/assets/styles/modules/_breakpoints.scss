@@ -1,20 +1,18 @@
 /*
   EXAMPLE USAGE
   Mobile first: No media query === phone
-  There is a mixin for phone-only,
-  but please avoid using it lol.
 
   @import '~assets/styles/partials/_breakpoints';
 
   .my-box {
-    padding: 10px;
+    padding: 0.5rem;
 
     @include for-tablet-portrait-up {
-      padding: 15px;
+      padding: 1rem;
     }
 
     @include for-desktop-up {
-      padding: 20px;
+      padding: 2rem;
     }
   }
 */

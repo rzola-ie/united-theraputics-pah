@@ -16,19 +16,19 @@
           managing<br />your pah
         </g-link>
 
-        <g-link class="nav__link" to="/about/">
+        <g-link class="nav__link" to="/pah-pathways/">
           pah pathways
         </g-link>
 
-        <g-link class="nav__link" to="/about/"
+        <g-link class="nav__link" to="/prostacyclin-class-therapies/"
           >prostacyclin-<br />class therapies
         </g-link>
 
-        <g-link class="nav__link" to="/about/">
+        <g-link class="nav__link" to="/resources/">
           resources
         </g-link>
 
-        <g-link class="nav__link newsletter" to="/about/">
+        <g-link class="nav__link newsletter" to="/newsletter/">
           sign up to recieve our newsletter
         </g-link>
       </nav>
@@ -54,25 +54,30 @@
 <script>
 export default {
   mounted() {
-    this.$refs.hamburger.addEventListener("click", () => {
+    this.$refs.hamburger.addEventListener("click", this.toggleSide);
+  },
+  beforeDestroy() {
+    this.$refs.hamburger.removeEventListener("click", this.toggleSide);
+  },
+  methods: {
+    toggleSide() {
       this.$refs.hamburger.classList.toggle("open");
       this.$refs.drawerBg.classList.toggle("open");
       this.$refs.drawer.classList.toggle("open");
-    });
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/_color-palette";
-@import "~/assets/styles/_breakpoints";
-
-$max-width: 1440px;
+@import "~/assets/styles/modules/_breakpoints";
+@import "~/assets/styles/modules/_cross-browser";
 
 .header {
   height: 60px;
   width: 100%;
   grid-row: 1;
+  grid-column: 1 / 17;
 
   @include for-desktop-up {
     height: 80px;
@@ -80,11 +85,11 @@ $max-width: 1440px;
 }
 
 .header-inner {
-  max-width: $max_width;
+  max-width: var(--max-width);
   height: 100%;
   margin: auto;
   padding: 1rem;
-  display: grid;
+  @include display-grid;
   grid-template-columns: 30px 1fr 30px;
   justify-items: center;
   align-items: center;
@@ -130,10 +135,9 @@ $max-width: 1440px;
 .hamburger span {
   display: block;
   position: absolute;
-  height: 4px;
+  height: 2px;
   width: 100%;
-  border-radius: 2px;
-  background: $wine;
+  background: var(--wine);
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -239,7 +243,7 @@ $max-width: 1440px;
   display: none;
 
   @include for-desktop-up {
-    display: grid;
+    @include display-grid;
     grid-template-columns: repeat(5, minmax(100px, 1fr)) 150px;
     grid-gap: 0.2rem;
     align-items: center;

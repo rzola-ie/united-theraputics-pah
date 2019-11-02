@@ -2,15 +2,13 @@
   <Layout>
     <section id="hero">
       <Header />
-
+      <g-image class="hero-image" src="~/assets/img/Hero-Visual.png" alt="an image of a park with trees. The PAH initiative logo is in the center" />
       <button id="hero-down-button" @click="handleArrowClick">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           id="hero-down-arrow"
           viewBox="0 0 35 25"
-          width="35px"
-          height="25px"
         >
           <path
             fill-rule="evenodd"
@@ -186,65 +184,69 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/_color-palette";
-@import "~/assets/styles/_breakpoints";
-
-$max_width: 1440px;
+@import "~/assets/styles/modules/_cross-browser";
+@import "~/assets/styles/modules/_breakpoints";
 
 /* HERO SECTION
 ====================================================== */
 
 #hero {
   position: relative;
-  padding: 0;
-  min-height: 100vh;
+  padding: 0 0.5rem;
   margin: 0;
-  background: url("../assets/img/Hero-Visual.png");
-  background-size: contain;
-  // background-position: 70% 25%;
-  background-position-x: 80%;
-  background-position-y: 15%;
-  background-size: 90%;
-  background-repeat: no-repeat;
-  display: grid;
-  grid-template-rows: 80px 1fr 80px;
+  grid-template-rows: 60px 1fr auto;
 
   @include for-desktop-up {
+    grid-template-rows: 80px 1fr auto;
+    padding: 0 1rem;
+    min-height: 100vh;
+  }
+
+  &::before {
+    background: none;
+    display: none;
+  }
+}
+
+#hero .hero-image {
+  width: 100%;
+  @include grid-child(2, 17, 2, 4);
+  z-index: -1;
+
+  @include for-desktop-up {
+    @include grid-child(2, 17, 1, 4);
   }
 }
 
 #hero #hero-down-button {
-  grid-row-start: 3;
-  height: 25px;
-  width: 35px;
+  @include grid-child(8, 9, 3, 4);
+  min-width: auto;
+  height: 10px;
+  width: 20px;
   padding: 0;
   background: 0;
   border: none;
   align-self: start;
   justify-self: center;
   cursor: pointer;
+
+  @include for-desktop-up {
+    height: 25px;
+    width: 35px;
+    margin-bottom: 2rem;
+  }
 }
 
 /* FEEL BETTER
 ====================================================== */
 #feel-better {
-  display: grid;
-  margin-top: 0;
-  grid-template-rows: auto auto;
-  grid-template-columns: repeat(16, 1fr);
 
   @include for-desktop-up {
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
   }
 
   &::before {
-    content: "";
-    margin-top: 35px;
-    background: $purple;
-    grid-row: 1 / 3;
-    grid-column: 1 / end;
-    border-radius: 7px;
-    z-index: -1;
+    background: var(--purple);
 
     @include for-tablet-portrait-up {
       margin-left: 10px;
@@ -253,40 +255,31 @@ $max_width: 1440px;
     @include for-desktop-up {
       margin-top: 1rem;
       margin-left: 44px;
-      grid-row: 1 / end;
-      grid-column: 4 / 13;
+      @include grid-child(4, 13, 1, 4);
     }
   }
 }
 
 #feel-better .section-header {
-  margin-top: 0;
-  grid-column: 1 / end;
-  grid-row: 1;
-
   @include for-desktop-up {
     margin-top: 2rem;
-    grid-row: 1 / span 2;
-    grid-column: 4 / 11;
+    @include grid-child(4, 11, 1, 3);
   }
 }
 
 #feel-better .section-icon {
   @include for-desktop-up {
-    grid-row: 1 / span 2;
-    grid-column: 12 / span 3;
+    padding: 0 20px;
+    @include grid-child(12, 15, 1, 3);
   }
 }
 
 #feel-better .section-body {
-  padding: 0 0 10px 0;
-  grid-column: 2 / 16;
-  grid-row: 2;
+  padding-bottom: 0.8rem;
 
   @include for-desktop-up {
     padding: 0 0 20px 0px;
-    grid-row-start: 3;
-    grid-column: 5 / 12;
+    @include grid-child(5, 12, 3, 4);
   }
 }
 
@@ -294,102 +287,84 @@ $max_width: 1440px;
 ====================================================== */
 
 #risk-status {
-  display: grid;
   grid-template-rows: repeat(4, auto);
-  grid-template-columns: repeat(16, 1fr);
 
   @include for-desktop-up {
-    grid-template-rows: 60px repeat(5, auto);
+    grid-template-rows: 60px repeat(4, auto);
   }
 
   &::before {
-    content: "";
-    background: $grey;
-    grid-column: 1 / end;
-    grid-row: 1 / end;
+    background: var(--grey);
+    @include grid-child(1, 17, 1, 5);
 
     @include for-tablet-portrait-up {
-      grid-column: 1 / end;
-      margin-top: 40px;
+      @include grid-child(1, 17, 2, 5);
     }
 
     @include for-desktop-up {
-      margin-top: 0;
-      grid-column: 6 / 15;
-      grid-row: 2 / 5;
+      @include grid-child(6, 15, 2, 5);
     }
   }
 }
 
 #risk-status .section-header {
-  grid-row: 1 / span 1;
-  grid-column: 2 / end;
-
   @include for-tablet-portrait-up {
-    grid-column: 4 / end;
+    @include grid-child(4, 17, 1, 2);
   }
 
   @include for-desktop-up {
     margin-bottom: 0;
-    grid-column: 8 / end;
+    @include grid-child(8, 17, 1, 2);
   }
 }
 
 #risk-status .section-icon {
   @include for-desktop-up {
-    grid-column: 4 / 7;
-    grid-row: 1 / 2;
+    padding: 0 20px;
+    @include grid-child(4, 7, 1, 2);
   }
 }
 
 #risk-status p:first-of-type {
-  grid-row: 2 / span 1;
-  grid-column: 2 / 16;
+  @include grid-child(2, 16, 2, 3);
 
   @include for-desktop-up {
-    grid-row: 2 / span 1;
-    grid-column: 7 / span 7;
+    padding-top: 1rem;
     font-size: 20px;
     line-height: 24px;
-    padding-top: 1rem;
+    @include grid-child(7, 14, 2, 3);
   }
 }
 
 #risk-status p:nth-of-type(2) {
-  grid-row: 3 / span 1;
-  grid-column: 2 / 16;
+  @include grid-child(2, 16, 3, 4);
 
   @include for-desktop-up {
-    grid-row: 3 / span 1;
-    grid-column: 7 / 14;
+    @include grid-child(7, 14, 3, 4);
     margin-bottom: 30px;
   }
 }
 
 #risk-status .section-body {
-  display: grid;
+  @include display-grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(16, 1fr);
-  grid-row: 4 / span 1;
-  grid-column: 1 / end;
+  @include grid-child(1, 17, 4, 5);
 
   @include for-desktop-up {
     grid-template-columns: repeat(9, 1fr);
-    grid-row: 4 / span 1;
-    grid-column: 6 / 15;
-
-    &:before {
-      grid-column: 1 / end;
-      grid-row: 1 / 2;
-    }
+    @include grid-child(6, 15, 4, 5);
   }
 
   &:before {
     content: "";
-    grid-column: 1 / end;
-    grid-row: 1 / end;
-    background: $purple;
+    @include grid-child(1, 17, 1, 3);
+    background: var(--purple);
     border-radius: 7px;
+
+    @include for-desktop-up {
+      @include grid-child(1, 17, 1, 2);
+    }
   }
 }
 
@@ -398,120 +373,66 @@ $max_width: 1440px;
   @include for-desktop-up {
     margin: 30px 0 30px 0;
     padding: 0;
-    grid-column: 2 / 9;
-    grid-row: 1 / 2;
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0.23px;
     line-height: 18px;
+    @include grid-child(2, 9, 1, 2);
   }
 }
 
-/* SIDE-BARS SECTION
-====================================================== */
-
-.side-bars {
-  position: relative;
-
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 100%;
-    top: 0;
-    background-color: $purple;
-  }
-
-  &:before {
-    left: 0;
-    border-radius: 0 0.5rem 0.5rem 0;
-  }
-
-  &:after {
-    right: 0;
-    border-radius: 0.5rem 0 0 0.5rem;
-  }
-}
-
-.side-bars section {
-  padding: 1rem 1.3rem;
-}
-
-.side-bars .section-icon {
-  width: 180px;
-}
 
 /* WHAT IS PAH
 ====================================================== */
 
 #what-is-pah {
-  display: grid;
-  grid-template-rows: repeat(4, auto);
-  grid-template-columns: repeat(16, 1fr);
-
   @include for-desktop-up {
-    grid-template-rows: 40px repeat(5, auto);
-    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: 40px repeat(2, auto);
   }
 
   &::before {
-    content: "";
-    margin-top: 15px;
-    background: $purple;
-
-    grid-column: 2 / 16;
-    grid-row: 1 / end;
+    background: var(--purple);
+    @include grid-child(2, 16, 1, 3);
 
     @include for-tablet-portrait-up {
-      grid-column: 3 / 13;
+      @include grid-child(3, 13, 2, 4);
     }
 
     @include for-desktop-up {
-      margin-top: 30px;
-      grid-column: 6 / 12;
+      @include grid-child(6, 12, 2, 4);
     }
   }
 }
 
 #what-is-pah .section-icon {
   @include for-desktop-up {
-    grid-column: 11 / span 2;
-    grid-row: 1 / span 3;
+    padding: 0 30px;
+    @include grid-child(11, 14, 1, 4);
   }
 }
 
 #what-is-pah .section-header {
-  grid-row: 1;
-  grid-column: 2 / end;
-  margin-top: 0;
-
-  @include for-tablet-portrait-up {
-    grid-column: 3 / end;
-  }
+  @include grid-child(3, 17, 1, 2);
 
   @include for-desktop-up {
     padding-left: 2.5rem;
-    grid-column: 5 / 10;
-    grid-row: 2;
     margin: 0.67em 0;
     margin-bottom: 0;
+    @include grid-child(5, 10, 2, 3);
   }
 }
 
 #what-is-pah .section-body {
-  grid-row: 2;
-  grid-column: 3 / 14;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  @include grid-child(3, 15, 2, 3);
 
   @include for-tablet-portrait-up {
-    grid-column: 4 / 12;
+    @include grid-child(4, 12, 2, 3);
   }
 
   @include for-desktop-up {
     padding-left: 2.5rem;
-    grid-column: 6 / 11;
-    grid-row: 3 / 4;
+    @include grid-child(6, 11, 3, 4);
   }
 }
 
@@ -519,72 +440,52 @@ $max_width: 1440px;
 ====================================================== */
 
 #managing-your-pah {
-  display: grid;
-  grid-template-rows: repeat(4, auto);
-  grid-template-columns: repeat(16, 1fr);
-
-  @include for-tablet-portrait-up {
-    grid-template-rows: repeat(6, auto);
-  }
 
   &::before {
-    content: "";
-    margin-top: 15px;
-    background: $grey;
-    grid-row: 1 / 4;
-    grid-column: 2 / 16;
+    background: var(--grey);
+    @include grid-child(2, 16, 1, 3);
 
     @include for-tablet-portrait-up {
-      grid-column: 5 / 15;
+      @include grid-child(5, 15, 2, 3);
     }
 
     @include for-desktop-up {
-      margin: 0;
-      grid-row: 2 / end;
-      grid-column: 7 / 13;
+      @include grid-child(7, 13, 2, 3);
     }
   }
 }
 
 #managing-your-pah .section-icon {
   @include for-desktop-up {
-    grid-row: 1 / 3;
-    grid-column: 5 / 8;
-  }
-
-  @include for-big-desktop-up {
-    margin-left: 2.5rem;
+    padding: 0 35px;
+    @include grid-child(5, 8, 1, 3);
   }
 }
 
 #managing-your-pah .section-header {
-  margin-top: 0;
-  grid-row: 1;
-  grid-column: 4 / end;
+  @include grid-child(3, 17, 1, 2);
 
   @include for-tablet-portrait-up {
-    grid-column: 8 / end;
+    @include grid-child(8, 17, 1, 2);
   }
 
   @include for-desktop-up {
-    grid-column: 8 / 15;
     padding-left: 1.5rem;
     margin-bottom: 10px;
+    @include grid-child(8, 15, 1, 2);
   }
 }
 
 #managing-your-pah .section-body {
-  grid-row: 2;
-  grid-column: 3 / 14;
+  @include grid-child(3, 14, 2, 3);
   padding-bottom: 2rem;
 
   @include for-tablet-portrait-up {
-    grid-column: 6 / 14;
+    @include grid-child(6, 14, 2, 3);
   }
 
   @include for-desktop-up {
-    grid-row: 2;
-    grid-column: 8 / 12;
+    @include grid-child(8, 12, 2, 3);
   }
 }
 
@@ -592,70 +493,53 @@ $max_width: 1440px;
 ====================================================== */
 
 #pah-pathways {
-  display: grid;
-  grid-template-rows: repeat(4, auto);
-  grid-template-columns: repeat(16, 1fr);
-
   @include for-desktop-up {
-    grid-template-rows: 40px repeat(5, auto);
+    grid-template-rows: 40px repeat(2, auto);
   }
 
   &::before {
-    content: "";
-    margin-top: 15px;
-    background: $purple;
-    grid-row: 1 / end;
-    grid-column: 2 / 16;
+    background: var(--purple);
+    @include grid-child(2, 16, 1, 3);
 
     @include for-tablet-portrait-up {
-      grid-column: 3 / 13;
+      @include grid-child(3, 13, 2, 3);
     }
 
     @include for-desktop-up {
-      grid-row: 1 / 4;
-      grid-column: 6 / 12;
+      @include grid-child(6, 12, 2, 4);
     }
   }
 }
 
 #pah-pathways .section-icon {
   @include for-desktop-up {
-    grid-column: 11 / span 2;
-    grid-row: 1 / span 3;
+    padding: 0 35px;
+    @include grid-child(11, 14, 1, 4);
   }
 }
 
 #pah-pathways .section-header {
-  margin-top: 0;
-  grid-row: 1;
-  grid-column: 2 / end;
-
-  @include for-tablet-portrait-up {
-    grid-column: 3 / end;
-  }
+  @include grid-child(3, 17, 1, 2);
 
   @include for-desktop-up {
     padding-left: 2.5rem;
-    grid-column: 5 / 9;
-    grid-row: 2;
     margin-bottom: 0;
+    @include grid-child(5, 9, 2, 3);
   }
 }
 
 #pah-pathways .section-body {
-  grid-row: 2;
-  grid-column: 3 / 14;
   padding-bottom: 2rem;
+  @include grid-child(3, 14, 2, 3);
 
   @include for-tablet-portrait-up {
-    grid-column: 4 / 11;
+    @include grid-child(4, 11, 2, 3);
   }
 
   @include for-desktop-up {
     padding-left: 2.5rem;
     padding-right: 3rem;
-    grid-column: 6 / 11;
-    grid-row: 3 / 4;
+    @include grid-child(6, 11, 3, 4);
   }
 }
 
@@ -663,74 +547,54 @@ $max_width: 1440px;
 ====================================================== */
 
 #therapies {
-  display: grid;
-  grid-template-rows: repeat(4, auto);
-  grid-template-columns: repeat(16, 1fr);
-
-  @include for-tablet-portrait-up {
-    grid-template-rows: repeat(6, auto);
-  }
-
   &::before {
-    content: "";
-    margin-top: 15px;
-    background: $grey;
-    grid-row: 1 / 4;
-    grid-column: 2 / 16;
+    background: var(--grey);
+    @include grid-child(2, 16, 1, 3);
 
     @include for-tablet-portrait-up {
-      grid-column: 5 / 15;
+      @include grid-child(5, 15, 1, 3);
     }
 
     @include for-desktop-up {
-      margin: 0;
-      grid-row: 2 / end;
-      grid-column: 7 / 13;
+      @include grid-child(7, 13, 2, 3);
     }
   }
 }
 
 #therapies .section-icon {
   @include for-desktop-up {
-    grid-row: 1 / 3;
-    grid-column: 5 / 8;
-  }
-
-  @include for-big-desktop-up {
-    margin-left: 2.5rem;
+    padding: 0 40px;
+    margin-top: 30px;
+    @include grid-child(5, 8, 1, 3);
   }
 }
 
 #therapies .section-header {
-  margin-top: 0;
-  grid-row: 1;
-  grid-column: 3 / end;
+  @include grid-child(3, 17, 1, 2);
 
   @include for-tablet-portrait-up {
     grid-column: 8 / end;
+    @include grid-child(8, 17, 1, 2);
   }
 
   @include for-desktop-up {
-    grid-column: 8 / 12;
     padding-left: 1.5rem;
     margin-bottom: 5px;
-    margin-top: 0;
+    @include grid-child(8, 12, 1, 2);
   }
 }
 
 #therapies .section-body {
-  grid-row: 2;
-  grid-column: 3 / 16;
   padding-bottom: 2rem;
+  @include grid-child(3, 16, 2, 3);
 
   @include for-tablet-portrait-up {
-    grid-column: 6 / 14;
+    @include grid-child(6, 14, 2, 3);
   }
 
   @include for-desktop-up {
-    grid-row: 2;
-    grid-column: 8 / 12;
     padding-left: 0;
+    @include grid-child(8, 12, 2, 3);
   }
 }
 </style>
