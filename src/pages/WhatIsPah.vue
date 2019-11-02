@@ -260,18 +260,15 @@
 
       <div class="section-body">
         <p>
-          Click on the link below to watch a video that will show how PAH
-          affects the vessels in your lungs and how this impacts your heart.
+          Watch a video that will show how PAH affects the vessels in your lungs and how this impacts your heart.
         </p>
-
-        <g-link class="button" to="/">Watch the Video</g-link>
       </div>
     </section>
     <!-- imacts -->
 
     <section id="managing-your-pah">
       <g-image
-        src="~/assets/img/icn-managing-your-pah.png"
+        src="~/assets/img/icn-managing-your-pah-2.png"
         alt="an icon of a checklist"
         class="section-icon"
       />
@@ -279,7 +276,7 @@
       <h1 class="section-header">Managing Your Pah</h1>
 
       <div class="section-body">
-        <h2>Want to learn how you can do more about your PAH?</h2>
+        <h3>Want to learn how you can do more about your PAH?</h3>
         <g-link class="button" to="/managing-your-pah/">Manage Your PAH</g-link>
       </div>
     </section>
@@ -298,93 +295,62 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/_color-palette";
-@import "~/assets/styles/_breakpoints";
-
-/* GENERAL
-====================================================== */
-
-section {
-  display: grid;
-  grid-template-columns: repeat(16, 1fr);
-
-  &::before {
-    content: "";
-  }
-}
-
-.section-icon,
-.section-image,
-.info-graphic {
-  width: 100%;
-}
+@import "~/assets/styles/modules/_breakpoints";
+@import "~/assets/styles/modules/_cross-browser";
 
 /* WHAT IS PAH
 ====================================================== */
 
 #what-is-pah {
-  grid-template-rows: repeat(2, auto);
-
   @include for-desktop-up {
     grid-template-rows: 40px repeat(2, auto);
   }
 
   &::before {
-    margin-top: 30px;
-    background: $purple;
-    grid-column: 1 / 17;
-    grid-row: 1 / 4;
+    background: var(--purple);
 
     @include for-tablet-portrait-up {
-      grid-column: 3 / 13;
+      @include grid-child(3, 13, 2, 3);
     }
 
     @include for-desktop-up {
-      margin-top: 0;
-      grid-row: 2 / 4;
       margin-left: 2.7rem;
-      grid-column: 4 / 13;
+      @include grid-child(4, 13, 2, 4);
     }
   }
 }
 
 #what-is-pah .section-icon {
   @include for-desktop-up {
-    grid-column: 12 / span 2;
-    grid-row: 1 / span 3;
+    padding: 0 30px;
+    @include grid-child(12, 15, 1, 4);
   }
 }
 
 #what-is-pah .section-header {
-  grid-row: 1;
-  grid-column: 2 / 17;
-  margin-bottom: 0;
-
   @include for-tablet-portrait-up {
-    grid-column: 3 / 17;
+    @include grid-child(3, 17, 1, 2);
   }
 
   @include for-desktop-up {
-    grid-column: 4 / 10;
-    grid-row: 2;
     margin-top: 2rem;
+    @include grid-child(4, 10, 2, 3);
   }
 }
 
 #what-is-pah .section-body {
-  grid-row: 2;
-  grid-column: 3 / 16;
-  padding-bottom: 0.9rem;
+  padding-bottom: 0.8rem;
 
   @include for-tablet-portrait-up {
+    padding-top: 0.5rem;
     padding-bottom: 1.4rem;
-    grid-column: 4 / 12;
+    @include grid-child(4, 12, 2, 3);
   }
 
   @include for-desktop-up {
+    padding-top: 0;
     padding-left: 2rem;
-    grid-column: 5 / 12;
-    grid-row: 3 / 4;
+    @include grid-child(5, 12, 3, 4);
   }
 }
 
@@ -392,53 +358,49 @@ section {
 ====================================================== */
 
 #pah-vs-ph {
-  grid-template-rows: repeat(2, auto);
-
-  @include for-desktop-up {
-    grid-template-rows: repeat(2, auto);
-  }
-
   &::before {
-    background: $grey;
-    grid-row: 1 / 3;
-    grid-column: 1 / 17;
-    margin-top: 30px;
+    background: var(--grey);
+
+    @include for-tablet-portrait-up {
+      @include grid-child(4, 16, 2, 3);
+    }
 
     @include for-desktop-up {
-      margin-top: 0;
-      grid-row: 2;
-      grid-column: 5 / 14;
       margin-left: 3rem;
+      margin-right: 20px;
+      @include grid-child(5, 15, 2, 3);
     }
   }
 }
 
 #pah-vs-ph .section-icon {
   @include for-desktop-up {
-    grid-column: 4 / span 2;
-    grid-row: 1 / span 2;
+    padding: 0 30px;
+    @include grid-child(4, 7, 1, 3);
   }
 }
 
 #pah-vs-ph .section-header {
-  margin-bottom: 0;
-  grid-row: 1;
-  grid-column: 9 / 17;
+  @include for-tablet-portrait-up {
+    @include grid-child(11, 17, 1, 2);
+  }
 
   @include for-desktop-up {
-    grid-column: 7 / 17;
     margin-bottom: 10px;
+    @include grid-child(7, 17, 1, 2);
   }
 }
 
 #pah-vs-ph .section-body {
-  grid-row: 2;
-  grid-column: 2 / 15;
-  padding-bottom: 0.9rem;
+  padding-bottom: 0.8rem;
+
+  @include for-tablet-portrait-up {
+    @include grid-child(5, 15, 2, 3);
+  }
 
   @include for-desktop-up {
-    grid-column: 6 / 14;
-    padding: 1.4rem 2rem 1.4rem 2rem;
+    padding: 1.4rem 2.5rem 1.4rem 4rem;
+    @include grid-child(6, 15, 2, 3);
   }
 }
 
@@ -448,70 +410,84 @@ section {
 #pah-symptoms {
   grid-template-rows: repeat(4, auto);
 
+  @include for-tablet-portrait-up {
+    grid-template-rows: repeat(3, auto);
+  }
   @include for-desktop-up {
-    grid-template-rows: 30px auto repeat(2, auto);
+    grid-template-rows: 40px 80px repeat(2, auto);
   }
 
   &::before {
-    margin-top: 30px;
-    background: $purple;
-    grid-row: 1 / 5;
-    grid-column: 1 / 17;
+    background: var(--purple);
+    @include grid-child(1, 17, 1, 5);
+
+    @include for-tablet-portrait-up {
+      @include grid-child(2, 15, 2, 4);
+    }
 
     @include for-desktop-up {
-      margin-top: 0;
+      @include grid-child(4, 12, 2, 5);
       transform: translateX(2.5rem);
-      grid-row: 2 / 5;
-      grid-column: 4 / 12;
       z-index: -1;
     }
   }
 }
 
 #pah-symptoms .info-graphic {
-  grid-row: 2;
-  grid-column: 2 / 16;
+  @include grid-child(2, 16, 2, 3);
+
+  @include for-tablet-portrait-up {
+    @include grid-child(10, 16, 1, 4);
+    border: 3px solid var(--purple);
+  }
+
   @include for-desktop-up {
+    max-width: 280px;
     grid-row: 1 / 4;
-    grid-column: 11 / span 3;
-    justify-self: end;
-    border: 3px solid $purple;
+    grid-column: 11 / 15;
+
   }
 }
 
 #pah-symptoms .section-header {
-  grid-row: 1;
-  grid-column: 2 / 16;
+  margin-bottom: 0.8rem;
+
+  @include for-tablet-portrait-up {
+    margin-bottom: 0;
+  }
 
   @include for-desktop-up {
-    grid-row: 2;
-    grid-column: 4 / 8;
     margin-top: 2rem;
-    margin-bottom: 0;
+    @include grid-child(4, 8, 2, 3);
   }
 }
 
 #pah-symptoms .section-body {
-  grid-row: 3;
-  grid-column: 2 / 16;
+  // grid-row: 3;
+  @include grid-child(2, 16, 3, 4);
+
+  @include for-tablet-portrait-up {
+    @include grid-child(3, 10, 2, 3);
+  }
 
   @include for-desktop-up {
-    grid-row: 3;
-    grid-column: 5 / 11;
     padding-right: 1rem;
+    @include grid-child(5, 11, 3, 4);
   }
 }
 
 #pah-symptoms .section-body.full {
-  grid-row: 4;
-  grid-column: 2 / 16;
-  padding-bottom: 1.5rem;
+  @include grid-child(2, 16, 4, 5);
+  padding-bottom: 0.8rem;
+
+  @include for-tablet-portrait-up {
+    @include grid-child(3, 14, 3, 4);
+  }
 
   @include for-desktop-up {
-    grid-row: 4;
-    grid-column: 5 / 12;
     padding-right: 0;
     padding-bottom: 2rem;
+    @include grid-child(5, 12, 4, 5);
   }
 }
 
@@ -522,7 +498,7 @@ section {
 
 #pah-symptoms .section-body ul li {
   & + li {
-    margin-top: 2px;
+    margin-top: 0.4rem;
   }
 }
 
@@ -530,65 +506,64 @@ section {
 ====================================================== */
 
 #pah-diagnosis {
-  grid-template-rows: repeat(2, auto);
-
   @include for-desktop-up {
     grid-template-rows: repeat(4, auto);
   }
 
   &::before {
-    background: $grey;
-    grid-row: 1 / 3;
-    grid-column: 1 / 17;
-    margin-top: 30px;
+    background: var(--grey);
+
+    @include for-tablet-portrait-up {
+      @include grid-child(4, 16, 2, 3);
+    }
 
     @include for-desktop-up {
-      margin-top: 0;
-      margin-left: 3.4rem;
-      grid-row: 2 / 5;
-      grid-column: 5 / 14;
+      margin-right: 30px;
+      @include grid-child(6, 15, 2, 5);
     }
   }
 }
 
 #pah-diagnosis .section-icon {
   @include for-desktop-up {
-    grid-row: 1 / 3;
-    grid-column: 4 / 6;
+    padding:  0 35px;
+    @include grid-child(4, 7, 1, 3);
   }
 }
 
 #pah-diagnosis .section-header {
-  grid-row: 1;
-  grid-column: 8 / 17;
-  margin-bottom: 0;
+
+  @include for-tablet-portrait-up {
+    @include grid-child(5, 15, 1, 2);
+    justify-self: end;
+  }
 
   @include for-desktop-up {
-    grid-column: 7 / 11;
+    padding-left: 30px;
     margin-bottom: 10px;
+    @include grid-child(7, 11, 1, 2);
   }
 }
 
 #pah-diagnosis .section-body {
-  grid-row: 2;
-  grid-column: 2 / 16;
   padding-bottom: 0.8rem;
 
+  @include for-tablet-portrait-up {
+    padding-top: 0.5rem;
+    @include grid-child(5, 15, 2, 3);
+  }
+
   @include for-desktop-up {
-    grid-row: 2 / 5;
-    grid-column: 6 / 13;
-    padding-top: 1.4rem;
-    padding-left: 3rem;
-    padding-right: 0rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-right: 0.6rem;
+    @include grid-child(7, 14, 2, 5);
   }
 }
 
 #pah-diagnosis .section-body .tests {
-  display: grid;
+  @include display-grid;
   grid-template-rows: repeat(6, auto);
   grid-template-columns: 1fr;
-  padding: 1.5rem;
 
   @include for-desktop-up {
     padding: 0;
@@ -600,14 +575,14 @@ section {
 
 #pah-diagnosis .section-body .tests .test {
   padding: 1rem 0;
-  border-bottom: 2px solid $wine;
+  border-bottom: 1px solid var(--wine);
 
   br {
     display: none;
   }
 
   &:first-child {
-    border-top: 2px solid $wine;
+    border-top: 1px solid var(--wine);
   }
 
   @include for-desktop-up {
@@ -619,7 +594,7 @@ section {
 
     &:nth-child(odd) {
       padding-right: 2rem;
-      border-right: 2px solid $wine;
+      border-right: 1px solid var(--wine);
     }
     &:nth-child(even) {
       padding-left: 2rem;
@@ -636,8 +611,8 @@ section {
       padding-top: 2rem;
       padding-bottom: 2rem;
       padding-right: 3rem;
-      border-top: 2px solid $wine;
-      border-bottom: 2px solid $wine;
+      border-top: 1px solid var(--wine);
+      border-bottom: 1px solid var(--wine);
     }
 
     &:last-child {
@@ -652,9 +627,9 @@ section {
 
 #pah-diagnosis .section-body .tests .test .test-header {
   margin: 0;
-  padding: 0 1.5rem;
 
   @include for-desktop-up {
+    padding: 0 1.5rem;
     padding: 0;
   }
 }
@@ -662,9 +637,9 @@ section {
 #pah-diagnosis .section-body .tests .test .test-body {
   margin-top: 0.5rem;
   margin-bottom: 0;
-  padding: 0 1.5rem;
 
   @include for-desktop-up {
+    padding: 0 1.5rem;
     padding: 0;
   }
 }
@@ -673,54 +648,55 @@ section {
 ====================================================== */
 
 #functional-class {
-  grid-template-rows: repeat(2, auto);
-
   @include for-desktop-up {
     grid-template-rows: repeat(3, auto);
   }
 
   &::before {
-    background: $purple;
-    margin-top: 30px;
-    grid-row: 1 / 3;
-    grid-column: 1 / 17;
+    background: var(--purple);
+
+    @include for-tablet-portrait-up {
+      @include grid-child(3, 15, 2, 4);
+    }
 
     @include for-desktop-up {
-      margin-top: 0;
-      grid-row: 1 / 4;
-      grid-column: 5 / 13;
+      @include grid-child(5, 13, 1, 4);
     }
   }
 }
 
 #functional-class .section-header {
-  grid-row: 1;
-  grid-column: 2 / 13;
-  margin-bottom: 0;
-
   @include for-desktop-up {
-    grid-column: 4 / 17;
     padding-left: 2rem;
     margin-top: 2rem;
+    @include grid-child(4, 17, 1, 2);
   }
 }
 
 #functional-class .section-body {
-  grid-row: 2;
-  grid-column: 2 / 16;
   padding-bottom: 1.5rem;
 
+  @include for-tablet-portrait-up {
+    @include grid-child(4, 14, 2, 3);
+  }
+
   @include for-desktop-up {
-    grid-column: 5 / 13;
+    @include grid-child(5, 13, 2, 3);
     padding: 0 3rem 2rem;
   }
 }
 
 #functional-class .section-body .func-classes {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 1fr);
+  @include display-grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: 1fr;
   grid-gap: 0.8rem;
+
+  @include for-tablet-portrait-up {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+  }
 
   @include for-desktop-up {
     grid-template-rows: 1fr;
@@ -729,27 +705,42 @@ section {
 }
 
 #functional-class .section-body .func-classes .func-class {
-  padding: 0.5rem;
+  padding: 1rem;
   background: #d8eff4;
   border-radius: 4px;
-  display: grid;
+  @include display-grid;
+  grid-template-rows: 30px repeat(3, auto);
   grid-row-gap: 0.8rem;
-  grid-template-rows: 28px 56px auto 30px;
   text-align: center;
+
+  @include for-desktop-up {
+    grid-template-rows: 30px 56px auto 30px;
+    padding: 0.5rem;
+  }
 }
 
 #functional-class .section-body .func-classes .func-header {
   margin: 0;
-  color: $teal;
-  border-bottom: 2px solid $wine;
+  color: var(--teal);
+  border-bottom: 2px solid var(--wine);
+  font-size: 1.2rem;
+
+  @include for-desktop-up {
+    font-size: unset;
+  }
 }
 
 #functional-class .section-body .func-classes .func-description {
-  font-size: 0.75rem;
+  @include for-desktop-up {
+    font-size: 0.75rem;
+  }
 }
 
 #functional-class .section-body .func-classes .func-footer {
-  font-size: 0.8rem;
+  
+  @include for-desktop-up {
+    font-size: 0.8rem;
+  }
 }
 
 /* IMPACTS
@@ -758,145 +749,136 @@ section {
 #impacts {
   grid-template-rows: repeat(4, auto);
 
-  @include for-desktop-up {
-  }
-
   &::before {
-    background: $grey;
+    background: var(--grey);
     grid-row: 1 / 5;
-    grid-column: 1 / 17;
-    margin-top: 30px;
+    @include grid-child(1, 17, 1, 5);
+
+    @include for-tablet-portrait-up {
+      @include grid-child(3, 16, 2, 5);
+    }
 
     @include for-desktop-up {
-      margin-top: 0;
-      grid-row: 2 / 4;
-      grid-column: 6 / 14;
+      @include grid-child(6, 14, 2, 4);
     }
   }
 }
 
 #impacts .section-header {
-  grid-row: 1;
-  grid-column: 2 / 16;
-  margin-bottom: 0;
+  @include for-tablet-portrait-up {
+    @include grid-child(5, 17, 1, 2);
+  }
 
   @include for-desktop-up {
-    grid-column: 7 / 15;
     padding-left: 0.8rem;
     margin: 0;
+    @include grid-child(7, 15, 1, 2);
   }
 }
 
 #impacts .video-link {
-  grid-row: 3;
-  grid-column: 2 / 16;
   padding: 1.5rem 0;
+  @include grid-child(2, 16, 3, 4);
+
+  @include for-tablet-portrait-up {
+    @include grid-child(2, 14, 3, 4);
+  }
 
   @include for-desktop-up {
-    grid-row: 3 / 5;
-    grid-column: 4 / 9;
+    @include grid-child(4, 9, 3, 5);
   }
 }
 
 #impacts .section-lead {
   font-weight: bold;
-  grid-row: 2;
-  grid-column: 2 / 16;
   margin-bottom: 0;
+  @include grid-child(2, 16, 2, 3);
+
+  @include for-tablet-portrait-up {
+    padding-top: 0.5rem;
+    @include grid-child(4, 15, 2, 3);
+  }
 
   @include for-desktop-up {
     margin-top: 2rem;
-    padding-left: 3rem;
     margin-bottom: 1rem;
-    grid-row: 2;
-    grid-column: 6 / 13;
+    padding-left: 3rem;
+    @include grid-child(6, 13, 2, 3);
   }
 }
 
 #impacts .section-body {
-  grid-row: 4;
-  grid-column: 2 / 16;
-  padding-bottom: 1.5rem;
+  @include grid-child(2, 16, 4, 5);
+  padding-bottom: 0.8rem;
+
+  @include for-tablet-portrait-up {
+    @include grid-child(4, 15, 4, 5);
+  }
 
   @include for-desktop-up {
-    padding-left: 3rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
-    grid-row: 3;
-    grid-column: 9 / 14;
+    padding: 1.5rem 2rem 1.5rem 3rem;
+    @include grid-child(9, 14, 3, 4);
   }
 }
 
 #impacts .section-body p {
   margin-top: 0;
-  margin-bottom: 1rem;
 }
 
 /* MANAGING YOUR PAH
 ====================================================== */
 
 #managing-your-pah {
-  display: grid;
-  grid-template-rows: repeat(2, auto);
-
   @include for-desktop-up {
-    grid-template-rows: 40px repeat(5, auto);
+    grid-template-rows: 40px repeat(2, auto);
   }
 
   &::before {
-    background: $purple;
-    grid-column: 1 / 17;
-    grid-row: 1 / 3;
-    margin-top: 30px;
+    background: var(--purple);
 
     @include for-tablet-portrait-up {
-      grid-column: 3 / 13;
+      @include grid-child(3, 13, 2, 4);
     }
 
     @include for-desktop-up {
-      margin-top: 0;
-      grid-column: 6 / 12;
+      @include grid-child(6, 12, 2, 4);
     }
   }
 }
 
 #managing-your-pah .section-icon {
   @include for-desktop-up {
-    grid-column: 11 / span 2;
-    grid-row: 1 / span 3;
+    padding: 0 35px;
+    @include grid-child(11, 14, 1, 4);
   }
 }
 
 #managing-your-pah .section-header {
-  grid-row: 1;
-  grid-column: 2 / 17;
+  @include grid-child(2, 17, 1, 2);
 
   @include for-tablet-portrait-up {
-    grid-column: 3 / 17;
+    @include grid-child(3, 17, 1, 2);
   }
 
   @include for-desktop-up {
-    padding-left: 2.5rem;
-    grid-column: 5 / 10;
-    grid-row: 2;
-    margin: 0.67em 0;
-    margin-bottom: 0;
+    padding-left: 2rem;
+    margin: 0.67em 0 0 0;
+    @include grid-child(5, 11, 2, 3);
   }
 }
 
 #managing-your-pah .section-body {
-  grid-row: 2;
-  grid-column: 3 / 14;
   padding-bottom: 1.5rem;
+  @include grid-child(3, 14, 2, 3);
 
   @include for-tablet-portrait-up {
-    grid-column: 4 / 12;
+    @include grid-child(4, 12, 2, 3);
   }
 
   @include for-desktop-up {
     padding-left: 2.5rem;
-    grid-column: 6 / 11;
-    grid-row: 3 / 4;
+    padding-bottom: 2rem;
+    @include grid-child(6, 11, 3, 4);
   }
 }
 </style>

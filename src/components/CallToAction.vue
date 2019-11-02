@@ -12,13 +12,17 @@
 </template>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/_color-palette";
-@import "~/assets/styles/_breakpoints";
+@import "~/assets/styles/modules/_color-palette";
+@import "~/assets/styles/modules/_breakpoints";
 
 #cta-bottom {
   padding: 2rem;
-  display: grid;
+  grid-template-rows: repeat(1, auto);
   grid-template-columns: repeat(16, 1fr);
+
+  &::before {
+    display: none;
+  }
 }
 
 #cta-bottom p {

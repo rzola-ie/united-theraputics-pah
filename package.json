@@ -4,7 +4,8 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "postcss": "postcss -o ./src/assets/styles/.css"
   },
   "dependencies": {
     "gridsome": "^0.7.0",

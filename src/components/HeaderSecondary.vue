@@ -22,15 +22,19 @@
           pah pathways
         </g-link>
 
-        <g-link class="nav__link" to="/about/"
-          >prostacyclin-<br />class therapies
+        <g-link
+          class="nav__link"
+          to="/prostacyclin-class-therapies/"
+          active-class
+        >
+          prostacyclin-<br />class therapies
         </g-link>
 
-        <g-link class="nav__link" to="/about/">
+        <g-link class="nav__link" to="/resources/" active-class>
           resources
         </g-link>
 
-        <g-link class="nav__link newsletter" to="/about/">
+        <g-link class="nav__link newsletter" to="/newsletter" active-class>
           sign up to recieve our newsletter
         </g-link>
       </nav>
@@ -53,14 +57,28 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    this.$refs.hamburger.addEventListener("click", this.toggleSide);
+  },
+  beforeDestroy() {
+    this.$refs.hamburger.removeEventListener("click", this.toggleSide);
+  },
+  methods: {
+    toggleSide() {
+      this.$refs.hamburger.classList.toggle("open");
+      this.$refs.drawerBg.classList.toggle("open");
+      this.$refs.drawer.classList.toggle("open");
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/_color-palette";
-@import "~/assets/styles/_breakpoints";
+@import "~/assets/styles/modules/_breakpoints";
+@import "~/assets/styles/modules/_cross-browser";
 
-$max-width: 1440px;
+
 
 .header {
   min-height: 60px;
@@ -74,29 +92,33 @@ $max-width: 1440px;
 }
 
 .header-inner {
-  max-width: $max_width;
+  width: 100%;
+  max-width: var(--max-width);
   height: 65px;
   margin: auto;
-  display: grid;
+  @include display-grid;
   grid-template-columns: 30px 1fr 30px;
-  justify-items: center;
-  align-items: center;
+    align-items: center;
+    justify-items: center;
   padding-bottom: 1rem;
   grid-gap: 1rem;
-  border-bottom: 2px solid $wine;
+  border-bottom: 2px solid var(--wine);
 
   @include for-desktop-up {
     grid-template-columns: 140px auto 110px;
   }
 }
 
-.header-logo-img {
-  width: 140px;
-  grid-column-start: 2;
+.header-logo {
+  grid-column: 2;
 
   @include for-desktop-up {
     grid-column-start: 1;
   }
+}
+
+.header-logo-img {
+  width: 140px;
 }
 
 /* NAV
@@ -106,7 +128,7 @@ $max-width: 1440px;
   display: none;
 
   @include for-desktop-up {
-    display: grid;
+    @include display-grid;
     grid-template-columns: repeat(5, minmax(100px, 1fr)) 150px;
     grid-gap: 0.2rem;
     align-items: center;
@@ -133,7 +155,7 @@ $max-width: 1440px;
   text-align: center;
 
   &.active {
-    color: $wine;
+    color: var(--wine);
   }
 
   &.newsletter {
@@ -158,6 +180,7 @@ $max-width: 1440px;
   width: 30px;
   height: 25px;
   position: relative;
+  grid-column: 3;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -180,7 +203,7 @@ $max-width: 1440px;
   height: 4px;
   width: 100%;
   border-radius: 2px;
-  background: $wine;
+  background: var(--wine);
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);

@@ -15,8 +15,8 @@ query {
 </static-query>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/_color-palette";
-@import "~/assets/styles/_breakpoints";
+@import "~/assets/styles/modules/_color-palette";
+@import "~/assets/styles/modules/_breakpoints";
 
 $max_width: 1440px;
 
