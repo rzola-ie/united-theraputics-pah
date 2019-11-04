@@ -2,7 +2,11 @@
   <Layout>
     <section id="hero">
       <Header />
-      <g-image class="hero-image" src="~/assets/img/Hero-Visual.png" alt="an image of a park with trees. The PAH initiative logo is in the center" />
+      <g-image
+        class="hero-image"
+        src="~/assets/img/Hero-Visual.png"
+        alt="an image of a park with trees. The PAH initiative logo is in the center"
+      />
       <button id="hero-down-button" @click="handleArrowClick">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +201,7 @@ export default {
   grid-template-rows: 60px 1fr auto;
 
   @include for-desktop-up {
-    grid-template-rows: 80px 1fr auto;
+    grid-template-rows: 80px repeat(11, 80px);
     padding: 0 1rem;
     min-height: 100vh;
   }
@@ -226,21 +230,20 @@ export default {
   padding: 0;
   background: 0;
   border: none;
-  align-self: start;
+  align-self: center;
   justify-self: center;
   cursor: pointer;
 
   @include for-desktop-up {
     height: 25px;
     width: 35px;
-    margin-bottom: 2rem;
+    @include grid-child(8, 9, 10, 11);
   }
 }
 
 /* FEEL BETTER
 ====================================================== */
 #feel-better {
-
   @include for-desktop-up {
     grid-template-rows: repeat(3, auto);
   }
@@ -381,7 +384,6 @@ export default {
   }
 }
 
-
 /* WHAT IS PAH
 ====================================================== */
 
@@ -440,7 +442,6 @@ export default {
 ====================================================== */
 
 #managing-your-pah {
-
   &::before {
     background: var(--grey);
     @include grid-child(2, 16, 1, 3);
@@ -563,7 +564,7 @@ export default {
 
 #therapies .section-icon {
   @include for-desktop-up {
-    padding: 0 40px;
+    padding: 0 35px;
     margin-top: 30px;
     @include grid-child(5, 8, 1, 3);
   }
@@ -573,14 +574,13 @@ export default {
   @include grid-child(3, 17, 1, 2);
 
   @include for-tablet-portrait-up {
-    grid-column: 8 / end;
     @include grid-child(8, 17, 1, 2);
   }
 
   @include for-desktop-up {
     padding-left: 1.5rem;
     margin-bottom: 5px;
-    @include grid-child(8, 12, 1, 2);
+    @include grid-child(8, 14, 1, 2);
   }
 }
 
