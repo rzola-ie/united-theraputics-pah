@@ -45,13 +45,13 @@
         </p>
 
         <p>
-          PAH is a severe disease that gets worse over time. But today’s
+          PAH is a severe disease that gets worse over time. But today's
           treatment options can
           <strong
-            >slow the disease’s progression and improve how you feel.</strong
+            >slow the disease's progression and improve how you feel.</strong
           >
           By working closely with your doctor to assess your <u>symptoms</u>,
-          <u>risk status</u> and <u>treatment options</u>, you’ll be better able
+          <u>risk status</u> and <u>treatment options</u>, you'll be better able
           to manage the impact of PAH on your life. Together with the support of
           your healthcare team, there may be more you can do to achieve your
           treatment goals.
@@ -75,15 +75,15 @@
         <strong
           ><i
             >"I aced my last 6-minute walk test and my doctor said I was doing
-            okay. But I didn’t tell her that it took me two days to recover. So
-            am I really doing okay?”</i
+            okay. But I didn't tell her that it took me two days to recover. So
+            am I really doing okay?"</i
           ></strong
         >
         - <small>PAH Patient</small>
       </p>
       <p>
-        Even if your doctor is satisfied that you’re doing “okay” with your PAH,
-        is doing “okay” enough for you? There may be ways to reduce your
+        Even if your doctor is satisfied that you're doing "okay" with your PAH,
+        is doing "okay" enough for you? There may be ways to reduce your
         <u>symptoms</u> so you can feel better and do more. As ongoing research
         helps us understand more about PAH, experts continue to improve the way
         they treat it.

@@ -16,7 +16,7 @@
           millions of tiny blood vessels in your lungs to thicken and narrow.
           This makes it difficult for blood to flow from your heart through your
           lungs, creating high blood pressure in the lung vessels. Without
-          regular blood flow, your lungs don’t receive enough oxygen. The
+          regular blood flow, your lungs don't receive enough oxygen. The
           pressure in the lungs causes the right side of the heart to work
           harder than normal.
         </p>
@@ -46,8 +46,8 @@
 
         <p>
           <strong>PAH is a serious disease that gets worse over time</strong>.
-          Whether you’re undiagnosed or already on treatment, it’s important to
-          talk with your doctor about the symptoms you’re experiencing—and the
+          Whether you're undiagnosed or already on treatment, it's important to
+          talk with your doctor about the symptoms you're experiencing—and the
           activities that trigger them—so that he/she can assess your condition
           correctly and treat it the best way for you.
         </p>
@@ -83,8 +83,8 @@
 
       <div class="section-body full">
         <p>
-          Because PAH gets worse over time, it’s important to have an honest
-          conversation with your doctor about how you’re really feeling,
+          Because PAH gets worse over time, it's important to have an honest
+          conversation with your doctor about how you're really feeling,
           regardless of your test results (which only tell part of the story).
           <u
             >It may be necessary to adjust your dose of medicines or add
@@ -112,7 +112,7 @@
         <p>
           Diagnosing PAH can be hard because it is rare and has a lot of the
           same symptoms as more common diseases or conditions. While some cases
-          are passed down through family, many people with PAH don’t know the
+          are passed down through family, many people with PAH don't know the
           cause of their disease. If you have symptoms of PAH, your doctor may
           conduct specific tests to assess for PAH, including:
         </p>
@@ -242,11 +242,11 @@
 
     <section id="impacts">
       <h1 class="section-header">
-        Let’s take a look at how PAH impacts your body
+        Let's take a look at how PAH impacts your body
       </h1>
 
       <p class="section-lead">
-        Sometimes, it helps to actually see what’s happening in the body to
+        Sometimes, it helps to actually see what's happening in the body to
         understand how PAH causes the symptoms you may be experiencing.
       </p>
 
