@@ -51,7 +51,7 @@ export default {};
 
   @include for-desktop-up {
     grid-gap: 0;
-    grid-template-rows: repeat(6, 50px);
+    grid-template-rows: repeat(6, 45px);
     grid-template-columns: 1.65fr 1fr;
     @include grid-child(5, 13, 1, 2);
   }
