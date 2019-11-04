@@ -38,6 +38,10 @@ body {
 /* GENERAL
 ====================================================== */
 
+a {
+  color: var(--wine);
+}
+
 button,
 a.button {
   display: inline-block;
@@ -45,7 +49,6 @@ a.button {
   height: 40px;
   padding: 0 2rem;
   border: 2px solid var(--wine);
-  color: var(--wine);
   background: transparent;
   line-height: 36px;
   text-align: center;

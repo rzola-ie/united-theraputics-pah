@@ -89,7 +89,7 @@
       </div>
     </section>
     <section id="fighting-pah">
-      <g-image class="section-icon" src="~/assets/img/icn-eye-2.png" alt="an icon of an eye" />
+      <g-image class="section-icon" src="~/assets/img/icn-eye.png" alt="an icon of an eye" />
       <div class="section-body">
         <h3>Visit FightingPAH.com to learn more about PAH treatment options brought to you by United Therapeutics</h3>
         <g-link class="button" to="/">Go Now</g-link>

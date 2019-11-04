@@ -34,9 +34,10 @@
         know how their PAH will impact them in the future. PAH experts now know
         how to use the information about your functional class and 6-minute walk
         test, along with other test results, to determine how PAH may affect you
-        in the next 5 years – it’s called <strong>risk status</strong>. Risk status goes beyond
-        determining how PAH is affecting you today and helps your doctor assess
-        the chance that your PAH will get worse in the future.
+        in the next 5 years – it’s called <strong>risk status</strong>. Risk
+        status goes beyond determining how PAH is affecting you today and helps
+        your doctor assess the chance that your PAH will get worse in the
+        future.
       </p>
       <div class="section-body">
         <p>
@@ -57,23 +58,28 @@
 
     <div class="side-bars">
       <section id="risk-assessment">
-        <g-image class="section-icon" src="~/assets/img/icn-magnifying-glass-check.png" alt="an icon of a magnifying glass with a check mark" />
+        <g-image
+          class="section-icon"
+          src="~/assets/img/icn-magnifying-glass-check.png"
+          alt="an icon of a magnifying glass with a check mark"
+        />
         <h1 class="section-header">How is risk status assessed?</h1>
         <div class="section-body">
           <p>
-            PAH experts now know that by continuing to monitor your condition and
-            assess your risk status, they can work to optimize your treatment
-            plan. Below are 3 of the most common assessments used to help evaluate
-            your risk status. Click on each assessment to learn more about what it
-            measures and how the results can help in assessing your risk status.
-            Slide the bottom arrow from left to right to see what the results may
-            be for low, intermediate and high-risk status.
+            PAH experts now know that by continuing to monitor your condition
+            and assess your risk status, they can work to optimize your
+            treatment plan. Below are 3 of the most common assessments used to
+            help evaluate your risk status. Click on each assessment to learn
+            more about what it measures and how the results can help in
+            assessing your risk status. Slide the bottom arrow from left to
+            right to see what the results may be for low, intermediate and
+            high-risk status.
           </p>
 
           <p>
-            Keep in mind that your doctor will use these, as well as a combination
-            of other test results and information, to assess your risk status and
-            determine your treatment plan.
+            Keep in mind that your doctor will use these, as well as a
+            combination of other test results and information, to assess your
+            risk status and determine your treatment plan.
             <strong
               >With the right plan, many patients will continue to see
               improvements that go beyond their initial therapy.</strong
@@ -90,7 +96,11 @@
     </div>
 
     <section id="treatment-goals">
-      <g-image class="section-icon" src="~/assets/img/icn-flag.png" alt="an icon of a golf course flag" />
+      <g-image
+        class="section-icon"
+        src="~/assets/img/icn-flag.png"
+        alt="an icon of a golf course flag"
+      />
       <h1 class="section-header">
         Set treatment goals to improve your risk status
       </h1>
@@ -122,7 +132,11 @@
     <!-- treatment goals -->
 
     <section id="best-advocate">
-      <g-image class="section-icon" src="~/assets/img/icn-heart-ekg.png" alt="an icon of heart with an ekg" />
+      <g-image
+        class="section-icon"
+        src="~/assets/img/icn-heart-ekg.png"
+        alt="an icon of heart with an ekg"
+      />
       <h1 class="section-header">Be your own best advocate</h1>
       <div class="section-body">
         <p>
@@ -149,7 +163,11 @@
     <!-- best advocate -->
 
     <section id="find-a-specialist">
-      <g-image class="section-icon" src="~/assets/img/icn-magnifying-glass-plus.png" alt="an icon of a magnifying glass with a plus" />
+      <g-image
+        class="section-icon"
+        src="~/assets/img/icn-magnifying-glass-plus.png"
+        alt="an icon of a magnifying glass with a plus"
+      />
       <h1 class="section-header">Find a PAH specialist</h1>
       <div class="section-body">
         <p>
@@ -170,7 +188,11 @@
     <!-- find a specialist -->
 
     <section id="make-the-most">
-      <g-image class="section-icon" src="~/assets/img/icn-download.png" alt="an icon of" />
+      <g-image
+        class="section-icon"
+        src="~/assets/img/icn-download.png"
+        alt="an icon of a download symbol on a piece of paper"
+      />
       <h1 class="section-header">Make the most out of your visit</h1>
       <div class="section-body">
         <h3>
@@ -199,7 +221,11 @@
     <!-- make the most -->
 
     <section id="build-your-network">
-      <g-image class="section-icon" src="~/assets/img/icn-molecule.png" alt="an icon of a molecule" />
+      <g-image
+        class="section-icon"
+        src="~/assets/img/icn-molecule.png"
+        alt="an icon of a molecule"
+      />
       <h1 class="section-header">Build your personal PAH care network</h1>
       <div class="section-body">
         <p>
@@ -233,7 +259,11 @@
     <!-- build your network -->
 
     <section id="on-your-own">
-      <g-image class="section-icon" src="~/assets/img/icn-heart-checklist.png" alt="an icon of a checklist with a heart" />
+      <g-image
+        class="section-icon"
+        src="~/assets/img/icn-heart-checklist.png"
+        alt="an icon of a checklist with a heart"
+      />
       <h1 class="section-header">More things you can do on your own</h1>
       <div class="section-body">
         <p>
@@ -258,7 +288,11 @@
     <!-- on your own -->
 
     <section id="pah-pathways">
-      <g-image class="section-icon" src="~/assets/img/icn-chemical-structure.png" alt="an icon of a chemical structure" />
+      <g-image
+        class="section-icon"
+        src="~/assets/img/icn-chemical-structure.png"
+        alt="an icon of a chemical structure"
+      />
       <h1 class="section-header">PAH PATHWAYS</h1>
       <div class="section-body">
         <h3>
@@ -350,7 +384,6 @@ export default {
 }
 
 #risk-prognosis .section-header {
-
   @include for-desktop-up {
     margin-bottom: 0.5rem;
     padding-right: 30px;
@@ -411,9 +444,8 @@ export default {
 ====================================================== */
 
 #risk-assessment {
-
   @include for-tablet-portrait-up {
-grid-template-rows: 50px auto;
+    grid-template-rows: 50px auto;
   }
 
   @include for-desktop-up {
@@ -470,7 +502,6 @@ grid-template-rows: 50px auto;
     @include for-desktop-up {
       margin-right: 15px;
       @include grid-child(5, 15, 2, 4);
-      
     }
   }
 }
@@ -497,7 +528,6 @@ grid-template-rows: 50px auto;
     padding-left: 1.5rem;
     @include grid-child(6, 14, 3, 4);
   }
-
 }
 
 /* BEST ADVOCATE
@@ -529,7 +559,7 @@ grid-template-rows: 50px auto;
 #best-advocate .section-header {
   @include for-desktop-up {
     padding-left: 15px;
-    @include grid-child(3, 12, 2, 3);   
+    @include grid-child(3, 12, 2, 3);
   }
 }
 
@@ -549,7 +579,7 @@ grid-template-rows: 50px auto;
   &::before {
     background: var(--grey);
 
-    @include for-desktop-up {      
+    @include for-desktop-up {
       margin-right: 15px;
       @include grid-child(5, 15, 2, 3);
     }
@@ -606,7 +636,6 @@ grid-template-rows: 50px auto;
   @include for-desktop-up {
     padding-left: 15px;
     @include grid-child(3, 13, 2, 3);
-
   }
 }
 
@@ -614,7 +643,7 @@ grid-template-rows: 50px auto;
   padding-bottom: 1.5rem;
 
   @include for-desktop-up {
-  padding-bottom: 2rem;
+    padding-bottom: 2rem;
     @include grid-child(5, 12, 3, 4);
   }
 }
@@ -623,7 +652,6 @@ grid-template-rows: 50px auto;
 ====================================================== */
 
 #build-your-network {
-
   &::before {
     background: var(--grey);
 
@@ -660,7 +688,6 @@ grid-template-rows: 50px auto;
   margin-bottom: 1rem;
   padding-left: 1rem;
 }
-
 
 /* ON YOUR OWN
 ====================================================== */
