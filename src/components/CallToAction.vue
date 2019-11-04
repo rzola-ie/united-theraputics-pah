@@ -12,13 +12,17 @@
 </template>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/modules/_color-palette";
+@import "~/assets/styles/modules/_cross-browser";
 @import "~/assets/styles/modules/_breakpoints";
 
 #cta-bottom {
-  padding: 2rem;
+  padding: 1rem 2rem;
   grid-template-rows: repeat(1, auto);
   grid-template-columns: repeat(16, 1fr);
+
+  @include for-desktop-up {
+    padding: 2rem;
+  }
 
   &::before {
     display: none;
@@ -29,16 +33,16 @@
   text-align: center;
   font-weight: bold;
   font-style: italic;
-  grid-column: 2 / 16;
   font-size: 20px;
   line-height: 24px;
+  @include grid-child(1, 17, 1, 2);
 
   @include for-tablet-portrait-up {
-    grid-column: 4 / 14;
+    @include grid-child(4, 14, 1, 2);
   }
 
   @include for-desktop-up {
-    grid-column: 1 / 17;
+    @include grid-child(1, 17, 1, 2);
   }
 
   br {

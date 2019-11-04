@@ -22,7 +22,7 @@
           <span>Unsubscribe</span>
         </g-link>
 
-        <g-link class="footer-nav-link" to="/about/">
+        <g-link class="footer-nav-link" to="/site-map">
           <span>Site Map</span>
         </g-link>
       </nav>
