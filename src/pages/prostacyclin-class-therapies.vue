@@ -1,105 +1,208 @@
 <template>
   <SecondaryLayout>
     <section id="do-more">
-      <h1 class="section-header">Do more for your PAH Treatment </h1>
-      <g-image class="section-icon" src="~/assets/img/icn-heart-plus.png" alt="an icon of a heart with a plus sign in the corner and an ekg line through the middle" />
+      <h1 class="section-header">Do more for your PAH Treatment</h1>
+      <g-image
+        class="section-icon"
+        src="~/assets/img/icn-heart-plus.png"
+        alt="an icon of a heart with a plus sign in the corner and an ekg line through the middle"
+      />
       <div class="section-body">
-        <p>When you have PAH, being “stable” or “feeling okay” may seem good enough. After a while, some people may accept the idea that they’ll never feel better or get closerto the life they had before PAH. But you don’t have to accept “good enough.” <strong>Prostacyclin-class medicines</strong> have been shown to be an effective PAH treatmentoption to reduce symptoms, increase 6-minute walk distance, reduce hospitalizations, slow disease progression and improve your functional class, which means you may be able to feel better and do more. </p>
+        <p>
+          When you have PAH, being "stable" or "feeling okay" may seem good
+          enough. After a while, some people may accept the idea that they'll
+          never feel better or get closer to the life they had before PAH. But
+          you don't have to accept "good enough."
+          <strong>Prostacyclin-class medicines</strong> have been shown to be an
+          effective PAH treatment option to reduce symptoms, increase 6-minute
+          walk distance, reduce hospitalizations, slow disease progression and
+          improve your functional class, which means you may be able to feel
+          better and do more.
+        </p>
       </div>
     </section>
+    <!-- do more -->
+
     <section id="what-is-prostacyclin">
-      <h1 class="section-header">What is Prostacyclin (PCY)? </h1>
+      <h1 class="section-header">What is Prostacyclin (PCY)?</h1>
       <div class="section-body">
-        <p><strong>Prostacyclin (pros-tuh-sahy-klin)</strong>—or “PCY”—is a natural substance in your body that works in different ways within the blood vessels. PCY is essential to help your lungs function properly. Normal PCY levels help maintain blood vessel health, keeping them open and allowing normal blood flow. Prostacyclin also helps prevent clotting, and slows down rapid cell growth (called proliferation), which prevents blood vessels from becoming too thick.</p>
-        <p><strong>People with PAH may not produce enough natural prostacyclin</strong>. When you have too little prostacyclin, the vessels of the lungs become narrow and restrict blood flow. That’s why your doctor may consider prescribing a <u>Prostacyclin-class medicine</u>.</p>
+        <p>
+          <strong>Prostacyclin (pros-tuh-sahy-klin)</strong>—or "PCY"—is a
+          natural substance in your body that works in different ways within the
+          blood vessels. PCY is essential to help your lungs function properly.
+          Normal PCY levels help maintain blood vessel health, keeping them open
+          and allowing normal blood flow. Prostacyclin also helps prevent
+          clotting, and slows down rapid cell growth (called proliferation),
+          which prevents blood vessels from becoming too thick.
+        </p>
+        <p>
+          <strong
+            >People with PAH may not produce enough natural prostacyclin</strong
+          >. When you have too little prostacyclin, the vessels of the lungs
+          become narrow and restrict blood flow. That's why your doctor may
+          consider prescribing a <u>Prostacyclin-class medicine</u>.
+        </p>
       </div>
       <h3>See how PAH affects blood vessels</h3>
       <video controls class="section-video">
-        <source src="../assets/vid/explaining-pah.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-      Your browser does not support the video tag.
-      </video> 
+        <source src="../assets/vid/explaining-pah.mp4" type="video/mp4" />
+        <source src="movie.ogg" type="video/ogg" />
+        Your browser does not support the video tag.
+      </video>
     </section>
+    <!-- what-is-prostacyclin -->
+
     <section id="medicines">
-      <h1 class="section-header">Prostacyclin-<wbr>class medicines</h1>
+      <h1 class="section-header">Prostacyclin-<wbr />class medicines</h1>
       <div class="section-body">
-        <p>Prostacyclin-class medicines target the prostacyclin pathway and mimic some of the effects of natural prostacyclin that your body lacks, to help the blood vessels in your lungs stay open. They may help prevent blood platelets from clumping together (forming clots), which can also narrow blood vessels in the lungs.</p>
+        <p>
+          Prostacyclin-class medicines target the prostacyclin pathway and mimic
+          some of the effects of natural prostacyclin that your body lacks, to
+          help the blood vessels in your lungs stay open. They may help prevent
+          blood platelets from clumping together (forming clots), which can also
+          narrow blood vessels in the lungs.
+        </p>
 
         <p><strong>Prostacyclin-class medicines may work by:</strong></p>
         <ul>
           <li>Widening or opening the blood vessels (known as vasodilation)</li>
           <li>Slowing down the vessel thickening process</li>
           <li>Preventing clotting (clotting can narrow blood vessels)</li>
-          <li>Smoothing the cell lining, which can help prevent the vessel from becoming too thick</li>
+          <li>
+            Smoothing the cell lining, which can help prevent the vessel from
+            becoming too thick
+          </li>
         </ul>
-
       </div>
-      <g-image src="~/assets/img/prostacyclin-vessels.png" class="section-image"/>
+      <g-image
+        class="section-image"
+        src="~/assets/img/prostacyclin-vessels.png"
+        alt="On the left is an example of a healthy blood vessel. On the right is an image of a blood vessel with PAH."
+      />
     </section>
     <section id="benefits">
-      <h1 class="section-header">Benefits of Prostacyclin-<wbr>CLASS medicines</h1>
+      <h1 class="section-header">
+        Benefits of Prostacyclin-<wbr />CLASS medicines
+      </h1>
       <div class="section-body top">
-        <p>In clinical studies, Prostacyclin-class medicines have been shown to</p>
+        <p>
+          In clinical studies, Prostacyclin-class medicines have been shown to
+        </p>
         <ul>
-          <li>Reduce the symptoms of PAH, like shortness of breath and fatigue</li>
+          <li>
+            Reduce the symptoms of PAH, like shortness of breath and fatigue
+          </li>
           <li>Improve the ability to exercise</li>
           <li>Improve functional class</li>
           <li>Improve 6-minute walk distance</li>
-          <li>Slow disease progression </li>
-          <li>Reduce hospitalizations </li>
+          <li>Slow disease progression</li>
+          <li>Reduce hospitalizations</li>
           <li>Lower risk status</li>
           <li>Lower the pressure in the vessels of the lungs</li>
         </ul>
       </div>
 
       <div class="section-body bottom">
-        <p>Prostacyclin-class medicines were the first type of treatment to be prescribed for PAH. It’s also the only class of PAH medicine available in 3 forms:</p>
+        <p>
+          Prostacyclin-class medicines were the first type of treatment to be
+          prescribed for PAH. It's also the only class of PAH medicine available
+          in 3 forms:
+        </p>
         <ul>
           <li>Oral (pills)</li>
-          <li>Inhaled </li>
+          <li>Inhaled</li>
           <li>Pump therapy</li>
         </ul>
       </div>
     </section>
     <section id="side-effects">
-      <h1 class="section-header">Side effects of Prostacyclin-<wbr>class medicines</h1>
-      <g-image class="section-icon" src="~/assets/img/icn-prescription.png" alt="an icon of a prescription card with a warning symbol on top of it" />
+      <h1 class="section-header">
+        Side effects of Prostacyclin-<wbr />class medicines
+      </h1>
+      <g-image
+        class="section-icon"
+        src="~/assets/img/icn-prescription.png"
+        alt="an icon of a prescription card with a warning symbol on top of it"
+      />
       <div class="section-body">
-        <p>As with many medications, you may experience side effects with prostacyclins. The most common side effects of this class of medicine include headache, diarrhea, flu-like symptoms, jaw pain, muscle spasm, flushing, and nausea. PAH specialists are familiar with these expected side effects and know how to manage them.</p>
-        <p>Talk to your doctor about the expected side effects before you start taking prostacyclin therapy. You will be better prepared and know what to do if they do occur. Tell your healthcare team if you have any side effect that bothers you or that does not go away.</p>
+        <p>
+          As with many medications, you may experience side effects with
+          prostacyclins. The most common side effects of this class of medicine
+          include headache, diarrhea, flu-like symptoms, jaw pain, muscle spasm,
+          flushing, and nausea. PAH specialists are familiar with these expected
+          side effects and know how to manage them.
+        </p>
+        <p>
+          Talk to your doctor about the expected side effects before you start
+          taking prostacyclin therapy. You will be better prepared and know what
+          to do if they do occur. Tell your healthcare team if you have any side
+          effect that bothers you or that does not go away.
+        </p>
       </div>
     </section>
     <section id="getting-started">
-      <h1 class="section-header">Getting started on Prostacyclin-class treatment</h1>
+      <h1 class="section-header">
+        Getting started on Prostacyclin-class treatment
+      </h1>
       <div class="section-body">
-        <p>If your doctor prescribes a Prostacyclin-class medicine, it will be delivered by a <strong>Specialty Pharmacy</strong>.</p>
-        <p>Specialty Pharmacies are different from your local pharmacy. They offer personalized care and teams of trained, experienced nurses and pharmacists who provide the customized support you may need, including:</p>
+        <p>
+          If your doctor prescribes a Prostacyclin-class medicine, it will be
+          delivered by a <strong>Specialty Pharmacy</strong>.
+        </p>
+        <p>
+          Specialty Pharmacies are different from your local pharmacy. They
+          offer personalized care and teams of trained, experienced nurses and
+          pharmacists who provide the customized support you may need,
+          including:
+        </p>
         <ul>
           <li>24/7 phone support</li>
           <li>In-home nurse visits to explain more about the medicine</li>
           <li>Home delivery of medicines</li>
-          <li>Scheduled follow-up calls from specialty pharmacy nurses and pharmacists</li>
+          <li>
+            Scheduled follow-up calls from specialty pharmacy nurses and
+            pharmacists
+          </li>
         </ul>
       </div>
     </section>
     <section id="make-the-most">
-      <g-image class="section-icon" src="~/assets/img/icn-ask.png" alt="an icon of a word bubble with a question mark in it" />
+      <g-image
+        class="section-icon"
+        src="~/assets/img/icn-ask.png"
+        alt="an icon of a word bubble with a question mark in it"
+      />
       <div class="section-body">
-        <h3>Make the most of your next visit with your PAH team.<br /> Ask if now is the right time to consider a Prostacyclin-class medicine to help lower your risk status and slow your PAH.</h3>
+        <h3>
+          Make the most of your next visit with your PAH team.<br />
+          Ask if now is the right time to consider a Prostacyclin-class medicine
+          to help lower your risk status and slow your PAH.
+        </h3>
       </div>
     </section>
     <section id="fighting-pah">
-      <g-image class="section-icon" src="~/assets/img/icn-eye.png" alt="an icon of an eye" />
+      <g-image
+        class="section-icon"
+        src="~/assets/img/icn-eye.png"
+        alt="an icon of an eye"
+      />
       <div class="section-body">
-        <h3>Visit FightingPAH.com to learn more about PAH treatment options brought to you by United Therapeutics</h3>
+        <h3>
+          Visit FightingPAH.com to learn more about PAH treatment options
+          brought to you by United Therapeutics
+        </h3>
         <g-link class="button" to="/">Go Now</g-link>
       </div>
     </section>
     <section id="resources">
       <h1 class="section-header">Resources</h1>
-      <g-image class="section-icon" src="~/assets/img/icn-laptop.png" alt="an icon of a laptop with a mouse pointer on the screen" />
+      <g-image
+        class="section-icon"
+        src="~/assets/img/icn-laptop.png"
+        alt="an icon of a laptop with a mouse pointer on the screen"
+      />
       <div class="section-body">
-        <h3>Check out other PAH resources. </h3>
+        <h3>Check out other PAH resources.</h3>
         <g-link class="button" to="/">Discover</g-link>
       </div>
     </section>
@@ -162,7 +265,6 @@ export default {};
 ====================================================== */
 
 #what-is-prostacyclin {
-
   @include for-desktop-up {
     grid-template-rows: repeat(5, auto);
   }
@@ -215,7 +317,6 @@ export default {};
 ====================================================== */
 
 #medicines {
-
   @include for-desktop-up {
     grid-template-rows: repeat(4, auto);
   }
@@ -288,7 +389,7 @@ export default {};
   margin-bottom: 1rem;
   @include grid-child(2, 16, 2, 3);
 
-    @include for-desktop-up {
+  @include for-desktop-up {
     @include grid-child(5, 13, 2, 3);
   }
 }
@@ -392,7 +493,7 @@ export default {};
 
 #getting-started .section-header {
   @include for-desktop-up {
-    @include grid-child(5, 12, 1, 2)
+    @include grid-child(5, 12, 1, 2);
   }
 }
 
@@ -423,7 +524,6 @@ export default {};
   @include for-desktop-up {
     grid-template-rows: 50px repeat(2, auto);
   }
-
 
   &::before {
     margin-top: 0;
@@ -531,11 +631,10 @@ export default {};
 ====================================================== */
 
 #resources {
-  
   @include for-tablet-portrait-up {
     grid-template-rows: auto auto;
   }
-  
+
   @include for-desktop-up {
     grid-template-rows: 50px auto auto;
   }
@@ -562,7 +661,6 @@ export default {};
 }
 
 #resources .section-header {
-
   @include for-tablet-portrait-up {
     @include grid-child(3, 12, 1, 2);
   }
@@ -587,7 +685,6 @@ export default {};
 }
 
 #resources .section-body h3 {
-    margin-top: 0;
+  margin-top: 0;
 }
-
 </style>

@@ -8,7 +8,7 @@
       />
       <h1 class="section-header">Join PAH-I Support</h1>
       <h3>
-        Subscribe to our newsletter and we’ll provide you with helpful
+        Subscribe to our newsletter and we'll provide you with helpful
         information and updates about the PAH Initiative, PAH treatment options,
         live events, and more.
       </h3>
@@ -319,14 +319,14 @@ export default {
 
 #mailing-list .section-icon {
   @include for-desktop-up {
-    padding: 0 30px;
+    padding: 0 20px;
     @include grid-child(13, 16, 1, 3);
   }
 }
 
 #mailing-list .section-header {
   @include for-desktop-up {
-    padding-left: 3.5rem;
+    padding-left: 2.5rem;
     @include grid-child(2, 15, 2, 3);
   }
 }
@@ -335,7 +335,7 @@ export default {
   @include grid-child(2, 16, 2, 3);
 
   @include for-desktop-up {
-    @include grid-child(4, 11, 3, 4);
+    @include grid-child(4, 12, 3, 4);
   }
 }
 
@@ -372,12 +372,12 @@ export default {
   grid-template-columns: repeat(14, 1fr);
 
   @include for-desktop-up {
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(14, 1fr);
   }
 }
 
 #mailing-list form .form-group.half {
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
 }
 
 #mailing-list form .form-group.not-required {
@@ -388,7 +388,7 @@ export default {
   @include grid-child(2, 16, 1, 2);
 
   @include for-desktop-up {
-    @include grid-child(2, 12, 1, 2);
+    @include grid-child(2, 16, 1, 2);
   }
 }
 
@@ -396,7 +396,7 @@ export default {
   @include grid-child(2, 16, 2, 3);
 
   @include for-desktop-up {
-    @include grid-child(2, 12, 2, 3);
+    @include grid-child(2, 16, 2, 3);
   }
 }
 
@@ -404,7 +404,7 @@ export default {
   @include grid-child(2, 16, 3, 4);
 
   @include for-desktop-up {
-    @include grid-child(2, 12, 3, 4);
+    @include grid-child(2, 16, 3, 4);
   }
 }
 
@@ -412,7 +412,7 @@ export default {
   @include grid-child(2, 16, 4, 5);
 
   @include for-desktop-up {
-    @include grid-child(2, 12, 4, 5);
+    @include grid-child(2, 16, 4, 5);
   }
 }
 
@@ -420,7 +420,7 @@ export default {
   @include grid-child(2, 16, 5, 6);
 
   @include for-desktop-up {
-    @include grid-child(2, 7, 5, 6);
+    @include grid-child(2, 9, 5, 6);
   }
 }
 
@@ -428,8 +428,11 @@ export default {
   @include grid-child(2, 16, 6, 7);
 
   @include for-desktop-up {
-    padding-left: 1rem;
-    @include grid-child(7, 12, 5, 6);
+    @include grid-child(9, 16, 5, 6);
+
+    & label {
+      padding-left: 1.8rem;
+    }
   }
 }
 
@@ -437,7 +440,7 @@ export default {
   @include grid-child(2, 16, 7, 8);
 
   @include for-desktop-up {
-    @include grid-child(2, 7, 6, 7);
+    @include grid-child(2, 9, 6, 7);
   }
 }
 
@@ -445,8 +448,11 @@ export default {
   @include grid-child(2, 16, 8, 9);
 
   @include for-desktop-up {
-    padding-left: 1rem;
-    @include grid-child(7, 12, 6, 7);
+    @include grid-child(9, 16, 6, 7);
+
+    & label {
+      padding-left: 1.8rem;
+    }
   }
 }
 
@@ -454,7 +460,7 @@ export default {
   @include grid-child(2, 16, 9, 10);
 
   @include for-desktop-up {
-    @include grid-child(2, 12, 7, 8);
+    @include grid-child(2, 16, 7, 8);
   }
 }
 
@@ -470,7 +476,7 @@ export default {
   @include grid-child(1, 15, 1, 2);
 
   @include for-desktop-up {
-    @include grid-child(1, 4, 1, 2);
+    @include grid-child(1, 6, 1, 2);
   }
 }
 
@@ -478,7 +484,7 @@ export default {
   @include grid-child(1, 15, 1, 2);
 
   @include for-desktop-up {
-    @include grid-child(1, 2, 1, 2);
+    @include grid-child(1, 3, 1, 2);
   }
 }
 
@@ -498,8 +504,7 @@ export default {
   @include grid-child(1, 15, 2, 3);
 
   @include for-desktop-up {
-    margin-left: 1.2rem;
-    @include grid-child(3, 11, 1, 2);
+    @include grid-child(5, 16, 1, 2);
   }
 }
 
@@ -507,7 +512,7 @@ export default {
   @include grid-child(1, 15, 2, 3);
 
   @include for-desktop-up {
-    @include grid-child(2, 6, 1, 2);
+    @include grid-child(3, 8, 1, 2);
   }
 }
 
@@ -521,8 +526,7 @@ export default {
 #mailing-list form .form-group.full span {
   @include grid-child(1, 15, 3, 4);
   @include for-desktop-up {
-    padding-left: 1.2rem;
-    @include grid-child(3, 11, 2, 3);
+    @include grid-child(5, 16, 2, 3);
   }
 }
 
@@ -530,7 +534,7 @@ export default {
   @include grid-child(1, 15, 3, 4);
 
   @include for-desktop-up {
-    @include grid-child(2, 11, 2, 3);
+    @include grid-child(3, 8, 2, 3);
   }
 }
 
@@ -540,21 +544,21 @@ export default {
   background: var(--grey);
   border-radius: 7px;
   @include display-grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(16, 1fr);
 
   @include grid-child(1, 17, 11, 12);
 
   @include for-desktop-up {
     margin-top: 2rem;
-    @include grid-child(1, 13, 8, 9);
+    @include grid-child(1, 17, 8, 9);
   }
 }
 
 #mailing-list form .legal .age {
   @include display-grid;
   grid-template-rows: auto auto auto;
-  grid-template-columns: repeat(11, 1fr);
-  @include grid-child(2, 12, 1, 2);
+  grid-template-columns: repeat(14, 1fr);
+  @include grid-child(2, 16, 1, 2);
 }
 
 #mailing-list form .legal .age h3 {
@@ -573,11 +577,12 @@ export default {
 }
 
 #mailing-list form .legal h4 {
-  @include grid-child(2, 11, 2, 3);
+  margin-bottom: 0;
+  @include grid-child(2, 16, 2, 3);
 }
 
 #mailing-list form .legal p {
-  @include grid-child(2, 12, 3, 4);
+  @include grid-child(2, 16, 3, 4);
 }
 
 #mailing-list form .legal .age .radio-group {
@@ -595,7 +600,7 @@ export default {
   @include grid-child(1, 6, 2, 3);
 
   @include for-desktop-up {
-    @include grid-child(2, 6, 2, 3);
+    @include grid-child(2, 7, 2, 3);
   }
 }
 
@@ -603,7 +608,7 @@ export default {
   @include grid-child(7, 12, 2, 3);
 
   @include for-desktop-up {
-    @include grid-child(7, 11, 2, 3);
+    @include grid-child(9, 14, 2, 3);
   }
 }
 
@@ -635,7 +640,7 @@ export default {
 
   @include for-desktop-up {
     margin: 5rem 0;
-    @include grid-child(3, 11, 9, 10);
+    @include grid-child(3, 15, 9, 10);
   }
 }
 

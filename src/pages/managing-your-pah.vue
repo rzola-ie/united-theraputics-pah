@@ -29,21 +29,21 @@
       />
       <h1 class="section-header">What is risk status (and your prognosis)?</h1>
       <p class="lead">
-        You’re likely familiar with your <u>functional class</u> and other tests
+        You're likely familiar with your <u>functional class</u> and other tests
         that describe the status of your PAH today. But most people also want to
         know how their PAH will impact them in the future. PAH experts now know
         how to use the information about your functional class and 6-minute walk
         test, along with other test results, to determine how PAH may affect you
-        in the next 5 years – it’s called <strong>risk status</strong>. Risk
+        in the next 5 years – it's called <strong>risk status</strong>. Risk
         status goes beyond determining how PAH is affecting you today and helps
         your doctor assess the chance that your PAH will get worse in the
         future.
       </p>
       <div class="section-body">
         <p>
-          There are 3 levels of risk: low, intermediate and high. If you’re
-          <strong>low risk</strong> today, that means there’s a low chance of
-          your PAH getting worse. If you’re <strong>intermediate</strong> or
+          There are 3 levels of risk: low, intermediate and high. If you're
+          <strong>low risk</strong> today, that means there's a low chance of
+          your PAH getting worse. If you're <strong>intermediate</strong> or
           <strong>high risk</strong>, there is a higher chance that your PAH
           will get worse. Your doctor may consider adjusting your dose or adding
           a new medicine to improve your risk status.
@@ -106,7 +106,7 @@
       </h1>
       <div class="section-body">
         <p>
-          It’s important for you to be clear and honest with your doctor about
+          It's important for you to be clear and honest with your doctor about
           your symptoms and to discuss treatment goals that will help improve
           them. For example, you may want to set a specific goal of being able
           to walk further without feeling short of breath.
@@ -145,10 +145,10 @@
           helps you feel better, and improves your long-term prognosis and life
           expectancy – that is, one that gives you the best chance of doing
           better in the future. Your doctor will monitor your test results, but
-          you’re the one who will really know how you’re doing day-to-day. It’s
+          you're the one who will really know how you're doing day-to-day. It's
           helpful to use a journal to keep track of your symptoms, along with
           the activities that seems to trigger them. That way, at your next
-          visit, you can tell your doctor how you’ve really been feeling so your
+          visit, you can tell your doctor how you've really been feeling so your
           care team can better understand how your are <i>really</i> doing.
         </p>
 
@@ -177,7 +177,7 @@
             >people living with PAH are encouraged to seek out a doctor and
             treatment team that specializes in treating PAH.</strong
           >
-          These doctors are committed to treating PAH—they’ve had specific PAH
+          These doctors are committed to treating PAH—they've had specific PAH
           training, they keep up with the latest research, and they have offices
           that support the special needs of people with PAH.
         </p>
@@ -296,7 +296,7 @@
       <h1 class="section-header">PAH PATHWAYS</h1>
       <div class="section-body">
         <h3>
-          Ready to do better than “just okay?” Learn about treatment approaches
+          Ready to do better than "just okay?" Learn about treatment approaches
           for PAH.
         </h3>
         <g-link class="button" to="/pah-pathways/">Learn More</g-link>

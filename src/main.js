@@ -27,7 +27,11 @@ extend('required', {
   ...rules.required,
   message: (field) => `The ${field} field is required`
 })
-  extend('email', email);
+extend('email', {
+  ...rules.email,
+  message: () => `Please enter a valid e-mail`
+})
+
   Vue.component('ValidationProvider', ValidationProvider);
   Vue.component('ValidationObserver', ValidationObserver);
 
@@ -48,4 +52,3 @@ extend('required', {
     content: 'width=device-width, initial-scale=1'
   })
 }
-
