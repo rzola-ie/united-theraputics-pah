@@ -28,7 +28,7 @@
           resources
         </g-link>
 
-        <g-link class="nav__link newsletter" to="/newsletter/">
+        <g-link class="nav__link newsletter" to="/join/">
           sign up to recieve our newsletter
         </g-link>
       </nav>

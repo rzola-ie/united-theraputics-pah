@@ -34,7 +34,7 @@
           resources
         </g-link>
 
-        <g-link class="nav__link newsletter" to="/newsletter" active-class>
+        <g-link class="nav__link newsletter" to="/join" active-class>
           sign up to recieve our newsletter
         </g-link>
       </nav>
@@ -78,8 +78,6 @@ export default {
 @import "~/assets/styles/modules/_breakpoints";
 @import "~/assets/styles/modules/_cross-browser";
 
-
-
 .header {
   min-height: 60px;
   width: 100%;
@@ -98,8 +96,8 @@ export default {
   margin: auto;
   @include display-grid;
   grid-template-columns: 30px 1fr 30px;
-    align-items: center;
-    justify-items: center;
+  align-items: center;
+  justify-items: center;
   padding-bottom: 1rem;
   grid-gap: 1rem;
   border-bottom: 2px solid var(--wine);

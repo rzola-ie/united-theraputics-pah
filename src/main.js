@@ -1,6 +1,10 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
+import { ValidationObserver, ValidationProvider, extend } from 'vee-validate';
+import { required, email } from "vee-validate/dist/rules";
+import * as rules from 'vee-validate/dist/rules';
+
 // stylesheets
 import 'normalize.css';
 import '~/assets/styles/main.scss';
@@ -18,6 +22,15 @@ import CallToAction from '~/components/CallToAction.vue';
 import Footer from '~/components/Footer.vue';
 
 export default function (Vue, { router, head, isClient }) {
+
+extend('required', {
+  ...rules.required,
+  message: (field) => `The ${field} field is required`
+})
+  extend('email', email);
+  Vue.component('ValidationProvider', ValidationProvider);
+  Vue.component('ValidationObserver', ValidationObserver);
+
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.component('SecondaryLayout', SecondaryLayout)
