@@ -259,6 +259,8 @@
         </div>
       </ValidationObserver>
     </section>
+
+    <CallToAction />
   </SecondaryLayout>
 </template>
 
@@ -307,6 +309,7 @@ export default {
 
   &::before {
     background: var(--purple);
+    @include grid-child(1, 17, 1, 7);
 
     @include for-desktop-up {
       @include grid-child(3, 15, 2, 7);
@@ -329,22 +332,27 @@ export default {
 }
 
 #mailing-list h3 {
+  @include grid-child(2, 16, 2, 3);
+
   @include for-desktop-up {
     @include grid-child(4, 11, 3, 4);
   }
 }
 
 #mailing-list small {
+  @include grid-child(2, 16, 3, 4);
+  margin-bottom: 1rem;
+
   @include for-desktop-up {
-    margin-bottom: 1rem;
     @include grid-child(4, 15, 4, 5);
   }
 }
 
 #mailing-list form {
   @include display-grid;
+  @include grid-child(1, 17, 5, 6);
   grid-template-rows: repeat(2, auto);
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(16, 1fr);
 
   @include for-desktop-up {
     @include grid-child(3, 15, 5, 6);
@@ -352,12 +360,20 @@ export default {
 }
 
 #mailing-list form .form-group {
-  width: 100%;
   @include display-grid;
+  grid-template-rows: repeat(3, auto);
+
+  @include for-desktop-up {
+    grid-template-rows: auto auto;
+  }
 }
 
 #mailing-list form .form-group.full {
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(14, 1fr);
+
+  @include for-desktop-up {
+    grid-template-columns: repeat(10, 1fr);
+  }
 }
 
 #mailing-list form .form-group.half {
@@ -369,55 +385,101 @@ export default {
 }
 
 #mailing-list form .form-group:first-child {
-  @include grid-child(2, 12, 1, 2);
+  @include grid-child(2, 16, 1, 2);
+
+  @include for-desktop-up {
+    @include grid-child(2, 12, 1, 2);
+  }
 }
 
 #mailing-list form .form-group:nth-child(2) {
-  @include grid-child(2, 12, 2, 3);
+  @include grid-child(2, 16, 2, 3);
+
+  @include for-desktop-up {
+    @include grid-child(2, 12, 2, 3);
+  }
 }
 
 #mailing-list form .form-group:nth-child(3) {
-  @include grid-child(2, 12, 3, 4);
+  @include grid-child(2, 16, 3, 4);
+
+  @include for-desktop-up {
+    @include grid-child(2, 12, 3, 4);
+  }
 }
 
 #mailing-list form .form-group:nth-child(4) {
-  @include grid-child(2, 12, 4, 5);
+  @include grid-child(2, 16, 4, 5);
+
+  @include for-desktop-up {
+    @include grid-child(2, 12, 4, 5);
+  }
 }
 
 #mailing-list form .form-group:nth-child(5) {
-  @include grid-child(2, 7, 5, 6);
+  @include grid-child(2, 16, 5, 6);
+
+  @include for-desktop-up {
+    @include grid-child(2, 7, 5, 6);
+  }
 }
 
 #mailing-list form .form-group:nth-child(6) {
-  padding-left: 1rem;
-  @include grid-child(7, 12, 5, 6);
+  @include grid-child(2, 16, 6, 7);
+
+  @include for-desktop-up {
+    padding-left: 1rem;
+    @include grid-child(7, 12, 5, 6);
+  }
 }
 
 #mailing-list form .form-group:nth-child(7) {
-  @include grid-child(2, 7, 6, 7);
+  @include grid-child(2, 16, 7, 8);
+
+  @include for-desktop-up {
+    @include grid-child(2, 7, 6, 7);
+  }
 }
 
 #mailing-list form .form-group:nth-child(8) {
-  padding-left: 1rem;
-  @include grid-child(7, 12, 6, 7);
+  @include grid-child(2, 16, 8, 9);
+
+  @include for-desktop-up {
+    padding-left: 1rem;
+    @include grid-child(7, 12, 6, 7);
+  }
 }
 
 #mailing-list form .form-group:nth-child(9) {
-  @include grid-child(2, 12, 7, 8);
+  @include grid-child(2, 16, 9, 10);
+
+  @include for-desktop-up {
+    @include grid-child(2, 12, 7, 8);
+  }
 }
 
 #mailing-list form .form-group label {
   font-weight: bold;
-  font-size: 1.2rem;
   align-self: center;
+  @include for-desktop-up {
+    font-size: 1.2rem;
+  }
 }
 
 #mailing-list form .form-group.full label {
-  @include grid-child(1, 4, 1, 2);
+  @include grid-child(1, 15, 1, 2);
+
+  @include for-desktop-up {
+    @include grid-child(1, 4, 1, 2);
+  }
 }
 
 #mailing-list form .form-group.half label {
-  @include grid-child(1, 2, 1, 2);
+  @include grid-child(1, 15, 1, 2);
+
+  @include for-desktop-up {
+    @include grid-child(1, 2, 1, 2);
+  }
 }
 
 #mailing-list form .form-group input {
@@ -428,13 +490,25 @@ export default {
   border-radius: 4px;
 }
 
+#mailing-list form .form-group input.invalid {
+  border: 1px solid red;
+}
+
 #mailing-list form .form-group.full input {
-  margin-left: 1.2rem;
-  @include grid-child(3, 11, 1, 2);
+  @include grid-child(1, 15, 2, 3);
+
+  @include for-desktop-up {
+    margin-left: 1.2rem;
+    @include grid-child(3, 11, 1, 2);
+  }
 }
 
 #mailing-list form .form-group.half input {
-  @include grid-child(2, 6, 1, 2);
+  @include grid-child(1, 15, 2, 3);
+
+  @include for-desktop-up {
+    @include grid-child(2, 6, 1, 2);
+  }
 }
 
 #mailing-list form .form-group span {
@@ -445,22 +519,35 @@ export default {
 }
 
 #mailing-list form .form-group.full span {
-  padding-left: 1.2rem;
-  @include grid-child(3, 11, 2, 3);
+  @include grid-child(1, 15, 3, 4);
+  @include for-desktop-up {
+    padding-left: 1.2rem;
+    @include grid-child(3, 11, 2, 3);
+  }
 }
 
 #mailing-list form .form-group.half span {
-  @include grid-child(2, 11, 2, 3);
+  @include grid-child(1, 15, 3, 4);
+
+  @include for-desktop-up {
+    @include grid-child(2, 11, 2, 3);
+  }
 }
 
 #mailing-list form .legal {
   padding: 3rem 0;
-  margin-top: 2rem;
+  margin-top: 1rem;
   background: var(--grey);
   border-radius: 7px;
   @include display-grid;
   grid-template-columns: repeat(12, 1fr);
-  @include grid-child(1, 13, 8, 9);
+
+  @include grid-child(1, 17, 11, 12);
+
+  @include for-desktop-up {
+    margin-top: 2rem;
+    @include grid-child(1, 13, 8, 9);
+  }
 }
 
 #mailing-list form .legal .age {
@@ -478,7 +565,11 @@ export default {
   margin-top: 1rem;
   color: red;
   text-align: center;
-  @include grid-child(4, 9, 3, 4);
+  @include grid-child(1, 12, 3, 4);
+
+  @include for-desktop-up {
+    @include grid-child(4, 9, 3, 4);
+  }
 }
 
 #mailing-list form .legal h4 {
@@ -501,11 +592,19 @@ export default {
 }
 
 #mailing-list form .legal .age .radio-group.yes {
-  @include grid-child(2, 6, 2, 3);
+  @include grid-child(1, 6, 2, 3);
+
+  @include for-desktop-up {
+    @include grid-child(2, 6, 2, 3);
+  }
 }
 
 #mailing-list form .legal .age .radio-group.no {
-  @include grid-child(7, 11, 2, 3);
+  @include grid-child(7, 12, 2, 3);
+
+  @include for-desktop-up {
+    @include grid-child(7, 11, 2, 3);
+  }
 }
 
 #mailing-list form .legal .age .radio-group input {
@@ -531,8 +630,13 @@ export default {
 }
 
 #mailing-list form .section-submit {
-  margin: 5rem 0;
-  @include grid-child(3, 11, 9, 10);
+  margin: 2rem 0;
+  @include grid-child(2, 16, 12, 13);
+
+  @include for-desktop-up {
+    margin: 5rem 0;
+    @include grid-child(3, 11, 9, 10);
+  }
 }
 
 #mailing-list form .section-submit button {
