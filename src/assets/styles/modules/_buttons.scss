@@ -1,0 +1,62 @@
+button {
+  cursor: pointer;
+}
+
+.button,
+a.button {
+  display: inline-block;
+  min-width: 180px;
+  height: 40px;
+  padding: 0 2rem;
+  border: 2px solid $wine;
+  font-family: ProximaNovaBold, 'Arial Narrow Bold', sans-serif;
+  font-size: 1rem;
+  color: $wine;
+  background: transparent;
+  line-height: 36px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button[type="submit"] {
+  height: 50px;
+  border-color: black;
+  background: black;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* MODAL BUTTONS
+====================================================== */
+
+a.modal-default,
+button.modal-default {
+  @extend .button;
+  height: 50px;
+  min-width: 140px;
+  line-height: 45px;
+  background: white;
+  border: 2px solid white;
+  
+
+  @include for-desktop-up {
+    min-width: 180px;
+    font-size: 1.2rem;
+  }
+}
+
+button.modal-secondary {
+  @extend .button;
+  min-width: 140px;
+  height: 50px;
+  line-height: 45px;
+  color: black;
+  cursor: pointer;
+
+  @include for-desktop-up {
+    min-width: 180px;
+    font-size: 1.2rem;
+  }
+}

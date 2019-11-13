@@ -1,12 +1,25 @@
 <template>
   <Layout>
-    <section id="hero">
+    <section transparent id="hero">
       <Header />
       <g-image
         class="hero-image"
-        src="~/assets/img/Hero-Visual.png"
+        src="~/assets/img/hero-image.png"
         alt="an image of a park with trees. The PAH initiative logo is in the center"
       />
+      <g-image
+        class="hero-image-mobile"
+        src="~/assets/img/hero-image-mobile.png"
+        alt="an image of a park with trees. The PAH initiative logo is in the center"
+      />
+      <h2 class="hero-text">
+        The PAH Initiative (PAH-I), sponsored by United Therapeutics, aims to
+        improve the care of people living with pulmonary arterial hypertension
+        (PAH) by providing education that helps patients receive the right
+        treatment at the right time. United Therapeutics is proud to sponsor the
+        PAH-I and will work to establish the PAH Initiative as a trusted
+        resource for the PAH community.
+      </h2>
       <button id="hero-down-button" @click="handleArrowClick">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +37,7 @@
     </section>
     <!-- hero -->
 
-    <section id="feel-better">
+    <section purple id="feel-better">
       <h1 class="section-header">
         You can accept feeling "okay." Or you can ask your doctor about feeling
         better
@@ -45,22 +58,22 @@
         </p>
 
         <p>
-          PAH is a severe disease that gets worse over time. But today's
-          treatment options can
-          <strong
-            >slow the disease's progression and improve how you feel.</strong
-          >
-          By working closely with your doctor to assess your <u>symptoms</u>,
-          <u>risk status</u> and <u>treatment options</u>, you'll be better able
-          to manage the impact of PAH on your life. Together with the support of
-          your healthcare team, there may be more you can do to achieve your
-          treatment goals.
+          PAH is a severe disease that gets worse over time. But some of today’s
+          medicines have been shown to slow disease progression and improve how
+          you feel. By working closely with your doctor to assess your
+          <g-link to="/what-is-pah#pah-symptoms">symptoms</g-link>,
+          <g-link to="/managing-your-pah#risk-prognosis">risk status</g-link>
+          and
+          <g-link to="/prostacyclin-class-therapies">treatment options</g-link>,
+          you may be better able to manage the impact of PAH on your life.
+          Together with the support of your healthcare team, there may be more
+          you can do to achieve your treatment goals.
         </p>
       </div>
     </section>
     <!-- feel better -->
 
-    <section id="risk-status">
+    <section grey id="risk-status">
       <h1 class="section-header">
         Why is risk status so important?
       </h1>
@@ -84,25 +97,25 @@
       <p>
         Even if your doctor is satisfied that you're doing "okay" with your PAH,
         is doing "okay" enough for you? There may be ways to reduce your
-        <u>symptoms</u> so you can feel better and do more. As ongoing research
-        helps us understand more about PAH, experts continue to improve the way
-        they treat it.
+        symptoms so you can feel better and do more. As ongoing research helps
+        us understand more about PAH, experts continue to improve the way they
+        treat it.
       </p>
       <div class="section-body">
         <p>
           In order to determine the best treatment approach for you, it is
           important to have your doctor regularly monitor your
-          <strong><u>risk status</u></strong> (the risk of your PAH getting
-          worse over the next 5 years). Your doctor will conside-bars a number
-          of factors to determine whether you are at low-, intermediate- or
-          high-risk status.
+          <g-link to="/managing-your-pah#risk-prognosis">risk status</g-link>
+          (the risk of your PAH getting worse over the next 5 years). Your
+          doctor will conside-bars a number of factors to determine whether you
+          are at low-, intermediate- or high-risk status.
         </p>
       </div>
     </section>
     <!-- feel better -->
 
     <div class="side-bars">
-      <section id="what-is-pah">
+      <section purple id="what-is-pah">
         <g-image
           src="~/assets/img/icn-what-is-pah.png"
           alt="an icon of lungs"
@@ -113,12 +126,12 @@
 
         <div class="section-body">
           <h2>Looking for more information about PAH?</h2>
-          <g-link class="button" to="/what-is-pah/">Learn More</g-link>
+          <g-link class="button" to="/what-is-pah">Learn More</g-link>
         </div>
       </section>
       <!-- what is pah -->
 
-      <section id="managing-your-pah">
+      <section grey id="managing-your-pah">
         <g-image
           src="~/assets/img/icn-managing-your-pah.png"
           alt="an icon of a checklist"
@@ -129,12 +142,12 @@
 
         <div class="section-body">
           <h2>Want to learn about how you can do more about your PAH?</h2>
-          <button>Take Action</button>
+          <g-link class="button" to="/managing-your-pah">Take Action</g-link>
         </div>
       </section>
       <!-- managing your pah -->
 
-      <section id="pah-pathways">
+      <section purple id="pah-pathways">
         <g-image
           src="~/assets/img/icn-pah-pathways.png"
           alt="an icon of molecule chains"
@@ -145,27 +158,28 @@
 
         <div class="section-body">
           <h2>Do you know about the 3 imbalances that contribute to PAH?</h2>
-          <button>Get Started</button>
+          <g-link class="button" to="/pah-pathways">Get Started</g-link>
         </div>
       </section>
       <!-- pah pathways -->
 
-      <section id="therapies">
+      <section grey id="therapies">
         <g-image
           src="~/assets/img/icn-therapies.png"
           alt="an icon of a prescription symbol"
           class="section-icon"
         />
 
-        <h1 class="section-header">Prostacyclin-Class Therapies</h1>
+        <h1 class="section-header">Treatment Options</h1>
 
         <div class="section-body">
-          <h2>Do you know about Prostacyclin-class treatments?</h2>
-          <button>Discover</button>
+          <h2>Learn about treatment options from United Therapeutics</h2>
+          <a class="button" href="https://www.fightingpah.com">Discover</a>
         </div>
       </section>
       <!-- therapies -->
     </div>
+    <!-- side bars -->
 
     <CallToAction />
   </Layout>
@@ -173,12 +187,8 @@
 
 <script>
 export default {
-  metaInfo: {
-    title: "Hello, world!"
-  },
   methods: {
     handleArrowClick() {
-      console.log("we scrollin");
       document
         .getElementById("feel-better")
         .scrollIntoView({ behavior: "smooth" });
@@ -188,17 +198,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/modules/_cross-browser";
-@import "~/assets/styles/modules/_breakpoints";
-
 /* HERO SECTION
 ====================================================== */
 
 #hero {
-  position: relative;
-  padding: 0 0.5rem;
-  margin: 0;
-  grid-template-rows: 60px 1fr auto;
+  padding: 0;
+  margin: 0 auto;
+  grid-template-rows: 60px repeat(11, 36px);
 
   @include for-desktop-up {
     grid-template-rows: 80px repeat(11, 80px);
@@ -207,37 +213,62 @@ export default {
   }
 
   &::before {
-    background: none;
     display: none;
   }
 }
 
 #hero .hero-image {
-  width: 100%;
-  @include grid-child(2, 17, 2, 4);
-  z-index: -1;
+  display: none;
 
   @include for-desktop-up {
+    display: block;
+    width: 100%;
     @include grid-child(2, 17, 1, 4);
   }
 }
 
+#hero .hero-image-mobile {
+  display: block;
+  width: 100%;
+  @include grid-child(1, 17, 1, 5);
+
+  @include for-desktop-up {
+    display: none;
+    width: 100%;
+  }
+}
+
+#hero .hero-text {
+  text-align: center;
+  font-size: 0.75rem;
+  padding-top: 0.4rem;
+  @include grid-child(2, 16, 7, 11);
+
+  @include for-desktop-up {
+    padding: 0 3rem;
+    padding-top: 0.6rem;
+    font-size: 1.35rem;
+    line-height: 1.92rem;
+    @include grid-child(3, 14, 7, 11);
+  }
+}
+
 #hero #hero-down-button {
-  @include grid-child(8, 9, 3, 4);
   min-width: auto;
-  height: 10px;
-  width: 20px;
+  height: 8px;
+  width: 16px;
   padding: 0;
   background: 0;
   border: none;
-  align-self: center;
   justify-self: center;
-  cursor: pointer;
+  align-self: center;
+  @include grid-child(8, 10, 10, 12);
 
   @include for-desktop-up {
-    height: 25px;
-    width: 35px;
-    @include grid-child(8, 9, 10, 11);
+    height: 20px;
+    width: 30px;
+    @include grid-child(8, 10, 10, 11);
+    cursor: pointer;
   }
 }
 
@@ -249,8 +280,6 @@ export default {
   }
 
   &::before {
-    background: var(--purple);
-
     @include for-tablet-portrait-up {
       margin-left: 10px;
     }
@@ -297,7 +326,6 @@ export default {
   }
 
   &::before {
-    background: var(--grey);
     @include grid-child(1, 17, 1, 5);
 
     @include for-tablet-portrait-up {
@@ -333,8 +361,6 @@ export default {
 
   @include for-desktop-up {
     padding-top: 1rem;
-    font-size: 20px;
-    line-height: 24px;
     @include grid-child(7, 14, 2, 3);
   }
 }
@@ -362,7 +388,7 @@ export default {
   &:before {
     content: "";
     @include grid-child(1, 17, 1, 3);
-    background: var(--purple);
+    background: $purple;
     border-radius: 7px;
 
     @include for-desktop-up {
@@ -376,10 +402,8 @@ export default {
   @include for-desktop-up {
     margin: 30px 0 30px 0;
     padding: 0;
-    font-weight: 400;
+    font-family: ProximaNova, sans-serif;
     font-size: 14px;
-    letter-spacing: 0.23px;
-    line-height: 18px;
     @include grid-child(2, 9, 1, 2);
   }
 }
@@ -393,7 +417,6 @@ export default {
   }
 
   &::before {
-    background: var(--purple);
     @include grid-child(2, 16, 1, 3);
 
     @include for-tablet-portrait-up {
@@ -408,7 +431,7 @@ export default {
 
 #what-is-pah .section-icon {
   @include for-desktop-up {
-    padding: 0 30px;
+    padding: 0 20px;
     @include grid-child(11, 14, 1, 4);
   }
 }
@@ -443,7 +466,6 @@ export default {
 
 #managing-your-pah {
   &::before {
-    background: var(--grey);
     @include grid-child(2, 16, 1, 3);
 
     @include for-tablet-portrait-up {
@@ -458,7 +480,7 @@ export default {
 
 #managing-your-pah .section-icon {
   @include for-desktop-up {
-    padding: 0 35px;
+    padding: 0 30px;
     @include grid-child(5, 8, 1, 3);
   }
 }
@@ -499,7 +521,6 @@ export default {
   }
 
   &::before {
-    background: var(--purple);
     @include grid-child(2, 16, 1, 3);
 
     @include for-tablet-portrait-up {
@@ -514,7 +535,7 @@ export default {
 
 #pah-pathways .section-icon {
   @include for-desktop-up {
-    padding: 0 35px;
+    padding: 0 20px;
     @include grid-child(11, 14, 1, 4);
   }
 }
@@ -549,7 +570,6 @@ export default {
 
 #therapies {
   &::before {
-    background: var(--grey);
     @include grid-child(2, 16, 1, 3);
 
     @include for-tablet-portrait-up {
@@ -564,7 +584,7 @@ export default {
 
 #therapies .section-icon {
   @include for-desktop-up {
-    padding: 0 35px;
+    padding: 0 25px;
     margin-top: 30px;
     @include grid-child(5, 8, 1, 3);
   }

@@ -24,17 +24,17 @@
 
         <g-link
           class="nav__link"
-          to="/prostacyclin-class-therapies/"
+          to="/prostacyclin-class-therapies"
           active-class
         >
           prostacyclin-<br />class therapies
         </g-link>
 
-        <g-link class="nav__link" to="/resources/" active-class>
+        <g-link class="nav__link" to="/resources" active-class>
           resources
         </g-link>
 
-        <g-link class="nav__link newsletter" to="/join" active-class>
+        <g-link class="nav__link newsletter" to="/newsletter" active-class>
           sign up to recieve our newsletter
         </g-link>
       </nav>
@@ -49,8 +49,47 @@
       <!-- hamburger -->
     </div>
 
-    <div class="drawer-back" ref="drawerBg">
-      <div class="drawer" ref="drawer">hi</div>
+    <div class="drawer-back" ref="drawerBg" @click.self="toggleSide">
+      <div class="drawer" ref="drawer">
+        <g-link to="/" class="drawer-header-logo">
+          <g-image
+            class="header-logo-img"
+            src="~/assets/img/PAH-Logo-Header.png"
+            alt="the pah initiative logo"
+          />
+        </g-link>
+
+        <nav class="drawer-nav">
+          <g-link class="nav__link" to="/what-is-pah">
+            what is pah?
+          </g-link>
+
+          <g-link class="nav__link" to="/managing-your-pah">
+            managing your pah
+          </g-link>
+
+          <g-link class="nav__link" to="/pah-pathways">
+            pah pathways
+          </g-link>
+
+          <g-link
+            class="nav__link"
+            to="/prostacyclin-class-therapies"
+            tabindex="5"
+            >prostacyclin-class therapies
+          </g-link>
+
+          <g-link class="nav__link" to="/resources">
+            resources
+          </g-link>
+
+          <g-link class="nav__link newsletter" to="/newsletter">
+            sign up to recieve our newsletter
+          </g-link>
+        </nav>
+
+        <div class="drawer-sponsored">Sponsored by: United Theraputics</div>
+      </div>
     </div>
     <!-- drawer-back -->
   </header>
@@ -75,13 +114,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/modules/_breakpoints";
-@import "~/assets/styles/modules/_cross-browser";
-
 .header {
   min-height: 60px;
   width: 100%;
-  padding: 1rem;
+  padding: 1.14rem 1rem;
   margin: auto;
 
   @include for-desktop-up {
@@ -91,18 +127,19 @@ export default {
 
 .header-inner {
   width: 100%;
-  max-width: var(--max-width);
-  height: 65px;
+  max-width: $web-common;
+  padding: 0 0 0 1rem;
+  padding-bottom: 0.5rem;
   margin: auto;
   @include display-grid;
   grid-template-columns: 30px 1fr 30px;
-  align-items: center;
   justify-items: center;
-  padding-bottom: 1rem;
   grid-gap: 1rem;
-  border-bottom: 2px solid var(--wine);
+  border-bottom: 2px solid $wine;
 
   @include for-desktop-up {
+    padding-bottom: 1rem;
+    align-items: center;
     grid-template-columns: 140px auto 110px;
   }
 }
@@ -143,7 +180,7 @@ export default {
 .nav__link {
   height: 100%;
   padding: 0.5rem 0;
-  font-weight: bold;
+  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
   color: black;
   text-decoration: none;
   text-transform: uppercase;
@@ -153,7 +190,7 @@ export default {
   text-align: center;
 
   &.active {
-    color: var(--wine);
+    color: $wine;
   }
 
   &.newsletter {
@@ -169,89 +206,14 @@ export default {
   @include for-desktop-up {
     display: flex;
     align-items: center;
+    justify-content: center;
     font-size: 0.7rem;
     text-align: center;
   }
 }
 
-.hamburger {
-  width: 30px;
-  height: 25px;
-  position: relative;
-  grid-column: 3;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-  z-index: 9999;
-
-  @include for-desktop-up {
-    display: none;
-  }
-}
-
-.hamburger span {
-  display: block;
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  border-radius: 2px;
-  background: var(--wine);
-  opacity: 1;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
-  -o-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out;
-}
-
-.hamburger span:nth-child(1) {
-  top: 0px;
-}
-
-.hamburger span:nth-child(2),
-.hamburger span:nth-child(3) {
-  top: 10px;
-}
-
-.hamburger span:nth-child(4) {
-  top: 20px;
-}
-
-.hamburger.open span:nth-child(1) {
-  top: 10px;
-  width: 0%;
-  left: 50%;
-}
-
-.hamburger.open span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.hamburger.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.hamburger.open span:nth-child(4) {
-  top: 10px;
-  width: 0%;
-  left: 50%;
-}
+/* DRAWER
+====================================================== */
 
 .drawer-back {
   position: fixed;
@@ -260,14 +222,14 @@ export default {
   z-index: 999;
   top: 0;
   left: 0;
-  background-color: rgba(black, 0.4);
-  opacity: 0;
+  background-color: rgba(black, 0);
+
   pointer-events: none;
-  transition: opacity 500ms cubic-bezier(0.5, 0, 0.5, 1);
+  transition: background-color 500ms cubic-bezier(0.5, 0, 0.5, 1);
   padding: 0.8rem;
 
   &.open {
-    opacity: 1;
+    background-color: rgba(black, 0.9);
     pointer-events: all;
   }
 
@@ -282,18 +244,52 @@ export default {
   width: 90%;
   right: -100%;
   top: 0;
-  background-color: white;
-  z-index: 9998;
+  @include display-grid;
+  grid-template-rows: 40px 1fr 40px;
+  grid-template-columns: 1fr;
+  background: #fff url("../assets/img/background.svg");
+  background-size: 100px 100px;
+  background-repeat: repeat;
   transition: right 500ms cubic-bezier(0.5, 0, 0.5, 1);
   box-shadow: -4px 0 8px 0 rgba(black, 0.2);
-  padding: 2rem;
+  padding: 1rem;
+  z-index: 9998;
+
+  & * {
+    opacity: 0;
+    transition: opacity 500ms cubic-bezier(0.5, 0, 0.5, 1);
+  }
 
   &.open {
     right: 0;
     transition: right 500ms cubic-bezier(0.5, 0, 0.5, 1);
+
+    & * {
+      opacity: 1;
+    }
   }
   @include for-desktop-up {
     display: none;
   }
+}
+
+.drawer-header-logo {
+  width: 140px;
+  grid-column-start: 1;
+  justify-self: center;
+  @include grid-child(1, 2, 1, 2);
+}
+
+.drawer-nav {
+  @include display-grid;
+  grid-auto-columns: 1fr;
+  grid-template-rows: repeat(6, 60px);
+}
+
+.drawer-sponsored {
+  align-self: start;
+  justify-self: center;
+  font-size: 0.7rem;
+  text-align: center;
 }
 </style>

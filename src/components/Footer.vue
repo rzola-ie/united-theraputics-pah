@@ -2,27 +2,35 @@
   <footer class="footer">
     <div class="footer-inner">
       <nav class="footer-nav">
-        <g-link class="footer-nav-link" to="/what-is-pah">
+        <g-link class="footer-nav-link" to="/newsletter" active-class>
           <span>Email Opt-In</span>
         </g-link>
 
-        <g-link class="footer-nav-link" to="/managing-your-pah">
+        <g-link
+          class="footer-nav-link"
+          to="../assets/pdfs/ut-privacy-policy.pdf"
+          target="_blank"
+        >
           <span>Privacy Policy</span>
         </g-link>
 
-        <g-link class="footer-nav-link" to="/about/">
+        <g-link
+          class="footer-nav-link"
+          to="../assets/pdfs/ut-terms-of-use.pdf"
+          target="_blank"
+        >
           <span>Terms of Use</span>
         </g-link>
 
-        <g-link class="footer-nav-link" to="/about/">
+        <g-link class="footer-nav-link" to="/contact-us" active-class>
           <span>Contact Us</span>
         </g-link>
 
-        <g-link class="footer-nav-link" to="/about/">
+        <g-link class="footer-nav-link" to="/unsubscribe" active-class>
           <span>Unsubscribe</span>
         </g-link>
 
-        <g-link class="footer-nav-link" to="/site-map">
+        <g-link class="footer-nav-link" to="/site-map" active-class>
           <span>Site Map</span>
         </g-link>
       </nav>
@@ -41,12 +49,9 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/modules/_breakpoints";
-@import "~/assets/styles/modules/_cross-browser";
-
 .footer {
   min-height: 120px;
-  background-color: var(--purple);
+  background-color: $purple;
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -59,33 +64,45 @@ export default {};
   @include display-grid;
   grid-template-rows: 1fr auto;
   grid-gap: 0.5rem;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
 .footer-nav {
-  display: none;
   font-size: 0.9rem;
+  @include display-grid;
+  grid-template-rows: repeat(6, auto);
+  grid-template-columns: 1fr;
 
   @include for-desktop-up {
-    @include display-grid;
-    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    grid-template-rows: auto;
+    grid-template-columns: repeat(6, auto);
     grid-gap: 0.2rem;
     align-items: center;
   }
 
   @include for-big-desktop-up {
-    grid-template-columns: repeat(6, minmax(110px, 1fr));
-
+    grid-template-columns: repeat(6, auto);
     grid-gap: 2rem;
   }
 }
 
 .footer-nav-link {
-  text-decoration: none;
+  padding: 0 20px;
+  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
   color: black;
-  font-weight: bold;
+  text-decoration: none;
+
+  &.active {
+    color: $wine;
+  }
+
+  & + .footer-nav-link {
+    margin-top: 0.8rem;
+
+    @include for-desktop-up {
+      margin-top: 0;
+    }
+  }
 }
 
 .footer-nav-link span {
@@ -97,18 +114,16 @@ export default {};
     bottom: -3px;
     height: 2px;
     width: 100%;
-    transform: scale(0);
-    opacity: 0;
+    transform: scaleX(0);
     transform-origin: center;
     background: black;
-    transition: all 400ms cubic-bezier(0.5, 0, 0.5, 1);
+    transition: transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
   }
 
   &:hover {
     &:before {
-      transform: scale(1);
-      opacity: 1;
-      transition: all 400ms cubic-bezier(0.5, 0, 0.5, 1);
+      transform: scaleX(1);
+      transition: transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
     }
   }
 }

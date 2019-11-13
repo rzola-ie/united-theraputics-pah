@@ -2,35 +2,39 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import { ValidationObserver, ValidationProvider, extend } from 'vee-validate';
-import { required, email } from "vee-validate/dist/rules";
+import { required, email, max } from "vee-validate/dist/rules";
 import * as rules from 'vee-validate/dist/rules';
 
 // stylesheets
 import 'normalize.css';
 import '~/assets/styles/main.scss';
-import '~/assets/styles/modules/_breakpoints.scss';
 
 // layouts
 import DefaultLayout from '~/layouts/Default.vue'
 import SecondaryLayout from '~/layouts/Secondary.vue'
 
 // components
-import Header from '~/components/Header.vue';
-import HeaderSecondary from '~/components/HeaderSecondary.vue';
-import InteractiveTool from '~/components/InteractiveTool.vue';
 import CallToAction from '~/components/CallToAction.vue';
 import Footer from '~/components/Footer.vue';
+import Header from '~/components/Header.vue';
+import HeaderSecondary from '~/components/HeaderSecondary.vue';
+import Modal from '~/components/Modal.vue';
+import InteractiveTool from '~/components/InteractiveTool.vue';
 
 export default function (Vue, { router, head, isClient }) {
 
-extend('required', {
-  ...rules.required,
-  message: (field) => `The ${field} field is required`
-})
-extend('email', {
-  ...rules.email,
-  message: () => `Please enter a valid e-mail`
-})
+  // vee-validate message overrides
+  extend('required', {
+    ...rules.required,
+    message: (field) => `The ${field} field is required`
+  })
+  extend('email', {
+    ...rules.email,
+    message: () => `Please enter a valid e-mail`
+  })
+  extend('max', {
+    ...rules.max
+  })
 
   Vue.component('ValidationProvider', ValidationProvider);
   Vue.component('ValidationObserver', ValidationObserver);
@@ -40,6 +44,7 @@ extend('email', {
   Vue.component('SecondaryLayout', SecondaryLayout)
 
   Vue.component('Header', Header);
+  Vue.component('Modal', Modal);
   Vue.component('HeaderSecondary', HeaderSecondary);
   Vue.component('InteractiveTool', InteractiveTool);
   Vue.component('CallToAction', CallToAction);

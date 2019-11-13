@@ -16,19 +16,19 @@
           managing<br />your pah
         </g-link>
 
-        <g-link class="nav__link" to="/pah-pathways/">
+        <g-link class="nav__link" to="/pah-pathways">
           pah pathways
         </g-link>
 
-        <g-link class="nav__link" to="/prostacyclin-class-therapies/"
+        <g-link class="nav__link" to="/prostacyclin-class-therapies"
           >prostacyclin-<br />class therapies
         </g-link>
 
-        <g-link class="nav__link" to="/resources/">
+        <g-link class="nav__link" to="/resources">
           resources
         </g-link>
 
-        <g-link class="nav__link newsletter" to="/join/">
+        <g-link class="nav__link newsletter" to="/newsletter">
           sign up to recieve our newsletter
         </g-link>
       </nav>
@@ -44,8 +44,46 @@
     </div>
     <!-- header-inner -->
 
-    <div class="drawer-back" ref="drawerBg">
-      <div class="drawer" ref="drawer">hi</div>
+    <div class="drawer-back" ref="drawerBg" @click.self="toggleSide">
+      <div class="drawer" ref="drawer">
+        <g-image
+          class="drawer-header-logo"
+          src="~/assets/img/PAH-Logo-Header.png"
+          alt="the pah initiative logo"
+          tabindex="1"
+        />
+
+        <nav class="drawer-nav">
+          <g-link class="nav__link" to="/what-is-pah" tabindex="2">
+            what is pah?
+          </g-link>
+
+          <g-link class="nav__link" to="/managing-your-pah" tabindex="3">
+            managing your pah
+          </g-link>
+
+          <g-link class="nav__link" to="/pah-pathways" tabindex="4">
+            pah pathways
+          </g-link>
+
+          <g-link
+            class="nav__link"
+            to="/prostacyclin-class-therapies"
+            tabindex="5"
+            >prostacyclin-class therapies
+          </g-link>
+
+          <g-link class="nav__link" to="/resources" tabindex="6">
+            resources
+          </g-link>
+
+          <g-link class="nav__link newsletter" to="/newsletter" tabindex="7">
+            sign up to recieve our newsletter
+          </g-link>
+        </nav>
+
+        <div class="drawer-sponsored">Sponsored by: United Theraputics</div>
+      </div>
     </div>
     <!-- drawer-back -->
   </header>
@@ -53,14 +91,24 @@
 
 <script>
 export default {
+  data() {
+    return {
+      isSideOpen: false
+    };
+  },
   mounted() {
     this.$refs.hamburger.addEventListener("click", this.toggleSide);
   },
   beforeDestroy() {
     this.$refs.hamburger.removeEventListener("click", this.toggleSide);
+
+    if (this.isSideOpen) {
+      this.toggleSide();
+    }
   },
   methods: {
     toggleSide() {
+      this.isSideOpen = !this.isSideOpen;
       this.$refs.hamburger.classList.toggle("open");
       this.$refs.drawerBg.classList.toggle("open");
       this.$refs.drawer.classList.toggle("open");
@@ -70,17 +118,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/modules/_breakpoints";
-@import "~/assets/styles/modules/_cross-browser";
-
 .header {
   height: 60px;
   width: 100%;
+  padding: 0 1rem;
   grid-row: 1;
   grid-column: 1 / 17;
+  z-index: 9998;
 
   @include for-desktop-up {
     height: 80px;
+    padding: 0 1rem;
   }
 }
 
@@ -88,12 +136,12 @@ export default {
   max-width: var(--max-width);
   height: 100%;
   margin: auto;
-  padding: 1rem;
   @include display-grid;
   grid-template-columns: 30px 1fr 30px;
   justify-items: center;
   align-items: center;
   grid-gap: 1rem;
+  border-bottom: 2px solid transparent;
 
   @include for-desktop-up {
     grid-template-columns: 140px auto 110px;
@@ -109,86 +157,6 @@ export default {
   }
 }
 
-/* HAMBURGER
-====================================================== */
-
-.hamburger {
-  width: 30px;
-  height: 25px;
-  position: relative;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-  z-index: 9999;
-
-  @include for-desktop-up {
-    display: none;
-  }
-}
-
-.hamburger span {
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background: var(--wine);
-  opacity: 1;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
-  -o-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out;
-}
-
-.hamburger span:nth-child(1) {
-  top: 0px;
-}
-
-.hamburger span:nth-child(2),
-.hamburger span:nth-child(3) {
-  top: 10px;
-}
-
-.hamburger span:nth-child(4) {
-  top: 20px;
-}
-
-.hamburger.open span:nth-child(1) {
-  top: 10px;
-  width: 0%;
-  left: 50%;
-}
-
-.hamburger.open span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.hamburger.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.hamburger.open span:nth-child(4) {
-  top: 10px;
-  width: 0%;
-  left: 50%;
-}
-
 /* DRAWER
 ====================================================== */
 
@@ -199,14 +167,14 @@ export default {
   z-index: 999;
   top: 0;
   left: 0;
-  background-color: rgba(black, 0.4);
-  opacity: 0;
+  background-color: rgba(black, 0);
+
   pointer-events: none;
-  transition: opacity 500ms cubic-bezier(0.5, 0, 0.5, 1);
+  transition: background-color 200ms cubic-bezier(0.5, 0, 0.5, 1);
   padding: 0.8rem;
 
   &.open {
-    opacity: 1;
+    background-color: rgba(black, 0.9);
     pointer-events: all;
   }
 
@@ -221,19 +189,53 @@ export default {
   width: 90%;
   right: -100%;
   top: 0;
-  background-color: white;
-  z-index: 9998;
-  transition: right 500ms cubic-bezier(0.5, 0, 0.5, 1);
+  @include display-grid;
+  grid-template-rows: 40px 1fr 40px;
+  grid-template-columns: 1fr;
+  background: #fff url("../assets/img/background.svg");
+  background-size: 100px 100px;
+  background-repeat: repeat;
+  transition: right 200ms cubic-bezier(0.5, 0, 0.5, 1);
   box-shadow: -4px 0 8px 0 rgba(black, 0.2);
-  padding: 2rem;
+  padding: 1rem;
+  z-index: 9998;
+
+  & * {
+    opacity: 0;
+    transition: opacity 200ms cubic-bezier(0.5, 0, 0.5, 1);
+  }
 
   &.open {
     right: 0;
-    transition: right 500ms cubic-bezier(0.5, 0, 0.5, 1);
+    transition: right 200ms cubic-bezier(0.5, 0, 0.5, 1);
+
+    & * {
+      opacity: 1;
+    }
   }
   @include for-desktop-up {
     display: none;
   }
+}
+
+.drawer-header-logo {
+  width: 140px;
+  grid-column-start: 1;
+  justify-self: center;
+  @include grid-child(1, 2, 1, 2);
+}
+
+.drawer-nav {
+  @include display-grid;
+  grid-auto-columns: 1fr;
+  grid-template-rows: repeat(6, 60px);
+}
+
+.drawer-sponsored {
+  align-self: start;
+  justify-self: center;
+  font-size: 0.7rem;
+  text-align: center;
 }
 
 /* NAV
@@ -260,7 +262,7 @@ export default {
 .nav__link {
   height: 100%;
   padding: 0.5rem 0;
-  font-weight: bold;
+  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
   color: black;
   text-decoration: none;
   text-transform: uppercase;

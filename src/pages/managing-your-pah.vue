@@ -1,6 +1,6 @@
 <template>
   <SecondaryLayout>
-    <section id="managing-your-pah">
+    <section purple id="managing-your-pah">
       <g-image
         class="section-icon"
         src="~/assets/img/icn-speedometer.png"
@@ -12,16 +12,17 @@
       <div class="section-body">
         <p>
           Once you have been diagnosed with PAH, your doctor can assess your
-          <u>risk status</u> to set treatment goals, and guide you on how best
-          to manage your condition. Studies show that patients who maximize
-          their therapy early on and lower their risk status may have a better
-          prognosis, or long-term outcomes, including life expectancy.
+          <g-link to="/managing-your-pah#risk-prognosis">risk status</g-link> to
+          set treatment goals, and guide you on how best to manage your
+          condition. Studies show that patients who optimize their therapy early
+          on and lower their risk status may have a better prognosis, or
+          long-term outcomes, including life expectancy.
         </p>
       </div>
     </section>
     <!-- managing your pah -->
 
-    <section id="risk-prognosis">
+    <section grey id="risk-prognosis">
       <g-image
         class="section-icon"
         src="~/assets/img/icn-risk-status.png"
@@ -29,15 +30,16 @@
       />
       <h1 class="section-header">What is risk status (and your prognosis)?</h1>
       <p class="lead">
-        You're likely familiar with your <u>functional class</u> and other tests
-        that describe the status of your PAH today. But most people also want to
-        know how their PAH will impact them in the future. PAH experts now know
-        how to use the information about your functional class and 6-minute walk
-        test, along with other test results, to determine how PAH may affect you
-        in the next 5 years – it's called <strong>risk status</strong>. Risk
-        status goes beyond determining how PAH is affecting you today and helps
-        your doctor assess the chance that your PAH will get worse in the
-        future.
+        You're likely familiar with your
+        <g-link to="/what-is-pah#functional-class">functional class</g-link> and
+        other tests that describe the status of your PAH today. But most people
+        also want to know how their PAH will impact them in the future. PAH
+        experts now know how to use the information about your functional class
+        and 6-minute walk test, along with other test results, to determine how
+        PAH may affect you in the next 5 years – it's called
+        <strong>risk status</strong>. Risk status goes beyond determining how
+        PAH is affecting you today and helps your doctor assess the chance that
+        your PAH will get worse in the future.
       </p>
       <div class="section-body">
         <p>
@@ -57,7 +59,7 @@
     <!-- risk prognosis -->
 
     <div class="side-bars">
-      <section id="risk-assessment">
+      <section purple id="risk-assessment">
         <g-image
           class="section-icon"
           src="~/assets/img/icn-magnifying-glass-check.png"
@@ -89,13 +91,13 @@
       </section>
       <!-- risk prognosis -->
 
-      <section id="interactive-tool">
+      <section transparent id="interactive-tool">
         <InteractiveTool />
       </section>
       <!-- interactive tool -->
     </div>
 
-    <section id="treatment-goals">
+    <section grey id="treatment-goals">
       <g-image
         class="section-icon"
         src="~/assets/img/icn-flag.png"
@@ -115,23 +117,28 @@
         <p>
           To help meet your treatment goals, your doctor will determine the
           appropriate treatment approach for you. PAH is associated with an
-          <u>imbalance of three natural substances</u> in your body, and studies
-          have shown that treating PAH with only one type of medication might
-          not be enough.
+          <g-link to="/pah-pathways">
+            imbalance of three natural substances
+          </g-link>
+          in your body, and studies have shown that treating PAH with only one
+          type of medication might not be enough.
         </p>
 
         <p>
-          <strong
-            >You may want to talk with your doctor or <u>PAH specialist</u> to
-            see if treatment with a combination of medicines can help you reduce
-            symptoms, feel better, and do more.</strong
-          >
+          <strong>
+            You may want to talk with your doctor or
+            <g-link to="https://phassociation.org/patients/doctorswhotreatph/">
+              PAH specialist
+            </g-link>
+            to see if treatment with a combination of medicines can help you
+            reduce symptoms, feel better, and do more.
+          </strong>
         </p>
       </div>
     </section>
     <!-- treatment goals -->
 
-    <section id="best-advocate">
+    <section purple id="best-advocate">
       <g-image
         class="section-icon"
         src="~/assets/img/icn-heart-ekg.png"
@@ -141,28 +148,32 @@
       <div class="section-body">
         <p>
           The key to staying on top of your disease is to find a treatment plan
-          that helps reduce your symptoms, increases your ability to exercise,
-          helps you feel better, and improves your long-term prognosis and life
-          expectancy – that is, one that gives you the best chance of doing
-          better in the future. Your doctor will monitor your test results, but
-          you're the one who will really know how you're doing day-to-day. It's
-          helpful to use a journal to keep track of your symptoms, along with
-          the activities that seems to trigger them. That way, at your next
-          visit, you can tell your doctor how you've really been feeling so your
-          care team can better understand how your are <i>really</i> doing.
+          that helps
+          <strong>
+            reduce your symptoms, increases your ability to exercise, helps you
+            feel better, and improves your long-term prognosis </strong
+          >. Your doctor will monitor your test results, but you're the one who
+          will really know how you're doing day-to-day. It's helpful to use a
+          journal to keep track of your symptoms, along with the activities that
+          seems to trigger them. That way, at your next visit, you can tell your
+          doctor how you've really been feeling so your care team can better
+          understand how your are <i>really</i> doing.
         </p>
 
         <p>
           Remember, when it comes to PAH, you may need more than one medicine to
           help control your symptoms and keep your disease from getting worse.
-          Ask your doctor about a <u>treatment plan</u> that helps you feel
-          better so you can do more.
+          <strong>
+            Ask your doctor about a
+            <g-link to="/prostacyclin-class-therapies">treatment plan</g-link>
+            that helps you feel better so you can do more.
+          </strong>
         </p>
       </div>
     </section>
     <!-- best advocate -->
 
-    <section id="find-a-specialist">
+    <section grey id="find-a-specialist">
       <g-image
         class="section-icon"
         src="~/assets/img/icn-magnifying-glass-plus.png"
@@ -182,12 +193,17 @@
           that support the special needs of people with PAH.
         </p>
 
-        <g-link class="button" to="/">Find a PAH Specialist</g-link>
+        <g-link
+          class="button"
+          to="https://phassociation.org/patients/doctorswhotreatph/"
+        >
+          Find a PAH Specialist
+        </g-link>
       </div>
     </section>
     <!-- find a specialist -->
 
-    <section id="make-the-most">
+    <section purple id="make-the-most">
       <g-image
         class="section-icon"
         src="~/assets/img/icn-download.png"
@@ -199,7 +215,10 @@
           Download this Doctor Discussion Tool &amp; Visit Checklist to guide
           your next appointment and help you ask the right questions.
         </h3>
-        <button class="button">
+        <g-link
+          class="button"
+          to="https://www.unitedpahsupport.com/pdfs/Doctor-Discussion-Guide.pdf"
+        >
           <span class="arrow">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -215,12 +234,12 @@
             </svg>
           </span>
           Doctor Discussion Tool
-        </button>
+        </g-link>
       </div>
     </section>
     <!-- make the most -->
 
-    <section id="build-your-network">
+    <section grey id="build-your-network">
       <g-image
         class="section-icon"
         src="~/assets/img/icn-molecule.png"
@@ -229,14 +248,16 @@
       <h1 class="section-header">Build your personal PAH care network</h1>
       <div class="section-body">
         <p>
-          An important part of living well with PAH is creating a strong network
-          of care professionals, friends, family, and other resources that you
-          can rely on. There are PAH support groups where you can tap into the
-          experience of others who have learned to effectively manage this
-          condition. With a bit of patience, planning, and flexibility, many
-          people affected by PAH find ways to work, travel, exercise, and do
-          some of the things they loved before they were diagnosed. Along with
-          your doctor, your treatment care team may include:
+          An important part of living well with PAH is creating a
+          <strong>
+            strong network of care professionals, friends, family, and other
+            resources that you can rely on </strong
+          >. There are PAH support groups where you can tap into the experience
+          of others who have learned to effectively manage this condition. With
+          a bit of patience, planning, and flexibility, many people affected by
+          PAH find ways to work, travel, exercise, and do some of the things
+          they loved before they were diagnosed. Along with your doctor, your
+          treatment care team may include:
         </p>
 
         <ul>
@@ -253,12 +274,12 @@
           </li>
         </ul>
 
-        <g-link class="button" to="/">Find More PAH Resources</g-link>
+        <g-link class="button" to="/resources">Find More PAH Resources</g-link>
       </div>
     </section>
     <!-- build your network -->
 
-    <section id="on-your-own">
+    <section purple id="on-your-own">
       <g-image
         class="section-icon"
         src="~/assets/img/icn-heart-checklist.png"
@@ -280,14 +301,14 @@
           <li>Getting a good amount of sleep every day</li>
           <li>
             Staying up-to-date on
-            <u>PAH treatments, including Prostacyclin-class therapies</u>
+            <g-link to="/prostacyclin-class-therapies">PAH treatments</g-link>
           </li>
         </ul>
       </div>
     </section>
     <!-- on your own -->
 
-    <section id="pah-pathways">
+    <section grey id="pah-pathways">
       <g-image
         class="section-icon"
         src="~/assets/img/icn-chemical-structure.png"
@@ -299,10 +320,19 @@
           Ready to do better than "just okay?" Learn about treatment approaches
           for PAH.
         </h3>
-        <g-link class="button" to="/pah-pathways/">Learn More</g-link>
+        <g-link class="button" to="/pah-pathways">Learn More</g-link>
       </div>
     </section>
     <!-- pah pathways -->
+
+    <CallToAction>
+      <p>
+        You can accept feeling okay, or you can ask about feeling better. Ask
+        your doctor about adjusting your treatment plan to help improve your
+        risk status so you can <span class="wine">feel better</span> and
+        <span class="wine">do more</span>.
+      </p>
+    </CallToAction>
   </SecondaryLayout>
 </template>
 
@@ -315,9 +345,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/modules/_breakpoints";
-@import "~/assets/styles/modules/_cross-browser";
-
 /* MANAGING YOUR PAH
 ====================================================== */
 
@@ -327,8 +354,6 @@ export default {
   }
 
   &::before {
-    background: var(--purple);
-
     @include for-desktop-up {
       margin-left: 40px;
       @include grid-child(3, 13, 2, 4);
@@ -338,7 +363,8 @@ export default {
 
 #managing-your-pah .section-icon {
   @include for-desktop-up {
-    padding: 0 30px;
+    justify-self: center;
+    padding: 0 50px 0 0;
     @include grid-child(12, 15, 1, 4);
   }
 }
@@ -365,7 +391,6 @@ export default {
   grid-template-rows: repeat(3, auto);
 
   &::before {
-    background: var(--grey);
     @include grid-child(1, 17, 1, 4);
 
     @include for-desktop-up {
@@ -377,8 +402,10 @@ export default {
 
 #risk-prognosis .section-icon {
   @include for-desktop-up {
-    margin-top: 0.67rem;
-    padding: 0 30px;
+    justify-self: center;
+    align-self: center;
+    margin-top: 0.5rem;
+    padding: 0 25px;
     @include grid-child(3, 6, 1, 3);
   }
 }
@@ -415,7 +442,7 @@ export default {
 
   &:before {
     content: "";
-    background: var(--purple);
+    background: $purple;
     border-radius: 7px;
     @include grid-child(1, 17, 1, 3);
 
@@ -433,7 +460,7 @@ export default {
     margin: 30px 0 30px 0;
     padding: 0;
     @include grid-child(2, 9, 1, 2);
-    font-weight: 400;
+    font-family: ProximaNova, sans-serif;
     font-size: 14px;
     letter-spacing: 0.23px;
     line-height: 18px;
@@ -453,7 +480,6 @@ export default {
   }
 
   &::before {
-    background: var(--purple);
     @include grid-child(2, 16, 1, 4);
 
     @include for-desktop-up {
@@ -465,7 +491,8 @@ export default {
 
 #risk-assessment .section-icon {
   @include for-desktop-up {
-    padding: 0 30px;
+    justify-self: center;
+    padding: 0 25px;
     @include grid-child(12, 15, 1, 4);
   }
 }
@@ -489,6 +516,12 @@ export default {
   }
 }
 
+/* INTERACTIVE TOOL
+====================================================== */
+#interactive-tool {
+  display: flex;
+}
+
 /* TREATMENT GOALS
 ====================================================== */
 #treatment-goals {
@@ -497,8 +530,6 @@ export default {
   }
 
   &::before {
-    background: var(--grey);
-
     @include for-desktop-up {
       margin-right: 15px;
       @include grid-child(5, 15, 2, 4);
@@ -508,8 +539,9 @@ export default {
 
 #treatment-goals .section-icon {
   @include for-desktop-up {
-    margin-top: 2rem;
-    padding: 0 30px;
+    margin-top: 1.8rem;
+    justify-self: center;
+    padding: 0 0 0 50px;
     @include grid-child(3, 6, 1, 4);
   }
 }
@@ -539,8 +571,6 @@ export default {
   }
 
   &::before {
-    background: var(--purple);
-
     @include for-desktop-up {
       @include grid-child(3, 14, 2, 4);
       margin-left: 3.6rem;
@@ -551,7 +581,8 @@ export default {
 
 #best-advocate .section-icon {
   @include for-desktop-up {
-    padding: 0 30px;
+    justify-self: center;
+    padding: 0 25px;
     @include grid-child(12, 15, 1, 4);
   }
 }
@@ -577,8 +608,6 @@ export default {
 
 #find-a-specialist {
   &::before {
-    background: var(--grey);
-
     @include for-desktop-up {
       margin-right: 15px;
       @include grid-child(5, 15, 2, 3);
@@ -588,7 +617,8 @@ export default {
 
 #find-a-specialist .section-icon {
   @include for-desktop-up {
-    padding: 0 35px;
+    justify-self: center;
+    padding: 0 0px 0 50px;
     @include grid-child(3, 6, 1, 4);
   }
 }
@@ -617,8 +647,6 @@ export default {
   }
 
   &::before {
-    background: var(--purple);
-
     @include for-desktop-up {
       @include grid-child(4, 13, 2, 4);
     }
@@ -627,7 +655,8 @@ export default {
 
 #make-the-most .section-icon {
   @include for-desktop-up {
-    padding: 0 30px;
+    justify-self: center;
+    padding: 0 50px 0 0;
     @include grid-child(12, 15, 1, 4);
   }
 }
@@ -635,7 +664,7 @@ export default {
 #make-the-most .section-header {
   @include for-desktop-up {
     padding-left: 15px;
-    @include grid-child(3, 13, 2, 3);
+    @include grid-child(3, 12, 2, 3);
   }
 }
 
@@ -653,8 +682,6 @@ export default {
 
 #build-your-network {
   &::before {
-    background: var(--grey);
-
     @include for-desktop-up {
       margin: 0 15px;
       @include grid-child(5, 15, 2, 4);
@@ -664,14 +691,15 @@ export default {
 
 #build-your-network .section-icon {
   @include for-desktop-up {
-    padding: 3rem 35px 0 35px;
+    justify-self: center;
+    padding: 3rem 20px 0 30px;
     @include grid-child(3, 6, 1, 3);
   }
 }
 
 #build-your-network .section-header {
   @include for-desktop-up {
-    @include grid-child(7, 12, 1, 2);
+    @include grid-child(7, 13, 1, 2);
   }
 }
 
@@ -694,11 +722,9 @@ export default {
 
 #on-your-own {
   @include for-desktop-up {
-    grid-template-rows: 50px repeat(2, auto);
+    grid-template-rows: 40px repeat(2, auto);
   }
   &::before {
-    background: var(--purple);
-
     @include for-desktop-up {
       @include grid-child(4, 13, 2, 4);
     }
@@ -707,7 +733,8 @@ export default {
 
 #on-your-own .section-icon {
   @include for-desktop-up {
-    padding: 0 40px;
+    justify-self: center;
+    padding: 0 30px;
     @include grid-child(12, 15, 1, 4);
   }
 }
@@ -736,12 +763,10 @@ export default {
 
 #pah-pathways {
   @include for-desktop-up {
-    grid-template-rows: 50px auto;
+    grid-template-rows: auto auto;
   }
 
   &::before {
-    background: var(--grey);
-
     @include for-desktop-up {
       @include grid-child(7, 13, 2, 3);
     }
@@ -750,7 +775,8 @@ export default {
 
 #pah-pathways .section-icon {
   @include for-desktop-up {
-    padding: 0 35px;
+    justify-self: center;
+    padding: 0 25px;
     @include grid-child(5, 8, 1, 3);
   }
 }
