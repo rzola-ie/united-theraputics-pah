@@ -1,6 +1,6 @@
 <template>
   <SecondaryLayout>
-    <section id="pah-pathways">
+    <section grey id="pah-pathways">
       <h1 class="section-header">PAH Pathways</h1>
       <g-image
         class="section-icon"
@@ -23,9 +23,9 @@
             <h3 class="cause-header">Too little Prostacyclin</h3>
             <p class="cause-body">
               Prostacyclin works in different ways within healthy blood vessels.
-              It helps to open arteries (dilation), helps prevent the vessels
-              from getting blocked and works to slow down rapid cell growth
-              (proliferation).
+              It helps to open arteries (dilation), helps prevent blood clots
+              from forming in blood vessels and works to slow down rapid cell
+              growth (smooth muscle proliferation).
             </p>
           </div>
           <div class="cause">
@@ -40,7 +40,8 @@
             <h3 class="cause-header">Too much Endothelin</h3>
             <p class="cause-body">
               Endothelin does almost the opposite of nitric oxide. It increases
-              blood pressure and makes the blood vessels firm.
+              blood pressure and makes the blood vessels firm. Excess endothelin
+              can also increase smooth muscle proliferation.
             </p>
           </div>
         </div>
@@ -51,9 +52,9 @@
           <strong>Each medicine works on only one pathway.</strong> Most
           patients start on one PAH medication, which means they are correcting
           only one of the imbalances, however, studies have shown that treating
-          more than one pathway is the most effective treatment approach. That's
-          why your doctor may prescribe more than one medication to improve your
-          symptoms and delay your disease progression.
+          more than one pathway may be a more effective treatment approach.
+          That's why your doctor may prescribe more than one medication to
+          improve your symptoms and delay your disease progression.
         </p>
 
         <p>
@@ -72,7 +73,7 @@
     </section>
     <!-- pah pathways -->
 
-    <section id="therapies">
+    <section purple id="therapies">
       <h1 class="section-header">Prostacyclin-Class Therapies</h1>
       <g-image
         class="section-icon"
@@ -92,7 +93,7 @@
     </section>
     <!-- therapies -->
 
-    <section id="fighting-pah">
+    <section grey id="fighting-pah">
       <g-image
         class="section-icon"
         src="~/assets/img/icn-eye.png"
@@ -103,10 +104,19 @@
           Visit FightingPAH.com to learn more about PAH treatment options from
           United Therapeutics
         </h3>
-        <g-link class="button" to="http://www/fightingpah.com">Go Now</g-link>
+        <g-link class="button" to="https://www.fightingpah.com/">Go Now</g-link>
       </div>
     </section>
     <!-- fighting pah -->
+
+    <CallToAction>
+      <p>
+        You can accept feeling okay, or you can ask about feeling better. Ask
+        your doctor about adjusting your
+        <g-link to="/prostacyclin-class-therapies">treatment plan</g-link> to
+        help you feel better and do more.
+      </p>
+    </CallToAction>
   </SecondaryLayout>
 </template>
 
@@ -119,16 +129,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/modules/_breakpoints";
-@import "~/assets/styles/modules/_cross-browser";
-
 /* PAH PATHWAYS
 ====================================================== */
 
 #pah-pathways {
   &::before {
-    background: var(--grey);
-
     @include for-desktop-up {
       margin-right: 2rem;
       @include grid-child(6, 15, 2, 3);
@@ -138,7 +143,8 @@ export default {
 
 #pah-pathways .section-icon {
   @include for-desktop-up {
-    padding: 0 35px;
+    justify-self: center;
+    padding: 0 25px;
     @include grid-child(4, 7, 1, 3);
   }
 }
@@ -151,16 +157,22 @@ export default {
 }
 
 #pah-pathways .section-body {
-  padding-bottom: 0.6rem;
+  padding-bottom: 1.5rem;
 
   @include for-desktop-up {
-    padding: 1rem 5.4rem 1rem 0;
+    padding: 1rem 5.4rem 2rem 0;
     @include grid-child(7, 15, 2, 3);
   }
 }
 
+#pah-pathways .section-body p {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 #pah-pathways .section-body .causes .cause {
-  border-bottom: 1px solid var(--wine);
+  border-bottom: 1px solid $wine;
 }
 
 #pah-pathways .section-body .causes .cause h3 {
@@ -179,8 +191,6 @@ export default {
   grid-template-rows: 50px repeat(2, auto);
 
   &::before {
-    background: var(--purple);
-
     @include for-desktop-up {
       margin-left: 40px;
       @include grid-child(4, 13, 2, 4);
@@ -190,7 +200,8 @@ export default {
 
 #therapies .section-icon {
   @include for-desktop-up {
-    padding: 0 25px;
+    justify-self: center;
+    padding: 0 50px 0 0;
     @include grid-child(12, 15, 1, 4);
   }
 }
@@ -232,7 +243,6 @@ export default {
   }
 
   &::before {
-    background: var(--grey);
     margin-top: 0;
 
     @include for-desktop-up {
@@ -244,6 +254,7 @@ export default {
 
 #fighting-pah .section-icon {
   @include for-desktop-up {
+    justify-self: center;
     padding: 0 30px;
     @include grid-child(4, 7, 1, 3);
   }

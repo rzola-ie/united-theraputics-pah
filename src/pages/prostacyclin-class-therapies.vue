@@ -1,6 +1,26 @@
 <template>
   <SecondaryLayout>
-    <section id="do-more">
+    <Modal v-if="leaving">
+      <h2 slot="header">
+        You’re leaving this page and heading to a site with information about
+        treatment options from United Therapeutics.
+      </h2>
+
+      <div slot="footer">
+        <div class="two-buttons">
+          <a class="modal-default" href="https://www.fightingpah.com">
+            Continue
+          </a>
+
+          <button class="modal-secondary" @click="toggleModal">
+            Go Back
+          </button>
+        </div>
+      </div>
+    </Modal>
+    <!-- exit modal -->
+
+    <section purple id="do-more">
       <h1 class="section-header">Do more for your PAH Treatment</h1>
       <g-image
         class="section-icon"
@@ -15,15 +35,15 @@
           you don't have to accept "good enough."
           <strong>Prostacyclin-class medicines</strong> have been shown to be an
           effective PAH treatment option to reduce symptoms, increase 6-minute
-          walk distance, reduce hospitalizations, slow disease progression and
-          improve your functional class, which means you may be able to feel
-          better and do more.
+          walk distance, reduce NT-proBNP (an indicator of the strain on your
+          heart), slow disease progression and improve your functional class,
+          which means you may be able to feel better and do more.
         </p>
       </div>
     </section>
     <!-- do more -->
 
-    <section id="what-is-prostacyclin">
+    <section grey id="what-is-prostacyclin">
       <h1 class="section-header">What is Prostacyclin (PCY)?</h1>
       <div class="section-body">
         <p>
@@ -40,19 +60,28 @@
             >People with PAH may not produce enough natural prostacyclin</strong
           >. When you have too little prostacyclin, the vessels of the lungs
           become narrow and restrict blood flow. That's why your doctor may
-          consider prescribing a <u>Prostacyclin-class medicine</u>.
+          consider prescribing a
+          <g-link to="/prostacyclin-class-therapies#medicines"
+            >Prostacyclin-class medicine</g-link
+          >.
         </p>
       </div>
       <h3>See how PAH affects blood vessels</h3>
-      <video controls class="section-video">
-        <source src="../assets/vid/explaining-pah.mp4" type="video/mp4" />
-        <source src="movie.ogg" type="video/ogg" />
-        Your browser does not support the video tag.
-      </video>
+      <div class="section-video">
+        <iframe
+          class=" embed-responsive-item "
+          src="https://player.vimeo.com/video/240001664"
+          frameborder="0"
+          webkitallowfullscreen=""
+          mozallowfullscreen=""
+          allowfullscreen=""
+          data-ready="true"
+        ></iframe>
+      </div>
     </section>
-    <!-- what-is-prostacyclin -->
+    <!-- what is prostacyclin -->
 
-    <section id="medicines">
+    <section purple id="medicines">
       <h1 class="section-header">Prostacyclin-<wbr />class medicines</h1>
       <div class="section-body">
         <p>
@@ -69,8 +98,8 @@
           <li>Slowing down the vessel thickening process</li>
           <li>Preventing clotting (clotting can narrow blood vessels)</li>
           <li>
-            Smoothing the cell lining, which can help prevent the vessel from
-            becoming too thick
+            Smoothing the vessel lining, which can help prevent the vessel from
+            becoming too thick.
           </li>
         </ul>
       </div>
@@ -80,7 +109,9 @@
         alt="On the left is an example of a healthy blood vessel. On the right is an image of a blood vessel with PAH."
       />
     </section>
-    <section id="benefits">
+    <!-- medicines -->
+
+    <section grey id="benefits">
       <h1 class="section-header">
         Benefits of Prostacyclin-<wbr />CLASS medicines
       </h1>
@@ -89,23 +120,27 @@
           In clinical studies, Prostacyclin-class medicines have been shown to
         </p>
         <ul>
-          <li>
-            Reduce the symptoms of PAH, like shortness of breath and fatigue
-          </li>
-          <li>Improve the ability to exercise</li>
-          <li>Improve functional class</li>
           <li>Improve 6-minute walk distance</li>
-          <li>Slow disease progression</li>
-          <li>Reduce hospitalizations</li>
-          <li>Lower risk status</li>
-          <li>Lower the pressure in the vessels of the lungs</li>
+          <li>
+            Improve symptoms associated with exercise, like shortness of breath
+            and fatigue
+          </li>
+          <li>Improve functional class</li>
+          <li>Slow disease progression (keep PAH from getting worse)</li>
+          <li>Reduce blood pressure in the lungs</li>
+          <li>Improve NT-proBNP numbers</li>
         </ul>
       </div>
 
       <div class="section-body bottom">
         <p>
+          Because these are key elements in determining your risk score, these
+          benefits indicate that Prostacyclin-class medicines may help improve
+          your risk status.
+        </p>
+        <p>
           Prostacyclin-class medicines were the first type of treatment to be
-          prescribed for PAH. It's also the only class of PAH medicine available
+          prescribed for PAH. It’s also the only class of PAH medicine available
           in 3 forms:
         </p>
         <ul>
@@ -115,7 +150,9 @@
         </ul>
       </div>
     </section>
-    <section id="side-effects">
+    <!-- benefits -->
+
+    <section purple id="side-effects">
       <h1 class="section-header">
         Side effects of Prostacyclin-<wbr />class medicines
       </h1>
@@ -126,21 +163,24 @@
       />
       <div class="section-body">
         <p>
-          As with many medications, you may experience side effects with
-          prostacyclins. The most common side effects of this class of medicine
-          include headache, diarrhea, flu-like symptoms, jaw pain, muscle spasm,
-          flushing, and nausea. PAH specialists are familiar with these expected
-          side effects and know how to manage them.
+          You may experience side effects with prostacyclins. The most common
+          side effects of this class of medicine include headache, diarrhea,
+          flu-like symptoms, jaw pain, muscle spasm, flushing, and nausea. There
+          may be different side effects depending upon how you take the
+          medicine. PAH specialists are familiar with these expected side
+          effects and know how to help manage them.
         </p>
         <p>
-          Talk to your doctor about the expected side effects before you start
-          taking prostacyclin therapy. You will be better prepared and know what
-          to do if they do occur. Tell your healthcare team if you have any side
-          effect that bothers you or that does not go away.
+          Talk to your doctor about the side effects before you start taking
+          prostacyclin therapy. You will be prepared and know what to do if they
+          do occur. Tell your healthcare team if you have any side effect that
+          bothers you or that does not go away.
         </p>
       </div>
     </section>
-    <section id="getting-started">
+    <!-- side effects -->
+
+    <section grey id="getting-started">
       <h1 class="section-header">
         Getting started on Prostacyclin-class treatment
       </h1>
@@ -166,7 +206,9 @@
         </ul>
       </div>
     </section>
-    <section id="make-the-most">
+    <!-- getting started -->
+
+    <section purple id="make-the-most">
       <g-image
         class="section-icon"
         src="~/assets/img/icn-ask.png"
@@ -180,7 +222,9 @@
         </h3>
       </div>
     </section>
-    <section id="fighting-pah">
+    <!-- make the most -->
+
+    <section grey id="fighting-pah">
       <g-image
         class="section-icon"
         src="~/assets/img/icn-eye.png"
@@ -191,10 +235,12 @@
           Visit FightingPAH.com to learn more about PAH treatment options
           brought to you by United Therapeutics
         </h3>
-        <g-link class="button" to="/">Go Now</g-link>
+        <button class="button" @click="toggleModal">Go Now</button>
       </div>
     </section>
-    <section id="resources">
+    <!-- fighting pah -->
+
+    <section purple id="resources">
       <h1 class="section-header">Resources</h1>
       <g-image
         class="section-icon"
@@ -203,21 +249,41 @@
       />
       <div class="section-body">
         <h3>Check out other PAH resources.</h3>
-        <g-link class="button" to="/">Discover</g-link>
+        <g-link class="button" to="/resources">Discover</g-link>
       </div>
     </section>
-    <CallToAction />
+    <!-- resources -->
+
+    <CallToAction>
+      <p>
+        You can accept feeling okay, or you can ask about feeling better. Ask
+        your doctor if adding a
+        <span class="wine">Prostacyclin-class medicine</span> could help you.
+      </p>
+    </CallToAction>
   </SecondaryLayout>
 </template>
 
 <script>
-export default {};
+export default {
+  metaInfo: {
+    title: "Prostacyclin Therapies"
+  },
+  data() {
+    return {
+      leaving: false
+    };
+  },
+  methods: {
+    toggleModal() {
+      console.log("what");
+      this.leaving = !this.leaving;
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/modules/_breakpoints";
-@import "~/assets/styles/modules/_cross-browser";
-
 /* DO MORE
 ====================================================== */
 
@@ -227,8 +293,6 @@ export default {};
   }
 
   &::before {
-    background: var(--purple);
-
     @include for-desktop-up {
       @include grid-child(4, 14, 2, 4);
     }
@@ -237,7 +301,8 @@ export default {};
 
 #do-more .section-icon {
   @include for-desktop-up {
-    padding: 0 30px;
+    justify-self: center;
+    padding: 0 50px 0 0;
     @include grid-child(13, 16, 1, 4);
   }
 }
@@ -270,7 +335,6 @@ export default {};
   }
 
   &::before {
-    background: var(--grey);
     @include grid-child(1, 17, 1, 5);
 
     @include for-desktop-up {
@@ -287,6 +351,14 @@ export default {};
   @include for-desktop-up {
     margin-bottom: 0;
     @include grid-child(8, 15, 3, 6);
+  }
+}
+
+#what-is-prostacyclin .section-video iframe {
+  width: 100%;
+
+  @include for-desktop-up {
+    height: 320px;
   }
 }
 
@@ -322,7 +394,6 @@ export default {};
   }
 
   &::before {
-    background: var(--purple);
     @include grid-child(1, 17, 1, 4);
 
     @include for-desktop-up {
@@ -346,7 +417,7 @@ export default {};
 }
 
 #medicines .section-body ul li {
-  font-weight: normal;
+  font-family: ProximaNova, sans-serif;
 }
 
 #medicines .section-image {
@@ -370,7 +441,6 @@ export default {};
   grid-template-rows: repeat(3, auto);
 
   &::before {
-    background: var(--grey);
     @include grid-child(1, 17, 1, 4);
 
     @include for-desktop-up {
@@ -380,8 +450,11 @@ export default {};
 }
 
 #benefits .section-header {
+  @include for-tablet-portrait-up {
+    @include grid-child(2, 14, 1, 2);
+  }
   @include for-desktop-up {
-    @include grid-child(6, 12, 1, 2);
+    @include grid-child(6, 13, 1, 2);
   }
 }
 
@@ -404,7 +477,7 @@ export default {};
 
   &::before {
     content: "";
-    background: var(--purple);
+    background: $purple;
     border-radius: 7px;
     @include grid-child(1, 17, 1, 3);
 
@@ -442,8 +515,6 @@ export default {};
   }
 
   &::before {
-    background: var(--purple);
-
     @include for-desktop-up {
       margin-left: 2.3rem;
       @include grid-child(3, 13, 2, 4);
@@ -453,8 +524,9 @@ export default {};
 
 #side-effects .section-icon {
   @include for-desktop-up {
-    padding: 0 30px;
-    @include grid-child(12, 15, 1, 3);
+    justify-self: center;
+    padding: 0 50px 0 0;
+    @include grid-child(12, 15, 1, 4);
   }
 }
 
@@ -482,8 +554,6 @@ export default {};
 
 #getting-started {
   &::before {
-    background: var(--grey);
-
     @include for-desktop-up {
       margin-right: 1rem;
       @include grid-child(4, 14, 2, 4);
@@ -508,7 +578,7 @@ export default {};
 
 #getting-started .section-body ul {
   padding-left: 1rem;
-  font-weight: bold;
+  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
 }
 
 #getting-started .section-body ul li {
@@ -527,7 +597,6 @@ export default {};
 
   &::before {
     margin-top: 0;
-    background: var(--purple);
 
     @include for-tablet-portrait-up {
       @include grid-child(3, 13, 2, 3);
@@ -542,7 +611,8 @@ export default {};
 
 #make-the-most .section-icon {
   @include for-desktop-up {
-    padding: 0 30px;
+    justify-self: center;
+    padding: 0 50px 0 0;
     @include grid-child(12, 15, 1, 3);
   }
 }
@@ -585,7 +655,6 @@ export default {};
 
   &::before {
     margin-top: 0;
-    background: var(--grey);
 
     @include for-tablet-portrait-up {
       @include grid-child(5, 15, 1, 2);
@@ -599,7 +668,8 @@ export default {};
 
 #fighting-pah .section-icon {
   @include for-desktop-up {
-    padding: 0 25px;
+    justify-self: center;
+    padding: 0 10px 0 40px;
     @include grid-child(3, 6, 1, 3);
   }
 }
@@ -640,8 +710,6 @@ export default {};
   }
 
   &::before {
-    background: var(--purple);
-
     @include for-tablet-portrait-up {
       @include grid-child(2, 12, 1, 3);
     }
@@ -655,7 +723,8 @@ export default {};
 
 #resources .section-icon {
   @include for-desktop-up {
-    padding: 0 20px;
+    justify-self: center;
+    padding: 0 45px 0 0;
     @include grid-child(11, 14, 1, 4);
   }
 }
@@ -686,5 +755,27 @@ export default {};
 
 #resources .section-body h3 {
   margin-top: 0;
+}
+
+/* MODAL
+====================================================== */
+.two-buttons {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
+  & a {
+    margin-right: 0.5rem;
+    @include for-desktop-up {
+      margin-right: 1rem;
+    }
+  }
+
+  & button {
+    margin-right: 0.5rem;
+    @include for-desktop-up {
+      margin-right: 1rem;
+    }
+  }
 }
 </style>

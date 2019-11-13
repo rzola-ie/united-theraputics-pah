@@ -1,0 +1,99 @@
+<template>
+  <SecondaryLayout>
+    <section purple id="contact-us">
+      <h1 class="section-header">
+        For more information or questions about United Therapeutics, please
+        call:
+      </h1>
+      <div class="section-body">
+        <a class="number-1" href="tel:+18778648437">1-877-UNITHER</a>
+        <a class="number-2" href="tel:+18778648437">(1-877-864-8437)</a>
+      </div>
+
+      <g-image
+        class="section-image"
+        src="~/assets/img/icn-phone.svg"
+        alt="an icon of a phone"
+      />
+    </section>
+    <CallToAction />
+  </SecondaryLayout>
+</template>
+
+<script>
+export default {
+  metaInfo: {
+    title: "Contact Us"
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+#contact-us {
+  @include for-desktop-up {
+    min-height: calc(100vh - (388px + 12rem));
+  }
+  &::before {
+    @include for-desktop-up {
+      margin: 0 35px;
+      @include grid-child(3, 15, 1, 3);
+    }
+  }
+}
+
+#contact-us .section-header {
+  margin-bottom: 1rem;
+  @include for-desktop-up {
+    @include grid-child(3, 13, 1, 2);
+  }
+}
+
+#contact-us .section-image {
+  height: 2rem;
+  width: 2rem;
+  margin-top: 1rem;
+  justify-self: center;
+  @include grid-child(2, 4, 2, 3);
+
+  @include for-desktop-up {
+    margin-top: 1.5rem;
+    @include grid-child(6, 8, 2, 3);
+  }
+}
+
+#contact-us .section-body {
+  background: white;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include grid-child(3, 15, 2, 3);
+
+  @include for-desktop-up {
+    padding: 0rem;
+    margin-bottom: 3rem;
+    @include grid-child(7, 11, 2, 3);
+  }
+}
+
+#contact-us .section-body a {
+  display: block;
+  text-align: center;
+  font-size: 1.3rem;
+  color: black;
+  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+
+  @include for-desktop-up {
+    font-size: 1.5rem;
+    pointer-events: none;
+    @include grid-child(3, 14, 1, 2);
+  }
+
+  & + a {
+    margin-top: 1rem;
+  }
+}
+</style>

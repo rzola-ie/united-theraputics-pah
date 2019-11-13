@@ -1,6 +1,24 @@
 <template>
   <SecondaryLayout>
-    <section id="useful-information">
+    <Modal v-if="leaving">
+      <h2 slot="header">
+        You’re leaving this page and heading to a site with information about
+        treatment options from United Therapeutics.
+      </h2>
+
+      <div slot="footer">
+        <div class="two-buttons">
+          <a class="modal-default" :href="exitLink">
+            Continue
+          </a>
+
+          <button class="modal-secondary" @click="toggleModal">
+            Go Back
+          </button>
+        </div>
+      </div>
+    </Modal>
+    <section grey id="useful-information">
       <h1 class="section-header">Useful information about PAH</h1>
       <div class="section-body">
         <h3>
@@ -11,7 +29,7 @@
     </section>
     <!-- useful information -->
 
-    <section id="opt-in">
+    <section purple id="opt-in">
       <h1 class="section-header">
         Opt-In
       </h1>
@@ -24,12 +42,12 @@
 
       <div class="section-body">
         <h3>Sign up for resources and the latest information about PAH.</h3>
-        <g-link class="button" to="/">Take Action</g-link>
+        <g-link class="button" to="/newsletter">Take Action</g-link>
       </div>
     </section>
     <!-- opt-in -->
 
-    <section id="videos">
+    <section grey id="videos">
       <h1 class="section-header">
         Videos
       </h1>
@@ -42,10 +60,16 @@
             This video shows you how blood vessels in the lungs function
             normally, compared with those affected by PAH.
           </div>
-          <g-image
-            class="video-media section-image"
-            src="~/assets/img/affects-video.png"
-          />
+
+          <iframe
+            class=" embed-responsive-item video-media section-image"
+            src="https://player.vimeo.com/video/240001664"
+            frameborder="0"
+            webkitallowfullscreen=""
+            mozallowfullscreen=""
+            allowfullscreen=""
+            data-ready="true"
+          ></iframe>
         </div>
 
         <div class="video">
@@ -54,7 +78,8 @@
             src="~/assets/img/affects-video.png"
           />
           <div class="video-text">
-            Understand how your heart and lungs are affected with PAH.
+            Understand why treatment with more than one PAH medicine is
+            important.
           </div>
         </div>
 
@@ -83,7 +108,7 @@
     </section>
     <!-- videos -->
 
-    <section id="learn-more">
+    <section purple id="learn-more">
       <h1 class="section-header">
         Want to learn more about PAH<br />
         treatments from United Therapeutics?
@@ -94,14 +119,21 @@
           Go directly to our site.
         </h3>
 
-        <g-link class="button" to="http://www.fightingpah.com">
+        <button
+          class="button"
+          @click="
+            toggleModal(
+              'http://www.fightingpah.com/pah-patient-stories/oral-inhaled-iv-treprostinil.html'
+            )
+          "
+        >
           Visit FightingPAH.com
-        </g-link>
+        </button>
       </div>
     </section>
     <!-- learn more -->
 
-    <section id="discussion-guide">
+    <section purple id="discussion-guide">
       <h1 class="section-header">PAH Doctor Discussion Guide</h1>
 
       <g-image
@@ -115,18 +147,34 @@
           Download this Doctor Discussion Tool &amp; Visit Checklist to guide
           your next appointment and help you ask the right questions.
         </h3>
-        <button class="button">Doctor Discussion Tool</button>
+        <button
+          class="button"
+          @click="
+            toggleModal(
+              'https://www.unitedpahsupport.com/pdfs/Doctor-Discussion-Guide.pdf'
+            )
+          "
+        >
+          Doctor Discussion Tool
+        </button>
       </div>
     </section>
     <!-- discussion guide -->
 
-    <section id="find-an-expert">
+    <section grey id="find-an-expert">
       <g-image
         class="section-icon"
         src="~/assets/img/icn-magnifying-glass-plus-2.png"
       />
       <div class="section-body">
-        <g-link class="button" to="/">Find An Expert Who Treats PAH</g-link>
+        <button
+          class="button"
+          @click="
+            toggleModal('https://phassociation.org/patients/doctorswhotreatph/')
+          "
+        >
+          Find An Expert Who Treats PAH
+        </button>
 
         <p>
           Because PAH is rare, not all heart and lung specialists have
@@ -142,11 +190,14 @@
     </section>
     <!-- find an expert -->
 
-    <section id="ph-association">
+    <section purple id="ph-association">
       <div class="section-body">
-        <g-link class="button" to="/">
+        <button
+          class="button"
+          @click="toggleModal('https://phassociation.org')"
+        >
           Pulmonary Hypertension Association
-        </g-link>
+        </button>
         <p>
           The <strong>Pulmonary Hypertension Associaltion</strong> (PHA)
           envisions a world without PH and is dedicated to improving the lives
@@ -164,9 +215,14 @@
     </section>
     <!-- ph association -->
 
-    <section id="ph-aware">
+    <section grey id="ph-aware">
       <div class="section-body">
-        <g-link class="button" to="/">phaware Global Association&reg;</g-link>
+        <button
+          class="button"
+          @click="toggleModal('https://www.phaware.global')"
+        >
+          phaware Global Association&reg;
+        </button>
         <p>
           <strong>phaware</strong>&reg; creates pulmonary hypertension awareness
           and global engagement on behalf of families, caregivers and medical
@@ -182,9 +238,18 @@
     </section>
     <!-- ph aware -->
 
-    <section id="scleroderma-foundation">
+    <section purple id="scleroderma-foundation">
       <div class="section-body">
-        <g-link class="button" to="/">Scleroderma Foundation </g-link>
+        <button
+          class="button"
+          @click="
+            toggleModal(
+              'https://www.scleroderma.org/site/SPageServer/#.XPct0y2ZOL8'
+            )
+          "
+        >
+          Scleroderma Foundation
+        </button>
         <p>
           <strong>Scleroderma</strong> is a chronic connective tissue disease.
           Patients with scleroderma are at high risk of getting PAH. The
@@ -201,9 +266,14 @@
     </section>
     <!-- scleroderma foundation -->
 
-    <section id="ph-news">
+    <section grey id="ph-news">
       <div class="section-body">
-        <g-link class="button" to="/">PH News</g-link>
+        <button
+          class="button"
+          @click="toggleModal('https://pulmonaryhypertensionnews.com')"
+        >
+          PH News
+        </button>
         <p>
           Provides news and articles about developments in PH research and
           therapies.
@@ -221,20 +291,32 @@
 </template>
 
 <script>
-export default {};
+export default {
+  metaInfo: {
+    title: "Resources"
+  },
+  data() {
+    return {
+      exitLink: "",
+      leaving: false
+    };
+  },
+  methods: {
+    toggleModal(url) {
+      this.leaving = !this.leaving;
+
+      this.exitLink = this.leaving ? url : "";
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/modules/_breakpoints";
-@import "~/assets/styles/modules/_cross-browser";
-
 /* USEFUL INFORMATION
 ====================================================== */
 
 #useful-information {
   &::before {
-    background: var(--grey);
-
     @include for-tablet-portrait-up {
       background: none;
     }
@@ -266,8 +348,6 @@ export default {};
   }
 
   &::before {
-    background: var(--purple);
-
     @include for-desktop-up {
       margin-left: 2.2rem;
       @include grid-child(5, 12, 2, 4);
@@ -277,7 +357,8 @@ export default {};
 
 #opt-in .section-icon {
   @include for-desktop-up {
-    padding: 0 50px 0 10px;
+    justify-self: center;
+    padding: 0 45px 0 0;
     @include grid-child(11, 14, 1, 4);
   }
 }
@@ -289,6 +370,8 @@ export default {};
 }
 
 #opt-in .section-body {
+  margin-bottom: 1.5rem;
+
   @include for-desktop-up {
     margin-bottom: 2rem;
     @include grid-child(6, 10, 3, 4);
@@ -300,8 +383,6 @@ export default {};
 
 #videos {
   &::before {
-    background: var(--grey);
-
     @include for-desktop-up {
       @include grid-child(4, 14, 2, 3);
     }
@@ -342,6 +423,10 @@ export default {};
   }
 }
 
+#videos .section-body .video .embed-responsive-item {
+  height: 206px;
+}
+
 #videos .section-body .video:nth-of-type(odd) .video-text {
   @include for-desktop-up {
     @include grid-child(1, 7, 1, 2);
@@ -361,6 +446,7 @@ export default {};
     @include grid-child(11, 16, 1, 2);
   }
 }
+
 #videos .section-body .video:nth-of-type(even) .video-media {
   @include for-desktop-up {
     @include grid-child(1, 10, 1, 2);
@@ -372,8 +458,6 @@ export default {};
 
 #learn-more {
   &::before {
-    background: var(--purple);
-
     @include for-desktop-up {
       @include grid-child(4, 14, 1, 3);
     }
@@ -413,8 +497,6 @@ export default {};
   }
 
   &::before {
-    background: var(--purple);
-
     @include for-desktop-up {
       margin-left: 2.6rem;
       @include grid-child(3, 13, 2, 4);
@@ -424,7 +506,8 @@ export default {};
 
 #discussion-guide .section-icon {
   @include for-desktop-up {
-    padding: 0 30px;
+    justify-self: center;
+    padding: 0 50px 0 0;
     @include grid-child(12, 15, 1, 4);
   }
 }
@@ -450,25 +533,25 @@ export default {};
 
 #find-an-expert {
   @include for-desktop-up {
-    grid-template-rows: 40px auto;
+    grid-template-rows: repeat(2, 40px) auto;
   }
 
   &::before {
     margin-top: 0;
-    background: var(--grey);
 
     @include for-desktop-up {
       margin-left: 1rem;
       margin-right: 2.5rem;
-      @include grid-child(5, 15, 1, 3);
+      @include grid-child(5, 15, 2, 4);
     }
   }
 }
 
 #find-an-expert .section-icon {
   @include for-desktop-up {
-    padding: 0 35px;
-    @include grid-child(3, 6, 1, 3);
+    justify-self: center;
+    padding: 0 25px;
+    @include grid-child(3, 6, 1, 4);
   }
 }
 
@@ -479,10 +562,10 @@ export default {};
 
   @include for-desktop-up {
     display: block;
-    margin-top: 0;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     padding-right: 1.2rem;
-    @include grid-child(6, 14, 2, 3);
+    @include grid-child(6, 14, 2, 4);
   }
 }
 
@@ -496,7 +579,7 @@ export default {};
   }
 }
 
-#find-an-expert .section-body a {
+#find-an-expert .section-body button {
   padding: 0 5px;
   @include grid-child(1, 17, 2, 3);
 
@@ -515,7 +598,6 @@ export default {};
 
   &::before {
     margin-top: 0;
-    background: var(--purple);
     @include grid-child(1, 17, 1, 3);
 
     @include for-desktop-up {
@@ -531,7 +613,7 @@ export default {};
   @include grid-child(2, 16, 2, 3);
 
   @include for-desktop-up {
-    border: 2px solid var(--purple);
+    border: 2px solid $purple;
     align-self: center;
     margin-left: 35px;
     @include grid-child(11, 14, 1, 2);
@@ -553,7 +635,7 @@ export default {};
 
 #ph-association .section-body p {
   margin-top: 0;
-  @include grid-child(1, 17, 1, 2);
+  @include grid-child(1, 17, 2, 3);
 
   @include for-desktop-up {
     margin-top: 1.5rem;
@@ -578,7 +660,6 @@ export default {};
 #ph-aware {
   &::before {
     margin-top: 0;
-    background: var(--grey);
 
     @include for-desktop-up {
       margin: 0 35px;
@@ -596,7 +677,7 @@ export default {};
     width: 80%;
     margin: 1.9rem 0;
     margin-left: 35px;
-    border: 2px solid var(--purple);
+    border: 2px solid $purple;
     border-radius: 7px;
     @include grid-child(3, 6, 1, 2);
   }
@@ -639,7 +720,6 @@ export default {};
 
   &::before {
     margin-top: 0;
-    background: var(--purple);
     @include grid-child(1, 17, 1, 3);
 
     @include for-desktop-up {
@@ -656,7 +736,7 @@ export default {};
 
   @include for-desktop-up {
     width: 80%;
-    border: 2px solid var(--purple);
+    border: 2px solid $purple;
     align-self: center;
     justify-self: end;
     margin-right: 30px;
@@ -699,7 +779,6 @@ export default {};
 #ph-news {
   &::before {
     margin-top: 0;
-    background: var(--grey);
 
     @include for-desktop-up {
       margin-right: 35px;
@@ -717,7 +796,7 @@ export default {};
     width: 80%;
     margin: 1.9rem 0;
     margin-left: 35px;
-    border: 2px solid var(--purple);
+    border: 2px solid $purple;
     border-radius: 7px;
     @include grid-child(3, 6, 1, 2);
   }
@@ -744,6 +823,28 @@ export default {};
   @include grid-child(2, 16, 2, 3);
   @include for-desktop-up {
     @include grid-child(2, 16, 2, 3);
+  }
+}
+
+/* MODAL
+====================================================== */
+.two-buttons {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
+  & a {
+    margin-right: 0.5rem;
+    @include for-desktop-up {
+      margin-right: 1rem;
+    }
+  }
+
+  & button {
+    margin-right: 0.5rem;
+    @include for-desktop-up {
+      margin-right: 1rem;
+    }
   }
 }
 </style>

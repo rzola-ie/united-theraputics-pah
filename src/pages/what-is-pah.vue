@@ -1,6 +1,6 @@
 <template>
   <SecondaryLayout>
-    <section id="what-is-pah">
+    <section purple id="what-is-pah">
       <g-image
         src="~/assets/img/icn-what-is-pah.png"
         alt="an icon of lungs"
@@ -15,16 +15,16 @@
           <strong>pulmonary arterial hypertension</strong>. PAH causes the
           millions of tiny blood vessels in your lungs to thicken and narrow.
           This makes it difficult for blood to flow from your heart through your
-          lungs, creating high blood pressure in the lung vessels. Without
-          regular blood flow, your lungs don't receive enough oxygen. The
-          pressure in the lungs causes the right side of the heart to work
+          lungs, creating high blood pressure in the lung vessels. As blood flow
+          through the lungs is reduced, your lungs don’t receive enough oxygen.
+          The pressure in the lungs causes the right side of the heart to work
           harder than normal.
         </p>
       </div>
     </section>
     <!-- what is pah -->
 
-    <section id="pah-vs-ph">
+    <section grey id="pah-vs-ph">
       <g-image
         src="~/assets/img/icn-pulmonary.png"
         alt="an icon of two arrows"
@@ -36,12 +36,12 @@
       <div class="section-body">
         <p>
           <strong>PH</strong>, which stands for
-          <strong>pulmonary hypertension</strong> is a more general term used to
-          describe any condition in which the blood pressure of the vessels in
-          your lungs is too high, such as chronic lung disease, heart disease or
-          chronic blood clots. Pulmonary <strong>arterial</strong> hypertension
-          (PAH) is an extremely rare type of PH that causes the pressure in the
-          pulmonary arteries to rise.
+          <strong>pulmonary hypertension</strong>, is a more general term used
+          to describe any condition in which the blood pressure of the vessels
+          in your lungs is too high, such as chronic lung disease, heart disease
+          or chronic blood clots. Pulmonary <strong>arterial</strong>
+          hypertension (PAH) is a rare type of PH that causes the pressure in
+          the pulmonary arteries to rise.
         </p>
 
         <p>
@@ -55,7 +55,7 @@
     </section>
     <!-- pah vs ph -->
 
-    <section id="pah-symptoms">
+    <section purple id="pah-symptoms">
       <g-image
         src="~/assets/img/symptoms-chart.png"
         alt="an image of a pah symptoms chart"
@@ -83,14 +83,13 @@
 
       <div class="section-body full">
         <p>
-          Because PAH gets worse over time, it's important to have an honest
-          conversation with your doctor about how you're really feeling,
+          Because PAH gets worse over time, it’s important to have an honest
+          conversation with your doctor about how you’re really feeling,
           regardless of your test results (which only tell part of the story).
-          <u
-            >It may be necessary to adjust your dose of medicines or add
-            treatment</u
-          >
-          <strong>
+          <g-link to="/prostacyclin-class-therapies"
+            >It may be necessary to adjust your dose of medicine(s) or add
+            treatment</g-link
+          ><strong>
             to help control PAH symptoms and keep your PAH from getting
             worse</strong
           >.
@@ -99,7 +98,30 @@
     </section>
     <!-- pah symptoms -->
 
-    <section id="pah-diagnosis">
+    <section grey id="impacts">
+      <h1 class="section-header">
+        Let's take a look at how PAH impacts your body
+      </h1>
+
+      <p class="section-lead">
+        Sometimes, it helps to actually see what’s happening in the body to
+        understand how PAH causes the symptoms you may be experiencing. Watch
+        this video that shows how PAH affects the vessels in your lungs and how
+        this impacts your heart.
+      </p>
+
+      <div class="section-video">
+        <iframe
+          src="https://www.youtube.com/embed/y7hTTg3saOM"
+          frameborder="0"
+          allow="accelerometer; encrypted-media; gyroscope;"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+    <!-- imacts -->
+
+    <section purple id="pah-diagnosis">
       <g-image
         src="~/assets/img/icn-diagnosis.png"
         alt="an icon of an arrow making a bullseye"
@@ -145,17 +167,12 @@
             </p>
           </div>
           <div class="test">
-            <h3 class="test-header">6-minute walk distance</h3>
-            <p class="test-body">
-              or 6MWD, tracks how far you can walk in 6 minutes
-            </p>
-          </div>
-          <div class="test">
-            <h3 class="test-header">Pulmonary<br />function tests</h3>
+            <h3 class="test-header">Pulmonary function tests</h3>
             <p class="test-body">or PFTs, measure your lung function</p>
           </div>
         </div>
 
+        <h3>Right-Heart Catheterization (RHC)</h3>
         <p>
           While the tests help your doctor better understand your condition, the
           only way to actually confirm that you have PAH is for your doctor to
@@ -171,18 +188,32 @@
     </section>
     <!-- pah-diagnosis -->
 
-    <section id="functional-class">
+    <section grey id="other-considerations">
+      <h1 class="section-header">Other Considerations</h1>
+
+      <div class="section-body">
+        <h3>
+          A doctor may also asses your 6-minute walk distance, or 6MWD, which
+          tracks how far you can walk on a flat surface in 6 minutes. This is
+          one of the most common tests to determine your ability to exercise. It
+          is an important test for people with PAH and is often conducted on a
+          regular basis.
+        </h3>
+      </div>
+    </section>
+
+    <section purple id="functional-class">
       <h1 class="section-header">What's your functional class?</h1>
 
       <div class="section-body">
         <p>
           Another measure of PAH severity is determined by your
-          <strong>functional class</strong> (FC). Your doctor will determine
-          your FC based on the information you share about your daily activities
-          – specifically, those activities that cause you to experience symptoms
-          of PAH, such as shortness of breath, fatigue or fainting. There are 4
-          functional classes, ranging from least severe (Class I) to most severe
-          (Class IV).
+          <strong>functional class</strong> (FC). Your healthcare provider will
+          determine your FC based on the information you share about your daily
+          activities – specifically, those activities that cause you to
+          experience symptoms of PAH, such as shortness of breath, fatigue or
+          fainting. There are 4 functional classes, ranging from least severe
+          (Class I) to most severe (Class IV).
         </p>
 
         <div class="func-classes">
@@ -240,33 +271,7 @@
     </section>
     <!-- functional-class -->
 
-    <section id="impacts">
-      <h1 class="section-header">
-        Let's take a look at how PAH impacts your body
-      </h1>
-
-      <p class="section-lead">
-        Sometimes, it helps to actually see what's happening in the body to
-        understand how PAH causes the symptoms you may be experiencing.
-      </p>
-
-      <g-link to="/" class="video-link">
-        <g-image
-          src="~/assets/img/impacts-video.png"
-          alt="an image of a pah symptoms chart"
-          class="section-image"
-        />
-      </g-link>
-
-      <div class="section-body">
-        <p>
-          Watch a video that will show how PAH affects the vessels in your lungs and how this impacts your heart.
-        </p>
-      </div>
-    </section>
-    <!-- imacts -->
-
-    <section id="managing-your-pah">
+    <section grey id="managing-your-pah">
       <g-image
         src="~/assets/img/icn-managing-your-pah-2.png"
         alt="an icon of a checklist"
@@ -277,12 +282,19 @@
 
       <div class="section-body">
         <h3>Want to learn how you can do more about your PAH?</h3>
-        <g-link class="button" to="/managing-your-pah/">Manage Your PAH</g-link>
+        <g-link class="button" to="/managing-your-pah">Manage Your PAH</g-link>
       </div>
     </section>
     <!-- managing your pah -->
 
-    <CallToAction />
+    <CallToAction>
+      <p>
+        You can accept feeling okay, or you can ask about feeling better. Ask
+        your doctor about adjusting your treatment plan to help you
+        <span class="wine">feel better</span> and
+        <span class="wine">do more</span>.
+      </p>
+    </CallToAction>
   </SecondaryLayout>
 </template>
 
@@ -295,9 +307,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/modules/_breakpoints";
-@import "~/assets/styles/modules/_cross-browser";
-
 /* WHAT IS PAH
 ====================================================== */
 
@@ -307,23 +316,21 @@ export default {
   }
 
   &::before {
-    background: var(--purple);
-
     @include for-tablet-portrait-up {
       @include grid-child(3, 13, 2, 3);
     }
 
     @include for-desktop-up {
       margin-left: 2.7rem;
-      @include grid-child(4, 13, 2, 4);
+      @include grid-child(4, 14, 2, 4);
     }
   }
 }
 
 #what-is-pah .section-icon {
   @include for-desktop-up {
-    padding: 0 30px;
-    @include grid-child(12, 15, 1, 4);
+    padding: 0 50px 0 0;
+    @include grid-child(13, 16, 1, 4);
   }
 }
 
@@ -349,8 +356,8 @@ export default {
 
   @include for-desktop-up {
     padding-top: 0;
-    padding-left: 2rem;
-    @include grid-child(5, 12, 3, 4);
+    padding: 0 1rem 0 2rem;
+    @include grid-child(5, 13, 3, 4);
   }
 }
 
@@ -359,15 +366,12 @@ export default {
 
 #pah-vs-ph {
   &::before {
-    background: var(--grey);
-
     @include for-tablet-portrait-up {
       @include grid-child(4, 16, 2, 3);
     }
 
     @include for-desktop-up {
       margin-left: 3rem;
-      margin-right: 20px;
       @include grid-child(5, 15, 2, 3);
     }
   }
@@ -375,7 +379,7 @@ export default {
 
 #pah-vs-ph .section-icon {
   @include for-desktop-up {
-    padding: 0 30px;
+    padding: 0 45px 0 0;
     @include grid-child(4, 7, 1, 3);
   }
 }
@@ -418,7 +422,6 @@ export default {
   }
 
   &::before {
-    background: var(--purple);
     @include grid-child(1, 17, 1, 5);
 
     @include for-tablet-portrait-up {
@@ -438,14 +441,13 @@ export default {
 
   @include for-tablet-portrait-up {
     @include grid-child(10, 16, 1, 4);
-    border: 3px solid var(--purple);
+    border: 3px solid $purple;
   }
 
   @include for-desktop-up {
     max-width: 280px;
     grid-row: 1 / 4;
     grid-column: 11 / 15;
-
   }
 }
 
@@ -478,7 +480,7 @@ export default {
 
 #pah-symptoms .section-body.full {
   @include grid-child(2, 16, 4, 5);
-  padding-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
 
   @include for-tablet-portrait-up {
     @include grid-child(3, 14, 3, 4);
@@ -486,20 +488,97 @@ export default {
 
   @include for-desktop-up {
     padding-right: 0;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
     @include grid-child(5, 12, 4, 5);
   }
 }
 
+#pah-symptoms .section-body.full p:last-child {
+  margin-bottom: 0;
+}
+
 #pah-symptoms .section-body ul {
   padding-left: 1rem;
-  font-weight: bold;
+  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
 }
 
 #pah-symptoms .section-body ul li {
   & + li {
     margin-top: 0.4rem;
   }
+}
+
+/* IMPACTS
+====================================================== */
+
+#impacts {
+  grid-template-rows: repeat(4, auto);
+
+  @include for-desktop-up {
+    grid-template-rows: repeat(2, auto) repeat(2, 1fr);
+  }
+
+  &::before {
+    @include grid-child(1, 17, 1, 5);
+
+    @include for-tablet-portrait-up {
+      @include grid-child(3, 16, 2, 5);
+    }
+
+    @include for-desktop-up {
+      @include grid-child(5, 13, 2, 4);
+    }
+  }
+}
+
+#impacts .section-header {
+  @include for-tablet-portrait-up {
+    @include grid-child(5, 17, 1, 2);
+  }
+
+  @include for-desktop-up {
+    margin: 0;
+    margin-bottom: 10px;
+    @include grid-child(6, 14, 1, 2);
+  }
+}
+
+#impacts .section-lead {
+  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+  @include grid-child(2, 16, 2, 3);
+
+  @include for-desktop-up {
+    padding: 0 0 0 3rem;
+    @include grid-child(5, 12, 2, 3);
+  }
+}
+
+.section-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0px;
+  margin-bottom: 1.5rem;
+  height: 0;
+  overflow: hidden;
+  align-self: center;
+
+  @include grid-child(2, 16, 3, 4);
+
+  @include for-desktop-up {
+    margin-bottom: 0;
+    padding-bottom: 50%;
+    @include grid-child(4, 12, 3, 5);
+  }
+}
+
+.section-video iframe,
+.section-video object,
+.section-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* PAH DIAGNOSIS
@@ -511,8 +590,6 @@ export default {
   }
 
   &::before {
-    background: var(--grey);
-
     @include for-tablet-portrait-up {
       @include grid-child(4, 16, 2, 3);
     }
@@ -526,13 +603,13 @@ export default {
 
 #pah-diagnosis .section-icon {
   @include for-desktop-up {
-    padding:  0 35px;
+    justify-self: center;
+    padding: 0 25px;
     @include grid-child(4, 7, 1, 3);
   }
 }
 
 #pah-diagnosis .section-header {
-
   @include for-tablet-portrait-up {
     @include grid-child(5, 15, 1, 2);
     justify-self: end;
@@ -560,6 +637,10 @@ export default {
   }
 }
 
+#pah-diagnosis .section-body h3 {
+  margin-bottom: 0;
+}
+
 #pah-diagnosis .section-body .tests {
   @include display-grid;
   grid-template-rows: repeat(6, auto);
@@ -575,14 +656,14 @@ export default {
 
 #pah-diagnosis .section-body .tests .test {
   padding: 1rem 0;
-  border-bottom: 1px solid var(--wine);
+  border-bottom: 1px solid $wine;
 
   br {
     display: none;
   }
 
   &:first-child {
-    border-top: 1px solid var(--wine);
+    border-top: 1px solid $wine;
   }
 
   @include for-desktop-up {
@@ -594,7 +675,7 @@ export default {
 
     &:nth-child(odd) {
       padding-right: 2rem;
-      border-right: 1px solid var(--wine);
+      border-right: 1px solid $wine;
     }
     &:nth-child(even) {
       padding-left: 2rem;
@@ -603,20 +684,26 @@ export default {
 
     &:nth-child(1),
     &:nth-child(2) {
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
     }
 
     &:nth-child(3),
     &:nth-child(4) {
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
       padding-right: 3rem;
-      border-top: 1px solid var(--wine);
-      border-bottom: 1px solid var(--wine);
+      border-top: 1px solid $wine;
     }
 
     &:last-child {
-      padding-right: 1rem;
+      width: 100%;
+      padding: 1rem 0;
+      grid-row: 2 / 3;
+      grid-column: 1 / 3;
+      border-right: none;
+      justify-self: center;
+      text-align: center;
+      border-top: 1px solid $wine;
     }
 
     br {
@@ -644,6 +731,41 @@ export default {
   }
 }
 
+/* OTHER CONSIDERATIONS
+====================================================== */
+#other-considerations {
+  &::before {
+    @include for-tablet-portrait-up {
+      @include grid-child(4, 13, 2, 3);
+    }
+
+    @include for-desktop-up {
+      margin-right: 30px;
+      @include grid-child(6, 14, 1, 3);
+    }
+  }
+}
+
+#other-considerations .section-header {
+  margin-bottom: 0;
+  padding-left: 2rem;
+  @include grid-child(5, 14, 1, 2);
+}
+
+#other-considerations .section-body {
+  margin-bottom: 1.5rem;
+
+  @include for-desktop-up {
+    margin-bottom: 2rem;
+    padding: 0 0 0 3rem;
+    @include grid-child(6, 13, 2, 3);
+  }
+}
+
+#other-considerations .section-body h3 {
+  margin-bottom: 0;
+}
+
 /* FUNCTIONAL CLASS
 ====================================================== */
 
@@ -653,8 +775,6 @@ export default {
   }
 
   &::before {
-    background: var(--purple);
-
     @include for-tablet-portrait-up {
       @include grid-child(3, 15, 2, 4);
     }
@@ -695,7 +815,6 @@ export default {
   @include for-tablet-portrait-up {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
-
   }
 
   @include for-desktop-up {
@@ -721,8 +840,8 @@ export default {
 
 #functional-class .section-body .func-classes .func-header {
   margin: 0;
-  color: var(--teal);
-  border-bottom: 2px solid var(--wine);
+  color: $teal;
+  border-bottom: 2px solid $wine;
   font-size: 1.2rem;
 
   @include for-desktop-up {
@@ -737,92 +856,9 @@ export default {
 }
 
 #functional-class .section-body .func-classes .func-footer {
-  
   @include for-desktop-up {
     font-size: 0.8rem;
   }
-}
-
-/* IMPACTS
-====================================================== */
-
-#impacts {
-  grid-template-rows: repeat(4, auto);
-
-  &::before {
-    background: var(--grey);
-    grid-row: 1 / 5;
-    @include grid-child(1, 17, 1, 5);
-
-    @include for-tablet-portrait-up {
-      @include grid-child(3, 16, 2, 5);
-    }
-
-    @include for-desktop-up {
-      @include grid-child(6, 14, 2, 4);
-    }
-  }
-}
-
-#impacts .section-header {
-  @include for-tablet-portrait-up {
-    @include grid-child(5, 17, 1, 2);
-  }
-
-  @include for-desktop-up {
-    padding-left: 0.8rem;
-    margin: 0;
-    @include grid-child(7, 15, 1, 2);
-  }
-}
-
-#impacts .video-link {
-  padding: 1.5rem 0;
-  @include grid-child(2, 16, 3, 4);
-
-  @include for-tablet-portrait-up {
-    @include grid-child(2, 14, 3, 4);
-  }
-
-  @include for-desktop-up {
-    @include grid-child(4, 9, 3, 5);
-  }
-}
-
-#impacts .section-lead {
-  font-weight: bold;
-  margin-bottom: 0;
-  @include grid-child(2, 16, 2, 3);
-
-  @include for-tablet-portrait-up {
-    padding-top: 0.5rem;
-    @include grid-child(4, 15, 2, 3);
-  }
-
-  @include for-desktop-up {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    padding-left: 3rem;
-    @include grid-child(6, 13, 2, 3);
-  }
-}
-
-#impacts .section-body {
-  @include grid-child(2, 16, 4, 5);
-  padding-bottom: 0.8rem;
-
-  @include for-tablet-portrait-up {
-    @include grid-child(4, 15, 4, 5);
-  }
-
-  @include for-desktop-up {
-    padding: 1.5rem 2rem 1.5rem 3rem;
-    @include grid-child(9, 14, 3, 4);
-  }
-}
-
-#impacts .section-body p {
-  margin-top: 0;
 }
 
 /* MANAGING YOUR PAH
@@ -834,8 +870,6 @@ export default {
   }
 
   &::before {
-    background: var(--purple);
-
     @include for-tablet-portrait-up {
       @include grid-child(3, 13, 2, 4);
     }
@@ -848,7 +882,8 @@ export default {
 
 #managing-your-pah .section-icon {
   @include for-desktop-up {
-    padding: 0 35px;
+    justify-self: center;
+    padding: 0 50px 0 0;
     @include grid-child(11, 14, 1, 4);
   }
 }

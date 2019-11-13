@@ -1,9 +1,9 @@
 <template>
   <SecondaryLayout>
-    <section id="site-map">
+    <section purple id="site-map">
       <div class="section-body">
         <g-link to="/">Home</g-link>
-        <g-link to="/email-opt-in">E-mail Opt-in</g-link>
+        <g-link to="/newsletter">E-mail Opt-in</g-link>
         <g-link to="/what-is-pah">What is PAH?</g-link>
         <g-link to="/privacy-policy">Privacy Policy</g-link>
         <g-link to="/managing-your-pah">Managing Your PAH</g-link>
@@ -23,17 +23,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+  metaInfo: {
+    title: "Site Map"
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/modules/_cross-browser";
-@import "~/assets/styles/modules/_breakpoints";
-
+/* SITE MAP
+====================================================== */
 #site-map {
   &::before {
     margin-top: 0;
-    background: var(--purple);
 
     @include for-desktop-up {
       @include grid-child(4, 14, 1, 3);
@@ -60,7 +62,7 @@ export default {};
 #site-map .section-body a {
   display: block;
   color: black;
-  font-weight: bold;
+  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
   align-self: center;
 }
 </style>

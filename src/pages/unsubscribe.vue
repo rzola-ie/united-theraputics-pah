@@ -1,0 +1,189 @@
+<template>
+  <SecondaryLayout>
+    <section purple id="unsubscribe">
+      <h1 class="section-header">Unsubscribe</h1>
+      <h3>
+        We’re sorry that you wish to unsubscribe from receiving communications
+        from United Therapeutics. Enter your e-mail address below and click
+        Submit.
+      </h3>
+      <ValidationObserver
+        tag="form"
+        ref="form"
+        class="form"
+        v-slot="{ invalid }"
+        id="powf_BF3BA305949DE911A834000D3A17CE77"
+        action="https://pocloudcentral.crm.powerobjects.net/PowerWebForm/PowerWebFormData.aspx?t=Xh89xZ055EiFJ%2bb7Nj6EkXUAbgBpAHQAZQBkAHQAaABlAHIAYQBwAGUAdQB0AGkAYwBzAA%3d%3d&formId=powf_BF3BA305949DE911A834000D3A17CE77&tver=2013&c=1"
+        enctype="multipart/form-data"
+        method="post"
+        @submit.prevent="submit"
+        novalidate="novalidate"
+      >
+        <ValidationProvider
+          name="email"
+          rules="required|email"
+          v-slot="{ errors, classes }"
+          tag="div"
+          class="form-group"
+        >
+          <label for="powf_da3ba305949de911a834000d3a17ce77">
+            E-mail Address <span class="required-field">*</span>
+          </label>
+          <input
+            type="text"
+            id="powf_da3ba305949de911a834000d3a17ce77"
+            name="powf_da3ba305949de911a834000d3a17ce77"
+            value=""
+            blockedemaildomain=""
+            maxlength="100"
+            autocomplete="email"
+            :class="classes"
+            v-model="email"
+          />
+          <span>
+            {{ errors[0] }}
+          </span>
+        </ValidationProvider>
+        <!-- e-mail address -->
+
+        <!-- No Time To Lose Opt-Out -->
+        <input
+          type="hidden"
+          id="powf_3b343d6a949de911a834000d3a17ce77"
+          name="powf_3b343d6a949de911a834000d3a17ce77"
+          value="Yes"
+        />
+        <input type="hidden" name="ignore_submitmessage" value="" />
+        <input type="hidden" name="ignore_linkbuttontext" value="" />
+        <input
+          type="hidden"
+          name="ignore_redirecturl"
+          :value="`${currentRoute}?success=true`"
+        />
+        <input type="hidden" name="ignore_redirectmode" value="Auto" />
+
+        <button class="button" type="submit">SUBMIT</button>
+      </ValidationObserver>
+    </section>
+    <CallToAction />
+  </SecondaryLayout>
+</template>
+
+<script>
+export default {
+  metaInfo: {
+    title: "Unsubscribe"
+  },
+  data() {
+    return {
+      email: null,
+      currentRoute: window.location.href
+    };
+  },
+  methods: {
+    async submit() {
+      const isValid = await this.$refs.form.validate();
+
+      if (isValid) {
+        console.log(this.email);
+        document.querySelector("form").submit();
+      }
+    }
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+/* UNSUBSCRIBE
+====================================================== */
+
+#unsubscribe {
+  @include for-desktop-up {
+    min-height: calc(100vh - (388px + 12rem));
+  }
+
+  &::before {
+    @include grid-child(1, 17, 1, 4);
+
+    @include for-desktop-up {
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+      @include grid-child(3, 15, 1, 4);
+    }
+  }
+}
+
+#unsubscribe .section-header {
+  @include for-desktop-up {
+    @include grid-child(3, 15, 1, 2);
+  }
+}
+
+#unsubscribe h3 {
+  @include grid-child(2, 16, 2, 3);
+
+  @include for-desktop-up {
+    padding-right: 2.5rem;
+    @include grid-child(4, 15, 2, 3);
+  }
+}
+
+#unsubscribe form {
+  margin-bottom: 1.5rem;
+  @include display-grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: repeat(16, 1fr);
+  @include grid-child(1, 17, 3, 4);
+  @include for-desktop-up {
+    margin-bottom: 0;
+    @include grid-child(4, 14, 3, 4);
+  }
+}
+
+#unsubscribe form .form-group {
+  @include display-grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(3, auto);
+  @include grid-child(1, 17, 1, 2);
+}
+
+#unsubscribe form .form-group label {
+  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+  align-self: center;
+  @include grid-child(2, 16, 1, 2);
+
+  @include for-desktop-up {
+    font-size: 1.2rem;
+    @include grid-child(1, 4, 1, 2);
+  }
+}
+
+#unsubscribe form .form-group input {
+  @include grid-child(2, 16, 2, 3);
+
+  @include for-desktop-up {
+    @include grid-child(5, 17, 1, 2);
+  }
+}
+
+#unsubscribe form .form-group span {
+  @include grid-child(2, 16, 3, 4);
+
+  @include for-desktop-up {
+    @include grid-child(5, 16, 2, 3);
+  }
+}
+
+#unsubscribe form button {
+  @include grid-child(2, 16, 2, 3);
+
+  @include for-desktop-up {
+    @include grid-child(6, 12, 2, 3);
+  }
+}
+
+.required-field {
+  color: red;
+  font-size: 1rem;
+}
+</style>

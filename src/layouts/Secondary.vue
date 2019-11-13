@@ -15,13 +15,8 @@ query {
 </static-query>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/modules/_color-palette";
-@import "~/assets/styles/modules/_breakpoints";
-
-$max_width: 1440px;
-
 .layout {
-  max-width: $max_width;
+  max-width: 1920px;
   margin: auto;
 }
 </style>
