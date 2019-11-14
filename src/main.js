@@ -12,6 +12,7 @@ import '~/assets/styles/main.scss';
 // layouts
 import DefaultLayout from '~/layouts/Default.vue'
 import SecondaryLayout from '~/layouts/Secondary.vue'
+import Short from '~/layouts/Short.vue'
 
 // components
 import CallToAction from '~/components/CallToAction.vue';
@@ -42,6 +43,7 @@ export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.component('SecondaryLayout', SecondaryLayout)
+  Vue.component('ShortLayout', Short)
 
   Vue.component('Header', Header);
   Vue.component('Modal', Modal);

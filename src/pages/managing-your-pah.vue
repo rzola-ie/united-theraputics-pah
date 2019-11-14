@@ -219,20 +219,6 @@
           class="button"
           to="https://www.unitedpahsupport.com/pdfs/Doctor-Discussion-Guide.pdf"
         >
-          <span class="arrow">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              width="10"
-              height="20"
-              viewBox="0 0 20 40"
-            >
-              <path
-                fill="rgb(141, 0, 52)"
-                d="M8,0 l4,0 l0,27 l8,0 l-10,13 l-10,-13 l8,0 l0,-27 Z"
-              />
-            </svg>
-          </span>
           Doctor Discussion Tool
         </g-link>
       </div>
@@ -675,6 +661,12 @@ export default {
     padding-bottom: 2rem;
     @include grid-child(5, 12, 3, 4);
   }
+}
+
+#make-the-most .section-body .button {
+  background: transparent url("../assets/img/download-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 14px 8px;
 }
 
 /* BUILD YOUR NETWORK

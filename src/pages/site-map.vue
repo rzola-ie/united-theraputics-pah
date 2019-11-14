@@ -1,5 +1,5 @@
 <template>
-  <SecondaryLayout>
+  <ShortLayout>
     <section purple id="site-map">
       <div class="section-body">
         <g-link to="/">Home</g-link>
@@ -19,7 +19,7 @@
       </div>
     </section>
     <CallToAction />
-  </SecondaryLayout>
+  </ShortLayout>
 </template>
 
 <script>
@@ -34,16 +34,20 @@ export default {
 /* SITE MAP
 ====================================================== */
 #site-map {
+  width: 100%;
+  height: 300px;
+  grid-template-rows: 1fr;
   &::before {
     margin-top: 0;
 
     @include for-desktop-up {
-      @include grid-child(4, 14, 1, 3);
+      @include grid-child(4, 14, 1, 2);
     }
   }
 }
 
 #site-map .section-body {
+  align-self: center;
   margin: 1.5rem 0;
   @include display-grid;
   @include grid-child(3, 16, 1, 2);

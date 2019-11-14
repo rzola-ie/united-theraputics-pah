@@ -1,5 +1,5 @@
 <template>
-  <SecondaryLayout>
+  <ShortLayout>
     <section purple id="unsubscribe">
       <h1 class="section-header">Unsubscribe</h1>
       <h3>
@@ -66,7 +66,7 @@
       </ValidationObserver>
     </section>
     <CallToAction />
-  </SecondaryLayout>
+  </ShortLayout>
 </template>
 
 <script>
@@ -77,8 +77,11 @@ export default {
   data() {
     return {
       email: null,
-      currentRoute: window.location.href
+      currentRoute: null
     };
+  },
+  mounted() {
+    this.currentRoute = window.location.href;
   },
   methods: {
     async submit() {
@@ -98,16 +101,13 @@ export default {
 ====================================================== */
 
 #unsubscribe {
-  @include for-desktop-up {
-    min-height: calc(100vh - (388px + 12rem));
-  }
-
+  max-height: 350px;
   &::before {
     @include grid-child(1, 17, 1, 4);
 
     @include for-desktop-up {
       margin-left: 2rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       @include grid-child(3, 15, 1, 4);
     }
   }
@@ -141,6 +141,7 @@ export default {
 }
 
 #unsubscribe form .form-group {
+  max-height: 300px;
   @include display-grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(3, auto);

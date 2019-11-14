@@ -202,6 +202,7 @@ export default {
 ====================================================== */
 
 #hero {
+  min-height: 100%;
   padding: 0;
   margin: 0 auto;
   grid-template-rows: 60px repeat(11, 36px);
@@ -209,7 +210,6 @@ export default {
   @include for-desktop-up {
     grid-template-rows: 80px repeat(11, 80px);
     padding: 0 1rem;
-    min-height: 100vh;
   }
 
   &::before {

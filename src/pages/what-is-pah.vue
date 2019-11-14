@@ -110,13 +110,15 @@
         this impacts your heart.
       </p>
 
-      <div class="section-video">
-        <iframe
-          src="https://www.youtube.com/embed/y7hTTg3saOM"
-          frameborder="0"
-          allow="accelerometer; encrypted-media; gyroscope;"
-          allowfullscreen
-        ></iframe>
+      <div class="section-video-wrapper">
+        <div class="section-video">
+          <iframe
+            src="https://www.youtube.com/embed/y7hTTg3saOM"
+            frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope;"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </section>
     <!-- imacts -->
@@ -515,7 +517,7 @@ export default {
   grid-template-rows: repeat(4, auto);
 
   @include for-desktop-up {
-    grid-template-rows: repeat(2, auto) repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
   }
 
   &::before {
@@ -553,27 +555,19 @@ export default {
   }
 }
 
-.section-video {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 0px;
-  margin-bottom: 1.5rem;
-  height: 0;
-  overflow: hidden;
-  align-self: center;
+.section-video-wrapper {
+  height: 100%;
+  width: 100%;
 
-  @include grid-child(2, 16, 3, 4);
-
-  @include for-desktop-up {
-    margin-bottom: 0;
-    padding-bottom: 50%;
-    @include grid-child(4, 12, 3, 5);
-  }
+  @include grid-child(3, 11, 3, 5);
 }
 
-.section-video iframe,
-.section-video object,
-.section-video embed {
+.section-video {
+  position: relative;
+  padding-bottom: 56.24%; /* 16:9 */
+  height: 0;
+}
+.section-video iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -747,9 +741,11 @@ export default {
 }
 
 #other-considerations .section-header {
-  margin-bottom: 0;
-  padding-left: 2rem;
-  @include grid-child(5, 14, 1, 2);
+  @include for-desktop-up {
+    margin-bottom: 0;
+    padding-left: 2rem;
+    @include grid-child(5, 14, 1, 2);
+  }
 }
 
 #other-considerations .section-body {
