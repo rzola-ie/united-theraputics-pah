@@ -72,6 +72,7 @@ export default {};
   @include display-grid;
   grid-template-rows: repeat(6, auto);
   grid-template-columns: 1fr;
+  justify-items: center;
 
   @include for-desktop-up {
     grid-template-rows: auto;
@@ -87,6 +88,7 @@ export default {};
 }
 
 .footer-nav-link {
+  max-width: 150px;
   padding: 0 20px;
   font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
   color: black;

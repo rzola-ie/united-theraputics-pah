@@ -528,6 +528,12 @@ export default {
   }
 }
 
+#discussion-guide .section-body .button {
+  background: transparent url("../assets/img/download-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 14px 8px;
+}
+
 /* FIND AN EXPERT
 ====================================================== */
 

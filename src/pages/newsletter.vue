@@ -424,12 +424,14 @@ export default {
         email: null
       },
       over18: null,
-      currentRoute: window.location.href,
+      currentRoute: null,
       showSuccessModal: false,
       showErrorModal: false
     };
   },
   mounted() {
+    this.currentRoute = window.location.href;
+
     if (this.$route.query.success === "true") {
       this.showSuccessModal = true;
     }

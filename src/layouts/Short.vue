@@ -21,8 +21,15 @@ query {
   @include for-desktop-up {
     min-height: 100vh;
     @include display-grid;
-    grid-template-rows: [header-start] auto [content-start] 1fr [footer-start] auto;
+    grid-template-rows: auto 1fr auto;
   }
   margin: auto;
+}
+
+.layout main {
+  @include display-grid;
+
+  grid-template-rows: 1fr auto;
+  align-items: center;
 }
 </style>
