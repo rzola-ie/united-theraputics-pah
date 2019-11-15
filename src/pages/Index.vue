@@ -495,7 +495,7 @@ export default {
   @include for-desktop-up {
     padding-left: 1.5rem;
     margin-bottom: 10px;
-    @include grid-child(8, 15, 1, 2);
+    @include grid-child(8, 13, 1, 2);
   }
 }
 

@@ -11,15 +11,15 @@
 
       <nav class="nav">
         <g-link class="nav__link" to="/what-is-pah" active-class>
-          what is pah?
+          <span>what is pah?</span>
         </g-link>
 
         <g-link class="nav__link" to="/managing-your-pah" active-class>
-          managing<br />your pah
+          <span>managing<br />your pah</span>
         </g-link>
 
         <g-link class="nav__link" to="/pah-pathways" active-class>
-          pah pathways
+          <span>pah pathways</span>
         </g-link>
 
         <g-link
@@ -27,11 +27,11 @@
           to="/prostacyclin-class-therapies"
           active-class
         >
-          prostacyclin-<br />class therapies
+          <span>prostacyclin-<br />class therapies</span>
         </g-link>
 
         <g-link class="nav__link" to="/resources" active-class>
-          resources
+          <span>resources</span>
         </g-link>
 
         <g-link class="nav__link newsletter" to="/newsletter" active-class>
@@ -194,9 +194,30 @@ export default {
   }
 
   &.newsletter {
-    padding: 0.5rem 0rem;
+    padding: 0.5rem 0.5rem;
     background-color: black;
     color: white;
+  }
+
+  &:hover > span::before {
+    transform: scaleX(1);
+    transition: transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
+  }
+}
+
+.nav__link span {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: center;
+    background: $wine;
+    transition: transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
   }
 }
 
