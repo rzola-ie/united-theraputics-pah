@@ -459,17 +459,22 @@ export default {
 }
 
 #benefits .section-body.top {
-  margin-bottom: 1rem;
+  margin: 1.5rem 0;
   @include grid-child(2, 16, 2, 3);
 
   @include for-desktop-up {
+    margin: 2rem 0;
     @include grid-child(5, 13, 2, 3);
   }
 }
 
+#benefits .section-body.top p:first-child {
+  margin-top: 0;
+}
+
 #benefits .section-body.bottom {
   @include display-grid;
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
   grid-template-columns: repeat(16, 1fr);
   grid-column: 1 / 17;
   grid-row: 3;
@@ -479,30 +484,39 @@ export default {
     content: "";
     background: $purple;
     border-radius: 7px;
-    @include grid-child(1, 17, 1, 3);
+    @include grid-child(1, 17, 1, 4);
 
     @include for-desktop-up {
-      @include grid-child(4, 14, 1, 3);
+      @include grid-child(4, 14, 1, 4);
     }
   }
 }
 
-#benefits .section-body.bottom p {
+#benefits .section-body.bottom p:first-child {
   @include grid-child(2, 16, 1, 2);
+  margin: 1.5rem 0 0;
 
   @include for-desktop-up {
+    margin: 2rem 0 0;
     @include grid-child(5, 13, 1, 2);
+  }
+}
+#benefits .section-body.bottom p:nth-child(2) {
+  @include grid-child(2, 16, 2, 3);
+
+  @include for-desktop-up {
+    @include grid-child(5, 13, 2, 3);
   }
 }
 
 #benefits .section-body.bottom ul {
   margin-top: 0;
   padding-bottom: 1.5rem;
-  @include grid-child(2, 17, 2, 3);
+  @include grid-child(2, 17, 3, 4);
 
   @include for-desktop-up {
     padding-bottom: 2rem;
-    @include grid-child(5, 13, 2, 3);
+    @include grid-child(5, 13, 3, 4);
   }
 }
 
@@ -568,12 +582,16 @@ export default {
 }
 
 #getting-started .section-body {
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
 
   @include for-desktop-up {
-    margin-bottom: 2rem;
+    margin: 2rem 0;
     @include grid-child(5, 13, 2, 4);
   }
+}
+
+#getting-started .section-body p:first-child {
+  margin-top: 0;
 }
 
 #getting-started .section-body ul {
