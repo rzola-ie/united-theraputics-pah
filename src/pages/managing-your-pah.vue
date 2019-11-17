@@ -505,7 +505,7 @@ export default {
 /* INTERACTIVE TOOL
 ====================================================== */
 #interactive-tool {
-  display: flex;
+  display: block;
 }
 
 /* TREATMENT GOALS

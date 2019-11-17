@@ -558,8 +558,14 @@ export default {
 .section-video-wrapper {
   height: 100%;
   width: 100%;
+  margin-bottom: 1.5rem;
 
-  @include grid-child(3, 11, 3, 5);
+  @include grid-child(2, 16, 3, 5);
+
+  @include for-desktop-up {
+    margin-bottom: 0;
+    @include grid-child(3, 11, 3, 5);
+  }
 }
 
 .section-video {

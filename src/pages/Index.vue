@@ -205,7 +205,7 @@ export default {
   min-height: 100%;
   padding: 0;
   margin: 0 auto;
-  grid-template-rows: 60px repeat(11, 36px);
+  grid-template-rows: 60px repeat(11, 42px);
 
   @include for-desktop-up {
     grid-template-rows: 80px repeat(11, 80px);
@@ -255,14 +255,13 @@ export default {
 
 #hero #hero-down-button {
   min-width: auto;
-  height: 8px;
-  width: 16px;
+  width: 20px;
   padding: 0;
   background: 0;
   border: none;
   justify-self: center;
   align-self: center;
-  @include grid-child(8, 10, 10, 12);
+  @include grid-child(8, 10, 10, 11);
 
   @include for-desktop-up {
     height: 20px;
