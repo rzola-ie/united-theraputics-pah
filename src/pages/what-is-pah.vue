@@ -809,12 +809,14 @@ export default {
 }
 
 #functional-class .section-body .func-classes {
+  padding: 0 2rem;
   @include display-grid;
   grid-template-rows: repeat(4, auto);
   grid-template-columns: 1fr;
-  grid-gap: 0.8rem;
+  grid-gap: 1rem;
 
   @include for-tablet-portrait-up {
+    padding: 0;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
   }

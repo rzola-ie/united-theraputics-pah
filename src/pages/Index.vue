@@ -220,7 +220,7 @@ export default {
 #hero .hero-image {
   display: none;
 
-  @include for-desktop-up {
+  @include for-tablet-portrait-up {
     display: block;
     width: 100%;
     @include grid-child(2, 17, 1, 4);
@@ -232,7 +232,7 @@ export default {
   width: 100%;
   @include grid-child(1, 17, 1, 5);
 
-  @include for-desktop-up {
+  @include for-tablet-portrait-up {
     display: none;
     width: 100%;
   }
@@ -243,6 +243,12 @@ export default {
   font-size: 0.75rem;
   padding-top: 0.4rem;
   @include grid-child(2, 16, 7, 11);
+
+  @include for-tablet-portrait-up {
+    padding-top: 0rem;
+    font-size: 0.95rem;
+    @include grid-child(3, 15, 8, 12);
+  }
 
   @include for-desktop-up {
     padding: 0 3rem;
@@ -262,6 +268,10 @@ export default {
   justify-self: center;
   align-self: center;
   @include grid-child(8, 10, 10, 11);
+
+  @include for-tablet-portrait-up {
+    @include grid-child(8, 10, 11, 12);
+  }
 
   @include for-desktop-up {
     height: 20px;
