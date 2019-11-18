@@ -1,6 +1,7 @@
 <template>
   <div class="layout">
-    <HeaderSecondary />
+    <SideNav :show="toggle" v-on:close="handleMenuToggle" />
+    <HeaderSecondary v-on:toggle="handleMenuToggle" />
     <main>
       <slot />
     </main>
@@ -8,13 +9,20 @@
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
+<script>
+export default {
+  data() {
+    return {
+      toggle: false
+    };
+  },
+  methods: {
+    handleMenuToggle() {
+      this.toggle = !this.toggle;
+    }
   }
-}
-</static-query>
+};
+</script>
 
 <style lang="scss" scoped>
 .layout {

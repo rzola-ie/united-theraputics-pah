@@ -344,7 +344,6 @@ export default {
 }
 
 #what-is-prostacyclin .section-video {
-  width: 100%;
   @include grid-child(2, 16, 4, 5);
   margin-bottom: 1.5rem;
 
@@ -695,7 +694,7 @@ export default {
 #fighting-pah .section-body {
   margin: 1.5rem 0;
 
-  @include grid-child(6, 14, 1, 2);
+  @include grid-child(2, 16, 1, 2);
 
   @include for-desktop-up {
     margin: 2rem 0;

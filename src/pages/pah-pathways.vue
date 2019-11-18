@@ -188,7 +188,9 @@ export default {
 ====================================================== */
 
 #therapies {
-  grid-template-rows: 50px repeat(2, auto);
+  @include for-desktop-up {
+    grid-template-rows: 50px repeat(2, auto);
+  }
 
   &::before {
     @include for-desktop-up {
@@ -223,10 +225,12 @@ export default {
 }
 
 #therapies .section-body .button {
+  width: 100%;
   padding: 0 10px;
   font-size: 0.7rem;
 
   @include for-desktop-up {
+    width: initial;
     padding: 0 2rem;
     font-size: 1rem;
   }

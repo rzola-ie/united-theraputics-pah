@@ -14,5 +14,6 @@
     <feBlend in="SourceGraphic" in2="noisy2" mode="multiply" />
     </filter>
 </defs>
-<rect height="100" width="100" filter="url(#noise)" fill="rgba(233, 220, 255, 0.2)" />
+<rect width="100" height="100" fill="white"/>
+<rect width="100" height="100" filter="url(#noise)" fill="rgba(233, 220, 255, 0.2)" />
 </svg>

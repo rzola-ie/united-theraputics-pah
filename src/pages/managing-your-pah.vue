@@ -506,6 +506,10 @@ export default {
 ====================================================== */
 #interactive-tool {
   display: block;
+
+  @include for-desktop-up {
+    padding: 0 10%;
+  }
 }
 
 /* TREATMENT GOALS

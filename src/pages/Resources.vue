@@ -615,12 +615,13 @@ export default {
 
 #ph-association .section-image {
   border-radius: 7px;
-  margin-bottom: 1.2rem;
-  @include grid-child(2, 16, 2, 3);
+  margin-top: 1.5rem;
+  @include grid-child(2, 16, 1, 2);
 
   @include for-desktop-up {
     border: 2px solid $purple;
     align-self: center;
+    margin-top: 0;
     margin-left: 35px;
     @include grid-child(11, 14, 1, 2);
   }
@@ -629,7 +630,7 @@ export default {
 #ph-association .section-body {
   @include display-grid;
   grid-template-rows: auto auto auto;
-  @include grid-child(2, 16, 1, 2);
+  @include grid-child(2, 16, 2, 3);
   margin: 1.2rem 0;
 
   @include for-desktop-up {
@@ -650,9 +651,9 @@ export default {
 }
 
 #ph-association .section-body .button {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   padding: 0 5px;
-  @include grid-child(1, 17, 2, 3);
+  @include grid-child(1, 17, 3, 4);
 
   @include for-desktop-up {
     font-size: 1rem;
@@ -676,22 +677,23 @@ export default {
 
 #ph-aware .section-image {
   border-radius: 7px;
-  margin-bottom: 1.2rem;
-  @include grid-child(2, 16, 2, 3);
+  margin-top: 1.5rem;
+  @include grid-child(2, 16, 1, 2);
 
   @include for-desktop-up {
     width: 80%;
-    margin: 1.9rem 0;
+    margin-top: 0;
     margin-left: 35px;
     border: 2px solid $purple;
     border-radius: 7px;
+    align-self: center;
     @include grid-child(3, 6, 1, 2);
   }
 }
 
 #ph-aware .section-body {
   @include display-grid;
-  @include grid-child(2, 16, 1, 2);
+  @include grid-child(2, 16, 2, 3);
   margin-bottom: 1.2rem;
 
   @include for-desktop-up {
@@ -707,7 +709,7 @@ export default {
 }
 
 #ph-aware .section-body .button {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   @include grid-child(1, 17, 2, 3);
 
   @include for-desktop-up {
@@ -737,25 +739,26 @@ export default {
 
 #scleroderma-foundation .section-image {
   border-radius: 7px;
-  margin-bottom: 1.2rem;
-  @include grid-child(2, 16, 2, 3);
+  margin-top: 1.5rem;
+  @include grid-child(2, 16, 1, 2);
 
   @include for-desktop-up {
     width: 80%;
+    margin-top: 0;
+    margin-right: 30px;
     border: 2px solid $purple;
     align-self: center;
     justify-self: end;
-    margin-right: 30px;
 
     @include grid-child(12, 15, 1, 2);
   }
 }
 
 #scleroderma-foundation .section-body {
+  margin-bottom: 1.2rem;
   @include display-grid;
   grid-template-rows: auto auto auto;
-  @include grid-child(2, 16, 1, 2);
-  margin: 1.5rem 0;
+  @include grid-child(2, 16, 2, 3);
 
   @include for-desktop-up {
     display: block;
@@ -795,15 +798,16 @@ export default {
 
 #ph-news .section-image {
   border-radius: 7px;
-  margin-bottom: 1.2rem;
-  @include grid-child(2, 16, 2, 3);
+  margin-top: 1.5rem;
+  @include grid-child(2, 16, 1, 2);
 
   @include for-desktop-up {
     width: 80%;
-    margin: 1.9rem 0;
+    margin-top: 0;
     margin-left: 35px;
     border: 2px solid $purple;
     border-radius: 7px;
+    align-self: center;
     @include grid-child(3, 6, 1, 2);
   }
 }
@@ -811,7 +815,7 @@ export default {
 #ph-news .section-body {
   margin-bottom: 1.2rem;
   @include display-grid;
-  @include grid-child(2, 16, 1, 2);
+  @include grid-child(2, 16, 2, 3);
 
   @include for-desktop-up {
     display: block;
