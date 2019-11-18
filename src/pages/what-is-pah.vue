@@ -356,6 +356,7 @@ export default {
 
   @include for-desktop-up {
     padding: 0 1rem 0 2rem;
+    margin: 0.8rem 0 2rem 0;
     @include grid-child(5, 13, 3, 4);
   }
 }
