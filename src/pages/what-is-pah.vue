@@ -348,19 +348,20 @@ export default {
 }
 
 #what-is-pah .section-body {
-  padding-bottom: 0.8rem;
+  margin: 0.8rem 0 1.5rem 0;
 
   @include for-tablet-portrait-up {
-    padding-top: 0.5rem;
-    padding-bottom: 1.4rem;
     @include grid-child(4, 12, 2, 3);
   }
 
   @include for-desktop-up {
-    padding-top: 0;
     padding: 0 1rem 0 2rem;
     @include grid-child(5, 13, 3, 4);
   }
+}
+
+#what-is-pah .section-body p {
+  margin: 0;
 }
 
 /* PAH VS PH
@@ -398,16 +399,25 @@ export default {
 }
 
 #pah-vs-ph .section-body {
-  padding-bottom: 0.8rem;
+  margin: 1.5rem 0;
 
   @include for-tablet-portrait-up {
     @include grid-child(5, 15, 2, 3);
   }
 
   @include for-desktop-up {
-    padding: 1.4rem 2.5rem 1.4rem 4rem;
+    margin-bottom: 2rem;
+    padding: 0 2.5rem 0 4rem;
     @include grid-child(6, 15, 2, 3);
   }
+}
+
+#pah-vs-ph .section-body p:first-child {
+  margin-top: 0;
+}
+
+#pah-vs-ph .section-body p:last-child {
+  margin-bottom: 0;
 }
 
 /* PAH SYMPTOMS
@@ -420,7 +430,7 @@ export default {
     grid-template-rows: repeat(3, auto);
   }
   @include for-desktop-up {
-    grid-template-rows: 40px 80px repeat(2, auto);
+    grid-template-rows: 40px repeat(3, auto);
   }
 
   &::before {
@@ -489,8 +499,8 @@ export default {
   }
 
   @include for-desktop-up {
-    padding-right: 0;
     margin-bottom: 2rem;
+    padding-right: 0;
     @include grid-child(5, 12, 4, 5);
   }
 }
@@ -546,6 +556,7 @@ export default {
 }
 
 #impacts .section-lead {
+  margin: 1.5rem 0;
   font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
   @include grid-child(2, 16, 2, 3);
 
@@ -573,6 +584,7 @@ export default {
   padding-bottom: 56.24%; /* 16:9 */
   height: 0;
 }
+
 .section-video iframe {
   position: absolute;
   top: 0;
@@ -623,16 +635,14 @@ export default {
 }
 
 #pah-diagnosis .section-body {
-  padding-bottom: 0.8rem;
+  margin: 1.5rem 0;
 
   @include for-tablet-portrait-up {
-    padding-top: 0.5rem;
     @include grid-child(5, 15, 2, 3);
   }
 
   @include for-desktop-up {
-    padding-top: 1rem;
-    padding-right: 0.6rem;
+    margin: 2rem 0;
     @include grid-child(7, 14, 2, 5);
   }
 }
@@ -731,6 +741,13 @@ export default {
   }
 }
 
+#pah-diagnosis .section-body p:first-child {
+  margin-top: 0;
+}
+#pah-diagnosis .section-body p:last-child {
+  margin-bottom: 0;
+}
+
 /* OTHER CONSIDERATIONS
 ====================================================== */
 #other-considerations {
@@ -755,17 +772,17 @@ export default {
 }
 
 #other-considerations .section-body {
-  margin-bottom: 1.5rem;
+  margin: 0.8rem 0 1.5rem 0;
 
   @include for-desktop-up {
-    margin-bottom: 2rem;
     padding: 0 0 0 3rem;
+    margin-bottom: 2rem;
     @include grid-child(6, 13, 2, 3);
   }
 }
 
 #other-considerations .section-body h3 {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 /* FUNCTIONAL CLASS
@@ -796,15 +813,16 @@ export default {
 }
 
 #functional-class .section-body {
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 
   @include for-tablet-portrait-up {
     @include grid-child(4, 14, 2, 3);
   }
 
   @include for-desktop-up {
+    margin-bottom: 2rem;
     @include grid-child(5, 13, 2, 3);
-    padding: 0 3rem 2rem;
+    padding: 0 3rem;
   }
 }
 
@@ -907,7 +925,7 @@ export default {
 }
 
 #managing-your-pah .section-body {
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
   @include grid-child(3, 14, 2, 3);
 
   @include for-tablet-portrait-up {
@@ -915,8 +933,8 @@ export default {
   }
 
   @include for-desktop-up {
+    margin-bottom: 2rem;
     padding-left: 2.5rem;
-    padding-bottom: 2rem;
     @include grid-child(6, 11, 3, 4);
   }
 }
