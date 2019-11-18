@@ -1,7 +1,8 @@
 <template>
   <Layout>
+    <SideNav :show="toggle" v-on:close="handleMenuToggle" />
     <section transparent id="hero">
-      <Header />
+      <Header v-on:toggle="handleMenuToggle" />
       <g-image
         class="hero-image"
         src="~/assets/img/hero-image.png"
@@ -187,11 +188,19 @@
 
 <script>
 export default {
+  data() {
+    return {
+      toggle: false
+    };
+  },
   methods: {
     handleArrowClick() {
       document
         .getElementById("feel-better")
         .scrollIntoView({ behavior: "smooth" });
+    },
+    handleMenuToggle() {
+      this.toggle = !this.toggle;
     }
   }
 };
@@ -242,12 +251,14 @@ export default {
   text-align: center;
   font-size: 0.75rem;
   padding-top: 0.4rem;
-  @include grid-child(2, 16, 7, 11);
+  align-self: center;
+  @include grid-child(2, 16, 6, 10);
 
   @include for-tablet-portrait-up {
-    padding-top: 0rem;
-    font-size: 0.95rem;
-    @include grid-child(3, 15, 8, 12);
+    padding-top: 0;
+    margin: 0;
+    font-size: 0.9rem;
+    @include grid-child(4, 14, 8, 11);
   }
 
   @include for-desktop-up {

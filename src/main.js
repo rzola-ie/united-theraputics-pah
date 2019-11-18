@@ -20,6 +20,7 @@ import Footer from '~/components/Footer.vue';
 import Header from '~/components/Header.vue';
 import HeaderSecondary from '~/components/HeaderSecondary.vue';
 import Modal from '~/components/Modal.vue';
+import SideNav from '~/components/SideNav.vue';
 import InteractiveTool from '~/components/InteractiveTool.vue';
 
 export default function (Vue, { router, head, isClient }) {
@@ -47,6 +48,7 @@ export default function (Vue, { router, head, isClient }) {
 
   Vue.component('Header', Header);
   Vue.component('Modal', Modal);
+  Vue.component('SideNav', SideNav);
   Vue.component('HeaderSecondary', HeaderSecondary);
   Vue.component('InteractiveTool', InteractiveTool);
   Vue.component('CallToAction', CallToAction);

@@ -707,7 +707,7 @@ export default {
   --color-high: #ed1f24;
 
   width: 100%;
-  max-width: 1024px;
+  // max-width: 1024px;
   margin: auto;
   visibility: hidden;
 }

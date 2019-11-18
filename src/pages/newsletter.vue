@@ -255,11 +255,10 @@
             blockedemaildomain=""
             maxlength="56"
             autocomplete="tel"
-            :class="classes"
             v-model="address.phone"
           />
         </div>
-        <!-- zip -->
+        <!-- phone -->
 
         <ValidationProvider
           name="email"
