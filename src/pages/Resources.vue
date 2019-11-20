@@ -2,8 +2,8 @@
   <SecondaryLayout>
     <Modal v-if="leaving">
       <h2 slot="header">
-        You’re leaving this page and heading to a site with information about
-        treatment options from United Therapeutics.
+        YOU ARE NOW LEAVING A SITE MANAGED BY UNITED THERAPEUTICS. CLICK
+        CONTINUE TO PROCEED.
       </h2>
 
       <div slot="footer">
@@ -147,16 +147,11 @@
           Download this Doctor Discussion Tool &amp; Visit Checklist to guide
           your next appointment and help you ask the right questions.
         </h3>
-        <button
+        <g-link
           class="button"
-          @click="
-            toggleModal(
-              'https://www.unitedpahsupport.com/pdfs/Doctor-Discussion-Guide.pdf'
-            )
-          "
+          to="https://www.unitedpahsupport.com/pdfs/Doctor-Discussion-Guide.pdf"
+          >Doctor Discussion Tool</g-link
         >
-          Doctor Discussion Tool
-        </button>
       </div>
     </section>
     <!-- discussion guide -->
@@ -286,7 +281,13 @@
       />
     </section>
     <!-- ph news -->
-    <CallToAction />
+    <CallToAction>
+      <p>
+        You can accept feeling okay, or you can ask about feeling better. Ask
+        your doctor if adding a
+        <span class="wine">Prostacyclin-class medicine</span> could help you.
+      </p>
+    </CallToAction>
   </SecondaryLayout>
 </template>
 
@@ -532,6 +533,7 @@ export default {
   background: transparent url("../assets/img/download-arrow.svg");
   background-repeat: no-repeat;
   background-position: 14px 8px;
+  padding-left: 40px;
 }
 
 /* FIND AN EXPERT
@@ -587,9 +589,11 @@ export default {
 
 #find-an-expert .section-body button {
   padding: 0 5px;
+  font-size: 0.8rem;
   @include grid-child(1, 17, 2, 3);
 
   @include for-desktop-up {
+    font-size: 1rem;
     padding: 0 32px;
   }
 }
@@ -651,7 +655,7 @@ export default {
 }
 
 #ph-association .section-body .button {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   padding: 0 5px;
   @include grid-child(1, 17, 3, 4);
 
@@ -709,7 +713,7 @@ export default {
 }
 
 #ph-aware .section-body .button {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   @include grid-child(1, 17, 2, 3);
 
   @include for-desktop-up {

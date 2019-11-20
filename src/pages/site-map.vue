@@ -18,7 +18,6 @@
         <g-link to="/site-map">Site Map</g-link>
       </div>
     </section>
-    <CallToAction />
   </ShortLayout>
 </template>
 

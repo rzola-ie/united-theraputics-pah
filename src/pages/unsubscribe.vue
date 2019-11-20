@@ -65,7 +65,6 @@
         <button class="button" type="submit">SUBMIT</button>
       </ValidationObserver>
     </section>
-    <CallToAction />
   </ShortLayout>
 </template>
 

@@ -153,6 +153,7 @@
       <!-- risk-options -->
 
       <ellipse id="inner" cx="989.5" cy="556.4" rx="350" ry="346.9" />
+
       <g id="outer" ref="outer">
         <path
           id="outer-ring"
@@ -161,6 +162,26 @@
         c0-85.8,26.2-165.5,71-231.5c0,0,0,0,0,0"
         />
         <circle id="halo" cx="660.5" cy="306.5" r="22.5" />
+      </g>
+
+      <g id="directional">
+        <g id="prev" class="direction">
+          <circle class="clickable" cx="686.43" cy="550" r="32.53" />
+          <path
+            class="arrow"
+            d="M694.84,534.79l-26.27,21.43L694.35,578a1.5,1.5,0,0,1-1,2.64,1.47,1.47,0,0,1-1-.35l-27.1-22.94,0,0a.19.19,0,0,1-.06-.07,1,1,0,0,1-.17-.18,1.35,1.35,0,0,1-.19-.33l-.06-.19a1.2,1.2,0,0,1,0-.38,1.17,1.17,0,0,1,0-.32,1.24,1.24,0,0,1,.1-.31,1.61,1.61,0,0,1,.17-.28,1.8,1.8,0,0,1,.19-.2.28.28,0,0,1,.1-.09L693,532.47a1.5,1.5,0,1,1,1.89,2.32Z"
+            transform="translate(3.37 -6)"
+          />
+        </g>
+        <g id="next" class="direction">
+          <circle class="clickable" cx="1293" cy="550" r="32.53" />
+          <path
+            class="arrow"
+            data-name="arrow"
+            d="M1284.28,578l26.27-21.43-25.78-21.82a1.5,1.5,0,0,1,1-2.64,1.47,1.47,0,0,1,1,.35l27.1,22.94,0,0a.19.19,0,0,1,.06.07,1,1,0,0,1,.17.18,1.35,1.35,0,0,1,.19.33l.06.19a1.2,1.2,0,0,1,.05.38,1.17,1.17,0,0,1,0,.32,1.24,1.24,0,0,1-.1.31,1.61,1.61,0,0,1-.17.28,1.8,1.8,0,0,1-.19.2.28.28,0,0,1-.1.09l-27.62,22.53a1.5,1.5,0,1,1-1.89-2.32Z"
+            transform="translate(-2 -6)"
+          />
+        </g>
       </g>
 
       <g id="markers">
@@ -257,17 +278,6 @@
       <!-- six-minute walk title -->
 
       <text
-        class="node nt-pro bottom"
-        transform="matrix(1 0 0 1 1393.1593 394.5493)"
-      >
-        <tspan x="0" y="0">
-          (used to help detect, diagnose, and
-        </tspan>
-        <tspan x="0" y="26">
-          evaluate the severity of heart failure)
-        </tspan>
-      </text>
-      <text
         class="node nt-pro top"
         transform="matrix(1 0 0 1 1392.8868 316.035)"
       >
@@ -287,7 +297,7 @@
         class="functional"
         data-show-info="functional"
         data-name="functional"
-        transform="matrix(1 0 0 1 816.0275 312.6332)"
+        transform="matrix(1 0 0 1 802 312.6332)"
       >
         <tspan x="0" y="0">Functional Class (FC) is one way</tspan>
         <tspan x="5.6" y="32">to describe the severity of PAH</tspan>
@@ -358,10 +368,10 @@
         <text
           class="functional"
           data-show-info="functional"
-          transform="matrix(1 0 0 1 851.8932 714.2774)"
+          transform="matrix(1 0 0 1 843 714.2774)"
         >
           <tspan x="0" y="0">Class I – No symptoms</tspan>
-          <tspan x="1" y="32">with ordinary activities</tspan>
+          <tspan x="1" y="32">with ordinary activities.</tspan>
           <tspan x="-67.5" y="64">Class II – Symptoms with ordinary</tspan>
           <tspan x="-72.7" y="96">
             activity. Slight limitation of activity.
@@ -450,7 +460,6 @@
         >
           <tspan x="0" y="0">BNP &gt;300 ng/L</tspan>
           <tspan x="-50.9" y="32">NT-pro BNP &gt;1400 ng/L</tspan>
-          <tspan x="-19.7" y="64">natriuretic peptide</tspan>
         </text>
         <!-- high nt-pro range -->
       </g>
@@ -531,9 +540,24 @@ export default {
           info: {
             initial: "functional",
             states: {
-              functional: {},
-              "six-minute": {},
-              "nt-pro": {}
+              functional: {
+                on: {
+                  PREV: "nt-pro",
+                  NEXT: "six-minute"
+                }
+              },
+              "six-minute": {
+                on: {
+                  PREV: "functional",
+                  NEXT: "nt-pro"
+                }
+              },
+              "nt-pro": {
+                on: {
+                  PREV: "six-minute",
+                  NEXT: "functional"
+                }
+              }
             },
             on: {
               SELECT_FUNCTIONAL: ".functional",
@@ -603,6 +627,44 @@ export default {
       risk.addEventListener("click", () => {
         this.setRiskOnSelect(risk.classList[1]);
       });
+    });
+
+    document.querySelector(".direction#prev").addEventListener("click", () => {
+      switch (this.service.state.value.info) {
+        case "nt-pro":
+          TweenMax.to(this.outerPath, 0.5, { rotation: 52.75 });
+          this.service.send("SELECT_SIX_WALK");
+          break;
+        case "six-minute":
+          TweenMax.to(this.outerPath, 0.5, { rotation: 0 });
+          this.service.send("SELECT_FUNCTIONAL");
+          break;
+        case "functional":
+          TweenMax.to(this.outerPath, 0.5, { rotation: 105.5 });
+          this.service.send("SELECT_NT_PRO");
+          break;
+        default:
+          console.log("oh no");
+      }
+    });
+
+    document.querySelector(".direction#next").addEventListener("click", () => {
+      switch (this.service.state.value.info) {
+        case "nt-pro":
+          TweenMax.to(this.outerPath, 0.5, { rotation: 0 });
+          this.service.send("SELECT_FUNCTIONAL");
+          break;
+        case "six-minute":
+          TweenMax.to(this.outerPath, 0.5, { rotation: 105.5 });
+          this.service.send("SELECT_NT_PRO");
+          break;
+        case "functional":
+          TweenMax.to(this.outerPath, 0.5, { rotation: 52.75 });
+          this.service.send("SELECT_SIX_WALK");
+          break;
+        default:
+          console.log("oh no");
+      }
     });
   },
   destroyed() {
@@ -770,6 +832,20 @@ export default {
   transition: fill 300ms ease-in-out;
 }
 
+#main-elements #directional .direction {
+  cursor: pointer;
+}
+
+#main-elements #directional .direction .clickable {
+  fill: transparent;
+}
+
+#main-elements #directional .direction .arrow {
+  fill: #8f9194;
+  transition: fill 300ms ease-in-out;
+  pointer-events: none;
+}
+
 /* ARROW
 =========================================== */
 
@@ -818,10 +894,6 @@ export default {
   font-size: 38px;
   fill: #8f9194;
   font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
-}
-
-#titles .nt-pro.bottom {
-  font-size: 21px;
 }
 
 /* RANGES
@@ -873,6 +945,10 @@ export default {
     stroke: var(--bg);
   }
 
+  #main-elements #directional .direction .clickable:hover + .arrow {
+    fill: var(--bg);
+  }
+
   #arrow polygon {
     fill: var(--bg);
   }
@@ -893,6 +969,10 @@ export default {
     stroke: var(--bg);
   }
 
+  #main-elements #directional .direction .clickable:hover + .arrow {
+    fill: var(--bg);
+  }
+
   #arrow polygon {
     fill: var(--bg);
   }
@@ -911,6 +991,10 @@ export default {
   --color: #fff;
   #main-elements #outer {
     stroke: var(--bg);
+  }
+
+  #main-elements #directional .direction .clickable:hover + .arrow {
+    fill: var(--bg);
   }
 
   #arrow polygon {

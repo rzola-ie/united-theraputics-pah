@@ -19,7 +19,7 @@
         </g-link>
 
         <g-link class="nav__link" to="/pah-pathways" active-class>
-          <span>pah pathways</span>
+          <span>pah<br />pathways</span>
         </g-link>
 
         <g-link
@@ -135,6 +135,12 @@ export default {};
 
   &.active {
     color: $wine;
+
+    span {
+      &::before {
+        transform: scaleX(1);
+      }
+    }
   }
 
   &.newsletter {

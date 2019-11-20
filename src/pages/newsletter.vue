@@ -18,7 +18,7 @@
     <!-- success modal -->
 
     <Modal v-if="showErrorModal">
-      <h2 slot="header">THANKS FOR SIGNING UP!</h2>
+      <h2 slot="header">WHOOPS!</h2>
 
       <h3 slot="body">
         We know how important it is to understand your PAH and take the
@@ -43,8 +43,8 @@
       <h1 class="section-header">Join PAH-I Support</h1>
       <h3>
         Subscribe to our newsletter and we'll provide you with helpful
-        information and updates about the PAH Initiative, PAH treatment options,
-        live events, and more.
+        information and updates about the PAH Initiative, PAH treatment options
+        from United Therapeutics, live events, and more.
       </h3>
       <small>*Note: Required fields.</small>
       <ValidationObserver
@@ -113,6 +113,33 @@
         </ValidationProvider>
         <!-- last-name -->
 
+        <ValidationProvider
+          name="email"
+          rules="required|email"
+          v-slot="{ errors, classes }"
+          tag="div"
+          class="form-group full"
+        >
+          <label for="powf_42beb314909de911a834000d3a17ce77"
+            >E-mail Address <span class="required-field">*</span></label
+          >
+          <input
+            type="text"
+            id="powf_42beb314909de911a834000d3a17ce77"
+            name="powf_42beb314909de911a834000d3a17ce77"
+            value=""
+            blockedemaildomain=""
+            maxlength="56"
+            autocomplete="email"
+            :class="classes"
+            v-model="address.email"
+          />
+          <span>
+            {{ errors[0] }}
+          </span>
+        </ValidationProvider>
+        <!-- e-mail address -->
+
         <div class="form-group full not-required">
           <label for="powf_43beb314909de911a834000d3a17ce77"
             >Mailing Address</label
@@ -147,7 +174,7 @@
         </div>
         <!-- mailing address 2 -->
 
-        <div class="form-group half">
+        <div class="form-group half not-required">
           <label for="powf_44beb314909de911a834000d3a17ce77">City</label>
           <input
             type="text"
@@ -260,33 +287,6 @@
         </div>
         <!-- phone -->
 
-        <ValidationProvider
-          name="email"
-          rules="required|email"
-          v-slot="{ errors, classes }"
-          tag="div"
-          class="form-group full"
-        >
-          <label for="powf_42beb314909de911a834000d3a17ce77"
-            >E-mail Address <span class="required-field">*</span></label
-          >
-          <input
-            type="text"
-            id="powf_42beb314909de911a834000d3a17ce77"
-            name="powf_42beb314909de911a834000d3a17ce77"
-            value=""
-            blockedemaildomain=""
-            maxlength="56"
-            autocomplete="email"
-            :class="classes"
-            v-model="address.email"
-          />
-          <span>
-            {{ errors[0] }}
-          </span>
-        </ValidationProvider>
-        <!-- e-mail address -->
-
         <div class="legal">
           <ValidationProvider
             name="age"
@@ -397,8 +397,6 @@
       </ValidationObserver>
     </section>
     <!-- mailing list -->
-
-    <CallToAction />
   </SecondaryLayout>
 </template>
 
@@ -582,7 +580,7 @@ export default {
   @include grid-child(2, 16, 5, 6);
 
   @include for-desktop-up {
-    @include grid-child(2, 9, 5, 6);
+    @include grid-child(2, 16, 5, 6);
   }
 }
 
@@ -590,24 +588,12 @@ export default {
   @include grid-child(2, 16, 6, 7);
 
   @include for-desktop-up {
-    @include grid-child(9, 16, 5, 6);
-
-    & label {
-      padding-left: 1.8rem;
-    }
+    @include grid-child(2, 9, 6, 7);
   }
 }
 
 #mailing-list form .form-group:nth-child(7) {
   @include grid-child(2, 16, 7, 8);
-
-  @include for-desktop-up {
-    @include grid-child(2, 9, 6, 7);
-  }
-}
-
-#mailing-list form .form-group:nth-child(8) {
-  @include grid-child(2, 16, 8, 9);
 
   @include for-desktop-up {
     @include grid-child(9, 16, 6, 7);
@@ -618,11 +604,23 @@ export default {
   }
 }
 
+#mailing-list form .form-group:nth-child(8) {
+  @include grid-child(2, 16, 8, 9);
+
+  @include for-desktop-up {
+    @include grid-child(2, 9, 7, 8);
+  }
+}
+
 #mailing-list form .form-group:nth-child(9) {
   @include grid-child(2, 16, 9, 10);
 
   @include for-desktop-up {
-    @include grid-child(2, 16, 7, 8);
+    @include grid-child(9, 16, 7, 8);
+
+    & label {
+      padding-left: 1.8rem;
+    }
   }
 }
 

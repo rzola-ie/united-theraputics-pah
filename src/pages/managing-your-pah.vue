@@ -28,15 +28,17 @@
         src="~/assets/img/icn-risk-status.png"
         alt="an icon of a warning sign"
       />
-      <h1 class="section-header">What is risk status (and your prognosis)?</h1>
+      <h1 class="section-header">
+        What is risk status<br />(and your prognosis)?
+      </h1>
       <p class="lead">
         You're likely familiar with your
         <g-link to="/what-is-pah#functional-class">functional class</g-link> and
         other tests that describe the status of your PAH today. But most people
         also want to know how their PAH will impact them in the future. PAH
         experts now know how to use the information about your functional class
-        and 6-minute walk test, along with other test results, to determine how
-        PAH may affect you in the next 5 years – it's called
+        and <strong>6-minute walk test</strong>, along with other test results,
+        to determine how PAH may affect you in the next 5 years – it's called
         <strong>risk status</strong>. Risk status goes beyond determining how
         PAH is affecting you today and helps your doctor assess the chance that
         your PAH will get worse in the future.
@@ -125,13 +127,14 @@
         </p>
 
         <p>
-          <strong>
-            You may want to talk with your doctor or
-            <g-link to="https://phassociation.org/patients/doctorswhotreatph/">
-              PAH specialist
-            </g-link>
-            to see if treatment with a combination of medicines can help you
-            reduce symptoms, feel better, and do more.
+          You may want to talk with your doctor or
+          <g-link to="https://phassociation.org/patients/doctorswhotreatph/">
+            PAH specialist
+          </g-link>
+          to see
+          <strong
+            >if treatment with a combination of medicines can help you reduce
+            symptoms, feel better, and do more.
           </strong>
         </p>
       </div>
@@ -151,13 +154,13 @@
           that helps
           <strong>
             reduce your symptoms, increases your ability to exercise, helps you
-            feel better, and improves your long-term prognosis </strong
+            feel better, and improves your long-term prognosis</strong
           >. Your doctor will monitor your test results, but you're the one who
           will really know how you're doing day-to-day. It's helpful to use a
           journal to keep track of your symptoms, along with the activities that
           seems to trigger them. That way, at your next visit, you can tell your
-          doctor how you've really been feeling so your care team can better
-          understand how your are <i>really</i> doing.
+          doctor how you've <i>really</i> been feeling so your care team can
+          better understand how you are <i>really</i> doing.
         </p>
 
         <p>
@@ -235,9 +238,9 @@
       <div class="section-body">
         <p>
           An important part of living well with PAH is creating a
-          <strong>
-            strong network of care professionals, friends, family, and other
-            resources that you can rely on </strong
+          <strong
+            >strong network of care professionals, friends, family, and other
+            resources that you can rely on</strong
           >. There are PAH support groups where you can tap into the experience
           of others who have learned to effectively manage this condition. With
           a bit of patience, planning, and flexibility, many people affected by
@@ -302,10 +305,10 @@
       />
       <h1 class="section-header">PAH PATHWAYS</h1>
       <div class="section-body">
-        <h3>
+        <h2>
           Ready to do better than "just okay?" Learn about treatment approaches
           for PAH.
-        </h3>
+        </h2>
         <g-link class="button" to="/pah-pathways">Learn More</g-link>
       </div>
     </section>
@@ -341,7 +344,7 @@ export default {
 
   &::before {
     @include for-desktop-up {
-      margin-left: 40px;
+      margin-left: 2.7rem;
       @include grid-child(3, 13, 2, 4);
     }
   }
@@ -349,8 +352,8 @@ export default {
 
 #managing-your-pah .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 50px 0 0;
+    padding: 0 2rem 0 0;
+    justify-self: end;
     @include grid-child(12, 15, 1, 4);
   }
 }
@@ -362,12 +365,17 @@ export default {
 }
 
 #managing-your-pah .section-body {
-  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 
   @include for-desktop-up {
-    padding: 0 36px 1rem 20px;
-    @include grid-child(4, 12, 3, 4);
+    margin: 0 0 2rem 2.7rem;
+    @include grid-child(3, 13, 3, 4);
   }
+}
+
+#managing-your-pah .section-body p {
+  margin-bottom: 0;
+  padding: 0 5.6vw;
 }
 
 /* RISK STATUS
@@ -380,18 +388,18 @@ export default {
     @include grid-child(1, 17, 1, 4);
 
     @include for-desktop-up {
-      margin-right: 15px;
-      @include grid-child(5, 15, 2, 5);
+      margin-left: 2.7rem;
+      margin-right: 2rem;
+      @include grid-child(4, 15, 2, 5);
     }
   }
 }
 
 #risk-prognosis .section-icon {
   @include for-desktop-up {
-    justify-self: center;
     align-self: center;
     margin-top: 0.5rem;
-    padding: 0 25px;
+    padding: 0 50px 0 0;
     @include grid-child(3, 6, 1, 3);
   }
 }
@@ -399,7 +407,6 @@ export default {
 #risk-prognosis .section-header {
   @include for-desktop-up {
     margin-bottom: 0.5rem;
-    padding-right: 30px;
     @include grid-child(7, 13, 1, 2);
   }
 }
@@ -408,9 +415,9 @@ export default {
   @include grid-child(2, 16, 2, 3);
 
   @include for-desktop-up {
-    padding-top: 1rem;
-    padding-bottom: 0.8rem;
-    @include grid-child(6, 14, 2, 3);
+    margin: 0 2rem 0 2.7rem;
+    padding: 2rem 5.6vw;
+    @include grid-child(4, 15, 2, 3);
   }
 }
 
@@ -421,19 +428,20 @@ export default {
   @include grid-child(1, 17, 3, 4);
 
   @include for-desktop-up {
-    margin-right: 15px;
-    grid-template-columns: repeat(9, 1fr);
-    @include grid-child(5, 15, 4, 5);
+    grid-template-columns: repeat(10, 1fr);
+    @include grid-child(4, 15, 4, 5);
   }
 
   &:before {
     content: "";
     background: $purple;
+    margin-left: 2.7rem;
+    margin-right: 2rem;
     border-radius: 7px;
     @include grid-child(1, 17, 1, 3);
 
     @include for-desktop-up {
-      @include grid-child(1, 10, 1, 2);
+      @include grid-child(1, 11, 1, 2);
     }
   }
 }
@@ -443,13 +451,9 @@ export default {
   @include grid-child(2, 16, 1, 2);
 
   @include for-desktop-up {
-    margin: 30px 0 30px 0;
-    padding: 0;
-    @include grid-child(2, 9, 1, 2);
-    font-family: ProximaNova, sans-serif;
-    font-size: 14px;
-    letter-spacing: 0.23px;
-    line-height: 18px;
+    margin: 1.5rem 3.8rem 2rem 2.7rem;
+    padding: 0 5.6vw;
+    @include grid-child(1, 11, 1, 2);
   }
 }
 
@@ -469,7 +473,7 @@ export default {
     @include grid-child(2, 16, 1, 4);
 
     @include for-desktop-up {
-      margin-left: 2.6rem;
+      margin-left: 2.7rem;
       @include grid-child(3, 13, 2, 4);
     }
   }
@@ -477,29 +481,38 @@ export default {
 
 #risk-assessment .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 25px;
+    padding: 0 15px;
     @include grid-child(12, 15, 1, 4);
   }
 }
 
 #risk-assessment .section-header {
+  margin-top: 1.5rem;
   @include grid-child(3, 16, 1, 2);
 
   @include for-desktop-up {
+    margin-top: 2rem;
     @include grid-child(3, 16, 2, 3);
   }
 }
 
 #risk-assessment .section-body {
-  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   @include grid-child(3, 15, 2, 3);
 
   @include for-desktop-up {
-    padding-left: 1.5rem;
-    padding-bottom: 1rem;
-    @include grid-child(4, 12, 3, 4);
+    margin-left: 2.7rem;
+    margin-bottom: 2rem;
+    @include grid-child(3, 13, 3, 4);
   }
+}
+
+#risk-assessment .section-body p {
+  padding: 1rem 5.6vw;
+}
+
+#risk-assessment .section-body p:last-child {
+  margin-bottom: 0;
 }
 
 /* INTERACTIVE TOOL
@@ -521,7 +534,7 @@ export default {
 
   &::before {
     @include for-desktop-up {
-      margin-right: 15px;
+      margin-right: 2rem;
       @include grid-child(5, 15, 2, 4);
     }
   }
@@ -530,8 +543,7 @@ export default {
 #treatment-goals .section-icon {
   @include for-desktop-up {
     margin-top: 1.8rem;
-    justify-self: center;
-    padding: 0 0 0 50px;
+    padding: 0 2rem 0 0;
     @include grid-child(3, 6, 1, 4);
   }
 }
@@ -543,13 +555,23 @@ export default {
 }
 
 #treatment-goals .section-body {
-  padding-bottom: 1rem;
+  margin: 1.5rem 0;
 
   @include for-desktop-up {
-    padding-top: 0.8rem;
-    padding-left: 1.5rem;
-    @include grid-child(6, 14, 3, 4);
+    margin: 2rem 2rem 2rem 0;
+    @include grid-child(5, 15, 3, 4);
   }
+}
+
+#treatment-goals .section-body p {
+  padding: 0 5.6vw;
+}
+
+#treatment-goals .section-body p:first-child {
+  margin-top: 0;
+}
+#treatment-goals .section-body p:last-child {
+  margin-bottom: 0;
 }
 
 /* BEST ADVOCATE
@@ -557,40 +579,51 @@ export default {
 
 #best-advocate {
   @include for-desktop-up {
-    grid-template-rows: 50px repeat(2, auto);
+    grid-template-rows: 40px repeat(2, auto);
   }
 
   &::before {
     @include for-desktop-up {
       @include grid-child(3, 14, 2, 4);
-      margin-left: 3.6rem;
-      margin-right: 30px;
+      margin-left: 2.7rem;
+      margin-right: 2rem;
     }
   }
 }
 
 #best-advocate .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 25px;
+    justify-self: end;
+    padding: 0 2rem 0 0;
     @include grid-child(12, 15, 1, 4);
   }
 }
 
 #best-advocate .section-header {
+  margin-top: 1.5rem;
   @include for-desktop-up {
-    padding-left: 15px;
+    margin-top: 2rem;
     @include grid-child(3, 12, 2, 3);
   }
 }
 
 #best-advocate .section-body {
-  padding-bottom: 0.5rem;
-
+  margin-bottom: 1.5rem;
   @include for-desktop-up {
-    padding: 0 1.5rem 1rem 1.5rem;
-    @include grid-child(4, 13, 3, 4);
+    margin: 1rem 2rem 2rem 2.7rem;
+    @include grid-child(3, 14, 3, 4);
   }
+}
+
+#best-advocate .section-body p {
+  padding: 0 6.4vw 0 5.6vw;
+}
+
+#best-advocate .section-body p:first-child {
+  margin-top: 0;
+}
+#best-advocate .section-body p:last-child {
+  margin-bottom: 0;
 }
 
 /* FIND A SPECIALIST
@@ -599,7 +632,7 @@ export default {
 #find-a-specialist {
   &::before {
     @include for-desktop-up {
-      margin-right: 15px;
+      margin-right: 2rem;
       @include grid-child(5, 15, 2, 3);
     }
   }
@@ -607,25 +640,36 @@ export default {
 
 #find-a-specialist .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 0px 0 50px;
-    @include grid-child(3, 6, 1, 4);
+    padding: 0 2rem 0 0;
+    @include grid-child(3, 6, 1, 3);
   }
 }
 
 #find-a-specialist .section-header {
+  @include grid-child(2, 17, 1, 2);
   @include for-desktop-up {
-    @include grid-child(7, 12, 1, 2);
+    padding-left: 2.4rem;
+    @include grid-child(6, 14, 1, 2);
   }
 }
 
 #find-a-specialist .section-body {
-  padding-bottom: 1.5rem;
+  margin: 1.5rem 0;
 
   @include for-desktop-up {
-    padding: 1rem 1.2rem 1.5rem 2.2rem;
-    @include grid-child(6, 14, 2, 3);
+    margin: 2rem 0;
+    margin-right: 2rem;
+    padding: 0 5.6vw;
+    @include grid-child(5, 15, 2, 3);
   }
+}
+
+#find-a-specialist .section-body p {
+  margin-top: 0;
+}
+
+#find-a-specialist .section-body .button {
+  margin-left: 2.4rem;
 }
 
 /* MAKE THE MOST
@@ -638,32 +682,35 @@ export default {
 
   &::before {
     @include for-desktop-up {
-      @include grid-child(4, 13, 2, 4);
+      margin: 0 2rem 0 2.7rem;
+      @include grid-child(3, 14, 2, 4);
     }
   }
 }
 
 #make-the-most .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 50px 0 0;
+    justify-self: end;
+    padding: 0 2rem 0 0;
     @include grid-child(12, 15, 1, 4);
   }
 }
 
 #make-the-most .section-header {
+  margin-top: 1.5rem;
   @include for-desktop-up {
-    padding-left: 15px;
+    margin-top: 2rem;
     @include grid-child(3, 12, 2, 3);
   }
 }
 
 #make-the-most .section-body {
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 
   @include for-desktop-up {
-    padding-bottom: 2rem;
-    @include grid-child(5, 12, 3, 4);
+    margin: 0 0 2rem 2.7rem;
+    padding: 0 5.3vw 0 5.6vw;
+    @include grid-child(3, 12, 3, 4);
   }
 }
 
@@ -671,6 +718,7 @@ export default {
   background: transparent url("../assets/img/download-arrow.svg");
   background-repeat: no-repeat;
   background-position: 14px 8px;
+  padding-left: 40px;
 }
 
 /* BUILD YOUR NETWORK
@@ -679,33 +727,40 @@ export default {
 #build-your-network {
   &::before {
     @include for-desktop-up {
-      margin: 0 15px;
-      @include grid-child(5, 15, 2, 4);
+      margin-right: 2rem;
+      @include grid-child(5, 15, 2, 3);
     }
   }
 }
 
 #build-your-network .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 3rem 20px 0 30px;
+    padding: 30px 2rem 0 0;
     @include grid-child(3, 6, 1, 3);
   }
 }
 
 #build-your-network .section-header {
   @include for-desktop-up {
-    @include grid-child(7, 13, 1, 2);
+    margin-top: 0;
+    padding-left: 2.4rem;
+    @include grid-child(6, 13, 1, 2);
   }
 }
 
 #build-your-network .section-body {
-  padding-bottom: 1.5rem;
+  margin: 1.5rem 0;
 
   @include for-desktop-up {
-    padding: 1.5rem 0 2rem 1.5rem;
-    @include grid-child(6, 14, 2, 3);
+    margin: 2rem 0;
+    margin-right: 2rem;
+    padding: 0 1vw 0 5.6vw;
+    @include grid-child(5, 14, 2, 3);
   }
+}
+
+#build-your-network .section-body p:first-child {
+  margin-top: 0;
 }
 
 #build-your-network .section-body ul {
@@ -713,40 +768,51 @@ export default {
   padding-left: 1rem;
 }
 
+#build-your-network .section-body .button {
+  padding: 0 20px;
+
+  @include for-desktop-up {
+    margin-left: 2.4rem;
+    padding: 0 32px;
+  }
+}
+
 /* ON YOUR OWN
 ====================================================== */
 
 #on-your-own {
   @include for-desktop-up {
-    grid-template-rows: 40px repeat(2, auto);
+    grid-template-rows: 50px repeat(2, auto);
   }
   &::before {
     @include for-desktop-up {
-      @include grid-child(4, 13, 2, 4);
+      margin-left: 2.7rem;
+      @include grid-child(3, 13, 2, 4);
     }
   }
 }
 
 #on-your-own .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 30px;
+    justify-self: end;
+    padding: 0 2rem 0 10px;
     @include grid-child(12, 15, 1, 4);
   }
 }
 
 #on-your-own .section-header {
   @include for-desktop-up {
-    padding-left: 30px;
     @include grid-child(3, 12, 2, 3);
   }
 }
 
 #on-your-own .section-body {
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
   @include for-desktop-up {
-    padding: 0 3rem 2rem 3rem;
-    @include grid-child(4, 13, 3, 4);
+    margin-bottom: 2rem;
+    margin-left: 2.7rem;
+    padding: 0 5.6vw;
+    @include grid-child(3, 13, 3, 4);
   }
 }
 
@@ -764,33 +830,41 @@ export default {
 
   &::before {
     @include for-desktop-up {
-      @include grid-child(7, 13, 2, 3);
+      @include grid-child(6, 13, 2, 3);
     }
   }
 }
 
 #pah-pathways .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 25px;
-    @include grid-child(5, 8, 1, 3);
+    padding: 0 1.2rem 0 2rem;
+    @include grid-child(4, 7, 1, 3);
   }
 }
 
 #pah-pathways .section-header {
   @include for-desktop-up {
-    padding-left: 1.5rem;
-    @include grid-child(8, 14, 1, 2);
+    padding-left: 2.4rem;
+    @include grid-child(7, 14, 1, 2);
   }
 }
 
 #pah-pathways .section-body {
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 
   @include for-desktop-up {
-    padding-right: 1.5rem;
-    padding-bottom: 2rem;
-    @include grid-child(8, 13, 2, 3);
+    margin-bottom: 2rem;
+    padding: 0 5.6vw;
+
+    @include grid-child(6, 13, 2, 3);
   }
+}
+
+#pah-pathways .section-body h2 {
+  font-size: 1.5rem;
+}
+
+#pah-pathways .section-body .button {
+  margin-left: 2.4rem;
 }
 </style>

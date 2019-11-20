@@ -31,7 +31,7 @@
         class="section-icon"
       />
 
-      <h1 class="section-header">PAH vs PH?</h1>
+      <h1 class="section-header">PAH VS PH – WHAT’S THE DIFFERENCE?</h1>
 
       <div class="section-body">
         <p>
@@ -65,7 +65,7 @@
       <h1 class="section-header">PAH Symptoms</h1>
 
       <div class="section-body">
-        <p>Signs and symptoms include:</p>
+        <p>Signs and symptoms of PAH include:</p>
 
         <ul>
           <li>Feeling dizzy</li>
@@ -103,22 +103,25 @@
         Let's take a look at how PAH impacts your body
       </h1>
 
-      <p class="section-lead">
-        Sometimes, it helps to actually see what’s happening in the body to
-        understand how PAH causes the symptoms you may be experiencing. Watch
-        this video that shows how PAH affects the vessels in your lungs and how
-        this impacts your heart.
-      </p>
+      <div class="section-body">
+        <p>
+          Sometimes, it helps to actually see what’s happening in the body to
+          understand how PAH causes the symptoms you may be experiencing.
+        </p>
 
-      <div class="section-video-wrapper">
-        <div class="section-video">
-          <iframe
-            src="https://www.youtube.com/embed/y7hTTg3saOM"
-            frameborder="0"
-            allow="accelerometer; encrypted-media; gyroscope;"
-            allowfullscreen
-          ></iframe>
-        </div>
+        <p>
+          Watch this video that shows how PAH affects the vessels in your lungs
+          and how this impacts your heart.
+        </p>
+      </div>
+
+      <div class="section-video">
+        <iframe
+          src="https://www.youtube.com/embed/y7hTTg3saOM"
+          frameborder="0"
+          allow="accelerometer; encrypted-media; gyroscope;"
+          allowfullscreen
+        ></iframe>
       </div>
     </section>
     <!-- imacts -->
@@ -143,38 +146,38 @@
 
         <div class="tests">
           <div class="test">
-            <h3 class="test-header">Chest x-rays</h3>
+            <h2 class="test-header">Chest x-rays</h2>
             <p class="test-body">
               show whether the arteries in your lungs and right ventricle are
               enlarged
             </p>
           </div>
           <div class="test">
-            <h3 class="test-header">Blood tests</h3>
+            <h2 class="test-header">Blood tests</h2>
             <p class="test-body">
               rule out any other diseases that may be causing your symptoms
             </p>
           </div>
           <div class="test">
-            <h3 class="test-header">Ventilation/<br />Perfusion scans</h3>
+            <h2 class="test-header">Ventilation/Perfusion scans</h2>
             <p class="test-body">
               or V/Q lung scans, measure your breathing and the circulation in
               your lungs
             </p>
           </div>
           <div class="test">
-            <h3 class="test-header">Echocardiograms</h3>
+            <h2 class="test-header">Echocardiograms</h2>
             <p class="test-body">
               allow your doctor to see your heart as it pumps
             </p>
           </div>
           <div class="test">
-            <h3 class="test-header">Pulmonary function tests</h3>
+            <h2 class="test-header">Pulmonary function tests</h2>
             <p class="test-body">or PFTs, measure your lung function</p>
           </div>
         </div>
 
-        <h3>Right-Heart Catheterization (RHC)</h3>
+        <h2>Right-Heart Catheterization (RHC)</h2>
         <p>
           While the tests help your doctor better understand your condition, the
           only way to actually confirm that you have PAH is for your doctor to
@@ -191,16 +194,22 @@
     <!-- pah-diagnosis -->
 
     <section grey id="other-considerations">
+      <g-image
+        class="section-icon"
+        src="~/assets/img/icn-considerations.png"
+        alt="an icon of a person walking"
+      />
+
       <h1 class="section-header">Other Considerations</h1>
 
       <div class="section-body">
-        <h3>
-          A doctor may also asses your 6-minute walk distance, or 6MWD, which
-          tracks how far you can walk on a flat surface in 6 minutes. This is
-          one of the most common tests to determine your ability to exercise. It
-          is an important test for people with PAH and is often conducted on a
-          regular basis.
-        </h3>
+        <P>
+          A doctor may also asses your <strong>6-minute walk distance</strong>,
+          or 6MWD, which tracks how far you can walk on a flat surface in 6
+          minutes. This is one of the most common tests to determine your
+          ability to exercise. It is an important test for people with PAH and
+          is often conducted on a regular basis.
+        </P>
       </div>
     </section>
 
@@ -210,7 +219,7 @@
       <div class="section-body">
         <p>
           Another measure of PAH severity is determined by your
-          <strong>functional class</strong> (FC). Your healthcare provider will
+          <strong>functional class (FC)</strong>. Your healthcare provider will
           determine your FC based on the information you share about your daily
           activities – specifically, those activities that cause you to
           experience symptoms of PAH, such as shortness of breath, fatigue or
@@ -219,55 +228,22 @@
         </p>
 
         <div class="func-classes">
-          <div class="func-class">
-            <h4 class="func-header">Class I</h4>
-            <div class="func-description">
-              No symptoms with ordinary physical activity.
-            </div>
-            <g-image
-              src="~/assets/img/icn-functional-biking.png"
-              alt="a picture of a person riding a bicycle"
-              class="section-image"
-            />
-            <div class="func-footer">Biking</div>
-          </div>
-          <div class="func-class">
-            <h4 class="func-header">Class II</h4>
-            <div class="func-description">
-              Symptoms with ordinary activity. Slight limitation of activity.
-            </div>
-            <g-image
-              src="~/assets/img/icn-functional-stairs.png"
-              alt="a picture of a person walking on stairs"
-              class="section-image"
-            />
-            <div class="func-footer">Walking 2 flights of stairs</div>
-          </div>
-          <div class="func-class">
-            <h4 class="func-header">Class III</h4>
-            <div class="func-description">
-              Symptoms with less than ordinary activity. Marked limitation of
-              activity.
-            </div>
-            <g-image
-              src="~/assets/img/icn-functional-stairs.png"
-              alt="a picture of a person walking on stairs"
-              class="section-image"
-            />
-            <div class="func-footer">Walking 1 flight of stairs</div>
-          </div>
-          <div class="func-class">
-            <h4 class="func-header">Class IV</h4>
-            <div class="func-description">
-              Symptoms with any activity or even at rest.
-            </div>
-            <g-image
-              src="~/assets/img/icn-functional-resting.png"
-              alt="a picture of a person relaxing on their phone"
-              class="section-image"
-            />
-            <div class="func-footer">Resting</div>
-          </div>
+          <g-image
+            src="~/assets/img/functional-1.jpg"
+            alt="functional class 1: biking"
+          />
+          <g-image
+            src="~/assets/img/functional-2.jpg"
+            alt="functional class 2: walking 2 flights of stairs"
+          />
+          <g-image
+            src="~/assets/img/functional-3.jpg"
+            alt="functional class 3: walking 1 flight of stairs"
+          />
+          <g-image
+            src="~/assets/img/functional-4.jpg"
+            alt="functional class 4: resting"
+          />
         </div>
       </div>
     </section>
@@ -283,7 +259,7 @@
       <h1 class="section-header">Managing Your Pah</h1>
 
       <div class="section-body">
-        <h3>Want to learn how you can do more about your PAH?</h3>
+        <h2>Want to learn how you can do more about your PAH?</h2>
         <g-link class="button" to="/managing-your-pah">Manage Your PAH</g-link>
       </div>
     </section>
@@ -331,7 +307,7 @@ export default {
 
 #what-is-pah .section-icon {
   @include for-desktop-up {
-    padding: 0 50px 0 0;
+    padding: 0 30px 0 0;
     @include grid-child(13, 16, 1, 4);
   }
 }
@@ -355,14 +331,18 @@ export default {
   }
 
   @include for-desktop-up {
-    padding: 0 1rem 0 2rem;
+    padding: 0 0 0 2.7rem;
     margin: 0.8rem 0 2rem 0;
-    @include grid-child(5, 13, 3, 4);
+    @include grid-child(4, 14, 3, 4);
   }
 }
 
 #what-is-pah .section-body p {
   margin: 0;
+
+  @include for-desktop-up {
+    padding: 0 5.6vw 0 4.5vw;
+  }
 }
 
 /* PAH VS PH
@@ -375,7 +355,7 @@ export default {
     }
 
     @include for-desktop-up {
-      margin-left: 3rem;
+      margin-left: 2.7rem;
       @include grid-child(5, 15, 2, 3);
     }
   }
@@ -383,7 +363,7 @@ export default {
 
 #pah-vs-ph .section-icon {
   @include for-desktop-up {
-    padding: 0 45px 0 0;
+    padding: 2rem 40px 0 0;
     @include grid-child(4, 7, 1, 3);
   }
 }
@@ -395,21 +375,26 @@ export default {
 
   @include for-desktop-up {
     margin-bottom: 10px;
-    @include grid-child(7, 17, 1, 2);
+    @include grid-child(7, 14, 1, 2);
   }
 }
 
 #pah-vs-ph .section-body {
-  margin: 1.5rem 0;
+  margin: 1rem 0 1.5rem 0;
 
   @include for-tablet-portrait-up {
     @include grid-child(5, 15, 2, 3);
   }
 
   @include for-desktop-up {
-    margin-bottom: 2rem;
-    padding: 0 2.5rem 0 4rem;
-    @include grid-child(6, 15, 2, 3);
+    margin: 1.5rem 0 2rem 2.7rem;
+    @include grid-child(5, 15, 2, 3);
+  }
+}
+
+#pah-vs-ph .section-body p {
+  @include for-desktop-up {
+    padding: 0 4vw 0 5.6vw;
   }
 }
 
@@ -431,7 +416,7 @@ export default {
     grid-template-rows: repeat(3, auto);
   }
   @include for-desktop-up {
-    grid-template-rows: 40px repeat(3, auto);
+    grid-template-rows: 30px repeat(3, auto);
   }
 
   &::before {
@@ -442,8 +427,8 @@ export default {
     }
 
     @include for-desktop-up {
-      @include grid-child(4, 12, 2, 5);
-      transform: translateX(2.5rem);
+      margin-left: 2.7rem;
+      @include grid-child(4, 14, 2, 5);
       z-index: -1;
     }
   }
@@ -458,9 +443,9 @@ export default {
   }
 
   @include for-desktop-up {
-    max-width: 280px;
-    grid-row: 1 / 4;
-    grid-column: 11 / 15;
+    max-width: 265px;
+    justify-self: center;
+    @include grid-child(12, 16, 1, 4);
   }
 }
 
@@ -478,7 +463,6 @@ export default {
 }
 
 #pah-symptoms .section-body {
-  // grid-row: 3;
   @include grid-child(2, 16, 3, 4);
 
   @include for-tablet-portrait-up {
@@ -486,8 +470,10 @@ export default {
   }
 
   @include for-desktop-up {
-    padding-right: 1rem;
-    @include grid-child(5, 11, 3, 4);
+    margin-left: 2.7rem;
+    padding-left: 5.6vw;
+    padding-right: 0.4rem;
+    @include grid-child(4, 12, 3, 4);
   }
 }
 
@@ -501,8 +487,8 @@ export default {
 
   @include for-desktop-up {
     margin-bottom: 2rem;
-    padding-right: 0;
-    @include grid-child(5, 12, 4, 5);
+    padding-right: 9rem;
+    @include grid-child(4, 15, 4, 5);
   }
 }
 
@@ -539,7 +525,7 @@ export default {
     }
 
     @include for-desktop-up {
-      @include grid-child(5, 13, 2, 4);
+      @include grid-child(5, 15, 2, 4);
     }
   }
 }
@@ -552,18 +538,25 @@ export default {
   @include for-desktop-up {
     margin: 0;
     margin-bottom: 10px;
-    @include grid-child(6, 14, 1, 2);
+    @include grid-child(7, 14, 1, 2);
   }
 }
 
-#impacts .section-lead {
-  margin: 1.5rem 0;
-  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+#impacts .section-body {
   @include grid-child(2, 16, 2, 3);
 
   @include for-desktop-up {
-    padding: 0 0 0 3rem;
-    @include grid-child(5, 12, 2, 3);
+    padding: 4.2vmin 0;
+    margin: 0 5.6vw 0 3.6vw;
+    @include grid-child(9, 15, 2, 3);
+  }
+}
+
+#impacts .section-body p {
+  margin: 0;
+
+  &:first-child {
+    margin-bottom: 1rem;
   }
 }
 
@@ -576,14 +569,20 @@ export default {
 
   @include for-desktop-up {
     margin-bottom: 0;
-    @include grid-child(3, 11, 3, 5);
+    @include grid-child(4, 11, 3, 5);
   }
 }
 
 .section-video {
+  margin-top: 2rem;
   position: relative;
-  padding-bottom: 56.24%; /* 16:9 */
+  padding-bottom: 56.25%; /* 16:9 */
   height: 0;
+  @include grid-child(2, 16, 3, 5);
+
+  @include for-desktop-up {
+    @include grid-child(3, 9, 2, 5);
+  }
 }
 
 .section-video iframe {
@@ -599,7 +598,7 @@ export default {
 
 #pah-diagnosis {
   @include for-desktop-up {
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: 40px repeat(3, auto);
   }
 
   &::before {
@@ -608,138 +607,104 @@ export default {
     }
 
     @include for-desktop-up {
-      margin-right: 30px;
-      @include grid-child(6, 15, 2, 5);
+      margin-left: 2.7rem;
+      @include grid-child(4, 14, 2, 5);
     }
   }
 }
 
 #pah-diagnosis .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 25px;
-    @include grid-child(4, 7, 1, 3);
+    padding: 0 20px;
+    @include grid-child(13, 16, 1, 4);
   }
 }
 
 #pah-diagnosis .section-header {
+  margin-top: 1.5rem;
   @include for-tablet-portrait-up {
+    margin-top: 2rem;
     @include grid-child(5, 15, 1, 2);
-    justify-self: end;
   }
 
   @include for-desktop-up {
-    padding-left: 30px;
-    margin-bottom: 10px;
-    @include grid-child(7, 11, 1, 2);
+    @include grid-child(4, 8, 2, 3);
   }
 }
 
 #pah-diagnosis .section-body {
   margin: 1.5rem 0;
-
+  @include grid-child(1, 17, 2, 3);
   @include for-tablet-portrait-up {
     @include grid-child(5, 15, 2, 3);
   }
 
   @include for-desktop-up {
-    margin: 2rem 0;
-    @include grid-child(7, 14, 2, 5);
+    margin: 1rem 0 2rem 2.7rem;
+    @include grid-child(4, 14, 3, 5);
   }
 }
 
-#pah-diagnosis .section-body h3 {
+#pah-diagnosis .section-body h2,
+#pah-diagnosis .section-body p {
   margin-bottom: 0;
+  padding: 0 1rem;
+
+  @include for-desktop-up {
+    padding: 0 5.6vw;
+  }
+}
+
+#pah-diagnosis .section-body p:first-child {
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1px;
 }
 
 #pah-diagnosis .section-body .tests {
+  position: relative;
   @include display-grid;
   grid-template-rows: repeat(6, auto);
   grid-template-columns: 1fr;
+  padding: 0 1rem;
 
   @include for-desktop-up {
-    padding: 0;
-    margin: 0;
-    grid-template-rows: repeat(3, auto);
-    grid-template-columns: repeat(2, 1fr);
+    padding: 0 4.6rem;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $grey;
   }
 }
 
 #pah-diagnosis .section-body .tests .test {
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   border-bottom: 1px solid $wine;
+  z-index: 2;
 
-  br {
-    display: none;
-  }
-
-  &:first-child {
-    border-top: 1px solid $wine;
+  &:last-child {
+    border-bottom: none;
   }
 
   @include for-desktop-up {
-    border-bottom: none;
-
-    &:first-child {
-      border-top: none;
-    }
-
-    &:nth-child(odd) {
-      padding-right: 2rem;
-      border-right: 1px solid $wine;
-    }
-    &:nth-child(even) {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-
-    &:nth-child(1),
-    &:nth-child(2) {
-      padding-bottom: 1rem;
-    }
-
-    &:nth-child(3),
-    &:nth-child(4) {
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      padding-right: 3rem;
-      border-top: 1px solid $wine;
-    }
-
-    &:last-child {
-      width: 100%;
-      padding: 1rem 0;
-      grid-row: 2 / 3;
-      grid-column: 1 / 3;
-      border-right: none;
-      justify-self: center;
-      text-align: center;
-      border-top: 1px solid $wine;
-    }
-
-    br {
-      display: block;
-    }
+    padding: 2rem 0;
   }
 }
 
 #pah-diagnosis .section-body .tests .test .test-header {
   margin: 0;
-
-  @include for-desktop-up {
-    padding: 0 1.5rem;
-    padding: 0;
-  }
+  padding: 0;
 }
 
 #pah-diagnosis .section-body .tests .test .test-body {
   margin-top: 0.5rem;
   margin-bottom: 0;
-
-  @include for-desktop-up {
-    padding: 0 1.5rem;
-    padding: 0;
-  }
+  padding: 0;
 }
 
 #pah-diagnosis .section-body p:first-child {
@@ -758,31 +723,37 @@ export default {
     }
 
     @include for-desktop-up {
-      margin-right: 30px;
-      @include grid-child(6, 14, 1, 3);
+      @include grid-child(6, 15, 2, 3);
     }
+  }
+}
+
+#other-considerations .section-icon {
+  @include for-desktop-up {
+    padding: 0 35px 0 0;
+    @include grid-child(4, 7, 1, 3);
   }
 }
 
 #other-considerations .section-header {
   @include for-desktop-up {
     margin-bottom: 0;
-    padding-left: 2rem;
-    @include grid-child(5, 14, 1, 2);
+    padding-left: 2.4rem;
+    @include grid-child(7, 14, 1, 2);
   }
 }
 
 #other-considerations .section-body {
-  margin: 0.8rem 0 1.5rem 0;
+  margin: 1.5rem 0;
 
   @include for-desktop-up {
-    padding: 0 0 0 3rem;
-    margin-bottom: 2rem;
-    @include grid-child(6, 13, 2, 3);
+    margin: 2rem 0;
+    padding: 0 5vw;
+    @include grid-child(6, 15, 2, 3);
   }
 }
 
-#other-considerations .section-body h3 {
+#other-considerations .section-body p {
   margin: 0;
 }
 
@@ -800,14 +771,14 @@ export default {
     }
 
     @include for-desktop-up {
-      @include grid-child(5, 13, 1, 4);
+      @include grid-child(5, 14, 1, 4);
     }
   }
 }
 
 #functional-class .section-header {
   @include for-desktop-up {
-    padding-left: 2rem;
+    padding-left: 2.7rem;
     margin-top: 2rem;
     @include grid-child(4, 17, 1, 2);
   }
@@ -822,22 +793,23 @@ export default {
 
   @include for-desktop-up {
     margin-bottom: 2rem;
-    @include grid-child(5, 13, 2, 3);
-    padding: 0 3rem;
+    padding: 0 4vw;
+    @include grid-child(5, 14, 2, 3);
   }
 }
 
+#functional-class .section-body p {
+  letter-spacing: 0.1px;
+}
+
 #functional-class .section-body .func-classes {
-  padding: 0 2rem;
   @include display-grid;
-  grid-template-rows: repeat(4, auto);
-  grid-template-columns: 1fr;
-  grid-gap: 1rem;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.6rem;
 
   @include for-tablet-portrait-up {
     padding: 0;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
   }
 
   @include for-desktop-up {
@@ -846,42 +818,9 @@ export default {
   }
 }
 
-#functional-class .section-body .func-classes .func-class {
-  padding: 1rem;
-  background: #d8eff4;
+#functional-class .section-body .func-classes img {
+  width: 100%;
   border-radius: 4px;
-  @include display-grid;
-  grid-template-rows: 30px repeat(3, auto);
-  grid-row-gap: 0.8rem;
-  text-align: center;
-
-  @include for-desktop-up {
-    grid-template-rows: 30px 56px auto 30px;
-    padding: 0.5rem;
-  }
-}
-
-#functional-class .section-body .func-classes .func-header {
-  margin: 0;
-  color: $teal;
-  border-bottom: 2px solid $wine;
-  font-size: 1.2rem;
-
-  @include for-desktop-up {
-    font-size: unset;
-  }
-}
-
-#functional-class .section-body .func-classes .func-description {
-  @include for-desktop-up {
-    font-size: 0.75rem;
-  }
-}
-
-#functional-class .section-body .func-classes .func-footer {
-  @include for-desktop-up {
-    font-size: 0.8rem;
-  }
 }
 
 /* MANAGING YOUR PAH
@@ -889,16 +828,16 @@ export default {
 
 #managing-your-pah {
   @include for-desktop-up {
-    grid-template-rows: 40px repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
   }
 
   &::before {
     @include for-tablet-portrait-up {
-      @include grid-child(3, 13, 2, 4);
+      @include grid-child(3, 13, 2, 3);
     }
 
     @include for-desktop-up {
-      @include grid-child(6, 12, 2, 4);
+      @include grid-child(6, 12, 2, 3);
     }
   }
 }
@@ -906,8 +845,8 @@ export default {
 #managing-your-pah .section-icon {
   @include for-desktop-up {
     justify-self: center;
-    padding: 0 50px 0 0;
-    @include grid-child(11, 14, 1, 4);
+    padding: 0 30px 0 10px;
+    @include grid-child(4, 7, 1, 3);
   }
 }
 
@@ -919,24 +858,33 @@ export default {
   }
 
   @include for-desktop-up {
-    padding-left: 2rem;
-    margin: 0.67em 0 0 0;
-    @include grid-child(5, 11, 2, 3);
+    padding: 0 4.8rem;
+    justify-self: center;
+    @include grid-child(6, 13, 1, 2);
   }
 }
 
 #managing-your-pah .section-body {
-  margin-bottom: 1.5rem;
-  @include grid-child(3, 14, 2, 3);
+  margin: 1.5rem 0;
+  @include grid-child(3, 16, 2, 3);
 
   @include for-tablet-portrait-up {
     @include grid-child(4, 12, 2, 3);
   }
 
   @include for-desktop-up {
-    margin-bottom: 2rem;
-    padding-left: 2.5rem;
-    @include grid-child(6, 11, 3, 4);
+    margin: 2rem 0;
+    padding: 0 2vw 0 4vw;
+    @include grid-child(6, 12, 2, 3);
   }
+}
+
+#managing-your-pah .section-body h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+#managing-your-pah .section-body .button {
+  margin-left: 2.6rem;
 }
 </style>
