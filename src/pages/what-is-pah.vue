@@ -621,7 +621,6 @@ export default {
 }
 
 #pah-diagnosis .section-header {
-  margin-top: 1.5rem;
   @include for-tablet-portrait-up {
     margin-top: 2rem;
     @include grid-child(5, 15, 1, 2);

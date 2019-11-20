@@ -375,7 +375,9 @@ export default {
 
 #managing-your-pah .section-body p {
   margin-bottom: 0;
-  padding: 0 5.6vw;
+  @include for-desktop-up {
+    padding: 0 5.6vw;
+  }
 }
 
 /* RISK STATUS
@@ -435,12 +437,12 @@ export default {
   &:before {
     content: "";
     background: $purple;
-    margin-left: 2.7rem;
-    margin-right: 2rem;
     border-radius: 7px;
     @include grid-child(1, 17, 1, 3);
 
     @include for-desktop-up {
+      margin-left: 2.7rem;
+      margin-right: 2rem;
       @include grid-child(1, 11, 1, 2);
     }
   }
@@ -487,7 +489,6 @@ export default {
 }
 
 #risk-assessment .section-header {
-  margin-top: 1.5rem;
   @include grid-child(3, 16, 1, 2);
 
   @include for-desktop-up {
@@ -508,7 +509,9 @@ export default {
 }
 
 #risk-assessment .section-body p {
-  padding: 1rem 5.6vw;
+  @include for-desktop-up {
+    padding: 1rem 5.6vw;
+  }
 }
 
 #risk-assessment .section-body p:last-child {
@@ -600,7 +603,6 @@ export default {
 }
 
 #best-advocate .section-header {
-  margin-top: 1.5rem;
   @include for-desktop-up {
     margin-top: 2rem;
     @include grid-child(3, 12, 2, 3);
@@ -620,7 +622,9 @@ export default {
 }
 
 #best-advocate .section-body p:first-child {
-  margin-top: 0;
+  @include for-desktop-up {
+    margin-top: 0;
+  }
 }
 #best-advocate .section-body p:last-child {
   margin-bottom: 0;
@@ -669,7 +673,9 @@ export default {
 }
 
 #find-a-specialist .section-body .button {
-  margin-left: 2.4rem;
+  @include for-desktop-up {
+    margin-left: 2.4rem;
+  }
 }
 
 /* MAKE THE MOST
@@ -697,7 +703,6 @@ export default {
 }
 
 #make-the-most .section-header {
-  margin-top: 1.5rem;
   @include for-desktop-up {
     margin-top: 2rem;
     @include grid-child(3, 12, 2, 3);
@@ -865,6 +870,8 @@ export default {
 }
 
 #pah-pathways .section-body .button {
-  margin-left: 2.4rem;
+  @include for-desktop-up {
+    margin-left: 2.4rem;
+  }
 }
 </style>

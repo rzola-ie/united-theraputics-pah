@@ -62,9 +62,13 @@ export default {};
   max-width: 1440px;
   margin: 0 auto;
   @include display-grid;
-  grid-template-rows: 40px auto;
+  grid-template-rows: auto auto;
   grid-gap: 1rem;
   text-align: center;
+
+  @include for-desktop-up {
+    grid-template-rows: 40px auto;
+  }
 }
 
 .footer-nav {
@@ -73,6 +77,7 @@ export default {};
   grid-template-rows: repeat(6, auto);
   grid-template-columns: 1fr;
   justify-items: center;
+  grid-gap: 0.8rem;
 
   @include for-desktop-up {
     grid-template-rows: auto;
@@ -88,7 +93,7 @@ export default {};
 }
 
 .footer-nav-link {
-  height: 100%;
+  height: 40px;
   max-width: 150px;
   padding: 0 20px;
   font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
@@ -99,6 +104,10 @@ export default {};
   align-items: center;
   text-align: center;
 
+  @include for-desktop-up {
+    height: 100%;
+  }
+
   &.active {
     color: $wine;
 
@@ -106,14 +115,6 @@ export default {};
       &::before {
         transform: scaleX(1);
       }
-    }
-  }
-
-  & + .footer-nav-link {
-    margin-top: 0.8rem;
-
-    @include for-desktop-up {
-      margin-top: 0;
     }
   }
 }
