@@ -302,6 +302,7 @@ export default {
 
   &::before {
     @include for-tablet-portrait-up {
+      margin-top: 15px;
       margin-left: 10px;
     }
 
@@ -313,7 +314,6 @@ export default {
 }
 
 #feel-better .section-header {
-  margin-top: 1.5rem;
   @include for-desktop-up {
     margin-top: 2rem;
     @include grid-child(4, 11, 2, 3);
@@ -454,7 +454,7 @@ export default {
   }
 
   &::before {
-    @include grid-child(2, 16, 1, 3);
+    @include grid-child(1, 17, 1, 3);
 
     @include for-tablet-portrait-up {
       @include grid-child(3, 13, 2, 4);
@@ -509,7 +509,7 @@ export default {
 
 #managing-your-pah {
   &::before {
-    @include grid-child(2, 16, 1, 3);
+    @include grid-child(1, 17, 1, 3);
 
     @include for-tablet-portrait-up {
       @include grid-child(5, 15, 2, 3);
@@ -578,7 +578,7 @@ export default {
   }
 
   &::before {
-    @include grid-child(2, 16, 1, 3);
+    @include grid-child(1, 17, 1, 3);
 
     @include for-tablet-portrait-up {
       @include grid-child(3, 13, 2, 3);
@@ -632,15 +632,15 @@ export default {
 
 #therapies {
   &::before {
-    @include grid-child(2, 16, 1, 3);
-    margin-left: 2rem;
-    margin-right: 2.4rem;
+    @include grid-child(1, 17, 1, 3);
 
     @include for-tablet-portrait-up {
       @include grid-child(6, 14, 2, 3);
     }
 
     @include for-desktop-up {
+      margin-left: 2rem;
+      margin-right: 2.4rem;
       @include grid-child(7, 14, 2, 3);
     }
   }
