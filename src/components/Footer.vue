@@ -62,8 +62,8 @@ export default {};
   max-width: 1440px;
   margin: 0 auto;
   @include display-grid;
-  grid-template-rows: 1fr auto;
-  grid-gap: 0.5rem;
+  grid-template-rows: 40px auto;
+  grid-gap: 1rem;
   text-align: center;
 }
 
@@ -88,14 +88,25 @@ export default {};
 }
 
 .footer-nav-link {
+  height: 100%;
   max-width: 150px;
   padding: 0 20px;
   font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
   color: black;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
   &.active {
     color: $wine;
+
+    span {
+      &::before {
+        transform: scaleX(1);
+      }
+    }
   }
 
   & + .footer-nav-link {
@@ -118,7 +129,7 @@ export default {};
     width: 100%;
     transform: scaleX(0);
     transform-origin: center;
-    background: black;
+    background: $wine;
     transition: transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
   }
 

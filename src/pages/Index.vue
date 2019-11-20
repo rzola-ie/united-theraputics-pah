@@ -5,7 +5,7 @@
       <Header v-on:toggle="handleMenuToggle" />
       <g-image
         class="hero-image"
-        src="~/assets/img/hero-image.png"
+        src="~/assets/img/hero-image.svg"
         alt="an image of a park with trees. The PAH initiative logo is in the center"
       />
       <g-image
@@ -60,8 +60,9 @@
 
         <p>
           PAH is a severe disease that gets worse over time. But some of today’s
-          medicines have been shown to slow disease progression and improve how
-          you feel. By working closely with your doctor to assess your
+          medicines have been shown to
+          <strong>slow disease progression and improve how you feel</strong>. By
+          working closely with your doctor to assess your
           <g-link to="/what-is-pah#pah-symptoms">symptoms</g-link>,
           <g-link to="/managing-your-pah#risk-prognosis">risk status</g-link>
           and
@@ -85,7 +86,7 @@
         class="section-icon"
       />
 
-      <p>
+      <p class="quote">
         <strong
           ><i
             >"I aced my last 6-minute walk test and my doctor said I was doing
@@ -95,7 +96,7 @@
         >
         - <small>PAH Patient</small>
       </p>
-      <p>
+      <p class="lead">
         Even if your doctor is satisfied that you're doing "okay" with your PAH,
         is doing "okay" enough for you? There may be ways to reduce your
         symptoms so you can feel better and do more. As ongoing research helps
@@ -106,81 +107,82 @@
         <p>
           In order to determine the best treatment approach for you, it is
           important to have your doctor regularly monitor your
-          <g-link to="/managing-your-pah#risk-prognosis">risk status</g-link>
+          <g-link to="/managing-your-pah#risk-prognosis"
+            ><strong>risk status</strong></g-link
+          >
           (the risk of your PAH getting worse over the next 5 years). Your
-          doctor will conside-bars a number of factors to determine whether you
-          are at low-, intermediate- or high-risk status.
+          doctor will consider a number of factors to determine whether you are
+          at low-, intermediate- or high-risk status.
         </p>
       </div>
     </section>
     <!-- feel better -->
 
-    <div class="side-bars">
-      <section purple id="what-is-pah">
-        <g-image
-          src="~/assets/img/icn-what-is-pah.png"
-          alt="an icon of lungs"
-          class="section-icon"
-        />
+    <section purple id="what-is-pah">
+      <g-image
+        src="~/assets/img/icn-what-is-pah.png"
+        alt="an icon of lungs"
+        class="section-icon"
+      />
 
-        <h1 class="section-header">What is pah?</h1>
+      <h1 class="section-header">What is pah?</h1>
 
-        <div class="section-body">
-          <h2>Looking for more information about PAH?</h2>
-          <g-link class="button" to="/what-is-pah">Learn More</g-link>
-        </div>
-      </section>
-      <!-- what is pah -->
+      <div class="section-body">
+        <h2>Looking for more information about PAH?</h2>
+        <g-link class="button" to="/what-is-pah">Learn More</g-link>
+      </div>
+    </section>
+    <!-- what is pah -->
 
-      <section grey id="managing-your-pah">
-        <g-image
-          src="~/assets/img/icn-managing-your-pah.png"
-          alt="an icon of a checklist"
-          class="section-icon"
-        />
+    <section grey id="managing-your-pah">
+      <g-image
+        src="~/assets/img/icn-managing-your-pah.png"
+        alt="an icon of a checklist"
+        class="section-icon"
+      />
 
-        <h1 class="section-header">Managing Your PAH</h1>
+      <h1 class="section-header">Managing Your PAH</h1>
 
-        <div class="section-body">
-          <h2>Want to learn about how you can do more about your PAH?</h2>
-          <g-link class="button" to="/managing-your-pah">Take Action</g-link>
-        </div>
-      </section>
-      <!-- managing your pah -->
+      <div class="section-body">
+        <h2>Want to learn about how you can do more about your PAH?</h2>
+        <g-link class="button" to="/managing-your-pah">Take Action</g-link>
+      </div>
+    </section>
+    <!-- managing your pah -->
 
-      <section purple id="pah-pathways">
-        <g-image
-          src="~/assets/img/icn-pah-pathways.png"
-          alt="an icon of molecule chains"
-          class="section-icon"
-        />
+    <section purple id="pah-pathways">
+      <g-image
+        src="~/assets/img/icn-pah-pathways.png"
+        alt="an icon of molecule chains"
+        class="section-icon"
+      />
 
-        <h1 class="section-header">PAH Pathways</h1>
+      <h1 class="section-header">PAH Pathways</h1>
 
-        <div class="section-body">
-          <h2>Do you know about the 3 imbalances that contribute to PAH?</h2>
-          <g-link class="button" to="/pah-pathways">Get Started</g-link>
-        </div>
-      </section>
-      <!-- pah pathways -->
+      <div class="section-body">
+        <h2>Do you know about the 3 imbalances that contribute to PAH?</h2>
+        <g-link class="button" to="/pah-pathways">Get Started</g-link>
+      </div>
+    </section>
+    <!-- pah pathways -->
 
-      <section grey id="therapies">
-        <g-image
-          src="~/assets/img/icn-therapies.png"
-          alt="an icon of a prescription symbol"
-          class="section-icon"
-        />
+    <section grey id="therapies">
+      <g-image
+        src="~/assets/img/icn-therapies.png"
+        alt="an icon of a prescription symbol"
+        class="section-icon"
+      />
 
-        <h1 class="section-header">Treatment Options</h1>
+      <h1 class="section-header">Treatment Options</h1>
 
-        <div class="section-body">
-          <h2>Learn about treatment options from United Therapeutics</h2>
-          <a class="button" href="https://www.fightingpah.com">Discover</a>
-        </div>
-      </section>
-      <!-- therapies -->
-    </div>
-    <!-- side bars -->
+      <div class="section-body">
+        <h2>Learn about treatment options from United Therapeutics</h2>
+        <g-link class="button" href="https://www.fightingpah.com"
+          >Discover</g-link
+        >
+      </div>
+    </section>
+    <!-- therapies -->
 
     <CallToAction />
   </Layout>
@@ -262,9 +264,9 @@ export default {
   }
 
   @include for-desktop-up {
-    padding: 0 3rem;
     padding-top: 0.6rem;
-    font-size: 1.35rem;
+    padding: 0.6rem 2.4rem 0.6rem 2.4rem;
+    font-size: 1.5rem;
     line-height: 1.92rem;
     @include grid-child(3, 14, 7, 11);
   }
@@ -287,7 +289,6 @@ export default {
   @include for-desktop-up {
     height: 20px;
     width: 30px;
-    @include grid-child(8, 10, 10, 11);
     cursor: pointer;
   }
 }
@@ -296,7 +297,7 @@ export default {
 ====================================================== */
 #feel-better {
   @include for-desktop-up {
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: 40px repeat(2, auto);
   }
 
   &::before {
@@ -305,34 +306,40 @@ export default {
     }
 
     @include for-desktop-up {
-      margin-top: 1rem;
-      margin-left: 44px;
-      @include grid-child(4, 13, 1, 4);
+      margin-left: 2.7rem;
+      @include grid-child(4, 14, 2, 4);
     }
   }
 }
 
 #feel-better .section-header {
+  margin-top: 1.5rem;
   @include for-desktop-up {
     margin-top: 2rem;
-    @include grid-child(4, 11, 1, 3);
+    @include grid-child(4, 11, 2, 3);
   }
 }
 
 #feel-better .section-icon {
   @include for-desktop-up {
-    padding: 0 20px;
-    @include grid-child(12, 15, 1, 3);
+    padding: 0 15px;
+    @include grid-child(13, 16, 1, 3);
   }
 }
 
 #feel-better .section-body {
-  padding-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
 
   @include for-desktop-up {
-    padding: 0 0 20px 0px;
-    @include grid-child(5, 12, 3, 4);
+    margin-left: 2.7rem;
+    margin-bottom: 2rem;
+    padding: 0 4.8rem;
+    @include grid-child(4, 14, 3, 4);
   }
+}
+
+#feel-better .section-body p:last-child {
+  margin-bottom: 0;
 }
 
 /* RISK STATUS
@@ -342,7 +349,7 @@ export default {
   grid-template-rows: repeat(4, auto);
 
   @include for-desktop-up {
-    grid-template-rows: 60px repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
   }
 
   &::before {
@@ -365,32 +372,42 @@ export default {
 
   @include for-desktop-up {
     margin-bottom: 0;
-    @include grid-child(8, 17, 1, 2);
+    justify-self: end;
+    @include grid-child(7, 15, 1, 2);
   }
 }
 
 #risk-status .section-icon {
   @include for-desktop-up {
-    padding: 0 20px;
-    @include grid-child(4, 7, 1, 2);
+    padding: 0 25px 0 0;
+    @include grid-child(4, 7, 1, 3);
   }
 }
 
-#risk-status p:first-of-type {
+#risk-status p {
+  @include for-desktop-up {
+    padding: 0 4.8rem;
+  }
+}
+
+#risk-status .quote {
   @include grid-child(2, 16, 2, 3);
+  margin: 1.5rem 0 1rem 0;
 
   @include for-desktop-up {
-    padding-top: 1rem;
-    @include grid-child(7, 14, 2, 3);
+    margin: 2rem 0 1rem 0;
+    font-size: 1.3rem;
+    line-height: 1.35rem;
+    @include grid-child(6, 15, 2, 3);
   }
 }
 
-#risk-status p:nth-of-type(2) {
+#risk-status .lead {
   @include grid-child(2, 16, 3, 4);
 
   @include for-desktop-up {
-    @include grid-child(7, 14, 3, 4);
-    margin-bottom: 30px;
+    @include grid-child(6, 15, 3, 4);
+    margin-top: 0;
   }
 }
 
@@ -418,13 +435,13 @@ export default {
 }
 
 #risk-status .section-body p {
-  padding: 10px 0;
+  margin: 1.5rem 0;
+  @include grid-child(2, 17, 1, 2);
   @include for-desktop-up {
-    margin: 30px 0 30px 0;
-    padding: 0;
+    margin: 2rem 0;
+    padding: 0 4.4rem 0 4.8rem;
     font-family: ProximaNova, sans-serif;
-    font-size: 14px;
-    @include grid-child(2, 9, 1, 2);
+    @include grid-child(1, 10, 1, 2);
   }
 }
 
@@ -451,7 +468,7 @@ export default {
 
 #what-is-pah .section-icon {
   @include for-desktop-up {
-    padding: 0 20px;
+    padding: 0 15px;
     @include grid-child(11, 14, 1, 4);
   }
 }
@@ -460,15 +477,15 @@ export default {
   @include grid-child(3, 17, 1, 2);
 
   @include for-desktop-up {
-    padding-left: 2.5rem;
+    padding-left: 2.4rem;
     margin: 0.67em 0;
     margin-bottom: 0;
-    @include grid-child(5, 10, 2, 3);
+    @include grid-child(5, 11, 2, 3);
   }
 }
 
 #what-is-pah .section-body {
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
   @include grid-child(3, 15, 2, 3);
 
   @include for-tablet-portrait-up {
@@ -476,9 +493,15 @@ export default {
   }
 
   @include for-desktop-up {
-    padding-left: 2.5rem;
-    @include grid-child(6, 11, 3, 4);
+    margin-bottom: 2rem;
+    padding: 0 4vw;
+    @include grid-child(6, 12, 3, 4);
   }
+}
+
+#what-is-pah .section-body h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
 }
 
 /* MANAGING YOUR PAH
@@ -493,14 +516,16 @@ export default {
     }
 
     @include for-desktop-up {
-      @include grid-child(7, 13, 2, 3);
+      margin-left: 2rem;
+      margin-right: 2.4rem;
+      @include grid-child(7, 14, 2, 3);
     }
   }
 }
 
 #managing-your-pah .section-icon {
   @include for-desktop-up {
-    padding: 0 30px;
+    padding: 0 0 0 3rem;
     @include grid-child(5, 8, 1, 3);
   }
 }
@@ -513,22 +538,34 @@ export default {
   }
 
   @include for-desktop-up {
-    padding-left: 1.5rem;
-    margin-bottom: 10px;
-    @include grid-child(8, 13, 1, 2);
+    padding-left: 2.4rem;
+    @include grid-child(8, 15, 1, 2);
   }
 }
 
 #managing-your-pah .section-body {
   @include grid-child(3, 14, 2, 3);
-  padding-bottom: 2rem;
+  padding: 0 4vw 2rem 4vw;
+  margin-left: 2rem;
+  margin-right: 2.4rem;
 
   @include for-tablet-portrait-up {
     @include grid-child(6, 14, 2, 3);
   }
 
   @include for-desktop-up {
-    @include grid-child(8, 12, 2, 3);
+    @include grid-child(7, 14, 2, 3);
+  }
+}
+
+#managing-your-pah .section-body h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+}
+
+#managing-your-pah .section-body .button {
+  @include for-desktop-up {
+    margin-left: 2.4rem;
   }
 }
 
@@ -555,7 +592,7 @@ export default {
 
 #pah-pathways .section-icon {
   @include for-desktop-up {
-    padding: 0 20px;
+    padding: 0 15px;
     @include grid-child(11, 14, 1, 4);
   }
 }
@@ -564,14 +601,14 @@ export default {
   @include grid-child(3, 17, 1, 2);
 
   @include for-desktop-up {
-    padding-left: 2.5rem;
+    padding-left: 2.4rem;
     margin-bottom: 0;
-    @include grid-child(5, 9, 2, 3);
+    @include grid-child(5, 11, 2, 3);
   }
 }
 
 #pah-pathways .section-body {
-  padding-bottom: 2rem;
+  margin-bottom: 1.5rem;
   @include grid-child(3, 14, 2, 3);
 
   @include for-tablet-portrait-up {
@@ -579,10 +616,15 @@ export default {
   }
 
   @include for-desktop-up {
-    padding-left: 2.5rem;
-    padding-right: 3rem;
+    margin-bottom: 2rem;
+    padding: 0 1vw 0 4vw;
     @include grid-child(6, 11, 3, 4);
   }
+}
+
+#pah-pathways .section-body h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
 }
 
 /* THERAPIES
@@ -591,21 +633,22 @@ export default {
 #therapies {
   &::before {
     @include grid-child(2, 16, 1, 3);
+    margin-left: 2rem;
+    margin-right: 2.4rem;
 
     @include for-tablet-portrait-up {
-      @include grid-child(5, 15, 1, 3);
+      @include grid-child(6, 14, 2, 3);
     }
 
     @include for-desktop-up {
-      @include grid-child(7, 13, 2, 3);
+      @include grid-child(7, 14, 2, 3);
     }
   }
 }
 
 #therapies .section-icon {
   @include for-desktop-up {
-    padding: 0 25px;
-    margin-top: 30px;
+    padding: 0 0 0 2.4rem;
     @include grid-child(5, 8, 1, 3);
   }
 }
@@ -618,14 +661,13 @@ export default {
   }
 
   @include for-desktop-up {
-    padding-left: 1.5rem;
-    margin-bottom: 5px;
+    padding-left: 2.4rem;
     @include grid-child(8, 14, 1, 2);
   }
 }
 
 #therapies .section-body {
-  padding-bottom: 2rem;
+  margin-bottom: 1.5rem;
   @include grid-child(3, 16, 2, 3);
 
   @include for-tablet-portrait-up {
@@ -633,8 +675,22 @@ export default {
   }
 
   @include for-desktop-up {
-    padding-left: 0;
-    @include grid-child(8, 12, 2, 3);
+    margin-left: 2rem;
+    margin-right: 2.4rem;
+    margin-bottom: 2rem;
+    padding: 0 4vw;
+    @include grid-child(7, 14, 2, 3);
+  }
+}
+
+#therapies .section-body h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+}
+
+#therapies .section-body .button {
+  @include for-desktop-up {
+    margin-left: 2.4rem;
   }
 }
 </style>

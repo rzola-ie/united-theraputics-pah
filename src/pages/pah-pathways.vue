@@ -1,5 +1,23 @@
 <template>
   <SecondaryLayout>
+    <Modal v-if="leaving">
+      <h2 slot="header">
+        YOU ARE NOW LEAVING A SITE MANAGED BY UNITED THERAPEUTICS. CLICK
+        CONTINUE TO PROCEED.
+      </h2>
+
+      <div slot="footer">
+        <div class="two-buttons">
+          <a class="modal-default" :href="exitLink">
+            Continue
+          </a>
+
+          <button class="modal-secondary" @click="toggleModal">
+            Go Back
+          </button>
+        </div>
+      </div>
+    </Modal>
     <section grey id="pah-pathways">
       <h1 class="section-header">PAH Pathways</h1>
       <g-image
@@ -104,7 +122,12 @@
           Visit FightingPAH.com to learn more about PAH treatment options from
           United Therapeutics
         </h3>
-        <g-link class="button" to="https://www.fightingpah.com/">Go Now</g-link>
+        <button
+          class="button"
+          @click="toggleModal('https://www.fightingpah.com/')"
+        >
+          Go Now
+        </button>
       </div>
     </section>
     <!-- fighting pah -->
@@ -124,6 +147,19 @@
 export default {
   metaInfo: {
     title: "PAH Pathways"
+  },
+  data() {
+    return {
+      exitLink: "",
+      leaving: false
+    };
+  },
+  methods: {
+    toggleModal(url) {
+      this.leaving = !this.leaving;
+
+      this.exitLink = this.leaving ? url : "";
+    }
   }
 };
 </script>
@@ -275,5 +311,27 @@ export default {
 
 #fighting-pah .section-body h3 {
   margin-top: 0;
+}
+
+/* MODAL
+====================================================== */
+.two-buttons {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
+  & a {
+    margin-right: 0.5rem;
+    @include for-desktop-up {
+      margin-right: 1rem;
+    }
+  }
+
+  & button {
+    margin-right: 0.5rem;
+    @include for-desktop-up {
+      margin-right: 1rem;
+    }
+  }
 }
 </style>

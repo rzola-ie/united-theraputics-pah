@@ -1,5 +1,5 @@
 <template>
-  <SecondaryLayout>
+  <ShortLayout>
     <section purple id="contact-us">
       <h1 class="section-header">
         For more information or questions about United Therapeutics, please
@@ -16,8 +16,7 @@
         alt="an icon of a phone"
       />
     </section>
-    <CallToAction />
-  </SecondaryLayout>
+  </ShortLayout>
 </template>
 
 <script>
@@ -30,19 +29,16 @@ export default {
 
 <style lang="scss" scoped>
 #contact-us {
-  @include for-desktop-up {
-    min-height: calc(100vh - (388px + 12rem));
-  }
   &::before {
     @include for-desktop-up {
-      margin: 0 35px;
-      @include grid-child(3, 15, 1, 3);
+      @include grid-child(4, 14, 1, 3);
     }
   }
 }
 
 #contact-us .section-header {
-  margin-bottom: 1rem;
+  padding-left: 48px;
+  margin-bottom: 1.2rem;
   @include for-desktop-up {
     @include grid-child(3, 13, 1, 2);
   }
@@ -73,7 +69,7 @@ export default {
   @include grid-child(3, 15, 2, 3);
 
   @include for-desktop-up {
-    padding: 0rem;
+    padding: 1.5rem 0rem;
     margin-bottom: 3rem;
     @include grid-child(7, 11, 2, 3);
   }

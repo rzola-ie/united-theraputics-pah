@@ -61,8 +61,8 @@
           >. When you have too little prostacyclin, the vessels of the lungs
           become narrow and restrict blood flow. That's why your doctor may
           consider prescribing a
-          <g-link to="/prostacyclin-class-therapies#medicines"
-            >Prostacyclin-class medicine</g-link
+          <g-link to="/prostacyclin-class-therapies#medicines">
+            Prostacyclin-class medicine</g-link
           >.
         </p>
       </div>
@@ -130,14 +130,14 @@
           <li>Reduce blood pressure in the lungs</li>
           <li>Improve NT-proBNP numbers</li>
         </ul>
-      </div>
-
-      <div class="section-body bottom">
         <p>
           Because these are key elements in determining your risk score, these
           benefits indicate that Prostacyclin-class medicines may help improve
           your risk status.
         </p>
+      </div>
+
+      <div class="section-body bottom">
         <p>
           Prostacyclin-class medicines were the first type of treatment to be
           prescribed for PAH. It’s also the only class of PAH medicine available
@@ -200,7 +200,7 @@
           <li>In-home nurse visits to explain more about the medicine</li>
           <li>Home delivery of medicines</li>
           <li>
-            Scheduled follow-up calls from specialty pharmacy nurses and
+            Scheduled follow-up calls from Specialty Pharmacy nurses and
             pharmacists
           </li>
         </ul>
@@ -470,6 +470,9 @@ export default {
 #benefits .section-body.top p:first-child {
   margin-top: 0;
 }
+#benefits .section-body.top p:last-child {
+  margin-bottom: 0;
+}
 
 #benefits .section-body.bottom {
   @include display-grid;
@@ -500,16 +503,8 @@ export default {
     @include grid-child(5, 13, 1, 2);
   }
 }
-#benefits .section-body.bottom p:nth-child(2) {
-  @include grid-child(2, 16, 2, 3);
-
-  @include for-desktop-up {
-    @include grid-child(5, 13, 2, 3);
-  }
-}
 
 #benefits .section-body.bottom ul {
-  margin-top: 0;
   padding-bottom: 1.5rem;
   @include grid-child(2, 17, 3, 4);
 
@@ -678,7 +673,7 @@ export default {
     }
 
     @include for-desktop-up {
-      @include grid-child(5, 15, 2, 3);
+      @include grid-child(5, 14, 2, 3);
     }
   }
 }
@@ -698,6 +693,7 @@ export default {
 
   @include for-desktop-up {
     margin: 2rem 0;
+    padding-right: 30px;
     @include grid-child(6, 14, 2, 3);
   }
 }
@@ -706,9 +702,7 @@ export default {
   margin-top: 0;
 }
 
-#fighting-pah .section-body a {
-  margin-left: 2rem;
-
+#fighting-pah .section-body .button {
   @include for-desktop-up {
     margin-left: 3rem;
   }
