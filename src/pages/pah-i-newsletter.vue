@@ -1,6 +1,10 @@
 <template>
   <SecondaryLayout>
-    <Modal v-if="showSuccessModal">
+    <Modal
+      v-if="showSuccessModal"
+      class="no-close-button"
+      v-on:closeModal="dismissModal"
+    >
       <h2 slot="header">THANKS FOR SIGNING UP!</h2>
 
       <h3 slot="body">
