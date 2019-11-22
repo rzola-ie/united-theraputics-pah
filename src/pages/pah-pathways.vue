@@ -136,8 +136,8 @@
       <p>
         You can accept feeling okay, or you can ask about feeling better. Ask
         your doctor about adjusting your
-        <g-link to="/pah-treatment-medicine">treatment plan</g-link> to
-        help you <span class="wine">feel better</span> and
+        <g-link to="/pah-treatment-medicine">treatment plan</g-link> to help you
+        <span class="wine">feel better</span> and
         <span class="wine">do more</span>.
       </p>
     </CallToAction>
@@ -153,6 +153,21 @@ export default {
         name: "description",
         content:
           "PAH is associated with an imbalance of 3 natural substances in your body. Learn more about these imbalances, or pathways."
+      },
+      {
+        property: "og:title",
+        content: "PAH Pathways| Prostacyclin, Endothelin and Nitric Oxide"
+      },
+      {
+        property: "og:description",
+        content:
+          "PAH is associated with an imbalance of 3 natural substances in your body. Learn more about these imbalances, or pathways."
+      }
+    ],
+    link: [
+      {
+        rel: "canonical",
+        href: "https://www.pahinitiative.com/pah-pathways/"
       }
     ]
   },
@@ -203,7 +218,7 @@ export default {
   margin: 1.5rem 0;
 
   @include for-desktop-up {
-    margin: 2rem 2rem 2rem 0;
+    margin: 2.5rem 2rem 2.5rem 0;
     padding: 0 5.6vw;
     @include grid-child(5, 15, 2, 3);
   }
@@ -255,14 +270,15 @@ export default {
 
 #therapies .section-icon {
   @include for-desktop-up {
-    padding: 0 15px;
+    justify-self: end;
+    padding: 0 2rem 0 0;
     @include grid-child(12, 15, 1, 4);
   }
 }
 
 #therapies .section-header {
   @include for-desktop-up {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     @include grid-child(3, 16, 2, 3);
   }
 }
@@ -273,7 +289,7 @@ export default {
 
   @include for-desktop-up {
     margin-left: 2.7rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     padding: 0 5vw 0 5.6vw;
     @include grid-child(3, 12, 3, 4);
   }
@@ -320,7 +336,7 @@ export default {
   @include grid-child(2, 16, 2, 3);
 
   @include for-desktop-up {
-    margin: 2rem 0;
+    margin: 2.5rem 0;
     padding: 0 5.6vw;
     @include grid-child(5, 14, 2, 3);
   }

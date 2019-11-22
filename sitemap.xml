@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+  <loc>https://www.pahinitiative.com</loc>
+  <image:image>
+  <image:loc>https://www.pahinitiative.com/assets/static/pah-initiative.1213a85.4b5afdb.png</image:loc>
+  </image:image>
+</url>
+<url>
+  <loc>https://www.pahinitiative.com/what-is-pah/</loc>
+    <image:image>
+  <image:loc>https://www.pahinitiative.com/assets/static/pah-symptoms.83e96e8.54ba4ae.png</image:loc>
+  </image:image>
+    <image:image>
+  <image:loc>https://www.pahinitiative.com/assets/static/who-functional-class-pah.8426ab8.2b33b37.png</image:loc>
+  </image:image>
+</url>
+<url>
+  <loc>https://www.pahinitiative.com/pah-life-expectancy/</loc>
+</url>
+<url>
+  <loc>https://www.pahinitiative.com/pah-pathways/</loc>
+</url>
+<url>
+  <loc>https://www.pahinitiative.com/pah-treatment-medicine/</loc>
+  <image:image>
+  <image:loc>https://www.pahinitiative.com/assets/static/blood-vessels.b28486f.1cef1e0.png</image:loc>
+  </image:image>
+</url>
+<url>
+  <loc>https://www.pahinitiative.com/pah-information-support/</loc>
+  <image:image>
+  <image:loc>https://www.pahinitiative.com/assets/static/pulmonary-hypertension-association.38e0f30.f7f1cbb.jpg</image:loc>
+  </image:image>
+  <image:image>
+  <image:loc>https://www.pahinitiative.com/assets/static/phaware.a0111f8.cbe5e61.jpg</image:loc>
+  </image:image>
+  <image:image>
+  <image:loc>https://www.pahinitiative.com/assets/static/scleroderma-foundation.de4034a.14103e9.jpg</image:loc>
+  </image:image>
+  <image:image>
+  <image:loc>https://www.pahinitiative.com/assets/static/pulmonary-hypertension-news.a0111f8.c1d345c.jpg</image:loc>
+  </image:image>
+</url>
+<url>
+  <loc>https://www.pahinitiative.com/pah-i-newsletter/</loc>
+</url>
+<url>
+  <loc>https://www.pahinitiative.com/contact/</loc>
+</url>
+<url>
+  <loc>https://www.pahinitiative.com/site-map/</loc>
+</url>
+</urlset>

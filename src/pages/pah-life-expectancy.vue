@@ -263,7 +263,9 @@
           </li>
         </ul>
 
-        <g-link class="button" to="/pah-information-support">Find More PAH Resources</g-link>
+        <g-link class="button" to="/pah-information-support"
+          >Find More PAH Resources</g-link
+        >
       </div>
     </section>
     <!-- build your network -->
@@ -334,6 +336,21 @@ export default {
         name: "description",
         content:
           "Understand the importance of managing your PAH, assessing risk status, and the impact it can have on life expectancy."
+      },
+      {
+        property: "og:title",
+        content: "Managing PAH | Life Expectancy Impact"
+      },
+      {
+        property: "og:description",
+        content:
+          "Understand the importance of managing your PAH, assessing risk status, and the impact it can have on life expectancy."
+      }
+    ],
+    link: [
+      {
+        rel: "canonical",
+        href: "https://www.pahinitiative.com/pah-life-expectancy"
       }
     ]
   }
@@ -375,7 +392,7 @@ export default {
   margin-bottom: 1.5rem;
 
   @include for-desktop-up {
-    margin: 0 0 2rem 2.7rem;
+    margin: 0 0 2.5rem 2.7rem;
     padding: 0 5.6vw;
     @include grid-child(3, 13, 3, 4);
   }
@@ -395,7 +412,7 @@ export default {
     @include grid-child(1, 17, 1, 4);
 
     @include for-desktop-up {
-      margin-left: 2.7rem;
+      margin-left: 4rem;
       margin-right: 2rem;
       @include grid-child(4, 15, 2, 5);
     }
@@ -405,8 +422,7 @@ export default {
 #risk-prognosis .section-icon {
   @include for-desktop-up {
     align-self: center;
-    margin-top: 0.5rem;
-    padding: 0 50px 0 0;
+    padding: 0 2rem 0 0;
     @include grid-child(3, 6, 1, 3);
   }
 }
@@ -414,7 +430,7 @@ export default {
 #risk-prognosis .section-header {
   @include for-desktop-up {
     margin-bottom: 0.5rem;
-    @include grid-child(7, 13, 1, 2);
+    @include grid-child(6, 13, 1, 2);
   }
 }
 
@@ -422,8 +438,8 @@ export default {
   @include grid-child(2, 16, 2, 3);
 
   @include for-desktop-up {
-    margin: 0 2rem 0 2.7rem;
-    padding: 2rem 5.6vw;
+    margin: 0 2rem 0 4rem;
+    padding: 2.5rem 5.6vw 2rem 5.6vw;
     @include grid-child(4, 15, 2, 3);
   }
 }
@@ -446,7 +462,7 @@ export default {
     @include grid-child(1, 17, 1, 3);
 
     @include for-desktop-up {
-      margin-left: 2.7rem;
+      margin-left: 4rem;
       margin-right: 2rem;
       @include grid-child(1, 11, 1, 2);
     }
@@ -458,7 +474,7 @@ export default {
   @include grid-child(2, 16, 1, 2);
 
   @include for-desktop-up {
-    margin: 1.5rem 3.8rem 2rem 2.7rem;
+    margin: 1.5rem 3.8rem 2.5rem 4rem;
     padding: 0 5.6vw;
     @include grid-child(1, 11, 1, 2);
   }
@@ -565,7 +581,7 @@ export default {
   margin: 1rem 0 1.5rem 0;
 
   @include for-desktop-up {
-    margin: 2rem 2rem 2rem 0;
+    margin: 2.5rem 2rem 2.5rem 0;
     padding: 0 5.6vw;
     @include grid-child(5, 15, 3, 4);
   }
@@ -613,7 +629,7 @@ export default {
 #best-advocate .section-body {
   margin-bottom: 1.5rem;
   @include for-desktop-up {
-    margin: 1rem 2rem 2rem 2.7rem;
+    margin: 1rem 2rem 2.5rem 2.7rem;
     padding: 0 6.4vw 0 5.6vw;
     @include grid-child(3, 14, 3, 4);
   }
@@ -659,7 +675,7 @@ export default {
   margin: 1.5rem 0;
 
   @include for-desktop-up {
-    margin: 2rem 0;
+    margin: 2.5rem 0;
     margin-right: 2rem;
     padding: 0 5.6vw;
     @include grid-child(5, 15, 2, 3);
@@ -711,7 +727,7 @@ export default {
   margin-bottom: 1.5rem;
 
   @include for-desktop-up {
-    margin: 0 0 2rem 2.7rem;
+    margin: 0 0 2.5rem 2.7rem;
     padding: 0 5.3vw 0 5.6vw;
     @include grid-child(3, 12, 3, 4);
   }
@@ -755,7 +771,7 @@ export default {
   margin: 1rem 0 1.5rem 0;
 
   @include for-desktop-up {
-    margin: 2rem 0;
+    margin: 2.5rem 0;
     margin-right: 2rem;
     padding: 0 1vw 0 5.6vw;
     @include grid-child(5, 14, 2, 3);
@@ -812,7 +828,7 @@ export default {
 #on-your-own .section-body {
   margin-bottom: 1.5rem;
   @include for-desktop-up {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     margin-left: 2.7rem;
     padding: 0 5.6vw;
     @include grid-child(3, 13, 3, 4);
@@ -856,7 +872,7 @@ export default {
   margin-bottom: 1.5rem;
 
   @include for-desktop-up {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     padding: 0 5.6vw;
 
     @include grid-child(6, 13, 2, 3);
