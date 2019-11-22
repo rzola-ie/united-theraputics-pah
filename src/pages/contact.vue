@@ -22,7 +22,13 @@
 <script>
 export default {
   metaInfo: {
-    title: "Contact Us"
+    title: "Contact United Therapeutics",
+    meta: [
+      {
+        name: "description",
+        content: "Contact information is provided for United Therapeutics."
+      }
+    ]
   }
 };
 </script>
@@ -37,7 +43,7 @@ export default {
 }
 
 #contact-us .section-header {
-  padding-left: 48px;
+  padding-left: 2.8rem;
   margin-bottom: 1.2rem;
   @include for-desktop-up {
     @include grid-child(3, 13, 1, 2);
@@ -70,7 +76,7 @@ export default {
 
   @include for-desktop-up {
     padding: 1.5rem 0rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     @include grid-child(7, 11, 2, 3);
   }
 }

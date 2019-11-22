@@ -1,16 +1,27 @@
 <template>
   <SecondaryLayout>
-    <section purple id="what-is-pah">
+    <section
+      purple
+      id="what-is-pah"
+      itemscope
+      itemprop="mainEntity"
+      itemtype="https://schema.org/Question"
+    >
       <g-image
         src="~/assets/img/icn-what-is-pah.png"
         alt="an icon of lungs"
         class="section-icon"
       />
 
-      <h1 class="section-header">What is PAH?</h1>
+      <h1 class="section-header" itemprop="name">What is PAH?</h1>
 
-      <div class="section-body">
-        <p>
+      <div
+        class="section-body"
+        itemscope
+        itemprop="acceptedAnswer"
+        itemtype="https://schema.org/Answer"
+      >
+        <p itemprop="text">
           PAH is the medical abbreviation for
           <strong>pulmonary arterial hypertension</strong>. PAH causes the
           millions of tiny blood vessels in your lungs to thicken and narrow.
@@ -24,17 +35,30 @@
     </section>
     <!-- what is pah -->
 
-    <section grey id="pah-vs-ph">
+    <section
+      grey
+      id="pah-vs-ph"
+      itemscope
+      itemprop="mainEntity"
+      itemtype="https://schema.org/Question"
+    >
       <g-image
         src="~/assets/img/icn-pulmonary.png"
         alt="an icon of two arrows"
         class="section-icon"
       />
 
-      <h1 class="section-header">PAH VS PH – WHAT’S THE DIFFERENCE?</h1>
+      <h1 class="section-header" itemprop="name">
+        PAH VS PH – WHAT’S THE DIFFERENCE?
+      </h1>
 
-      <div class="section-body">
-        <p>
+      <div
+        class="section-body"
+        itemscope
+        itemprop="acceptedAnswer"
+        itemtype="https://schema.org/Answer"
+      >
+        <p itemprop="text">
           <strong>PH</strong>, which stands for
           <strong>pulmonary hypertension</strong>, is a more general term used
           to describe any condition in which the blood pressure of the vessels
@@ -44,7 +68,7 @@
           the pulmonary arteries to rise.
         </p>
 
-        <p>
+        <p itemprop="text">
           <strong>PAH is a serious disease that gets worse over time</strong>.
           Whether you're undiagnosed or already on treatment, it's important to
           talk with your doctor about the symptoms you're experiencing—and the
@@ -57,8 +81,8 @@
 
     <section purple id="pah-symptoms">
       <g-image
-        src="~/assets/img/symptoms-chart.png"
-        alt="an image of a pah symptoms chart"
+        src="~/assets/img/pah-symptoms.png"
+        alt="Signs and symptoms of PAH include dizziness, shortness of breath, feeling tired, fainting and swollen ankles or legs."
         class="info-graphic"
       />
 
@@ -86,7 +110,7 @@
           Because PAH gets worse over time, it’s important to have an honest
           conversation with your doctor about how you’re really feeling,
           regardless of your test results (which only tell part of the story).
-          <g-link to="/prostacyclin-class-therapies"
+          <g-link to="/pah-treatment-medicine"
             >It may be necessary to adjust your dose of medicine(s) or add
             treatment</g-link
           ><strong>
@@ -213,11 +237,24 @@
       </div>
     </section>
 
-    <section purple id="functional-class">
-      <h1 class="section-header">What's your functional class?</h1>
+    <section
+      purple
+      id="functional-class"
+      itemscope
+      itemprop="mainEntity"
+      itemtype="https://schema.org/Question"
+    >
+      <h1 class="section-header" itemprop="name">
+        What's your functional class?
+      </h1>
 
-      <div class="section-body">
-        <p>
+      <div
+        class="section-body"
+        itemscope
+        itemprop="acceptedAnswer"
+        itemtype="https://schema.org/Answer"
+      >
+        <p itemprop="text">
           Another measure of PAH severity is determined by your
           <strong>functional class (FC)</strong>. Your healthcare provider will
           determine your FC based on the information you share about your daily
@@ -227,24 +264,11 @@
           (Class I) to most severe (Class IV).
         </p>
 
-        <div class="func-classes">
-          <g-image
-            src="~/assets/img/functional-1.jpg"
-            alt="functional class 1: biking"
-          />
-          <g-image
-            src="~/assets/img/functional-2.jpg"
-            alt="functional class 2: walking 2 flights of stairs"
-          />
-          <g-image
-            src="~/assets/img/functional-3.jpg"
-            alt="functional class 3: walking 1 flight of stairs"
-          />
-          <g-image
-            src="~/assets/img/functional-4.jpg"
-            alt="functional class 4: resting"
-          />
-        </div>
+        <g-image
+          class="func-chart"
+          src="~/assets/img/who-functional-class-pah.png"
+          alt="WHO functional class system for PAH classification"
+        />
       </div>
     </section>
     <!-- functional-class -->
@@ -260,7 +284,9 @@
 
       <div class="section-body">
         <h2>Want to learn how you can do more about your PAH?</h2>
-        <g-link class="button" to="/managing-your-pah">Manage Your PAH</g-link>
+        <g-link class="button" to="/pah-life-expectancy"
+          >Manage Your PAH</g-link
+        >
       </div>
     </section>
     <!-- managing your pah -->
@@ -279,7 +305,14 @@
 <script>
 export default {
   metaInfo: {
-    title: "What is PAH?"
+    title: "What is PAH? | Medical Abbreviation",
+    meta: [
+      {
+        name: "description",
+        content:
+          "PAH is the medical abbreviation that stands for pulmonary arterial hypertension. PAH is a serious disease that thickens and narrowsthe blood vessels in your lungs."
+      }
+    ]
   }
 };
 </script>
@@ -458,7 +491,7 @@ export default {
 
   @include for-desktop-up {
     margin-top: 2rem;
-    @include grid-child(4, 8, 2, 3);
+    @include grid-child(4, 12, 2, 3);
   }
 }
 
@@ -632,7 +665,7 @@ export default {
 }
 
 #pah-diagnosis .section-body {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
   @include grid-child(1, 17, 2, 3);
   @include for-tablet-portrait-up {
     @include grid-child(5, 15, 2, 3);
@@ -743,7 +776,7 @@ export default {
 }
 
 #other-considerations .section-body {
-  margin: 1.5rem 0;
+  margin: 1rem 0 1.5rem 0;
 
   @include for-desktop-up {
     margin: 2rem 0;
@@ -801,25 +834,8 @@ export default {
   letter-spacing: 0.1px;
 }
 
-#functional-class .section-body .func-classes {
-  @include display-grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 0.6rem;
-
-  @include for-tablet-portrait-up {
-    padding: 0;
-  }
-
-  @include for-desktop-up {
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-#functional-class .section-body .func-classes img {
+#functional-class .section-body .func-chart {
   width: 100%;
-  border-radius: 4px;
 }
 
 /* MANAGING YOUR PAH
@@ -864,8 +880,8 @@ export default {
 }
 
 #managing-your-pah .section-body {
-  margin: 1.5rem 0;
-  @include grid-child(3, 16, 2, 3);
+  margin: 1rem 0 1.5rem 0;
+  @include grid-child(2, 16, 2, 3);
 
   @include for-tablet-portrait-up {
     @include grid-child(4, 12, 2, 3);
@@ -881,9 +897,11 @@ export default {
 #managing-your-pah .section-body h2 {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 #managing-your-pah .section-body .button {
-  margin-left: 2.6rem;
+  @include for-desktop-up {
+    margin-left: 2.6rem;
+  }
 }
 </style>

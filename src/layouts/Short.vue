@@ -27,9 +27,13 @@ query {
 }
 
 .layout main {
+  height: calc(100vh - 60px);
   @include display-grid;
-
   grid-template-rows: 1fr auto;
   align-items: center;
+
+  @include for-desktop-up {
+    height: auto;
+  }
 }
 </style>

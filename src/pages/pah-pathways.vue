@@ -104,7 +104,7 @@
           different treatment needs over time. One such treatment your doctor
           may recommend is a Prostacyclin-class medicine.
         </h3>
-        <g-link class="button" to="/prostacyclin-class-therapies"
+        <g-link class="button" to="/pah-treatment-medicine"
           >Learn about Prostacyclin-class medicines</g-link
         >
       </div>
@@ -118,10 +118,10 @@
         alt="an icon of an eye"
       />
       <div class="section-body">
-        <h3>
+        <h2>
           Visit FightingPAH.com to learn more about PAH treatment options from
           United Therapeutics
-        </h3>
+        </h2>
         <button
           class="button"
           @click="toggleModal('https://www.fightingpah.com/')"
@@ -136,8 +136,9 @@
       <p>
         You can accept feeling okay, or you can ask about feeling better. Ask
         your doctor about adjusting your
-        <g-link to="/prostacyclin-class-therapies">treatment plan</g-link> to
-        help you feel better and do more.
+        <g-link to="/pah-treatment-medicine">treatment plan</g-link> to
+        help you <span class="wine">feel better</span> and
+        <span class="wine">do more</span>.
       </p>
     </CallToAction>
   </SecondaryLayout>
@@ -146,7 +147,14 @@
 <script>
 export default {
   metaInfo: {
-    title: "PAH Pathways"
+    title: "PAH Pathways| Prostacyclin, Endothelin and Nitric Oxide",
+    meta: [
+      {
+        name: "description",
+        content:
+          "PAH is associated with an imbalance of 3 natural substances in your body. Learn more about these imbalances, or pathways."
+      }
+    ]
   },
   data() {
     return {
@@ -172,36 +180,39 @@ export default {
   &::before {
     @include for-desktop-up {
       margin-right: 2rem;
-      @include grid-child(6, 15, 2, 3);
+      @include grid-child(5, 15, 2, 3);
     }
   }
 }
 
 #pah-pathways .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 25px;
-    @include grid-child(4, 7, 1, 3);
+    padding: 30px 2rem 0 0;
+    @include grid-child(3, 6, 1, 3);
   }
 }
 
 #pah-pathways .section-header {
   @include for-desktop-up {
-    margin-bottom: 5px;
-    @include grid-child(8, 14, 1, 2);
+    padding-left: 2.4rem;
+    @include grid-child(6, 14, 1, 2);
   }
 }
 
 #pah-pathways .section-body {
-  padding-bottom: 1.5rem;
+  margin: 1.5rem 0;
 
   @include for-desktop-up {
-    padding: 1rem 5.4rem 2rem 0;
-    @include grid-child(7, 15, 2, 3);
+    margin: 2rem 2rem 2rem 0;
+    padding: 0 5.6vw;
+    @include grid-child(5, 15, 2, 3);
   }
 }
 
 #pah-pathways .section-body p {
+  &:first-child {
+    margin-top: 0;
+  }
   &:last-child {
     margin-bottom: 0;
   }
@@ -224,39 +235,47 @@ export default {
 ====================================================== */
 
 #therapies {
+  @include for-tablet-portrait-up {
+    grid-template-rows: 50px auto;
+  }
+
   @include for-desktop-up {
     grid-template-rows: 50px repeat(2, auto);
   }
 
   &::before {
+    @include grid-child(1, 17, 1, 4);
+
     @include for-desktop-up {
-      margin-left: 40px;
-      @include grid-child(4, 13, 2, 4);
+      margin-left: 2.7rem;
+      @include grid-child(3, 13, 2, 4);
     }
   }
 }
 
 #therapies .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 50px 0 0;
+    padding: 0 15px;
     @include grid-child(12, 15, 1, 4);
   }
 }
 
 #therapies .section-header {
   @include for-desktop-up {
-    @include grid-child(4, 14, 2, 3);
+    margin-top: 2rem;
+    @include grid-child(3, 16, 2, 3);
   }
 }
 
 #therapies .section-body {
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  @include grid-child(2, 16, 2, 3);
 
   @include for-desktop-up {
-    padding-bottom: 2rem;
-    padding-left: 40px;
-    @include grid-child(5, 12, 3, 4);
+    margin-left: 2.7rem;
+    margin-bottom: 2rem;
+    padding: 0 5vw 0 5.6vw;
+    @include grid-child(3, 12, 3, 4);
   }
 }
 
@@ -267,8 +286,8 @@ export default {
 
   @include for-desktop-up {
     width: initial;
-    padding: 0 2rem;
-    font-size: 1rem;
+    padding: 0 2.4rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -276,41 +295,40 @@ export default {
 ====================================================== */
 
 #fighting-pah {
-  grid-template-rows: auto;
-
   @include for-desktop-up {
-    grid-template-rows: 50px auto;
+    grid-template-rows: 30px auto;
   }
 
   &::before {
     margin-top: 0;
-
     @include for-desktop-up {
-      margin-right: 30px;
-      @include grid-child(6, 15, 2, 3);
+      margin-right: 2rem;
+      @include grid-child(5, 15, 2, 3);
     }
   }
 }
 
 #fighting-pah .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 30px;
-    @include grid-child(4, 7, 1, 3);
+    padding: 0 2rem 0 0;
+    @include grid-child(3, 6, 1, 3);
   }
 }
 
 #fighting-pah .section-body {
-  padding: 1.5rem 0;
+  margin: 1.5rem 0;
+  @include grid-child(2, 16, 2, 3);
 
   @include for-desktop-up {
-    padding: 2rem 0;
-    @include grid-child(7, 13, 2, 3);
+    margin: 2rem 0;
+    padding: 0 5.6vw;
+    @include grid-child(5, 14, 2, 3);
   }
 }
 
-#fighting-pah .section-body h3 {
+#fighting-pah .section-body h2 {
   margin-top: 0;
+  font-size: 1.5rem;
 }
 
 /* MODAL

@@ -4,8 +4,8 @@
       <g-link to="/" class="header-logo">
         <g-image
           class="header-logo-img"
-          src="~/assets/img/PAH-Logo-Header.png"
-          alt="the pah initiative logo"
+          src="~/assets/img/pah-initiative.png"
+          alt="The PAH Initiative"
         />
       </g-link>
 
@@ -14,7 +14,7 @@
           <span>what is pah?</span>
         </g-link>
 
-        <g-link class="nav__link" to="/managing-your-pah" active-class>
+        <g-link class="nav__link" to="/pah-life-expectancy" active-class>
           <span>managing<br />your pah</span>
         </g-link>
 
@@ -22,19 +22,19 @@
           <span>pah<br />pathways</span>
         </g-link>
 
-        <g-link
-          class="nav__link"
-          to="/prostacyclin-class-therapies"
-          active-class
-        >
+        <g-link class="nav__link" to="/pah-treatment-medicine" active-class>
           <span>prostacyclin-<br />class therapies</span>
         </g-link>
 
-        <g-link class="nav__link" to="/resources" active-class>
+        <g-link class="nav__link" to="/pah-information-support" active-class>
           <span>resources</span>
         </g-link>
 
-        <g-link class="nav__link newsletter" to="/newsletter" active-class>
+        <g-link
+          class="nav__link newsletter"
+          to="/pah-i-newsletter"
+          active-class
+        >
           sign up to recieve our newsletter
         </g-link>
       </nav>

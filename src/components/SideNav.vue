@@ -8,9 +8,8 @@
       <div class="drawer-header">
         <g-image
           class="drawer-header-logo"
-          src="~/assets/img/PAH-Logo-Header.png"
-          alt="the pah initiative logo"
-          tabindex="1"
+          src="~/assets/img/pah-initiative.png"
+          alt="The PAH Initiative"
         />
         <!-- logo -->
 
@@ -28,7 +27,7 @@
           what is pah?
         </g-link>
 
-        <g-link class="nav__link" to="/managing-your-pah" active-class>
+        <g-link class="nav__link" to="/pah-life-expectancy" active-class>
           managing your pah
         </g-link>
 
@@ -36,18 +35,19 @@
           pah pathways
         </g-link>
 
-        <g-link
-          class="nav__link"
-          to="/prostacyclin-class-therapies"
-          active-class
+        <g-link class="nav__link" to="/pah-treatment-medicine" active-class
           >prostacyclin-class therapies
         </g-link>
 
-        <g-link class="nav__link" to="/resources" active-class>
+        <g-link class="nav__link" to="/pah-information-support" active-class>
           resources
         </g-link>
 
-        <g-link class="nav__link newsletter" to="/newsletter" active-class>
+        <g-link
+          class="nav__link newsletter"
+          to="/pah-i-newsletter"
+          active-class
+        >
           sign up to recieve our newsletter
         </g-link>
         <div class="drawer-sponsored">Sponsored by: United Theraputics</div>
