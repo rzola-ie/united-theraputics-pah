@@ -3,19 +3,19 @@
     <section purple id="site-map">
       <div class="section-body">
         <g-link to="/">Home</g-link>
-        <g-link to="/pah-i-newsletter">E-mail Opt-in</g-link>
-        <g-link to="/what-is-pah">What is PAH?</g-link>
-        <g-link to="/privacy-policy">Privacy Policy</g-link>
-        <g-link to="/pah-life-expectancy">Managing Your PAH</g-link>
-        <g-link to="/terms-of-use">Terms of Use</g-link>
-        <g-link to="/pah-pathways">PAH Pathways</g-link>
-        <g-link to="/contact">Contact Us</g-link>
-        <g-link to="/pah-treatment-medicine">
+        <g-link to="/pah-i-newsletter/">E-mail Opt-in</g-link>
+        <g-link to="/what-is-pah/">What is PAH?</g-link>
+        <g-link to="/privacy-policy/">Privacy Policy</g-link>
+        <g-link to="/pah-life-expectancy/">Managing Your PAH</g-link>
+        <g-link to="/terms-of-use/">Terms of Use</g-link>
+        <g-link to="/pah-pathways/">PAH Pathways</g-link>
+        <g-link to="/contact/">Contact Us</g-link>
+        <g-link to="/pah-treatment-medicine/">
           Prostacyclin-class Therapies
         </g-link>
-        <g-link to="/unsubscribe">Unsubscribe</g-link>
-        <g-link to="/pah-information-support">Resources</g-link>
-        <g-link to="/site-map">Site Map</g-link>
+        <g-link to="/unsubscribe/">Unsubscribe</g-link>
+        <g-link to="/pah-information-support/">Resources</g-link>
+        <g-link to="/site-map/">Site Map</g-link>
       </div>
     </section>
   </ShortLayout>

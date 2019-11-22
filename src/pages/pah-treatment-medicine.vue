@@ -61,7 +61,7 @@
           >. When you have too little prostacyclin, the vessels of the lungs
           become narrow and restrict blood flow. That's why your doctor may
           consider prescribing a
-          <g-link to="/pah-treatment-medicine#medicines">
+          <g-link to="/pah-treatment-medicine#medicines/">
             Prostacyclin-class medicine</g-link
           >.
         </p>
@@ -249,7 +249,7 @@
       />
       <div class="section-body">
         <h2>Check out other PAH resources.</h2>
-        <g-link class="button" to="/pah-information-support">Discover</g-link>
+        <g-link class="button" to="/pah-information-support/">Discover</g-link>
       </div>
     </section>
     <!-- resources -->

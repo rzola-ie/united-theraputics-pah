@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <nav class="footer-nav">
-        <g-link class="footer-nav-link" to="/pah-i-newsletter" active-class>
+        <g-link class="footer-nav-link" to="/pah-i-newsletter/" active-class>
           <span>Email Opt-In</span>
         </g-link>
 
@@ -22,15 +22,15 @@
           <span>Terms of Use</span>
         </g-link>
 
-        <g-link class="footer-nav-link" to="/contact" active-class>
+        <g-link class="footer-nav-link" to="/contact/" active-class>
           <span>Contact Us</span>
         </g-link>
 
-        <g-link class="footer-nav-link" to="/unsubscribe" active-class>
+        <g-link class="footer-nav-link" to="/unsubscribe/" active-class>
           <span>Unsubscribe</span>
         </g-link>
 
-        <g-link class="footer-nav-link" to="/site-map" active-class>
+        <g-link class="footer-nav-link" to="/site-map/" active-class>
           <span>Site Map</span>
         </g-link>
       </nav>

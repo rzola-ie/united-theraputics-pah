@@ -43,7 +43,7 @@
 
       <div class="section-body">
         <h3>Sign up for resources and the latest information about PAH.</h3>
-        <g-link class="button" to="/pah-i-newsletter">Take Action</g-link>
+        <g-link class="button" to="/pah-i-newsletter/">Take Action</g-link>
       </div>
     </section>
     <!-- opt-in -->

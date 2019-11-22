@@ -12,8 +12,8 @@
       <div class="section-body">
         <p>
           Once you have been diagnosed with PAH, your doctor can assess your
-          <g-link to="/managing-your-pah#risk-prognosis">risk status</g-link> to
-          set treatment goals, and guide you on how best to manage your
+          <g-link to="/pah-life-expectancy#risk-prognosis/">risk status</g-link>
+          to set treatment goals, and guide you on how best to manage your
           condition. Studies show that patients who optimize their therapy early
           on and lower their risk status may have a better prognosis, or
           long-term outcomes, including life expectancy.
@@ -33,15 +33,15 @@
       </h1>
       <p class="lead">
         You're likely familiar with your
-        <g-link to="/what-is-pah#functional-class">functional class</g-link> and
-        other tests that describe the status of your PAH today. But most people
-        also want to know how their PAH will impact them in the future. PAH
-        experts now know how to use the information about your functional class
-        and <strong>6-minute walk test</strong>, along with other test results,
-        to determine how PAH may affect you in the next 5 years – it's called
-        <strong>risk status</strong>. Risk status goes beyond determining how
-        PAH is affecting you today and helps your doctor assess the chance that
-        your PAH will get worse in the future.
+        <g-link to="/what-is-pah#functional-class/">functional class</g-link>
+        and other tests that describe the status of your PAH today. But most
+        people also want to know how their PAH will impact them in the future.
+        PAH experts now know how to use the information about your functional
+        class and <strong>6-minute walk test</strong>, along with other test
+        results, to determine how PAH may affect you in the next 5 years – it's
+        called <strong>risk status</strong>. Risk status goes beyond determining
+        how PAH is affecting you today and helps your doctor assess the chance
+        that your PAH will get worse in the future.
       </p>
       <div class="section-body">
         <p>
@@ -119,7 +119,7 @@
         <p>
           To help meet your treatment goals, your doctor will determine the
           appropriate treatment approach for you. PAH is associated with an
-          <g-link to="/pah-pathways">
+          <g-link to="/pah-pathways/">
             imbalance of three natural substances
           </g-link>
           in your body, and studies have shown that treating PAH with only one
@@ -168,7 +168,7 @@
           help control your symptoms and keep your disease from getting worse.
           <strong>
             Ask your doctor about a
-            <g-link to="/pah-treatment-medicine">treatment plan</g-link>
+            <g-link to="/pah-treatment-medicine/">treatment plan</g-link>
             that helps you feel better so you can do more.
           </strong>
         </p>
@@ -263,7 +263,7 @@
           </li>
         </ul>
 
-        <g-link class="button" to="/pah-information-support"
+        <g-link class="button" to="/pah-information-support/"
           >Find More PAH Resources</g-link
         >
       </div>
@@ -292,7 +292,7 @@
           <li>Getting a good amount of sleep every day</li>
           <li>
             Staying up-to-date on
-            <g-link to="/pah-treatment-medicine">PAH treatments</g-link>
+            <g-link to="/pah-treatment-medicine/">PAH treatments</g-link>
           </li>
         </ul>
       </div>
@@ -311,7 +311,7 @@
           Ready to do better than "just okay?" Learn about treatment approaches
           for PAH.
         </h2>
-        <g-link class="button" to="/pah-pathways">Learn More</g-link>
+        <g-link class="button" to="/pah-pathways/">Learn More</g-link>
       </div>
     </section>
     <!-- pah pathways -->
@@ -350,7 +350,7 @@ export default {
     link: [
       {
         rel: "canonical",
-        href: "https://www.pahinitiative.com/pah-life-expectancy"
+        href: "https://www.pahinitiative.com/pah-life-expectancy/"
       }
     ]
   }

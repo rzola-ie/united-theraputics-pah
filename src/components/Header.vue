@@ -8,27 +8,27 @@
       />
 
       <nav class="nav">
-        <g-link class="nav__link" to="/what-is-pah">
+        <g-link class="nav__link" to="/what-is-pah/">
           <span>what is pah?</span>
         </g-link>
 
-        <g-link class="nav__link" to="/pah-life-expectancy">
+        <g-link class="nav__link" to="/pah-life-expectancy/">
           <span>managing<br />your pah</span>
         </g-link>
 
-        <g-link class="nav__link" to="/pah-pathways">
+        <g-link class="nav__link" to="/pah-pathways/">
           <span>pah pathways</span>
         </g-link>
 
-        <g-link class="nav__link" to="/pah-treatment-medicine">
+        <g-link class="nav__link" to="/pah-treatment-medicine/">
           <span>prostacyclin-<br />class therapies</span>
         </g-link>
 
-        <g-link class="nav__link" to="/pah-information-support">
+        <g-link class="nav__link" to="/pah-information-support/">
           <span>resources</span>
         </g-link>
 
-        <g-link class="nav__link newsletter" to="/pah-i-newsletter">
+        <g-link class="nav__link newsletter" to="/pah-i-newsletter/">
           sign up to recieve our newsletter
         </g-link>
       </nav>
