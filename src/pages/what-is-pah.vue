@@ -311,7 +311,19 @@ export default {
         name: "description",
         content:
           "PAH is the medical abbreviation that stands for pulmonary arterial hypertension. PAH is a serious disease that thickens and narrowsthe blood vessels in your lungs."
+      },
+      {
+        property: "og:title",
+        content: "What is PAH? | Medical Abbreviation"
+      },
+      {
+        property: "og:description",
+        content:
+          "PAH is the medical abbreviation that stands for pulmonary arterial hypertension. PAH is a serious disease that thickens and narrowsthe blood vessels in your lungs."
       }
+    ],
+    link: [
+      { rel: "canonical", href: "https://www.pahinitiative.com/what-is-pah/" }
     ]
   }
 };
@@ -323,50 +335,39 @@ export default {
 
 #what-is-pah {
   @include for-desktop-up {
-    grid-template-rows: 40px repeat(2, auto);
+    grid-template-rows: 50px repeat(2, auto);
   }
 
   &::before {
-    @include for-tablet-portrait-up {
-      @include grid-child(3, 13, 2, 3);
-    }
-
     @include for-desktop-up {
       margin-left: 2.7rem;
-      @include grid-child(4, 14, 2, 4);
+      @include grid-child(3, 13, 2, 4);
     }
   }
 }
 
 #what-is-pah .section-icon {
   @include for-desktop-up {
-    padding: 0 30px 0 0;
-    @include grid-child(13, 16, 1, 4);
+    padding: 0 2rem 0 0;
+    justify-self: end;
+    @include grid-child(12, 15, 1, 4);
   }
 }
 
 #what-is-pah .section-header {
-  @include for-tablet-portrait-up {
-    @include grid-child(3, 17, 1, 2);
-  }
-
   @include for-desktop-up {
-    margin-top: 2rem;
-    @include grid-child(4, 10, 2, 3);
+    margin-bottom: 1rem;
+    @include grid-child(3, 10, 2, 3);
   }
 }
 
 #what-is-pah .section-body {
-  margin: 0.8rem 0 1.5rem 0;
-
-  @include for-tablet-portrait-up {
-    @include grid-child(4, 12, 2, 3);
-  }
+  margin-bottom: 1.5rem;
 
   @include for-desktop-up {
-    padding: 0 0 0 2.7rem;
-    margin: 0.8rem 0 2rem 0;
-    @include grid-child(4, 14, 3, 4);
+    margin: 0 0 2.5rem 2.7rem;
+    padding: 0 5.6vw;
+    @include grid-child(3, 13, 3, 4);
   }
 }
 
@@ -374,7 +375,6 @@ export default {
   margin: 0;
 
   @include for-desktop-up {
-    padding: 0 5.6vw 0 4.5vw;
   }
 }
 
@@ -388,16 +388,18 @@ export default {
     }
 
     @include for-desktop-up {
-      margin-left: 2.7rem;
-      @include grid-child(5, 15, 2, 3);
+      margin-left: 4rem;
+      margin-right: 2rem;
+      @include grid-child(4, 15, 2, 3);
     }
   }
 }
 
 #pah-vs-ph .section-icon {
   @include for-desktop-up {
-    padding: 2rem 40px 0 0;
-    @include grid-child(4, 7, 1, 3);
+    margin-top: 3rem;
+    padding: 0 2rem 0 0;
+    @include grid-child(3, 6, 1, 3);
   }
 }
 
@@ -408,7 +410,7 @@ export default {
 
   @include for-desktop-up {
     margin-bottom: 10px;
-    @include grid-child(7, 14, 1, 2);
+    @include grid-child(6, 13, 1, 2);
   }
 }
 
@@ -420,14 +422,9 @@ export default {
   }
 
   @include for-desktop-up {
-    margin: 1.5rem 0 2rem 2.7rem;
-    @include grid-child(5, 15, 2, 3);
-  }
-}
-
-#pah-vs-ph .section-body p {
-  @include for-desktop-up {
-    padding: 0 4vw 0 5.6vw;
+    margin: 2.5rem 2rem 2.5rem 4rem;
+    padding: 0 5.6vw;
+    @include grid-child(4, 15, 2, 3);
   }
 }
 
@@ -461,8 +458,7 @@ export default {
 
     @include for-desktop-up {
       margin-left: 2.7rem;
-      @include grid-child(4, 14, 2, 5);
-      z-index: -1;
+      @include grid-child(3, 13, 2, 5);
     }
   }
 }
@@ -476,9 +472,10 @@ export default {
   }
 
   @include for-desktop-up {
-    max-width: 265px;
-    justify-self: center;
-    @include grid-child(12, 16, 1, 4);
+    max-width: 275px;
+    justify-self: end;
+    margin-right: 2rem;
+    @include grid-child(11, 15, 1, 4);
   }
 }
 
@@ -490,8 +487,8 @@ export default {
   }
 
   @include for-desktop-up {
-    margin-top: 2rem;
-    @include grid-child(4, 12, 2, 3);
+    margin-bottom: 1rem;
+    @include grid-child(3, 10, 2, 3);
   }
 }
 
@@ -503,10 +500,9 @@ export default {
   }
 
   @include for-desktop-up {
-    margin-left: 2.7rem;
-    padding-left: 5.6vw;
-    padding-right: 0.4rem;
-    @include grid-child(4, 12, 3, 4);
+    margin: 0 0 2rem 2.7rem;
+    padding: 0 1.6vw 0 5vw;
+    @include grid-child(3, 11, 3, 4);
   }
 }
 
@@ -519,9 +515,10 @@ export default {
   }
 
   @include for-desktop-up {
-    margin-bottom: 2rem;
-    padding-right: 9rem;
-    @include grid-child(4, 15, 4, 5);
+    margin-bottom: 2.5rem;
+    padding: 0 5vw 0 5vw;
+
+    @include grid-child(3, 13, 4, 5);
   }
 }
 
@@ -558,7 +555,9 @@ export default {
     }
 
     @include for-desktop-up {
-      @include grid-child(5, 15, 2, 4);
+      margin-right: 2rem;
+      margin-left: 4rem;
+      @include grid-child(4, 15, 2, 4);
     }
   }
 }
@@ -571,7 +570,8 @@ export default {
   @include for-desktop-up {
     margin: 0;
     margin-bottom: 10px;
-    @include grid-child(7, 14, 1, 2);
+    padding-left: 2.4rem;
+    @include grid-child(6, 14, 1, 2);
   }
 }
 
@@ -579,8 +579,8 @@ export default {
   @include grid-child(2, 16, 2, 3);
 
   @include for-desktop-up {
-    padding: 4.2vmin 0;
-    margin: 0 5.6vw 0 3.6vw;
+    margin: 2.5rem 0;
+    padding: 0 6vw 0 0;
     @include grid-child(9, 15, 2, 3);
   }
 }
@@ -614,6 +614,7 @@ export default {
   @include grid-child(2, 16, 3, 5);
 
   @include for-desktop-up {
+    margin-right: 3rem;
     @include grid-child(3, 9, 2, 5);
   }
 }
@@ -635,32 +636,30 @@ export default {
   }
 
   &::before {
-    @include for-tablet-portrait-up {
-      @include grid-child(4, 16, 2, 3);
-    }
-
     @include for-desktop-up {
       margin-left: 2.7rem;
-      @include grid-child(4, 14, 2, 5);
+      @include grid-child(3, 13, 2, 4);
     }
   }
 }
 
 #pah-diagnosis .section-icon {
   @include for-desktop-up {
-    padding: 0 20px;
-    @include grid-child(13, 16, 1, 4);
+    padding: 0 2rem 0 0;
+    justify-self: end;
+    @include grid-child(12, 15, 1, 4);
   }
 }
 
 #pah-diagnosis .section-header {
   @include for-tablet-portrait-up {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     @include grid-child(5, 15, 1, 2);
   }
 
   @include for-desktop-up {
-    @include grid-child(4, 8, 2, 3);
+    margin-bottom: 1rem;
+    @include grid-child(3, 10, 2, 3);
   }
 }
 
@@ -672,8 +671,8 @@ export default {
   }
 
   @include for-desktop-up {
-    margin: 1rem 0 2rem 2.7rem;
-    @include grid-child(4, 14, 3, 5);
+    margin: 0 0 2.5rem 2.7rem;
+    @include grid-child(3, 13, 3, 4);
   }
 }
 
@@ -755,15 +754,17 @@ export default {
     }
 
     @include for-desktop-up {
-      @include grid-child(6, 15, 2, 3);
+      margin-left: 4rem;
+      margin-right: 2rem;
+      @include grid-child(4, 15, 2, 3);
     }
   }
 }
 
 #other-considerations .section-icon {
   @include for-desktop-up {
-    padding: 0 35px 0 0;
-    @include grid-child(4, 7, 1, 3);
+    padding: 0 2rem 0 0;
+    @include grid-child(3, 6, 1, 3);
   }
 }
 
@@ -779,9 +780,9 @@ export default {
   margin: 1rem 0 1.5rem 0;
 
   @include for-desktop-up {
-    margin: 2rem 0;
-    padding: 0 5vw;
-    @include grid-child(6, 15, 2, 3);
+    margin: 2.5rem 2rem 2.5rem 4rem;
+    padding: 0 5.6vw;
+    @include grid-child(4, 15, 2, 3);
   }
 }
 
@@ -811,7 +812,7 @@ export default {
 #functional-class .section-header {
   @include for-desktop-up {
     padding-left: 2.7rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     @include grid-child(4, 17, 1, 2);
   }
 }
@@ -824,7 +825,7 @@ export default {
   }
 
   @include for-desktop-up {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     padding: 0 4vw;
     @include grid-child(5, 14, 2, 3);
   }
@@ -888,7 +889,7 @@ export default {
   }
 
   @include for-desktop-up {
-    margin: 2rem 0;
+    margin: 2.5rem 0;
     padding: 0 2vw 0 4vw;
     @include grid-child(6, 12, 2, 3);
   }

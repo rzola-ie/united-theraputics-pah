@@ -267,12 +267,27 @@
 <script>
 export default {
   metaInfo: {
-    title: "Pulmonary Arterial Hypertension (PAH) Treatment ",
+    title: "Pulmonary Arterial Hypertension (PAH) Treatment",
     meta: [
       {
         name: "description",
         content:
           "Learn more about prostacyclin-class medicines as a treatment option for pulmonary arterial hypertension."
+      },
+      {
+        property: "og:title",
+        content: "Pulmonary Arterial Hypertension (PAH) Treatment"
+      },
+      {
+        property: "og:description",
+        content:
+          "Learn more about prostacyclin-class medicines as a treatment option for pulmonary arterial hypertension."
+      }
+    ],
+    link: [
+      {
+        rel: "canonical",
+        href: "https://www.pahinitiative.com/pah-treatment-medicine/"
       }
     ]
   },
@@ -316,6 +331,7 @@ export default {
 
 #do-more .section-header {
   @include for-desktop-up {
+    margin-top: 2.5rem;
     @include grid-child(3, 12, 2, 3);
   }
 }
@@ -324,7 +340,7 @@ export default {
   margin-bottom: 1.5rem;
 
   @include for-desktop-up {
-    margin: 0 0 2rem 2.7rem;
+    margin: 0 0 2.5rem 2.7rem;
     padding: 0 6.2vw 0 5.6vw;
     @include grid-child(3, 13, 3, 4);
   }
@@ -378,11 +394,15 @@ export default {
 
 #what-is-prostacyclin .section-body {
   @include for-desktop-up {
-    margin-top: 1rem;
+    margin-top: 2.5rem;
     margin-bottom: 0.5rem;
     padding: 0 5.6vw;
     @include grid-child(4, 14, 2, 3);
   }
+}
+
+#what-is-prostacyclin .section-body p:first-child {
+  margin-top: 0;
 }
 
 #what-is-prostacyclin h3 {
@@ -414,7 +434,7 @@ export default {
 
 #medicines .section-header {
   @include for-desktop-up {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     padding-left: 2.7rem;
     @include grid-child(3, 14, 1, 2);
   }
@@ -440,7 +460,7 @@ export default {
   }
 
   @include for-desktop-up {
-    margin: 2rem 0;
+    margin: 2rem 0 2.5rem 0;
     @include grid-child(7, 11, 3, 4);
   }
 }
@@ -475,7 +495,7 @@ export default {
   @include grid-child(2, 16, 2, 3);
 
   @include for-desktop-up {
-    margin: 2rem 0;
+    margin: 2.5rem 0;
     padding: 0 5.6vw;
     @include grid-child(4, 14, 2, 3);
   }
@@ -513,7 +533,7 @@ export default {
   margin: 1.5rem 0 0;
 
   @include for-desktop-up {
-    margin: 2rem 0 0;
+    margin: 2.5rem 0 0;
     padding: 0 5.6vw;
     @include grid-child(4, 14, 1, 2);
   }
@@ -557,6 +577,7 @@ export default {
 
 #side-effects .section-header {
   @include for-desktop-up {
+    margin-top: 2.5rem;
     @include grid-child(3, 10, 2, 3);
   }
 }
@@ -565,7 +586,7 @@ export default {
   margin-bottom: 1.5rem;
 
   @include for-desktop-up {
-    margin: 0 0 2rem 2.7rem;
+    margin: 0 0 2.5rem 2.7rem;
     padding: 0 5vw 0 5.6vw;
     @include grid-child(3, 13, 3, 4);
   }
@@ -596,7 +617,7 @@ export default {
   margin: 1.5rem 0;
 
   @include for-desktop-up {
-    margin: 2rem 0;
+    margin: 2.5rem 0;
     padding: 0 7.5vw 0 5.6vw;
     @include grid-child(4, 14, 2, 4);
   }
@@ -655,7 +676,7 @@ export default {
   }
 
   @include for-desktop-up {
-    margin: 2rem 0 2.5rem 2rem;
+    margin: 2.5rem 0 2.5rem 2rem;
     padding: 0 5.6vw;
     @include grid-child(3, 13, 2, 3);
   }
@@ -709,7 +730,7 @@ export default {
   @include grid-child(2, 16, 1, 2);
 
   @include for-desktop-up {
-    margin: 2rem 0;
+    margin: 2.5rem 0;
     margin-right: 2rem;
     padding: 0 5.6vw;
     @include grid-child(5, 15, 2, 3);
@@ -765,6 +786,7 @@ export default {
   }
 
   @include for-desktop-up {
+    margin-top: 2.5rem;
     padding-left: 2.7rem;
     @include grid-child(4, 14, 2, 3);
   }
@@ -779,7 +801,7 @@ export default {
 
   @include for-desktop-up {
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     padding: 0 4vw;
     @include grid-child(5, 12, 3, 4);
   }

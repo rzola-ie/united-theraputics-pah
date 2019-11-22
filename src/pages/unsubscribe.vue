@@ -90,6 +90,15 @@ export default {
         name: "description",
         content:
           "Enter your e-mail address to unsubscribe from receiving communications from United Therapeutics."
+      },
+      {
+        property: "og:title",
+        content: "Unsubscribe from PAH I Support"
+      },
+      {
+        property: "og:description",
+        content:
+          "Enter your e-mail address to unsubscribe from receiving communications from United Therapeutics."
       }
     ]
   },
@@ -129,7 +138,11 @@ export default {
 ====================================================== */
 
 #unsubscribe {
-  max-height: 350px;
+  height: 350px;
+
+  @include for-desktop-up {
+    height: auto;
+  }
   &::before {
     @include grid-child(1, 17, 1, 4);
 

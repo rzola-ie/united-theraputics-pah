@@ -301,6 +301,21 @@ export default {
         name: "description",
         content:
           "Find useful videos, links and other information to help support you on your treatment journey with PAH."
+      },
+      {
+        property: "og:title",
+        content: "PAH Information and Support"
+      },
+      {
+        property: "og:description",
+        content:
+          "Find useful videos, links and other information to help support you on your treatment journey with PAH."
+      }
+    ],
+    link: [
+      {
+        rel: "canonical",
+        href: "https://www.pahinitiative.com/pah-information-support/"
       }
     ]
   },
@@ -430,8 +445,12 @@ export default {
 
   @include for-desktop-up {
     @include grid-child(5, 13, 2, 3);
-    margin-bottom: 2rem;
+    margin: 2.5rem 0;
   }
+}
+
+#videos .section-body h3 {
+  margin-top: 0;
 }
 
 #videos .section-body .video {
@@ -460,9 +479,13 @@ export default {
   }
 }
 
-#videos .section-body .video .embed-responsive-item {
+#videos .section-body .video {
   width: 100%;
   height: 165px;
+
+  @include for-desktop-up {
+    height: 215px;
+  }
 }
 
 #videos .section-body .video:nth-of-type(odd) .video-text {
@@ -504,7 +527,7 @@ export default {
 
 #learn-more .section-header {
   @include for-desktop-up {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     padding-left: 2.7rem;
     @include grid-child(3, 16, 1, 2);
   }
@@ -522,7 +545,7 @@ export default {
   margin-bottom: 1.5rem;
 
   @include for-desktop-up {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     padding: 0 5.6vw;
     @include grid-child(4, 14, 2, 3);
   }
@@ -564,7 +587,7 @@ export default {
 
 #discussion-guide .section-header {
   @include for-desktop-up {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     @include grid-child(3, 16, 2, 3);
   }
 }
@@ -573,7 +596,7 @@ export default {
   margin-bottom: 1.5rem;
 
   @include for-desktop-up {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     margin-left: 2.7rem;
     padding: 0 5.6vw;
     @include grid-child(3, 12, 3, 4);
@@ -629,7 +652,8 @@ export default {
 
   @include for-desktop-up {
     display: block;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
     margin-right: 3rem;
     padding: 0 5.6vw;
     @include grid-child(5, 15, 1, 2);
@@ -699,7 +723,7 @@ export default {
 
   @include for-desktop-up {
     display: block;
-    margin: 2rem 0;
+    margin: 2.5rem 0;
     padding: 0 6.6vw 0 5.6vw;
     @include grid-child(3, 12, 1, 2);
   }
@@ -762,7 +786,7 @@ export default {
 
   @include for-desktop-up {
     display: block;
-    margin: 2rem 3rem 2rem 0;
+    margin: 2.5rem 3rem 2.5rem 0;
     padding: 0 5.6vw;
     @include grid-child(5, 15, 1, 2);
   }
@@ -825,7 +849,7 @@ export default {
 
   @include for-desktop-up {
     display: block;
-    margin: 2rem 0;
+    margin: 2.5rem 0;
     padding: 0 3.5vw 0 5.6vw;
     @include grid-child(3, 12, 1, 2);
   }
@@ -881,7 +905,7 @@ export default {
 
   @include for-desktop-up {
     display: block;
-    margin: 2rem 0;
+    margin: 2.5rem 0;
     padding: 0 5.6vw;
     @include grid-child(5, 14, 1, 2);
   }

@@ -197,8 +197,18 @@ export default {
         name: "description",
         content:
           "The PAH Initiative (PAH-I), sponsored by United Therapeutics, aims to improve the care of people living with pulmonary arterial hypertension (PAH)."
+      },
+      {
+        property: "og:title",
+        content: "PAH Initiative Official Website"
+      },
+      {
+        property: "og:description",
+        content:
+          "The PAH Initiative (PAH-I), sponsored by United Therapeutics, aims to improve the care of people living with pulmonary arterial hypertension (PAH)."
       }
-    ]
+    ],
+    link: [{ rel: "canonical", href: "https://www.pahinitiative.com" }]
   },
   data() {
     return {
@@ -325,7 +335,7 @@ export default {
 
 #feel-better .section-header {
   @include for-desktop-up {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     @include grid-child(4, 11, 2, 3);
   }
 }
@@ -342,7 +352,7 @@ export default {
 
   @include for-desktop-up {
     margin-left: 2.7rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     padding: 0 4.8rem;
     @include grid-child(4, 14, 3, 4);
   }
@@ -396,7 +406,7 @@ export default {
 
 #risk-status p {
   @include for-desktop-up {
-    padding: 0 4.8rem;
+    padding: 0 5.6vw;
   }
 }
 
@@ -448,8 +458,8 @@ export default {
   margin: 1.5rem 0;
   @include grid-child(2, 17, 1, 2);
   @include for-desktop-up {
-    margin: 2rem 0;
-    padding: 0 4.4rem 0 4.8rem;
+    margin: 2.5rem 0;
+    padding: 0 5.6vw;
     font-family: ProximaNova, sans-serif;
     @include grid-child(1, 10, 1, 2);
   }

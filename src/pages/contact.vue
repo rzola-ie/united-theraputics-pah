@@ -27,6 +27,20 @@ export default {
       {
         name: "description",
         content: "Contact information is provided for United Therapeutics."
+      },
+      {
+        property: "og:title",
+        content: "Contact United Therapeutics"
+      },
+      {
+        property: "og:description",
+        content: "Contact information is provided for United Therapeutics."
+      }
+    ],
+    link: [
+      {
+        rel: "canonical",
+        href: "https://www.pahinitiative.com/contact/"
       }
     ]
   }
@@ -46,6 +60,7 @@ export default {
   padding-left: 2.8rem;
   margin-bottom: 1.2rem;
   @include for-desktop-up {
+    margin-top: 2rem;
     @include grid-child(3, 13, 1, 2);
   }
 }
@@ -76,7 +91,7 @@ export default {
 
   @include for-desktop-up {
     padding: 1.5rem 0rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     @include grid-child(7, 11, 2, 3);
   }
 }

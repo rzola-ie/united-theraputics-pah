@@ -29,6 +29,20 @@ export default {
       {
         name: "description",
         content: "View a site map of the PAH-I website."
+      },
+      {
+        property: "og:title",
+        content: "PAH Initiative Site Map"
+      },
+      {
+        property: "og:description",
+        content: "View a site map of the PAH-I website."
+      }
+    ],
+    link: [
+      {
+        rel: "canonical",
+        href: "https://www.pahinitiative.com/site-map/"
       }
     ]
   }
@@ -42,6 +56,10 @@ export default {
   width: 100%;
   height: 300px;
   grid-template-rows: 1fr;
+
+  @include for-desktop-up {
+    height: auto;
+  }
   &::before {
     margin-top: 0;
 
@@ -61,6 +79,7 @@ export default {
   grid-column-gap: 1rem;
 
   @include for-desktop-up {
+    margin: 2.5rem 0;
     grid-gap: 0;
     grid-template-rows: repeat(6, 45px);
     grid-template-columns: 1.65fr 1fr;

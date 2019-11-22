@@ -415,6 +415,21 @@ export default {
         name: "description",
         content:
           "Subscribe to our newsletter and get helpful information and updates about the PAH Initiative, PAH treatment options, live events, and more."
+      },
+      {
+        property: "og:title",
+        content: "PAH I Support Newsletter"
+      },
+      {
+        property: "og:description",
+        content:
+          "Subscribe to our newsletter and get helpful information and updates about the PAH Initiative, PAH treatment options, live events, and more."
+      }
+    ],
+    link: [
+      {
+        rel: "canonical",
+        href: "https://www.pahinitiative.com/pah-i-newsletter/"
       }
     ]
   },
@@ -498,6 +513,7 @@ export default {
 #mailing-list .section-header {
   @include for-desktop-up {
     padding-left: 2.5rem;
+    margin-top: 2.5rem;
     @include grid-child(2, 15, 2, 3);
   }
 }
