@@ -66,10 +66,10 @@
           <g-link to="/what-is-pah#pah-symptoms">symptoms</g-link>,
           <g-link to="/managing-your-pah#risk-prognosis">risk status</g-link>
           and
-          <g-link to="/prostacyclin-class-therapies">treatment options</g-link>,
-          you may be better able to manage the impact of PAH on your life.
-          Together with the support of your healthcare team, there may be more
-          you can do to achieve your treatment goals.
+          <g-link to="/pah-treatment-medicine">treatment options</g-link>, you
+          may be better able to manage the impact of PAH on your life. Together
+          with the support of your healthcare team, there may be more you can do
+          to achieve your treatment goals.
         </p>
       </div>
     </section>
@@ -190,6 +190,16 @@
 
 <script>
 export default {
+  metaInfo: {
+    title: "PAH Initiative Official Website",
+    meta: [
+      {
+        name: "description",
+        content:
+          "The PAH Initiative (PAH-I), sponsored by United Therapeutics, aims to improve the care of people living with pulmonary arterial hypertension (PAH)."
+      }
+    ]
+  },
   data() {
     return {
       toggle: false
@@ -486,7 +496,7 @@ export default {
 
 #what-is-pah .section-body {
   margin-bottom: 1.5rem;
-  @include grid-child(3, 15, 2, 3);
+  @include grid-child(2, 16, 2, 3);
 
   @include for-tablet-portrait-up {
     @include grid-child(4, 12, 2, 3);
@@ -500,8 +510,12 @@ export default {
 }
 
 #what-is-pah .section-body h2 {
-  font-size: 1.9rem;
   margin-bottom: 1rem;
+  font-size: 1.5rem;
+
+  @include for-desktop-up {
+    font-size: 1.9rem;
+  }
 }
 
 /* MANAGING YOUR PAH
@@ -544,23 +558,27 @@ export default {
 }
 
 #managing-your-pah .section-body {
-  @include grid-child(3, 14, 2, 3);
-  padding: 0 4vw 2rem 4vw;
-  margin-left: 2rem;
-  margin-right: 2.4rem;
+  margin-bottom: 1.5rem;
+  @include grid-child(2, 16, 2, 3);
 
   @include for-tablet-portrait-up {
     @include grid-child(6, 14, 2, 3);
   }
 
   @include for-desktop-up {
+    padding: 0 4vw;
+    margin: 0 2.4rem 2rem 2rem;
     @include grid-child(7, 14, 2, 3);
   }
 }
 
 #managing-your-pah .section-body h2 {
-  font-size: 1.9rem;
   margin-bottom: 1rem;
+  font-size: 1.5rem;
+
+  @include for-desktop-up {
+    font-size: 1.9rem;
+  }
 }
 
 #managing-your-pah .section-body .button {
@@ -609,7 +627,7 @@ export default {
 
 #pah-pathways .section-body {
   margin-bottom: 1.5rem;
-  @include grid-child(3, 14, 2, 3);
+  @include grid-child(2, 16, 2, 3);
 
   @include for-tablet-portrait-up {
     @include grid-child(4, 11, 2, 3);
@@ -623,8 +641,12 @@ export default {
 }
 
 #pah-pathways .section-body h2 {
-  font-size: 1.9rem;
   margin-bottom: 1rem;
+  font-size: 1.5rem;
+
+  @include for-desktop-up {
+    font-size: 1.9rem;
+  }
 }
 
 /* THERAPIES
@@ -668,7 +690,7 @@ export default {
 
 #therapies .section-body {
   margin-bottom: 1.5rem;
-  @include grid-child(3, 16, 2, 3);
+  @include grid-child(2, 16, 2, 3);
 
   @include for-tablet-portrait-up {
     @include grid-child(6, 14, 2, 3);
@@ -684,8 +706,12 @@ export default {
 }
 
 #therapies .section-body h2 {
-  font-size: 1.9rem;
   margin-bottom: 1rem;
+  font-size: 1.5rem;
+
+  @include for-desktop-up {
+    font-size: 1.9rem;
+  }
 }
 
 #therapies .section-body .button {

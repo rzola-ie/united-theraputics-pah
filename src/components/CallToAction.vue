@@ -37,13 +37,16 @@
   }
 
   @include for-desktop-up {
-    padding: 0 1rem;
+    padding: 0 2rem;
     @include grid-child(5, 13, 1, 2);
   }
 }
 
-#cta-bottom a {
-  text-decoration: none;
-  color: $wine;
+br {
+  display: none;
+
+  @include for-big-desktop-up {
+    display: inline;
+  }
 }
 </style>

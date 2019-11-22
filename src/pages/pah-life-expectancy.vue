@@ -168,7 +168,7 @@
           help control your symptoms and keep your disease from getting worse.
           <strong>
             Ask your doctor about a
-            <g-link to="/prostacyclin-class-therapies">treatment plan</g-link>
+            <g-link to="/pah-treatment-medicine">treatment plan</g-link>
             that helps you feel better so you can do more.
           </strong>
         </p>
@@ -263,7 +263,7 @@
           </li>
         </ul>
 
-        <g-link class="button" to="/resources">Find More PAH Resources</g-link>
+        <g-link class="button" to="/pah-information-support">Find More PAH Resources</g-link>
       </div>
     </section>
     <!-- build your network -->
@@ -290,7 +290,7 @@
           <li>Getting a good amount of sleep every day</li>
           <li>
             Staying up-to-date on
-            <g-link to="/prostacyclin-class-therapies">PAH treatments</g-link>
+            <g-link to="/pah-treatment-medicine">PAH treatments</g-link>
           </li>
         </ul>
       </div>
@@ -328,7 +328,14 @@
 <script>
 export default {
   metaInfo: {
-    title: "Managing Your PAH"
+    title: "Managing PAH | Life Expectancy Impact",
+    meta: [
+      {
+        name: "description",
+        content:
+          "Understand the importance of managing your PAH, assessing risk status, and the impact it can have on life expectancy."
+      }
+    ]
   }
 };
 </script>
@@ -369,15 +376,13 @@ export default {
 
   @include for-desktop-up {
     margin: 0 0 2rem 2.7rem;
+    padding: 0 5.6vw;
     @include grid-child(3, 13, 3, 4);
   }
 }
 
 #managing-your-pah .section-body p {
   margin-bottom: 0;
-  @include for-desktop-up {
-    padding: 0 5.6vw;
-  }
 }
 
 /* RISK STATUS
@@ -504,14 +509,13 @@ export default {
   @include for-desktop-up {
     margin-left: 2.7rem;
     margin-bottom: 2rem;
+    padding: 1rem 5.6vw;
     @include grid-child(3, 13, 3, 4);
   }
 }
 
-#risk-assessment .section-body p {
-  @include for-desktop-up {
-    padding: 1rem 5.6vw;
-  }
+#risk-assessment .section-body p:first-child {
+  margin-top: 0;
 }
 
 #risk-assessment .section-body p:last-child {
@@ -558,16 +562,13 @@ export default {
 }
 
 #treatment-goals .section-body {
-  margin: 1.5rem 0;
+  margin: 1rem 0 1.5rem 0;
 
   @include for-desktop-up {
     margin: 2rem 2rem 2rem 0;
+    padding: 0 5.6vw;
     @include grid-child(5, 15, 3, 4);
   }
-}
-
-#treatment-goals .section-body p {
-  padding: 0 5.6vw;
 }
 
 #treatment-goals .section-body p:first-child {
@@ -613,12 +614,9 @@ export default {
   margin-bottom: 1.5rem;
   @include for-desktop-up {
     margin: 1rem 2rem 2rem 2.7rem;
+    padding: 0 6.4vw 0 5.6vw;
     @include grid-child(3, 14, 3, 4);
   }
-}
-
-#best-advocate .section-body p {
-  padding: 0 6.4vw 0 5.6vw;
 }
 
 #best-advocate .section-body p:first-child {
@@ -754,7 +752,7 @@ export default {
 }
 
 #build-your-network .section-body {
-  margin: 1.5rem 0;
+  margin: 1rem 0 1.5rem 0;
 
   @include for-desktop-up {
     margin: 2rem 0;
@@ -842,7 +840,7 @@ export default {
 
 #pah-pathways .section-icon {
   @include for-desktop-up {
-    padding: 0 1.2rem 0 2rem;
+    padding: 0 2rem 0 0;
     @include grid-child(4, 7, 1, 3);
   }
 }
@@ -867,11 +865,21 @@ export default {
 
 #pah-pathways .section-body h2 {
   font-size: 1.5rem;
+
+  @include for-desktop-up {
+    margin-top: 2rem;
+  }
 }
 
 #pah-pathways .section-body .button {
   @include for-desktop-up {
     margin-left: 2.4rem;
+  }
+}
+
+#cta-bottom p {
+  @include for-desktop-up {
+    padding: 1rem;
   }
 }
 </style>

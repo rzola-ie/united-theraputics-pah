@@ -3,18 +3,18 @@
     <section purple id="site-map">
       <div class="section-body">
         <g-link to="/">Home</g-link>
-        <g-link to="/newsletter">E-mail Opt-in</g-link>
+        <g-link to="/pah-i-newsletter">E-mail Opt-in</g-link>
         <g-link to="/what-is-pah">What is PAH?</g-link>
         <g-link to="/privacy-policy">Privacy Policy</g-link>
-        <g-link to="/managing-your-pah">Managing Your PAH</g-link>
+        <g-link to="/pah-life-expectancy">Managing Your PAH</g-link>
         <g-link to="/terms-of-use">Terms of Use</g-link>
         <g-link to="/pah-pathways">PAH Pathways</g-link>
-        <g-link to="/contact-us">Contact Us</g-link>
-        <g-link to="/prostacyclin-class-therapies">
+        <g-link to="/contact">Contact Us</g-link>
+        <g-link to="/pah-treatment-medicine">
           Prostacyclin-class Therapies
         </g-link>
         <g-link to="/unsubscribe">Unsubscribe</g-link>
-        <g-link to="/resources">Resources</g-link>
+        <g-link to="/pah-information-support">Resources</g-link>
         <g-link to="/site-map">Site Map</g-link>
       </div>
     </section>
@@ -24,7 +24,13 @@
 <script>
 export default {
   metaInfo: {
-    title: "Site Map"
+    title: "PAH Initiative Site Map",
+    meta: [
+      {
+        name: "description",
+        content: "View a site map of the PAH-I website."
+      }
+    ]
   }
 };
 </script>
@@ -49,7 +55,7 @@ export default {
   align-self: center;
   margin: 1.5rem 0;
   @include display-grid;
-  @include grid-child(3, 16, 1, 2);
+  @include grid-child(2, 16, 1, 2);
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(6, 40px);
   grid-column-gap: 1rem;
@@ -58,7 +64,8 @@ export default {
     grid-gap: 0;
     grid-template-rows: repeat(6, 45px);
     grid-template-columns: 1.65fr 1fr;
-    @include grid-child(5, 13, 1, 2);
+    @include grid-child(4, 14, 1, 2);
+    padding: 0 5.6vw;
   }
 }
 

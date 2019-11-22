@@ -71,7 +71,14 @@
 <script>
 export default {
   metaInfo: {
-    title: "Unsubscribe"
+    title: "Unsubscribe from PAH I Support",
+    meta: [
+      {
+        name: "description",
+        content:
+          "Enter your e-mail address to unsubscribe from receiving communications from United Therapeutics."
+      }
+    ]
   },
   data() {
     return {
@@ -106,6 +113,7 @@ export default {
 
     @include for-desktop-up {
       margin-left: 2rem;
+      margin-right: 2rem;
       margin-bottom: 2rem;
       @include grid-child(3, 15, 1, 4);
     }
@@ -122,8 +130,10 @@ export default {
   @include grid-child(2, 16, 2, 3);
 
   @include for-desktop-up {
-    padding-right: 2.5rem;
-    @include grid-child(4, 15, 2, 3);
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 0 3rem;
+    @include grid-child(3, 14, 2, 3);
   }
 }
 
@@ -135,7 +145,10 @@ export default {
   @include grid-child(1, 17, 3, 4);
   @include for-desktop-up {
     margin-bottom: 0;
-    @include grid-child(4, 14, 3, 4);
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 0 3rem;
+    @include grid-child(3, 15, 3, 4);
   }
 }
 

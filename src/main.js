@@ -54,10 +54,19 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('CallToAction', CallToAction);
   Vue.component('Footer', Footer);
 
+  let sc = document.createElement("html");
+  sc.setAttribute("itemscope", "");
+  sc.setAttribute("itemtype", "https://schema.org/FAQPage");
+
+  document.head.appendChild(sc)
+  console.log(document)
+
   Vue.config.productionTip = false
 
   head.meta.push({
     name: 'viewport',
     content: 'width=device-width, initial-scale=1'
   })
+
+
 }

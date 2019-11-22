@@ -1,8 +1,11 @@
 <template type="text/x-template" id="modal-template">
   <transition name="modal">
-    <div class="modal-mask" @click.self="$emit('close')">
-      <div class="modal-wrapper">
+    <div class="modal-mask" @click.self="$emit('closeModal')">
+      <div class="modal-wrapper" @click.self="$emit('closeModal')">
         <div class="modal-container">
+          <button class="modal-close-button" @click.self="$emit('closeModal')">
+            &times;
+          </button>
           <div class="modal-header">
             <slot name="header">
               default header
@@ -15,7 +18,7 @@
 
           <div class="modal-footer">
             <slot name="footer">
-              <button class="modal-default-button" @click="$emit('close')">
+              <button class="modal-default-button" @click="$emit('closeModal')">
                 Default Button
               </button>
             </slot>
@@ -52,6 +55,7 @@ export default {};
 }
 
 .modal-container {
+  position: relative;
   width: 100%;
   max-width: 650px;
   padding: 1.5rem;
@@ -64,6 +68,24 @@ export default {};
     padding: 2rem 3rem;
     margin: 0px auto;
     width: 50%;
+  }
+}
+
+.modal-close-button {
+  display: none;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: -20px;
+  right: -20px;
+  border-radius: 50%;
+  box-shadow: -2px 2px 5px 0 rgba(0, 0, 0, 0.33);
+  border: 1px solid white;
+  background: white;
+  font-size: 2.2rem;
+
+  @include for-tablet-portrait-up {
+    display: block;
   }
 }
 

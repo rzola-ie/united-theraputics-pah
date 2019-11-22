@@ -1,6 +1,6 @@
 <template>
   <SecondaryLayout>
-    <Modal v-if="leaving">
+    <Modal v-if="leaving" v-on:closeModal="leaving = false">
       <h2 slot="header">
         YOU ARE NOW LEAVING A SITE MANAGED BY UNITED THERAPEUTICS. CLICK
         CONTINUE TO PROCEED.
@@ -18,7 +18,8 @@
         </div>
       </div>
     </Modal>
-    <section grey id="useful-information">
+
+    <section transparent id="useful-information">
       <h1 class="section-header">Useful information about PAH</h1>
       <div class="section-body">
         <h3>
@@ -42,7 +43,7 @@
 
       <div class="section-body">
         <h3>Sign up for resources and the latest information about PAH.</h3>
-        <g-link class="button" to="/newsletter">Take Action</g-link>
+        <g-link class="button" to="/pah-i-newsletter">Take Action</g-link>
       </div>
     </section>
     <!-- opt-in -->
@@ -75,7 +76,7 @@
         <div class="video">
           <g-image
             class="video-media section-image"
-            src="~/assets/img/affects-video.png"
+            src="~/assets/img/video-2-placeholder.png"
           />
           <div class="video-text">
             Understand why treatment with more than one PAH medicine is
@@ -90,14 +91,14 @@
           </div>
           <g-image
             class="video-media section-image"
-            src="~/assets/img/affects-video.png"
+            src="~/assets/img/video-3-placeholder.png"
           />
         </div>
 
         <div class="video">
           <g-image
             class="video-media section-image"
-            src="~/assets/img/affects-video.png"
+            src="~/assets/img/video-4-placeholder.png"
           />
           <div class="video-text">
             Understand why treatment with more than one PAH medicine is
@@ -205,7 +206,7 @@
       <g-image
         class="section-image"
         src="~/assets/img/pulmonary-hypertension-association.jpg"
-        alt="an image of the pulmonary hypertension association logo"
+        alt="Pulmonary Hypertension Association"
       />
     </section>
     <!-- ph association -->
@@ -227,8 +228,8 @@
       </div>
       <g-image
         class="section-image"
-        src="~/assets/img/ph-aware.jpg"
-        alt="an image of the PH Aware logo"
+        src="~/assets/img/phaware.jpg"
+        alt="PHAware"
       />
     </section>
     <!-- ph aware -->
@@ -256,7 +257,7 @@
       <g-image
         class="section-image"
         src="~/assets/img/scleroderma-foundation.jpg"
-        alt="an image of the scleroderma foundation logo"
+        alt="Scleroderma Foundation"
       />
     </section>
     <!-- scleroderma foundation -->
@@ -276,8 +277,8 @@
       </div>
       <g-image
         class="section-image"
-        src="~/assets/img/ph-news.jpg"
-        alt="an image of the scleroderma foundation logo"
+        src="~/assets/img/pulmonary-hypertension-news.jpg"
+        alt="Pulmonary Hypertension News"
       />
     </section>
     <!-- ph news -->
@@ -294,7 +295,14 @@
 <script>
 export default {
   metaInfo: {
-    title: "Resources"
+    title: "PAH Information and Support",
+    meta: [
+      {
+        name: "description",
+        content:
+          "Find useful videos, links and other information to help support you on your treatment journey with PAH."
+      }
+    ]
   },
   data() {
     return {
@@ -328,16 +336,25 @@ export default {
   @include grid-child(2, 15, 1, 2);
   @include for-desktop-up {
     text-align: center;
+    margin-bottom: 1rem;
     @include grid-child(5, 13, 1, 2);
   }
 }
 
 #useful-information .section-body {
+  margin: 1rem 0 1.5rem 0;
+
   @include for-desktop-up {
-    padding: 0 1.3rem;
     text-align: center;
+    margin: 0;
+    padding: 0 2.4rem;
     @include grid-child(5, 13, 2, 3);
   }
+}
+
+#useful-information .section-body h3 {
+  font-size: 1.3rem;
+  margin: 0;
 }
 
 /* OPT-IN
@@ -350,7 +367,7 @@ export default {
 
   &::before {
     @include for-desktop-up {
-      margin-left: 2.2rem;
+      margin-left: 2.7rem;
       @include grid-child(5, 12, 2, 4);
     }
   }
@@ -358,8 +375,7 @@ export default {
 
 #opt-in .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 45px 0 0;
+    padding: 0 2rem 0 0;
     @include grid-child(11, 14, 1, 4);
   }
 }
@@ -375,7 +391,19 @@ export default {
 
   @include for-desktop-up {
     margin-bottom: 2rem;
-    @include grid-child(6, 10, 3, 4);
+    margin-left: 2.7rem;
+    padding: 0 4vw;
+    @include grid-child(5, 11, 3, 4);
+  }
+}
+
+#opt-in .section-body h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+
+  @include for-desktop-up {
+    font-size: 1.1rem;
+    margin-top: 1rem;
   }
 }
 
@@ -416,16 +444,25 @@ export default {
   }
 
   & + .video {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 
     @include for-desktop-up {
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
   }
 }
 
+#videos .section-body .video .video-text {
+  margin-bottom: 0.5rem;
+
+  @include for-desktop-up {
+    margin-bottom: 0;
+  }
+}
+
 #videos .section-body .video .embed-responsive-item {
-  height: 206px;
+  width: 100%;
+  height: 165px;
 }
 
 #videos .section-body .video:nth-of-type(odd) .video-text {
@@ -467,7 +504,8 @@ export default {
 
 #learn-more .section-header {
   @include for-desktop-up {
-    padding-left: 2.2rem;
+    margin-top: 2rem;
+    padding-left: 2.7rem;
     @include grid-child(3, 16, 1, 2);
   }
 
@@ -485,7 +523,18 @@ export default {
 
   @include for-desktop-up {
     margin-bottom: 2rem;
-    @include grid-child(5, 16, 2, 3);
+    padding: 0 5.6vw;
+    @include grid-child(4, 14, 2, 3);
+  }
+}
+
+#learn-more .section-body h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+
+  @include for-desktop-up {
+    font-size: 1.3rem;
+    margin-top: 1rem;
   }
 }
 
@@ -499,7 +548,7 @@ export default {
 
   &::before {
     @include for-desktop-up {
-      margin-left: 2.6rem;
+      margin-left: 2.7rem;
       @include grid-child(3, 13, 2, 4);
     }
   }
@@ -507,14 +556,15 @@ export default {
 
 #discussion-guide .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 50px 0 0;
+    justify-self: end;
+    padding: 0 3rem 0 0;
     @include grid-child(12, 15, 1, 4);
   }
 }
 
 #discussion-guide .section-header {
   @include for-desktop-up {
+    margin-top: 2rem;
     @include grid-child(3, 16, 2, 3);
   }
 }
@@ -524,8 +574,19 @@ export default {
 
   @include for-desktop-up {
     margin-bottom: 2rem;
-    padding-left: 1.5rem;
-    @include grid-child(4, 11, 3, 4);
+    margin-left: 2.7rem;
+    padding: 0 5.6vw;
+    @include grid-child(3, 12, 3, 4);
+  }
+}
+
+#discussion-guide .section-body h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+
+  @include for-desktop-up {
+    font-size: 1.3rem;
+    margin-top: 1rem;
   }
 }
 
@@ -541,24 +602,22 @@ export default {
 
 #find-an-expert {
   @include for-desktop-up {
-    grid-template-rows: repeat(2, 40px) auto;
+    grid-template-rows: auto;
   }
 
   &::before {
     margin-top: 0;
 
     @include for-desktop-up {
-      margin-left: 1rem;
-      margin-right: 2.5rem;
-      @include grid-child(5, 15, 2, 4);
+      margin-right: 3rem;
+      @include grid-child(5, 15, 1, 2x);
     }
   }
 }
 
 #find-an-expert .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 25px;
+    padding: 15px 2rem 0 0;
     @include grid-child(3, 6, 1, 4);
   }
 }
@@ -571,9 +630,9 @@ export default {
   @include for-desktop-up {
     display: block;
     margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding-right: 1.2rem;
-    @include grid-child(6, 14, 2, 4);
+    margin-right: 3rem;
+    padding: 0 5.6vw;
+    @include grid-child(5, 15, 1, 2);
   }
 }
 
@@ -611,7 +670,6 @@ export default {
     @include grid-child(1, 17, 1, 3);
 
     @include for-desktop-up {
-      margin-left: 35px;
       @include grid-child(3, 13, 1, 2);
     }
   }
@@ -623,11 +681,13 @@ export default {
   @include grid-child(2, 16, 1, 2);
 
   @include for-desktop-up {
+    max-width: 250px;
     border: 2px solid $purple;
+    justify-self: end;
     align-self: center;
     margin-top: 0;
-    margin-left: 35px;
-    @include grid-child(11, 14, 1, 2);
+    margin-right: 3rem;
+    @include grid-child(11, 15, 1, 2);
   }
 }
 
@@ -640,7 +700,8 @@ export default {
   @include for-desktop-up {
     display: block;
     margin: 2rem 0;
-    @include grid-child(4, 11, 1, 2);
+    padding: 0 6.6vw 0 5.6vw;
+    @include grid-child(3, 12, 1, 2);
   }
 }
 
@@ -673,7 +734,7 @@ export default {
     margin-top: 0;
 
     @include for-desktop-up {
-      margin: 0 35px;
+      margin-right: 3rem;
       @include grid-child(5, 15, 1, 2);
     }
   }
@@ -685,9 +746,8 @@ export default {
   @include grid-child(2, 16, 1, 2);
 
   @include for-desktop-up {
-    width: 80%;
+    width: 85%;
     margin-top: 0;
-    margin-left: 35px;
     border: 2px solid $purple;
     border-radius: 7px;
     align-self: center;
@@ -702,9 +762,9 @@ export default {
 
   @include for-desktop-up {
     display: block;
-    margin: 2rem 0;
-    padding-left: 2rem;
-    @include grid-child(6, 14, 1, 2);
+    margin: 2rem 3rem 2rem 0;
+    padding: 0 5.6vw;
+    @include grid-child(5, 15, 1, 2);
   }
 }
 
@@ -735,7 +795,6 @@ export default {
     @include grid-child(1, 17, 1, 3);
 
     @include for-desktop-up {
-      margin-left: 30px;
       @include grid-child(3, 13, 1, 3);
     }
   }
@@ -747,9 +806,9 @@ export default {
   @include grid-child(2, 16, 1, 2);
 
   @include for-desktop-up {
-    width: 80%;
+    width: 85%;
     margin-top: 0;
-    margin-right: 30px;
+    margin-right: 3rem;
     border: 2px solid $purple;
     align-self: center;
     justify-self: end;
@@ -767,8 +826,8 @@ export default {
   @include for-desktop-up {
     display: block;
     margin: 2rem 0;
-    padding-right: 1rem;
-    @include grid-child(4, 12, 1, 2);
+    padding: 0 3.5vw 0 5.6vw;
+    @include grid-child(3, 12, 1, 2);
   }
 }
 
@@ -794,7 +853,7 @@ export default {
     margin-top: 0;
 
     @include for-desktop-up {
-      margin-right: 35px;
+      margin-right: 3rem;
       @include grid-child(5, 15, 1, 3);
     }
   }
@@ -806,9 +865,8 @@ export default {
   @include grid-child(2, 16, 1, 2);
 
   @include for-desktop-up {
-    width: 80%;
+    width: 85%;
     margin-top: 0;
-    margin-left: 35px;
     border: 2px solid $purple;
     border-radius: 7px;
     align-self: center;
@@ -824,8 +882,8 @@ export default {
   @include for-desktop-up {
     display: block;
     margin: 2rem 0;
-    padding-left: 1.2rem;
-    @include grid-child(6, 14, 1, 2);
+    padding: 0 5.6vw;
+    @include grid-child(5, 14, 1, 2);
   }
 }
 

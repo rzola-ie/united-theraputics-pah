@@ -1,6 +1,6 @@
 <template>
   <SecondaryLayout>
-    <Modal v-if="leaving">
+    <Modal v-if="leaving" v-on:closeModal="leaving = false">
       <h2 slot="header">
         You’re leaving this page and heading to a site with information about
         treatment options from United Therapeutics.
@@ -61,7 +61,7 @@
           >. When you have too little prostacyclin, the vessels of the lungs
           become narrow and restrict blood flow. That's why your doctor may
           consider prescribing a
-          <g-link to="/prostacyclin-class-therapies#medicines">
+          <g-link to="/pah-treatment-medicine#medicines">
             Prostacyclin-class medicine</g-link
           >.
         </p>
@@ -105,8 +105,8 @@
       </div>
       <g-image
         class="section-image"
-        src="~/assets/img/prostacyclin-vessels.png"
-        alt="On the left is an example of a healthy blood vessel. On the right is an image of a blood vessel with PAH."
+        src="~/assets/img/blood-vessels.png"
+        alt="A healthy blood vessel and a blood vessel affected by PAH"
       />
     </section>
     <!-- medicines -->
@@ -248,8 +248,8 @@
         alt="an icon of a laptop with a mouse pointer on the screen"
       />
       <div class="section-body">
-        <h3>Check out other PAH resources.</h3>
-        <g-link class="button" to="/resources">Discover</g-link>
+        <h2>Check out other PAH resources.</h2>
+        <g-link class="button" to="/pah-information-support">Discover</g-link>
       </div>
     </section>
     <!-- resources -->
@@ -267,7 +267,14 @@
 <script>
 export default {
   metaInfo: {
-    title: "Prostacyclin Therapies"
+    title: "Pulmonary Arterial Hypertension (PAH) Treatment ",
+    meta: [
+      {
+        name: "description",
+        content:
+          "Learn more about prostacyclin-class medicines as a treatment option for pulmonary arterial hypertension."
+      }
+    ]
   },
   data() {
     return {
@@ -276,7 +283,6 @@ export default {
   },
   methods: {
     toggleModal() {
-      console.log("what");
       this.leaving = !this.leaving;
     }
   }
@@ -294,31 +300,33 @@ export default {
 
   &::before {
     @include for-desktop-up {
-      @include grid-child(4, 14, 2, 4);
+      margin-left: 2.7rem;
+      @include grid-child(3, 13, 2, 4);
     }
   }
 }
 
 #do-more .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 50px 0 0;
-    @include grid-child(13, 16, 1, 4);
+    padding: 0 2rem 0 0;
+    justify-self: end;
+    @include grid-child(12, 15, 1, 4);
   }
 }
 
 #do-more .section-header {
   @include for-desktop-up {
-    padding-left: 40px;
-    @include grid-child(3, 14, 2, 3);
+    @include grid-child(3, 12, 2, 3);
   }
 }
 
 #do-more .section-body {
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+
   @include for-desktop-up {
-    padding-bottom: 2rem;
-    @include grid-child(5, 13, 3, 4);
+    margin: 0 0 2rem 2.7rem;
+    padding: 0 6.2vw 0 5.6vw;
+    @include grid-child(3, 13, 3, 4);
   }
 }
 
@@ -331,7 +339,7 @@ export default {
 
 #what-is-prostacyclin {
   @include for-desktop-up {
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(4, auto) 40px;
   }
 
   &::before {
@@ -349,15 +357,16 @@ export default {
 
   @include for-desktop-up {
     margin-bottom: 0;
-    @include grid-child(8, 15, 3, 6);
+    @include grid-child(8, 13, 3, 6);
   }
 }
 
 #what-is-prostacyclin .section-video iframe {
   width: 100%;
+  height: 165px;
 
   @include for-desktop-up {
-    height: 320px;
+    height: 225px;
   }
 }
 
@@ -371,7 +380,8 @@ export default {
   @include for-desktop-up {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
-    @include grid-child(5, 13, 2, 3);
+    padding: 0 5.6vw;
+    @include grid-child(4, 14, 2, 3);
   }
 }
 
@@ -380,7 +390,8 @@ export default {
 
   @include for-desktop-up {
     margin-top: 0;
-    @include grid-child(5, 8, 3, 4);
+    padding-left: 5.6vw;
+    @include grid-child(4, 8, 3, 4);
   }
 }
 
@@ -404,14 +415,15 @@ export default {
 #medicines .section-header {
   @include for-desktop-up {
     margin-top: 2rem;
-    padding-left: 2rem;
+    padding-left: 2.7rem;
     @include grid-child(3, 14, 1, 2);
   }
 }
 
 #medicines .section-body {
   @include for-desktop-up {
-    @include grid-child(5, 13, 2, 3);
+    padding: 0 5.6vw;
+    @include grid-child(4, 14, 2, 3);
   }
 }
 
@@ -453,7 +465,8 @@ export default {
     @include grid-child(2, 14, 1, 2);
   }
   @include for-desktop-up {
-    @include grid-child(6, 13, 1, 2);
+    padding-left: 2.4rem;
+    @include grid-child(5, 12, 1, 2);
   }
 }
 
@@ -463,7 +476,8 @@ export default {
 
   @include for-desktop-up {
     margin: 2rem 0;
-    @include grid-child(5, 13, 2, 3);
+    padding: 0 5.6vw;
+    @include grid-child(4, 14, 2, 3);
   }
 }
 
@@ -500,17 +514,20 @@ export default {
 
   @include for-desktop-up {
     margin: 2rem 0 0;
-    @include grid-child(5, 13, 1, 2);
+    padding: 0 5.6vw;
+    @include grid-child(4, 14, 1, 2);
   }
 }
 
 #benefits .section-body.bottom ul {
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
   @include grid-child(2, 17, 3, 4);
 
   @include for-desktop-up {
-    padding-bottom: 2rem;
-    @include grid-child(5, 13, 3, 4);
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    padding: 0 5.6vw;
+    @include grid-child(4, 14, 3, 4);
   }
 }
 
@@ -524,7 +541,7 @@ export default {
 
   &::before {
     @include for-desktop-up {
-      margin-left: 2.3rem;
+      margin-left: 2.7rem;
       @include grid-child(3, 13, 2, 4);
     }
   }
@@ -532,8 +549,8 @@ export default {
 
 #side-effects .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 50px 0 0;
+    padding: 0 2rem 0 0;
+    justify-self: end;
     @include grid-child(12, 15, 1, 4);
   }
 }
@@ -548,8 +565,9 @@ export default {
   margin-bottom: 1.5rem;
 
   @include for-desktop-up {
-    margin-bottom: 2rem;
-    @include grid-child(4, 12, 3, 4);
+    margin: 0 0 2rem 2.7rem;
+    padding: 0 5vw 0 5.6vw;
+    @include grid-child(3, 13, 3, 4);
   }
 }
 
@@ -563,7 +581,6 @@ export default {
 #getting-started {
   &::before {
     @include for-desktop-up {
-      margin-right: 1rem;
       @include grid-child(4, 14, 2, 4);
     }
   }
@@ -580,7 +597,8 @@ export default {
 
   @include for-desktop-up {
     margin: 2rem 0;
-    @include grid-child(5, 13, 2, 4);
+    padding: 0 7.5vw 0 5.6vw;
+    @include grid-child(4, 14, 2, 4);
   }
 }
 
@@ -615,7 +633,7 @@ export default {
     }
 
     @include for-desktop-up {
-      margin-left: 40px;
+      margin-left: 2rem;
       @include grid-child(3, 13, 2, 3);
     }
   }
@@ -637,10 +655,9 @@ export default {
   }
 
   @include for-desktop-up {
-    margin: 2rem 0 2.5rem 0;
-    padding-left: 40px;
-    padding-right: 1rem;
-    @include grid-child(4, 12, 2, 3);
+    margin: 2rem 0 2.5rem 2rem;
+    padding: 0 5.6vw;
+    @include grid-child(3, 13, 2, 3);
   }
 }
 
@@ -673,15 +690,15 @@ export default {
     }
 
     @include for-desktop-up {
-      @include grid-child(5, 14, 2, 3);
+      margin-right: 2rem;
+      @include grid-child(5, 15, 2, 3);
     }
   }
 }
 
 #fighting-pah .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 10px 0 40px;
+    padding: 0 0 0 2rem;
     @include grid-child(3, 6, 1, 3);
   }
 }
@@ -693,18 +710,20 @@ export default {
 
   @include for-desktop-up {
     margin: 2rem 0;
-    padding-right: 30px;
-    @include grid-child(6, 14, 2, 3);
+    margin-right: 2rem;
+    padding: 0 5.6vw;
+    @include grid-child(5, 15, 2, 3);
   }
 }
 
 #fighting-pah .section-body h3 {
+  font-size: 1.5rem;
   margin-top: 0;
 }
 
 #fighting-pah .section-body .button {
   @include for-desktop-up {
-    margin-left: 3rem;
+    margin-left: 2.4rem;
   }
 }
 
@@ -717,7 +736,7 @@ export default {
   }
 
   @include for-desktop-up {
-    grid-template-rows: 50px auto auto;
+    grid-template-rows: 40px auto auto;
   }
 
   &::before {
@@ -734,8 +753,8 @@ export default {
 
 #resources .section-icon {
   @include for-desktop-up {
-    justify-self: center;
-    padding: 0 45px 0 0;
+    justify-self: end;
+    padding: 0 2rem 0 0;
     @include grid-child(11, 14, 1, 4);
   }
 }
@@ -746,7 +765,7 @@ export default {
   }
 
   @include for-desktop-up {
-    padding-left: 2rem;
+    padding-left: 2.7rem;
     @include grid-child(4, 14, 2, 3);
   }
 }
@@ -759,12 +778,15 @@ export default {
   }
 
   @include for-desktop-up {
-    margin: 2rem 0;
-    @include grid-child(6, 14, 3, 4);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 0 4vw;
+    @include grid-child(5, 12, 3, 4);
   }
 }
 
-#resources .section-body h3 {
+#resources .section-body h2 {
+  font-size: 1.5rem;
   margin-top: 0;
 }
 
@@ -775,17 +797,13 @@ export default {
   display: flex;
   justify-content: center;
 
-  & a {
-    margin-right: 0.5rem;
-    @include for-desktop-up {
-      margin-right: 1rem;
-    }
-  }
-
+  & a,
   & button {
     margin-right: 0.5rem;
+    padding: 0 10px;
     @include for-desktop-up {
       margin-right: 1rem;
+      padding: 0 2rem;
     }
   }
 }
