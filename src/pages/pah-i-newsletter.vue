@@ -337,6 +337,14 @@
             </span>
           </ValidationProvider>
 
+          <div class="captcha-wrapper">
+            <vue-recaptcha
+              class="captcha"
+              sitekey="6LdTMcQUAAAAAKpmSz3vOQcKXpJCFcvwLajG3kxg"
+              :loadRecaptchaScript="true"
+            ></vue-recaptcha>
+          </div>
+
           <h4>United Therapeutics respects your privacy.</h4>
 
           <p>
@@ -406,6 +414,7 @@
 
 <script>
 import { required, email, max } from "vee-validate/dist/rules";
+import VueRecaptcha from "vue-recaptcha";
 
 export default {
   metaInfo: {
@@ -433,6 +442,7 @@ export default {
       }
     ]
   },
+  components: { VueRecaptcha },
   data() {
     return {
       address: {
@@ -782,6 +792,7 @@ export default {
 
 #mailing-list form .legal p {
   @include grid-child(2, 16, 3, 4);
+  margin-bottom: 3rem;
 
   @include for-desktop-up {
     @include grid-child(1, 17, 3, 4);
@@ -843,6 +854,11 @@ export default {
   font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
   font-size: 1.3rem;
   cursor: pointer;
+}
+
+#mailing-list form .legal .captcha-wrapper {
+  @include grid-child(2, 16, 4, 5);
+  margin: auto;
 }
 
 #mailing-list form .section-submit {
