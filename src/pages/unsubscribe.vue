@@ -1,5 +1,18 @@
 <template>
   <ShortLayout>
+    <Modal v-if="showModal" class="unsubscribe" v-on:closeModal="dismissModal">
+      <h1 slot="body" class="wine">
+        Thank You!
+      </h1>
+
+      <div slot="footer">
+        <button class="modal-default" @click="dismissModal">
+          Close
+        </button>
+      </div>
+    </Modal>
+    <!-- success modal -->
+
     <section purple id="unsubscribe">
       <h1 class="section-header">Unsubscribe</h1>
       <h3>
@@ -83,11 +96,16 @@ export default {
   data() {
     return {
       email: null,
-      currentRoute: null
+      currentRoute: null,
+      showModal: false
     };
   },
   mounted() {
     this.currentRoute = window.location.href;
+
+    if (this.$route.query.success === "true") {
+      this.showModal = true;
+    }
   },
   methods: {
     async submit() {
@@ -97,6 +115,10 @@ export default {
         console.log(this.email);
         document.querySelector("form").submit();
       }
+    },
+    dismissModal() {
+      this.showModal = false;
+      this.$router.replace("/unsubscribe");
     }
   }
 };

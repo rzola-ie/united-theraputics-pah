@@ -54,12 +54,13 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('CallToAction', CallToAction);
   Vue.component('Footer', Footer);
 
-  let sc = document.createElement("html");
-  sc.setAttribute("itemscope", "");
-  sc.setAttribute("itemtype", "https://schema.org/FAQPage");
-
-  document.head.appendChild(sc)
-  console.log(document)
+  
+  if(isClient) {
+    let sc = document.createElement("html");
+    sc.setAttribute("itemscope", "");
+    sc.setAttribute("itemtype", "https://schema.org/FAQPage");
+    document.head.appendChild(sc)
+  }
 
   Vue.config.productionTip = false
 

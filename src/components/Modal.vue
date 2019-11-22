@@ -7,9 +7,7 @@
             &times;
           </button>
           <div class="modal-header">
-            <slot name="header">
-              default header
-            </slot>
+            <slot name="header"></slot>
           </div>
 
           <div class="modal-body">
@@ -49,9 +47,44 @@ export default {};
   transition: opacity 0.3s ease;
 }
 
+.modal-mask.no-close-button .modal-container .modal-close-button {
+  display: none;
+}
+
+.modal-mask.unsubscribe .modal-container {
+  background-image: url("../assets/img/modal-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include for-desktop-up {
+    padding: 3rem;
+  }
+
+  .modal-close-button,
+  /deep/ .modal-header {
+    display: none;
+  }
+
+  /deep/ .modal-body {
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+
+  /deep/ h1 {
+    margin: 0;
+    @include for-desktop-up {
+      font-size: 3rem;
+    }
+  }
+}
+
 .modal-wrapper {
   display: table-cell;
   vertical-align: top;
+
+  @include for-desktop-up {
+    vertical-align: middle;
+  }
 }
 
 .modal-container {
