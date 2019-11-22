@@ -63,10 +63,10 @@
           medicines have been shown to
           <strong>slow disease progression and improve how you feel</strong>. By
           working closely with your doctor to assess your
-          <g-link to="/what-is-pah#pah-symptoms">symptoms</g-link>,
-          <g-link to="/managing-your-pah#risk-prognosis">risk status</g-link>
+          <g-link to="/what-is-pah#pah-symptoms/">symptoms</g-link>,
+          <g-link to="/pah-life-expectancy#risk-prognosis/">risk status</g-link>
           and
-          <g-link to="/pah-treatment-medicine">treatment options</g-link>, you
+          <g-link to="/pah-treatment-medicine/">treatment options</g-link>, you
           may be better able to manage the impact of PAH on your life. Together
           with the support of your healthcare team, there may be more you can do
           to achieve your treatment goals.
@@ -107,7 +107,7 @@
         <p>
           In order to determine the best treatment approach for you, it is
           important to have your doctor regularly monitor your
-          <g-link to="/managing-your-pah#risk-prognosis"
+          <g-link to="/managing-your-pah#risk-prognosis/"
             ><strong>risk status</strong></g-link
           >
           (the risk of your PAH getting worse over the next 5 years). Your
@@ -129,7 +129,7 @@
 
       <div class="section-body">
         <h2>Looking for more information about PAH?</h2>
-        <g-link class="button" to="/what-is-pah">Learn More</g-link>
+        <g-link class="button" to="/what-is-pah/">Learn More</g-link>
       </div>
     </section>
     <!-- what is pah -->
@@ -145,7 +145,7 @@
 
       <div class="section-body">
         <h2>Want to learn about how you can do more about your PAH?</h2>
-        <g-link class="button" to="/managing-your-pah">Take Action</g-link>
+        <g-link class="button" to="/managing-your-pah/">Take Action</g-link>
       </div>
     </section>
     <!-- managing your pah -->
@@ -161,7 +161,7 @@
 
       <div class="section-body">
         <h2>Do you know about the 3 imbalances that contribute to PAH?</h2>
-        <g-link class="button" to="/pah-pathways">Get Started</g-link>
+        <g-link class="button" to="/pah-pathways/">Get Started</g-link>
       </div>
     </section>
     <!-- pah pathways -->
@@ -328,7 +328,7 @@ export default {
 
     @include for-desktop-up {
       margin-left: 2.7rem;
-      @include grid-child(4, 14, 2, 4);
+      @include grid-child(3, 13, 2, 4);
     }
   }
 }
@@ -336,14 +336,15 @@ export default {
 #feel-better .section-header {
   @include for-desktop-up {
     margin-top: 2.5rem;
-    @include grid-child(4, 11, 2, 3);
+    @include grid-child(3, 11, 2, 3);
   }
 }
 
 #feel-better .section-icon {
   @include for-desktop-up {
-    padding: 0 15px;
-    @include grid-child(13, 16, 1, 3);
+    padding: 0 2rem 0 0;
+    justify-self: end;
+    @include grid-child(12, 15, 1, 4);
   }
 }
 
@@ -351,10 +352,9 @@ export default {
   margin-bottom: 1.5rem;
 
   @include for-desktop-up {
-    margin-left: 2.7rem;
-    margin-bottom: 2.5rem;
-    padding: 0 4.8rem;
-    @include grid-child(4, 14, 3, 4);
+    margin: 0 0 2.5rem 2.7rem;
+    padding: 0 5.6vw;
+    @include grid-child(3, 13, 3, 4);
   }
 }
 
@@ -380,7 +380,9 @@ export default {
     }
 
     @include for-desktop-up {
-      @include grid-child(6, 15, 2, 5);
+      margin-left: 4rem;
+      margin-right: 2rem;
+      @include grid-child(4, 15, 2, 5);
     }
   }
 }
@@ -391,16 +393,15 @@ export default {
   }
 
   @include for-desktop-up {
-    margin-bottom: 0;
-    justify-self: end;
-    @include grid-child(7, 15, 1, 2);
+    margin-bottom: 10px;
+    @include grid-child(6, 16, 1, 2);
   }
 }
 
 #risk-status .section-icon {
   @include for-desktop-up {
-    padding: 0 25px 0 0;
-    @include grid-child(4, 7, 1, 3);
+    padding: 0 2rem 0 0;
+    @include grid-child(3, 6, 1, 3);
   }
 }
 
@@ -415,10 +416,11 @@ export default {
   margin: 1.5rem 0 1rem 0;
 
   @include for-desktop-up {
-    margin: 2rem 0 1rem 0;
+    margin: 2.5rem 2rem 2.5rem 4rem;
+
     font-size: 1.3rem;
     line-height: 1.35rem;
-    @include grid-child(6, 15, 2, 3);
+    @include grid-child(4, 15, 2, 3);
   }
 }
 
@@ -426,7 +428,8 @@ export default {
   @include grid-child(2, 16, 3, 4);
 
   @include for-desktop-up {
-    @include grid-child(6, 15, 3, 4);
+    margin: 2.5rem 2rem 0 4rem;
+    @include grid-child(4, 15, 3, 4);
     margin-top: 0;
   }
 }
@@ -439,7 +442,8 @@ export default {
 
   @include for-desktop-up {
     grid-template-columns: repeat(9, 1fr);
-    @include grid-child(6, 15, 4, 5);
+    margin: 2.5rem 2rem 0 4rem;
+    @include grid-child(4, 15, 4, 5);
   }
 
   &:before {
@@ -481,6 +485,7 @@ export default {
     }
 
     @include for-desktop-up {
+      margin-bottom: 0;
       @include grid-child(6, 12, 2, 4);
     }
   }
@@ -497,8 +502,6 @@ export default {
   @include grid-child(3, 17, 1, 2);
 
   @include for-desktop-up {
-    padding-left: 2.4rem;
-    margin: 0.67em 0;
     margin-bottom: 0;
     @include grid-child(5, 11, 2, 3);
   }
@@ -514,8 +517,8 @@ export default {
 
   @include for-desktop-up {
     margin-bottom: 2rem;
-    padding: 0 4vw;
-    @include grid-child(6, 12, 3, 4);
+    padding: 0 1vw 0 4vw;
+    @include grid-child(6, 11, 3, 4);
   }
 }
 
@@ -540,16 +543,16 @@ export default {
     }
 
     @include for-desktop-up {
-      margin-left: 2rem;
-      margin-right: 2.4rem;
-      @include grid-child(7, 14, 2, 3);
+      margin-left: 2.7rem;
+      @include grid-child(6, 13, 2, 3);
     }
   }
 }
 
 #managing-your-pah .section-icon {
   @include for-desktop-up {
-    padding: 0 0 0 3rem;
+    padding: 0 3rem 0 0;
+    margin-top: 15px;
     @include grid-child(5, 8, 1, 3);
   }
 }
@@ -562,8 +565,7 @@ export default {
   }
 
   @include for-desktop-up {
-    padding-left: 2.4rem;
-    @include grid-child(8, 15, 1, 2);
+    @include grid-child(8, 14, 1, 2);
   }
 }
 
@@ -576,9 +578,10 @@ export default {
   }
 
   @include for-desktop-up {
-    padding: 0 4vw;
-    margin: 0 2.4rem 2rem 2rem;
-    @include grid-child(7, 14, 2, 3);
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+    padding: 0 5.6vw;
+    @include grid-child(6, 13, 2, 3);
   }
 }
 
@@ -629,7 +632,6 @@ export default {
   @include grid-child(3, 17, 1, 2);
 
   @include for-desktop-up {
-    padding-left: 2.4rem;
     margin-bottom: 0;
     @include grid-child(5, 11, 2, 3);
   }
@@ -671,16 +673,16 @@ export default {
     }
 
     @include for-desktop-up {
-      margin-left: 2rem;
-      margin-right: 2.4rem;
-      @include grid-child(7, 14, 2, 3);
+      margin-left: 2.7rem;
+      @include grid-child(6, 13, 2, 3);
     }
   }
 }
 
 #therapies .section-icon {
   @include for-desktop-up {
-    padding: 0 0 0 2.4rem;
+    padding: 0 3rem 0 0;
+    margin-top: 15px;
     @include grid-child(5, 8, 1, 3);
   }
 }
@@ -693,7 +695,6 @@ export default {
   }
 
   @include for-desktop-up {
-    padding-left: 2.4rem;
     @include grid-child(8, 14, 1, 2);
   }
 }
@@ -707,11 +708,10 @@ export default {
   }
 
   @include for-desktop-up {
-    margin-left: 2rem;
-    margin-right: 2.4rem;
+    margin-left: 3rem;
     margin-bottom: 2rem;
-    padding: 0 4vw;
-    @include grid-child(7, 14, 2, 3);
+    padding: 0 5.6vw;
+    @include grid-child(6, 13, 2, 3);
   }
 }
 
@@ -726,7 +726,7 @@ export default {
 
 #therapies .section-body .button {
   @include for-desktop-up {
-    margin-left: 2.4rem;
+    margin-left: 2.2rem;
   }
 }
 </style>

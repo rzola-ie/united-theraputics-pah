@@ -65,6 +65,11 @@ export default function (Vue, { router, head, isClient }) {
   Vue.config.productionTip = false
 
   head.meta.push({
+    name: 'robots',
+    content: 'index,follow'
+  })
+
+  head.meta.push({
     name: 'viewport',
     content: 'width=device-width, initial-scale=1'
   })

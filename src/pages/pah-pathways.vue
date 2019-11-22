@@ -104,7 +104,7 @@
           different treatment needs over time. One such treatment your doctor
           may recommend is a Prostacyclin-class medicine.
         </h3>
-        <g-link class="button" to="/pah-treatment-medicine"
+        <g-link class="button" to="/pah-treatment-medicine/"
           >Learn about Prostacyclin-class medicines</g-link
         >
       </div>
@@ -136,7 +136,7 @@
       <p>
         You can accept feeling okay, or you can ask about feeling better. Ask
         your doctor about adjusting your
-        <g-link to="/pah-treatment-medicine">treatment plan</g-link> to help you
+        <g-link to="/pah-treatment-medicine/">treatment plan</g-link> to help you
         <span class="wine">feel better</span> and
         <span class="wine">do more</span>.
       </p>

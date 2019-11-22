@@ -23,29 +23,29 @@
       </div>
 
       <nav class="drawer-nav">
-        <g-link class="nav__link" to="/what-is-pah" active-class>
+        <g-link class="nav__link" to="/what-is-pah/" active-class>
           what is pah?
         </g-link>
 
-        <g-link class="nav__link" to="/pah-life-expectancy" active-class>
+        <g-link class="nav__link" to="/pah-life-expectancy/" active-class>
           managing your pah
         </g-link>
 
-        <g-link class="nav__link" to="/pah-pathways" active-class>
+        <g-link class="nav__link" to="/pah-pathways/" active-class>
           pah pathways
         </g-link>
 
-        <g-link class="nav__link" to="/pah-treatment-medicine" active-class
+        <g-link class="nav__link" to="/pah-treatment-medicine/" active-class
           >prostacyclin-class therapies
         </g-link>
 
-        <g-link class="nav__link" to="/pah-information-support" active-class>
+        <g-link class="nav__link" to="/pah-information-support/" active-class>
           resources
         </g-link>
 
         <g-link
           class="nav__link newsletter"
-          to="/pah-i-newsletter"
+          to="/pah-i-newsletter/"
           active-class
         >
           sign up to recieve our newsletter

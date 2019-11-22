@@ -4,7 +4,7 @@
       <p>
         You can accept feeling okay, or you can ask about feeling better. Learn
         about
-        <g-link to="/managing-your-pah#risk-prognosis">risk status</g-link>
+        <g-link to="/pah-life-expectancy#risk-prognosis/">risk status</g-link>
         and how improving your risk status may improve how you feel.
       </p>
     </slot>

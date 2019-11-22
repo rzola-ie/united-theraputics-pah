@@ -110,7 +110,7 @@
           Because PAH gets worse over time, it’s important to have an honest
           conversation with your doctor about how you’re really feeling,
           regardless of your test results (which only tell part of the story).
-          <g-link to="/pah-treatment-medicine"
+          <g-link to="/pah-treatment-medicine/"
             >It may be necessary to adjust your dose of medicine(s) or add
             treatment</g-link
           ><strong>
@@ -284,7 +284,7 @@
 
       <div class="section-body">
         <h2>Want to learn how you can do more about your PAH?</h2>
-        <g-link class="button" to="/pah-life-expectancy"
+        <g-link class="button" to="/pah-life-expectancy/"
           >Manage Your PAH</g-link
         >
       </div>
@@ -310,7 +310,7 @@ export default {
       {
         name: "description",
         content:
-          "PAH is the medical abbreviation that stands for pulmonary arterial hypertension. PAH is a serious disease that thickens and narrowsthe blood vessels in your lungs."
+          "PAH is the medical abbreviation that stands for pulmonary arterial hypertension. PAH is a serious disease that thickens and narrows the blood vessels in your lungs."
       },
       {
         property: "og:title",
@@ -319,7 +319,7 @@ export default {
       {
         property: "og:description",
         content:
-          "PAH is the medical abbreviation that stands for pulmonary arterial hypertension. PAH is a serious disease that thickens and narrowsthe blood vessels in your lungs."
+          "PAH is the medical abbreviation that stands for pulmonary arterial hypertension. PAH is a serious disease that thickens and narrows the blood vessels in your lungs."
       }
     ],
     link: [
