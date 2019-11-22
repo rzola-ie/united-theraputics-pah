@@ -101,8 +101,8 @@ export default {
   height: 100vh;
   width: 90%;
   padding: 0 1rem;
-  background: url("../assets/img/background.png");
-  background-size: 200%;
+  background: url("../assets/img/background.jpg");
+  background-size: 256px;
   background-repeat: repeat;
   @include display-grid;
   grid-template-rows: 60px auto;

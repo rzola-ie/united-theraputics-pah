@@ -10,7 +10,7 @@
       />
       <g-image
         class="hero-image-mobile"
-        src="~/assets/img/hero-image-mobile.png"
+        src="~/assets/img/hero-image-mobile.svg"
         alt="an image of a park with trees. The PAH initiative logo is in the center"
       />
       <h2 class="hero-text">
@@ -250,6 +250,7 @@ export default {
 
 #hero .hero-image {
   display: none;
+  opacity: 0.9;
 
   @include for-tablet-portrait-up {
     display: block;
@@ -261,6 +262,7 @@ export default {
 #hero .hero-image-mobile {
   display: block;
   width: 100%;
+  opacity: 0.9;
   @include grid-child(1, 17, 1, 5);
 
   @include for-tablet-portrait-up {
@@ -275,6 +277,7 @@ export default {
   padding-top: 0.4rem;
   align-self: center;
   @include grid-child(2, 16, 6, 10);
+  z-index: 2;
 
   @include for-tablet-portrait-up {
     padding-top: 0;
@@ -301,6 +304,7 @@ export default {
   justify-self: center;
   align-self: center;
   @include grid-child(8, 10, 10, 11);
+  z-index: 2;
 
   @include for-tablet-portrait-up {
     @include grid-child(8, 10, 11, 12);

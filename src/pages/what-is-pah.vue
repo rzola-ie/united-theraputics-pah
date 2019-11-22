@@ -355,8 +355,8 @@ export default {
 }
 
 #what-is-pah .section-header {
+  margin-bottom: 1rem;
   @include for-desktop-up {
-    margin-bottom: 1rem;
     @include grid-child(3, 10, 2, 3);
   }
 }
@@ -563,6 +563,7 @@ export default {
 }
 
 #impacts .section-header {
+  margin-bottom: 1rem;
   @include for-tablet-portrait-up {
     @include grid-child(5, 17, 1, 2);
   }
@@ -608,6 +609,7 @@ export default {
 
 .section-video {
   margin-top: 2rem;
+  margin-bottom: 1.3rem;
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
@@ -615,6 +617,7 @@ export default {
 
   @include for-desktop-up {
     margin-right: 3rem;
+    margin-bottom: 0;
     @include grid-child(3, 9, 2, 5);
   }
 }
