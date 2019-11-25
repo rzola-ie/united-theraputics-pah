@@ -136,8 +136,8 @@
       <p>
         You can accept feeling okay, or you can ask about feeling better. Ask
         your doctor about adjusting your
-        <g-link to="/pah-treatment-medicine/">treatment plan</g-link> to help you
-        <span class="wine">feel better</span> and
+        <g-link to="/pah-treatment-medicine/">treatment plan</g-link> to help
+        you <span class="wine">feel better</span> and
         <span class="wine">do more</span>.
       </p>
     </CallToAction>
@@ -300,10 +300,14 @@ export default {
   padding: 0 10px;
   font-size: 0.7rem;
 
+  @include for-tablet-portrait-up {
+    width: initial;
+    font-size: 1.2rem;
+  }
+
   @include for-desktop-up {
     width: initial;
     padding: 0 2.4rem;
-    font-size: 1.2rem;
   }
 }
 

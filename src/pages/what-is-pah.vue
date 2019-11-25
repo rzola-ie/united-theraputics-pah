@@ -373,9 +373,6 @@ export default {
 
 #what-is-pah .section-body p {
   margin: 0;
-
-  @include for-desktop-up {
-  }
 }
 
 /* PAH VS PH
@@ -383,10 +380,6 @@ export default {
 
 #pah-vs-ph {
   &::before {
-    @include for-tablet-portrait-up {
-      @include grid-child(4, 16, 2, 3);
-    }
-
     @include for-desktop-up {
       margin-left: 4rem;
       margin-right: 2rem;
@@ -404,10 +397,6 @@ export default {
 }
 
 #pah-vs-ph .section-header {
-  @include for-tablet-portrait-up {
-    @include grid-child(11, 17, 1, 2);
-  }
-
   @include for-desktop-up {
     margin-bottom: 10px;
     @include grid-child(6, 13, 1, 2);
@@ -416,10 +405,6 @@ export default {
 
 #pah-vs-ph .section-body {
   margin: 1rem 0 1.5rem 0;
-
-  @include for-tablet-portrait-up {
-    @include grid-child(5, 15, 2, 3);
-  }
 
   @include for-desktop-up {
     margin: 2.5rem 2rem 2.5rem 4rem;
@@ -442,19 +427,12 @@ export default {
 #pah-symptoms {
   grid-template-rows: repeat(4, auto);
 
-  @include for-tablet-portrait-up {
-    grid-template-rows: repeat(3, auto);
-  }
   @include for-desktop-up {
     grid-template-rows: 30px repeat(3, auto);
   }
 
   &::before {
     @include grid-child(1, 17, 1, 5);
-
-    @include for-tablet-portrait-up {
-      @include grid-child(2, 15, 2, 4);
-    }
 
     @include for-desktop-up {
       margin-left: 2.7rem;
@@ -496,7 +474,7 @@ export default {
   @include grid-child(2, 16, 3, 4);
 
   @include for-tablet-portrait-up {
-    @include grid-child(3, 10, 2, 3);
+    @include grid-child(2, 10, 2, 3);
   }
 
   @include for-desktop-up {
@@ -511,7 +489,7 @@ export default {
   margin-bottom: 1.5rem;
 
   @include for-tablet-portrait-up {
-    @include grid-child(3, 14, 3, 4);
+    @include grid-child(2, 16, 3, 4);
   }
 
   @include for-desktop-up {
@@ -550,10 +528,6 @@ export default {
   &::before {
     @include grid-child(1, 17, 1, 5);
 
-    @include for-tablet-portrait-up {
-      @include grid-child(3, 16, 2, 5);
-    }
-
     @include for-desktop-up {
       margin-right: 2rem;
       margin-left: 4rem;
@@ -564,9 +538,6 @@ export default {
 
 #impacts .section-header {
   margin-bottom: 1rem;
-  @include for-tablet-portrait-up {
-    @include grid-child(5, 17, 1, 2);
-  }
 
   @include for-desktop-up {
     margin: 0;
@@ -609,7 +580,7 @@ export default {
 
 .section-video {
   margin-top: 2rem;
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
@@ -655,11 +626,6 @@ export default {
 }
 
 #pah-diagnosis .section-header {
-  @include for-tablet-portrait-up {
-    margin-top: 2.5rem;
-    @include grid-child(5, 15, 1, 2);
-  }
-
   @include for-desktop-up {
     margin-bottom: 1rem;
     @include grid-child(3, 10, 2, 3);
@@ -669,9 +635,6 @@ export default {
 #pah-diagnosis .section-body {
   margin: 1rem 0;
   @include grid-child(1, 17, 2, 3);
-  @include for-tablet-portrait-up {
-    @include grid-child(5, 15, 2, 3);
-  }
 
   @include for-desktop-up {
     margin: 0 0 2.5rem 2.7rem;
@@ -684,8 +647,11 @@ export default {
   margin-bottom: 0;
   padding: 0 1rem;
 
-  @include for-desktop-up {
+  @include for-tablet-portrait-up {
     padding: 0 5.6vw;
+  }
+
+  @include for-desktop-up {
   }
 }
 
@@ -701,7 +667,7 @@ export default {
   grid-template-columns: 1fr;
   padding: 0 1rem;
 
-  @include for-desktop-up {
+  @include for-tablet-portrait-up {
     padding: 0 4.6rem;
   }
 
@@ -752,10 +718,6 @@ export default {
 ====================================================== */
 #other-considerations {
   &::before {
-    @include for-tablet-portrait-up {
-      @include grid-child(4, 13, 2, 3);
-    }
-
     @include for-desktop-up {
       margin-left: 4rem;
       margin-right: 2rem;
@@ -802,10 +764,6 @@ export default {
   }
 
   &::before {
-    @include for-tablet-portrait-up {
-      @include grid-child(3, 15, 2, 4);
-    }
-
     @include for-desktop-up {
       @include grid-child(5, 14, 1, 4);
     }
@@ -815,17 +773,13 @@ export default {
 #functional-class .section-header {
   @include for-desktop-up {
     padding-left: 2.7rem;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     @include grid-child(4, 17, 1, 2);
   }
 }
 
 #functional-class .section-body {
   margin-bottom: 1.5rem;
-
-  @include for-tablet-portrait-up {
-    @include grid-child(4, 14, 2, 3);
-  }
 
   @include for-desktop-up {
     margin-bottom: 2.5rem;
@@ -852,7 +806,7 @@ export default {
 
   &::before {
     @include for-tablet-portrait-up {
-      @include grid-child(3, 13, 2, 3);
+      @include grid-child(3, 13, 1, 4);
     }
 
     @include for-desktop-up {
@@ -870,11 +824,7 @@ export default {
 }
 
 #managing-your-pah .section-header {
-  @include grid-child(2, 17, 1, 2);
-
-  @include for-tablet-portrait-up {
-    @include grid-child(3, 17, 1, 2);
-  }
+  @include grid-child(4, 17, 1, 2);
 
   @include for-desktop-up {
     padding: 0 4.8rem;

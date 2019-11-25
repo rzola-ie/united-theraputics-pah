@@ -57,10 +57,10 @@
         <h3>See how PAH affects blood vessels</h3>
 
         <div class="video">
-          <div class="video-text">
+          <p class="video-text">
             This video shows you how blood vessels in the lungs function
             normally, compared with those affected by PAH.
-          </div>
+          </p>
 
           <iframe
             class=" embed-responsive-item video-media section-image"
@@ -78,17 +78,17 @@
             class="video-media section-image"
             src="~/assets/img/video-2-placeholder.png"
           />
-          <div class="video-text">
+          <p class="video-text">
             Understand why treatment with more than one PAH medicine is
             important.
-          </div>
+          </p>
         </div>
 
         <div class="video">
-          <div class="video-text">
+          <p class="video-text">
             Learn why getting to a low-risk status is an important goal of
             treatment.
-          </div>
+          </p>
           <g-image
             class="video-media section-image"
             src="~/assets/img/video-3-placeholder.png"
@@ -100,10 +100,10 @@
             class="video-media section-image"
             src="~/assets/img/video-4-placeholder.png"
           />
-          <div class="video-text">
+          <p class="video-text">
             Understand why treatment with more than one PAH medicine is
             important.
-          </div>
+          </p>
         </div>
       </div>
     </section>
@@ -434,14 +434,16 @@ export default {
 }
 
 #videos .section-header {
+  margin-bottom: 1rem;
   @include for-desktop-up {
+    margin-bottom: 0;
     padding-left: 2.2rem;
     @include grid-child(5, 13, 1, 2);
   }
 }
 
 #videos .section-body {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 
   @include for-desktop-up {
     @include grid-child(5, 13, 2, 3);
@@ -454,37 +456,43 @@ export default {
 }
 
 #videos .section-body .video {
+  width: 100%;
+  height: 165px;
   @include display-grid;
   grid-template-rows: repeat(2, auto);
+
+  @include for-tablet-portrait-up {
+    height: auto;
+    iframe,
+    img {
+      justify-self: center;
+      width: 622px;
+      height: 350px;
+    }
+  }
 
   @include for-desktop-up {
     grid-template-rows: auto;
     grid-template-columns: repeat(16, 1fr);
+
+    iframe,
+    img {
+      justify-self: start;
+      width: 382px;
+      height: 215px;
+    }
   }
 
   & + .video {
-    margin-top: 1.5rem;
-
-    @include for-desktop-up {
-      margin-top: 2rem;
-    }
+    margin-top: 2rem;
   }
 }
 
 #videos .section-body .video .video-text {
   margin-bottom: 0.5rem;
 
-  @include for-desktop-up {
-    margin-bottom: 0;
-  }
-}
-
-#videos .section-body .video {
-  width: 100%;
-  height: 165px;
-
-  @include for-desktop-up {
-    height: 215px;
+  @include for-tablet-portrait-up {
+    margin: 0;
   }
 }
 
@@ -504,7 +512,7 @@ export default {
   @include grid-child(1, 2, 1, 2);
 
   @include for-desktop-up {
-    @include grid-child(11, 16, 1, 2);
+    @include grid-child(11, 17, 1, 2);
   }
 }
 
@@ -520,14 +528,16 @@ export default {
 #learn-more {
   &::before {
     @include for-desktop-up {
-      @include grid-child(4, 14, 1, 3);
+      margin-left: 4rem;
+      margin-right: 2rem;
+      @include grid-child(4, 15, 1, 3);
     }
   }
 }
 
 #learn-more .section-header {
   @include for-desktop-up {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     padding-left: 2.7rem;
     @include grid-child(3, 16, 1, 2);
   }
@@ -545,9 +555,10 @@ export default {
   margin-bottom: 1.5rem;
 
   @include for-desktop-up {
-    margin-bottom: 2.5rem;
+    grid-template-columns: repeat(10, 1fr);
+    @include grid-child(4, 15, 2, 3);
+    margin: 0 3.8rem 2.5rem 4rem;
     padding: 0 5.6vw;
-    @include grid-child(4, 14, 2, 3);
   }
 }
 
@@ -579,16 +590,16 @@ export default {
 
 #discussion-guide .section-icon {
   @include for-desktop-up {
+    padding: 0 2rem 0 0;
     justify-self: end;
-    padding: 0 3rem 0 0;
     @include grid-child(12, 15, 1, 4);
   }
 }
 
 #discussion-guide .section-header {
+  margin-bottom: 1rem;
   @include for-desktop-up {
-    margin-top: 2.5rem;
-    @include grid-child(3, 16, 2, 3);
+    @include grid-child(3, 10, 2, 3);
   }
 }
 
@@ -596,8 +607,7 @@ export default {
   margin-bottom: 1.5rem;
 
   @include for-desktop-up {
-    margin-bottom: 2.5rem;
-    margin-left: 2.7rem;
+    margin: 0 0 2.5rem 2.7rem;
     padding: 0 5.6vw;
     @include grid-child(3, 12, 3, 4);
   }
@@ -632,8 +642,9 @@ export default {
     margin-top: 0;
 
     @include for-desktop-up {
-      margin-right: 3rem;
-      @include grid-child(5, 15, 1, 2x);
+      margin-left: 4rem;
+      margin-right: 2rem;
+      @include grid-child(4, 15, 1, 3);
     }
   }
 }
@@ -654,9 +665,10 @@ export default {
     display: block;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
-    margin-right: 3rem;
+    margin-right: 2rem;
+    margin-left: 4rem;
     padding: 0 5.6vw;
-    @include grid-child(5, 15, 1, 2);
+    @include grid-child(4, 15, 1, 2);
   }
 }
 
@@ -675,8 +687,13 @@ export default {
   font-size: 0.8rem;
   @include grid-child(1, 17, 2, 3);
 
-  @include for-desktop-up {
+  @include for-tablet-portrait-up {
     font-size: 1rem;
+    width: 275px;
+  }
+
+  @include for-desktop-up {
+    width: initial;
     padding: 0 32px;
   }
 }
@@ -710,7 +727,7 @@ export default {
     justify-self: end;
     align-self: center;
     margin-top: 0;
-    margin-right: 3rem;
+    margin-right: 2rem;
     @include grid-child(11, 15, 1, 2);
   }
 }
@@ -758,8 +775,9 @@ export default {
     margin-top: 0;
 
     @include for-desktop-up {
-      margin-right: 3rem;
-      @include grid-child(5, 15, 1, 2);
+      margin-left: 4rem;
+      margin-right: 2rem;
+      @include grid-child(4, 15, 1, 3);
     }
   }
 }
@@ -877,8 +895,9 @@ export default {
     margin-top: 0;
 
     @include for-desktop-up {
-      margin-right: 3rem;
-      @include grid-child(5, 15, 1, 3);
+      margin-left: 4rem;
+      margin-right: 2rem;
+      @include grid-child(4, 15, 1, 3);
     }
   }
 }

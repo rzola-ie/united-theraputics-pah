@@ -774,9 +774,12 @@ export default {
   text-align: center;
   @include grid-child(1, 12, 3, 4);
 
+  @include for-tablet-portrait-up {
+    @include grid-child(1, 17, 3, 4);
+  }
+
   @include for-desktop-up {
     margin-top: 1rem;
-    @include grid-child(6, 10, 3, 4);
   }
 }
 
