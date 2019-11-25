@@ -147,6 +147,10 @@ export default {};
     padding: 0.5rem 0.5rem;
     background-color: black;
     color: white;
+
+    &.active {
+      background-color: $wine;
+    }
   }
 
   &:hover > span::before {

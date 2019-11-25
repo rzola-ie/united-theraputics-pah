@@ -180,9 +180,13 @@ export default {
     padding: 0.5rem 0rem;
     background-color: black;
     color: white;
+
+    &.active {
+      background-color: $wine;
+    }
   }
 
-  &.active {
+  &.active:not(.newsletter) {
     color: $wine;
   }
 
