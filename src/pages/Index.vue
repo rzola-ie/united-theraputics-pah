@@ -325,11 +325,6 @@ export default {
   }
 
   &::before {
-    @include for-tablet-portrait-up {
-      margin-top: 15px;
-      margin-left: 10px;
-    }
-
     @include for-desktop-up {
       margin-left: 2.7rem;
       @include grid-child(3, 13, 2, 4);
@@ -339,7 +334,7 @@ export default {
 
 #feel-better .section-header {
   @include for-desktop-up {
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
     @include grid-child(3, 11, 2, 3);
   }
 }
@@ -380,7 +375,7 @@ export default {
     @include grid-child(1, 17, 1, 5);
 
     @include for-tablet-portrait-up {
-      @include grid-child(1, 17, 2, 5);
+      @include grid-child(1, 17, 1, 5);
     }
 
     @include for-desktop-up {
@@ -393,11 +388,10 @@ export default {
 
 #risk-status .section-header {
   @include for-tablet-portrait-up {
-    @include grid-child(4, 17, 1, 2);
+    @include grid-child(2, 17, 1, 2);
   }
 
   @include for-desktop-up {
-    margin-bottom: 10px;
     @include grid-child(6, 16, 1, 2);
   }
 }
@@ -485,25 +479,30 @@ export default {
     @include grid-child(1, 17, 1, 3);
 
     @include for-tablet-portrait-up {
-      @include grid-child(3, 13, 2, 4);
+      @include grid-child(3, 13, 1, 4);
     }
 
     @include for-desktop-up {
-      margin-bottom: 0;
-      @include grid-child(6, 12, 2, 4);
+      margin: 0 3rem;
+      @include grid-child(5, 12, 2, 4);
     }
   }
 }
 
 #what-is-pah .section-icon {
   @include for-desktop-up {
-    padding: 0 15px;
-    @include grid-child(11, 14, 1, 4);
+    padding: 0 0 0 2rem;
+    justify-self: end;
+    @include grid-child(10, 13, 1, 4);
   }
 }
 
 #what-is-pah .section-header {
   @include grid-child(3, 17, 1, 2);
+
+  @include for-tablet-portrait-up {
+    @include grid-child(4, 17, 1, 2);
+  }
 
   @include for-desktop-up {
     margin-bottom: 0;
@@ -520,9 +519,10 @@ export default {
   }
 
   @include for-desktop-up {
-    margin-bottom: 2rem;
-    padding: 0 1vw 0 4vw;
-    @include grid-child(6, 11, 3, 4);
+    // padding: 0 1vw 0 4vw;
+    padding: 0 5vw 0 4vw;
+    margin: 0 0 2rem 3rem;
+    @include grid-child(5, 12, 3, 4);
   }
 }
 
@@ -543,7 +543,7 @@ export default {
     @include grid-child(1, 17, 1, 3);
 
     @include for-tablet-portrait-up {
-      @include grid-child(5, 15, 2, 3);
+      @include grid-child(5, 15, 1, 3);
     }
 
     @include for-desktop-up {
@@ -565,7 +565,7 @@ export default {
   @include grid-child(3, 17, 1, 2);
 
   @include for-tablet-portrait-up {
-    @include grid-child(8, 17, 1, 2);
+    @include grid-child(6, 17, 1, 2);
   }
 
   @include for-desktop-up {
@@ -616,24 +616,31 @@ export default {
     @include grid-child(1, 17, 1, 3);
 
     @include for-tablet-portrait-up {
-      @include grid-child(3, 13, 2, 3);
+      @include grid-child(3, 13, 1, 3);
     }
 
     @include for-desktop-up {
-      @include grid-child(6, 12, 2, 4);
+      margin-left: 3rem;
+      margin-right: 3rem;
+      @include grid-child(5, 12, 2, 4);
     }
   }
 }
 
 #pah-pathways .section-icon {
   @include for-desktop-up {
-    padding: 0 15px;
-    @include grid-child(11, 14, 1, 4);
+    padding: 0 0 0 2rem;
+    justify-self: end;
+    @include grid-child(10, 13, 1, 4);
   }
 }
 
 #pah-pathways .section-header {
   @include grid-child(3, 17, 1, 2);
+
+  @include for-tablet-portrait-up {
+    @include grid-child(4, 17, 1, 2);
+  }
 
   @include for-desktop-up {
     margin-bottom: 0;
@@ -651,8 +658,9 @@ export default {
 
   @include for-desktop-up {
     margin-bottom: 2rem;
-    padding: 0 1vw 0 4vw;
-    @include grid-child(6, 11, 3, 4);
+    margin: 0 0 2rem 3rem;
+    padding: 0 5vw 0 4vw;
+    @include grid-child(5, 11, 3, 4);
   }
 }
 
@@ -673,7 +681,7 @@ export default {
     @include grid-child(1, 17, 1, 3);
 
     @include for-tablet-portrait-up {
-      @include grid-child(6, 14, 2, 3);
+      @include grid-child(5, 15, 1, 3);
     }
 
     @include for-desktop-up {
@@ -695,7 +703,7 @@ export default {
   @include grid-child(3, 17, 1, 2);
 
   @include for-tablet-portrait-up {
-    @include grid-child(8, 17, 1, 2);
+    @include grid-child(6, 17, 1, 2);
   }
 
   @include for-desktop-up {
@@ -712,7 +720,7 @@ export default {
   }
 
   @include for-desktop-up {
-    margin-left: 3rem;
+    margin-left: 2.7rem;
     margin-bottom: 2rem;
     padding: 0 5.6vw;
     @include grid-child(6, 13, 2, 3);

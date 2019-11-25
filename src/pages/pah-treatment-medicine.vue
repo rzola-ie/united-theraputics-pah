@@ -331,7 +331,7 @@ export default {
 
 #do-more .section-header {
   @include for-desktop-up {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     @include grid-child(3, 12, 2, 3);
   }
 }
@@ -402,7 +402,9 @@ export default {
 }
 
 #what-is-prostacyclin .section-body p:first-child {
-  margin-top: 0;
+  @include for-desktop-up {
+    margin-top: 0;
+  }
 }
 
 #what-is-prostacyclin h3 {
@@ -434,7 +436,7 @@ export default {
 
 #medicines .section-header {
   @include for-desktop-up {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     padding-left: 2.7rem;
     @include grid-child(3, 14, 1, 2);
   }
@@ -577,7 +579,7 @@ export default {
 
 #side-effects .section-header {
   @include for-desktop-up {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     @include grid-child(3, 10, 2, 3);
   }
 }
@@ -727,12 +729,15 @@ export default {
 #fighting-pah .section-body {
   margin: 1.5rem 0;
 
-  @include grid-child(2, 16, 1, 2);
+  @include for-tablet-portrait-up {
+    padding: 0 5.6vw;
+    @include grid-child(5, 15, 1, 2);
+  }
 
   @include for-desktop-up {
     margin: 2.5rem 0;
     margin-right: 2rem;
-    padding: 0 5.6vw;
+
     @include grid-child(5, 15, 2, 3);
   }
 }
@@ -762,7 +767,7 @@ export default {
 
   &::before {
     @include for-tablet-portrait-up {
-      @include grid-child(2, 12, 1, 3);
+      @include grid-child(3, 13, 1, 3);
     }
 
     @include for-desktop-up {
@@ -782,11 +787,11 @@ export default {
 
 #resources .section-header {
   @include for-tablet-portrait-up {
-    @include grid-child(3, 12, 1, 2);
+    @include grid-child(4, 14, 1, 2);
   }
 
   @include for-desktop-up {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     padding-left: 2.7rem;
     @include grid-child(4, 14, 2, 3);
   }
@@ -796,7 +801,7 @@ export default {
   margin: 1.5rem 0;
 
   @include for-tablet-portrait-up {
-    @include grid-child(3, 12, 2, 3);
+    @include grid-child(4, 13, 2, 3);
   }
 
   @include for-desktop-up {

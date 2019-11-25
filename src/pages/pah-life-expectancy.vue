@@ -531,7 +531,9 @@ export default {
 }
 
 #risk-assessment .section-body p:first-child {
-  margin-top: 0;
+  @include for-desktop-up {
+    margin-top: 0;
+  }
 }
 
 #risk-assessment .section-body p:last-child {
@@ -848,6 +850,10 @@ export default {
   }
 
   &::before {
+    @include for-tablet-portrait-up {
+      @include grid-child(3, 13, 1, 4);
+    }
+
     @include for-desktop-up {
       @include grid-child(6, 13, 2, 3);
     }
@@ -862,6 +868,10 @@ export default {
 }
 
 #pah-pathways .section-header {
+  @include for-tablet-portrait-up {
+    @include grid-child(4, 17, 1, 2);
+  }
+
   @include for-desktop-up {
     padding-left: 2.4rem;
     @include grid-child(7, 14, 1, 2);
@@ -870,6 +880,10 @@ export default {
 
 #pah-pathways .section-body {
   margin-bottom: 1.5rem;
+
+  @include for-tablet-portrait-up {
+    @include grid-child(4, 12, 2, 3);
+  }
 
   @include for-desktop-up {
     margin-bottom: 2.5rem;
