@@ -443,7 +443,11 @@ export default {
 }
 
 #videos .section-body {
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
+
+  @include for-tablet-portrait-up {
+    margin-bottom: 2rem;
+  }
 
   @include for-desktop-up {
     @include grid-child(5, 13, 2, 3);
@@ -456,16 +460,20 @@ export default {
 }
 
 #videos .section-body .video {
-  width: 100%;
-  height: 165px;
   @include display-grid;
   grid-template-rows: repeat(2, auto);
+
+  iframe,
+  img {
+    justify-self: center;
+    width: 252px;
+    height: 142px;
+  }
 
   @include for-tablet-portrait-up {
     height: auto;
     iframe,
     img {
-      justify-self: center;
       width: 622px;
       height: 350px;
     }
@@ -484,11 +492,16 @@ export default {
   }
 
   & + .video {
-    margin-top: 2rem;
+    margin-top: 1.2rem;
+
+    @include for-tablet-portrait-up {
+      margin-top: 2rem;
+    }
   }
 }
 
 #videos .section-body .video .video-text {
+  margin: 0;
   margin-bottom: 0.5rem;
 
   @include for-tablet-portrait-up {
