@@ -150,7 +150,8 @@
         </h3>
         <g-link
           class="button"
-          to="https://www.unitedpahsupport.com/pdfs/Doctor-Discussion-Guide.pdf"
+          to="../assets/pdfs/ut_doctor_discussion_tool.pdf"
+          target="_blank"
           >Doctor Discussion Tool</g-link
         >
       </div>

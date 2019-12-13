@@ -6,6 +6,7 @@
 
 module.exports = {
   plugins: [],
+  titleTemplate: '%s',
   head: {
     script: [
       { src: 'gsap/TweenMax.js' },
@@ -28,4 +29,3 @@ module.exports = {
     }
   }
 }
-
