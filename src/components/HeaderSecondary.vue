@@ -182,8 +182,9 @@ export default {};
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-align: center;
+    line-height: 1rem;
   }
 }
 </style>
