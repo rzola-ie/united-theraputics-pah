@@ -143,6 +143,8 @@
         <iframe
           src="https://www.youtube.com/embed/y7hTTg3saOM"
           frameborder="0"
+          height="215"
+          width="382"
           allow="accelerometer; encrypted-media; gyroscope;"
           allowfullscreen
         ></iframe>
@@ -565,40 +567,17 @@ export default {
   }
 }
 
-.section-video-wrapper {
-  height: 100%;
-  width: 100%;
-  margin-bottom: 1.5rem;
-
-  @include grid-child(2, 16, 3, 5);
-
-  @include for-desktop-up {
-    margin-bottom: 0;
-    @include grid-child(4, 11, 3, 5);
-  }
-}
-
 .section-video {
   margin-top: 2rem;
   margin-bottom: 1.5rem;
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
   @include grid-child(2, 16, 3, 5);
 
   @include for-desktop-up {
-    margin-right: 3rem;
+    margin-right: 1rem;
     margin-bottom: 0;
     @include grid-child(3, 9, 2, 5);
+    justify-self: center;
   }
-}
-
-.section-video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 /* PAH DIAGNOSIS

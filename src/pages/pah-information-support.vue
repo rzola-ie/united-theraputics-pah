@@ -74,10 +74,15 @@
         </div>
 
         <div class="video">
-          <g-image
-            class="video-media section-image"
-            src="~/assets/img/video-2-placeholder.png"
-          />
+          <iframe
+            class=" embed-responsive-item video-media section-image"
+            src="https://player.vimeo.com/video/378797969"
+            width="640"
+            height="360"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+          ></iframe>
           <p class="video-text">
             Understand why treatment with more than one PAH medicine is
             important.
@@ -96,10 +101,15 @@
         </div>
 
         <div class="video">
-          <g-image
-            class="video-media section-image"
-            src="~/assets/img/video-4-placeholder.png"
-          />
+          <iframe
+            class=" embed-responsive-item video-media section-image"
+            src="https://player.vimeo.com/video/378797835"
+            width="640"
+            height="360"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+          ></iframe>
           <p class="video-text">
             Understand why treatment with more than one PAH medicine is
             important.

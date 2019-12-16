@@ -155,8 +155,9 @@ export default {};
   @include for-desktop-up {
     display: flex;
     align-items: center;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-align: center;
+    line-height: 1rem;
   }
 }
 </style>

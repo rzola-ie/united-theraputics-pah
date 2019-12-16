@@ -38,8 +38,11 @@
 
   @include for-desktop-up {
     padding: 0 2rem;
-    @include grid-child(5, 13, 1, 2);
   }
+}
+
+#cta-bottom a {
+  color: $wine;
 }
 
 br {
