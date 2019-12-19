@@ -90,14 +90,19 @@
         </div>
 
         <div class="video">
+          <iframe
+            class=" embed-responsive-item video-media section-image"
+            src="https://player.vimeo.com/video/"
+            width="640"
+            height="360"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+          ></iframe>
           <p class="video-text">
-            Learn why getting to a low-risk status is an important goal of
-            treatment.
+            Understand why treatment with more than one PAH medicine is
+            important.
           </p>
-          <g-image
-            class="video-media section-image"
-            src="~/assets/img/video-3-placeholder.png"
-          />
         </div>
 
         <div class="video">
