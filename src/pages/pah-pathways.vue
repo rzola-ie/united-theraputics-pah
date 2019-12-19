@@ -67,12 +67,13 @@
         <p>
           Medicines are available to treat each of the three imbalances, or
           pathways.
-          <strong>Each medicine works on only one pathway.</strong> Most
-          patients start on one PAH medication, which means they are correcting
-          only one of the imbalances, however, studies have shown that treating
-          more than one pathway may be a more effective treatment approach.
-          That's why your doctor may prescribe more than one medication to
-          improve your symptoms and delay your disease progression.
+          <strong>Each medicine works on only one pathway.</strong> Many
+          patients today are taking one PAH medication, which means they are
+          correcting only one of the imbalances, however, studies have shown
+          that treating more than one pathway may be a more effective treatment
+          approach. That's why your doctor may prescribe more than one
+          medication to improve your symptoms and delay your disease
+          progression.
         </p>
 
         <p>
