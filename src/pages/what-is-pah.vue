@@ -296,7 +296,7 @@
     <CallToAction>
       <p>
         You can accept feeling okay, or you can ask about feeling better. Ask
-        your doctor about adjusting your treatment plan to help you
+        your doctor to help you
         <span class="wine">feel better</span> and
         <span class="wine">do more</span>.
       </p>

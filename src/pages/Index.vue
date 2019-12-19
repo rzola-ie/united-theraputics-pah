@@ -16,10 +16,11 @@
       <h2 class="hero-text">
         The PAH Initiative (PAH-I), sponsored by United Therapeutics, aims to
         improve the care of people living with pulmonary arterial hypertension
-        (PAH) by providing education that helps patients receive the right
-        treatment at the right time. United Therapeutics is proud to sponsor the
-        PAH-I and will work to establish the PAH Initiative as a trusted
-        resource for the PAH community.
+        (PAH) by providing education that encourages patients to speak with
+        their doctors so that they may receive the right treatment at the right
+        time. United Therapeutics is proud to sponsor the PAH-I and will work to
+        establish the PAH Initiative as a trusted resource for the PAH
+        community.
       </h2>
       <button id="hero-down-button" @click="handleArrowClick">
         <svg

@@ -164,9 +164,21 @@
       <div class="section-body">
         <p>
           You may experience side effects with prostacyclins. The most common
-          side effects of this class of medicine include headache, diarrhea,
-          flu-like symptoms, jaw pain, muscle spasm, flushing, and nausea. There
-          may be different side effects depending upon how you take the
+          side effects of this class of medicine include:
+        </p>
+
+        <ul>
+          <li>Headache</li>
+          <li>Diarrhea</li>
+          <li>Flu-like symptoms</li>
+          <li>Jaw pain</li>
+          <li>Muscle spasm</li>
+          <li>Flushing</li>
+          <li>Nausea</li>
+        </ul>
+
+        <p>
+          There may be different side effects depending upon how you take the
           medicine. PAH specialists are familiar with these expected side
           effects and know how to help manage them.
         </p>
@@ -218,7 +230,7 @@
         <h3>
           Make the most of your next visit with your PAH team.<br />
           Ask if now is the right time to consider a Prostacyclin-class medicine
-          to help lower your risk status and slow your PAH.
+          to help improve your risk status and slow your PAH.
         </h3>
       </div>
     </section>

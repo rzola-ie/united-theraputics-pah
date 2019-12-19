@@ -319,8 +319,8 @@
     <CallToAction>
       <p>
         You can accept feeling okay, or you can ask about feeling better. Ask
-        your doctor about adjusting your treatment plan to help improve your
-        risk status so you can <span class="wine">feel better</span> and
+        your doctor about improving your risk status so you can
+        <span class="wine">feel better</span> and
         <span class="wine">do more</span>.
       </p>
     </CallToAction>

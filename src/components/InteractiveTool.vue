@@ -170,7 +170,7 @@
           <path
             class="arrow"
             d="M694.84,534.79l-26.27,21.43L694.35,578a1.5,1.5,0,0,1-1,2.64,1.47,1.47,0,0,1-1-.35l-27.1-22.94,0,0a.19.19,0,0,1-.06-.07,1,1,0,0,1-.17-.18,1.35,1.35,0,0,1-.19-.33l-.06-.19a1.2,1.2,0,0,1,0-.38,1.17,1.17,0,0,1,0-.32,1.24,1.24,0,0,1,.1-.31,1.61,1.61,0,0,1,.17-.28,1.8,1.8,0,0,1,.19-.2.28.28,0,0,1,.1-.09L693,532.47a1.5,1.5,0,1,1,1.89,2.32Z"
-            transform="translate(3.37 -6)"
+            transform="translate(-9.37 -6)"
           />
         </g>
         <g id="next" class="direction">
@@ -179,7 +179,7 @@
             class="arrow"
             data-name="arrow"
             d="M1284.28,578l26.27-21.43-25.78-21.82a1.5,1.5,0,0,1,1-2.64,1.47,1.47,0,0,1,1,.35l27.1,22.94,0,0a.19.19,0,0,1,.06.07,1,1,0,0,1,.17.18,1.35,1.35,0,0,1,.19.33l.06.19a1.2,1.2,0,0,1,.05.38,1.17,1.17,0,0,1,0,.32,1.24,1.24,0,0,1-.1.31,1.61,1.61,0,0,1-.17.28,1.8,1.8,0,0,1-.19.2.28.28,0,0,1-.1.09l-27.62,22.53a1.5,1.5,0,1,1-1.89-2.32Z"
-            transform="translate(-2 -6)"
+            transform="translate(11 -6)"
           />
         </g>
       </g>
@@ -341,22 +341,26 @@
         data-name="nt-pro"
         transform="matrix(1 0 0 1 828.825 313.1411)"
       >
-        <tspan x="0" y="0">Helps detect, diagnose and</tspan>
-        <tspan x="-48.5" y="32">evaluate the severity of heart failure</tspan>
-        <tspan x="-109.7" y="96">
+        <tspan x="0" y="-32">Helps detect, diagnose and</tspan>
+        <tspan x="3" y="0">evaluate the severity of the</tspan>
+        <tspan x="50" y="32">strain on your heart</tspan>
+        <tspan x="-109.7" y="80">
           Measures the amount of BNP hormone in your
         </tspan>
-        <tspan x="-126.8" y="128">
+        <tspan x="-126.8" y="112">
           blood. BNP is produced when your heart is under
         </tspan>
-        <tspan x="-116.5" y="160">
+        <tspan x="-116.5" y="144">
           stress. If your heart works harder than normal, it
         </tspan>
-        <tspan x="-50.7" y="192">releases more BNP and NT-pro BNP</tspan>
-        <tspan x="-84.2" y="256">
-          Provides information about how hard your
+        <tspan x="-50.7" y="176">releases more BNP and NT-pro BNP</tspan>
+        <tspan x="-137" y="224">
+          Provides information about how much strain is on
         </tspan>
-        <tspan x="-61.2" y="288">heart is working and how your body is</tspan>
+        <tspan x="-128" y="256">
+          your heart. Tracking these values over time helps
+        </tspan>
+        <tspan x="-80" y="288">your doctor understand how your body is</tspan>
         <tspan x="19.3" y="320">responding to treatment</tspan>
       </text>
       <!-- nt-pro description -->
