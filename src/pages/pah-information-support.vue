@@ -165,7 +165,7 @@
         </h3>
         <g-link
           class="button"
-          to="../assets/pdfs/ut_doctor_discussion_tool.pdf"
+          to="../assets/pdfs/ut-doctor-discussion-tool.pdf"
           target="_blank"
           >Doctor Discussion Tool</g-link
         >
