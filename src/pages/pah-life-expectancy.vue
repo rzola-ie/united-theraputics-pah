@@ -220,7 +220,7 @@
         </h3>
         <g-link
           class="button"
-          to="https://www.unitedpahsupport.com/pdfs/ut-doctor-discussion-tool.pdf"
+          to="../assets/pdfs/ut-doctor-discussion-tool.pdf"
         >
           Doctor Discussion Tool
         </g-link>

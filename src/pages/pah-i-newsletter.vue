@@ -340,7 +340,7 @@
           <div class="captcha-wrapper">
             <vue-recaptcha
               class="captcha"
-              sitekey="6LdTMcQUAAAAAKpmSz3vOQcKXpJCFcvwLajG3kxg"
+              :sitekey="recaptcha"
               :loadRecaptchaScript="true"
             ></vue-recaptcha>
           </div>
@@ -459,11 +459,13 @@ export default {
       over18: null,
       currentRoute: null,
       showSuccessModal: false,
-      showErrorModal: false
+      showErrorModal: false,
+      recaptcha: null
     };
   },
   mounted() {
     this.currentRoute = window.location.href;
+    this.recaptcha = process.env.GRIDSOME_RECAPTCHA;
 
     if (this.$route.query.success === "true") {
       this.showSuccessModal = true;
