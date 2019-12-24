@@ -340,7 +340,7 @@
           <div class="captcha-wrapper">
             <vue-recaptcha
               class="captcha"
-              :sitekey="recaptcha"
+              sitekey="6LdJyckUAAAAAFFVuBkS2uIe0UmhLV-iXS5_y6fJ"
               :loadRecaptchaScript="true"
             ></vue-recaptcha>
           </div>
