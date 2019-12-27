@@ -5,6 +5,17 @@
       <slot />
     </main>
     <Footer />
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TJ74SDK"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
   </div>
 </template>
 
@@ -15,6 +26,21 @@ query {
   }
 }
 </static-query>
+
+<script>
+export default {
+  data() {
+    return {
+      toggle: false
+    };
+  },
+  methods: {
+    handleMenuToggle() {
+      this.toggle = !this.toggle;
+    }
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 .layout {
