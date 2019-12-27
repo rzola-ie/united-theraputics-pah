@@ -5,6 +5,9 @@ import { ValidationObserver, ValidationProvider, extend } from 'vee-validate';
 import { required, email, max } from "vee-validate/dist/rules";
 import * as rules from 'vee-validate/dist/rules';
 
+// google tag manager
+import './vendor/gtm/gtm.js';
+
 // stylesheets
 import 'normalize.css';
 import '~/assets/styles/main.scss';
@@ -54,8 +57,8 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('CallToAction', CallToAction);
   Vue.component('Footer', Footer);
 
-  
-  if(isClient) {
+
+  if (isClient) {
     let sc = document.createElement("html");
     sc.setAttribute("itemscope", "");
     sc.setAttribute("itemtype", "https://schema.org/FAQPage");

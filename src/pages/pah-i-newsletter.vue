@@ -459,8 +459,7 @@ export default {
       over18: null,
       currentRoute: null,
       showSuccessModal: false,
-      showErrorModal: false,
-      recaptcha: null
+      showErrorModal: false
     };
   },
   mounted() {
