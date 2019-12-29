@@ -141,11 +141,11 @@
 
       <div class="section-video">
         <iframe
-          src="https://www.youtube.com/embed/y7hTTg3saOM"
-          frameborder="0"
-          height="215"
+          src="https://player.vimeo.com/video/381649738"
           width="382"
-          allow="accelerometer; encrypted-media; gyroscope;"
+          height="215"
+          frameborder="0"
+          allow="autoplay; fullscreen"
           allowfullscreen
         ></iframe>
       </div>
