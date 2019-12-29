@@ -90,6 +90,10 @@
         </div>
 
         <div class="video">
+          <p class="video-text">
+            Understand why treatment with more than one PAH medicine is
+            important.
+          </p>
           <iframe
             class=" embed-responsive-item video-media section-image"
             src="https://player.vimeo.com/video/381649738"
@@ -99,10 +103,6 @@
             allow="autoplay; fullscreen"
             allowfullscreen
           ></iframe>
-          <p class="video-text">
-            Understand why treatment with more than one PAH medicine is
-            important.
-          </p>
         </div>
 
         <div class="video">
@@ -466,8 +466,9 @@ export default {
   }
 
   @include for-desktop-up {
-    @include grid-child(5, 13, 2, 3);
+    @include grid-child(4, 14, 2, 3);
     margin: 2.5rem 0;
+    padding: 0 2.5rem;
   }
 }
 
@@ -479,8 +480,7 @@ export default {
   @include display-grid;
   grid-template-rows: repeat(2, auto);
 
-  iframe,
-  img {
+  iframe {
     justify-self: center;
     width: 252px;
     height: 142px;
@@ -522,6 +522,12 @@ export default {
 
   @include for-tablet-portrait-up {
     margin: 0;
+    width: 622px;
+    justify-self: center;
+  }
+
+  @include for-desktop-up {
+    width: 100%;
   }
 }
 
@@ -533,7 +539,8 @@ export default {
 
 #videos .section-body .video:nth-of-type(odd) .video-media {
   @include for-desktop-up {
-    @include grid-child(8, 17, 1, 2);
+    @include grid-child(7, 17, 1, 2);
+    justify-self: end;
   }
 }
 
@@ -547,7 +554,7 @@ export default {
 
 #videos .section-body .video:nth-of-type(even) .video-media {
   @include for-desktop-up {
-    @include grid-child(1, 10, 1, 2);
+    @include grid-child(1, 11, 1, 2);
   }
 }
 
