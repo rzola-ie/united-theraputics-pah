@@ -5,9 +5,6 @@ import { ValidationObserver, ValidationProvider, extend } from 'vee-validate';
 import { required, email, max } from "vee-validate/dist/rules";
 import * as rules from 'vee-validate/dist/rules';
 
-// google tag manager
-import './vendor/gtm/gtm.js';
-
 // stylesheets
 import 'normalize.css';
 import '~/assets/styles/main.scss';
@@ -27,6 +24,25 @@ import SideNav from '~/components/SideNav.vue';
 import InteractiveTool from '~/components/InteractiveTool.vue';
 
 export default function (Vue, { router, head, isClient }) {
+
+  if (isClient) {
+    let sc = document.createElement("html");
+    sc.setAttribute("itemscope", "");
+    sc.setAttribute("itemtype", "https://schema.org/FAQPage");
+    document.head.appendChild(sc)
+  }
+
+  Vue.config.productionTip = false
+
+  head.meta.push({
+    name: 'robots',
+    content: 'index,follow'
+  })
+
+  head.meta.push({
+    name: 'viewport',
+    content: 'width=device-width, initial-scale=1'
+  })
 
   // vee-validate message overrides
   extend('required', {
@@ -56,26 +72,4 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('InteractiveTool', InteractiveTool);
   Vue.component('CallToAction', CallToAction);
   Vue.component('Footer', Footer);
-
-
-  if (isClient) {
-    let sc = document.createElement("html");
-    sc.setAttribute("itemscope", "");
-    sc.setAttribute("itemtype", "https://schema.org/FAQPage");
-    document.head.appendChild(sc)
-  }
-
-  Vue.config.productionTip = false
-
-  head.meta.push({
-    name: 'robots',
-    content: 'index,follow'
-  })
-
-  head.meta.push({
-    name: 'viewport',
-    content: 'width=device-width, initial-scale=1'
-  })
-
-
 }

@@ -5,7 +5,15 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  plugins: [],
+  plugins: [
+    {
+      use: 'gridsome-plugin-gtm',
+      options: {
+        id: 'GTM-TJ74SDK',
+        enabled: true,
+      }
+    }
+  ],
   titleTemplate: '%s',
   head: {
     script: [
