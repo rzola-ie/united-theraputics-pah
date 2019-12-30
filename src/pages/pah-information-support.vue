@@ -61,28 +61,29 @@
             This video shows you how blood vessels in the lungs function
             normally, compared with those affected by PAH.
           </p>
-
-          <iframe
-            class=" embed-responsive-item video-media section-image"
-            src="https://player.vimeo.com/video/240001664"
-            frameborder="0"
-            webkitallowfullscreen=""
-            mozallowfullscreen=""
-            allowfullscreen=""
-            data-ready="true"
-          ></iframe>
+          <div class="embed-container odd">
+            <iframe
+              class=" embed-responsive-item video-media section-image"
+              src="https://player.vimeo.com/video/240001664"
+              frameborder="0"
+              webkitallowfullscreen=""
+              mozallowfullscreen=""
+              allowfullscreen=""
+              data-ready="true"
+            ></iframe>
+          </div>
         </div>
 
         <div class="video">
-          <iframe
-            class=" embed-responsive-item video-media section-image"
-            src="https://player.vimeo.com/video/378797969"
-            width="640"
-            height="360"
-            frameborder="0"
-            allow="autoplay; fullscreen"
-            allowfullscreen
-          ></iframe>
+          <div class="embed-container even">
+            <iframe
+              class=" embed-responsive-item video-media section-image"
+              src="https://player.vimeo.com/video/378797969"
+              frameborder="0"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+            ></iframe>
+          </div>
           <p class="video-text">
             Understand why treatment with more than one PAH medicine is
             important.
@@ -94,27 +95,28 @@
             Understand why treatment with more than one PAH medicine is
             important.
           </p>
-          <iframe
-            class=" embed-responsive-item video-media section-image"
-            src="https://player.vimeo.com/video/"
-            width="640"
-            height="360"
-            frameborder="0"
-            allow="autoplay; fullscreen"
-            allowfullscreen
-          ></iframe>
+
+          <div class="embed-container odd">
+            <iframe
+              class=" embed-responsive-item video-media section-image"
+              src="https://player.vimeo.com/video/"
+              frameborder="0"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
 
         <div class="video">
-          <iframe
-            class=" embed-responsive-item video-media section-image"
-            src="https://player.vimeo.com/video/378797835"
-            width="640"
-            height="360"
-            frameborder="0"
-            allow="autoplay; fullscreen"
-            allowfullscreen
-          ></iframe>
+          <div class="embed-container even">
+            <iframe
+              class=" embed-responsive-item video-media section-image"
+              src="https://player.vimeo.com/video/378797835"
+              frameborder="0"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+            ></iframe>
+          </div>
           <p class="video-text">
             Understand why treatment with more than one PAH medicine is
             important.
@@ -479,40 +481,15 @@ export default {
 #videos .section-body .video {
   @include display-grid;
   grid-template-rows: repeat(2, auto);
+  margin-bottom: 2rem;
 
-  iframe {
-    justify-self: center;
-    width: 252px;
-    height: 142px;
-  }
-
-  @include for-tablet-portrait-up {
-    height: auto;
-    iframe,
-    img {
-      width: 622px;
-      height: 350px;
-    }
+  &:last-child {
+    margin-bottom: 0;
   }
 
   @include for-desktop-up {
     grid-template-rows: auto;
     grid-template-columns: repeat(16, 1fr);
-
-    iframe,
-    img {
-      justify-self: start;
-      width: 382px;
-      height: 215px;
-    }
-  }
-
-  & + .video {
-    margin-top: 1.2rem;
-
-    @include for-tablet-portrait-up {
-      margin-top: 2rem;
-    }
   }
 }
 
@@ -533,14 +510,8 @@ export default {
 
 #videos .section-body .video:nth-of-type(odd) .video-text {
   @include for-desktop-up {
-    @include grid-child(1, 7, 1, 2);
-  }
-}
-
-#videos .section-body .video:nth-of-type(odd) .video-media {
-  @include for-desktop-up {
-    @include grid-child(7, 17, 1, 2);
-    justify-self: end;
+    @include grid-child(1, 8, 1, 2);
+    padding-right: 1rem;
   }
 }
 
@@ -548,13 +519,47 @@ export default {
   @include grid-child(1, 2, 1, 2);
 
   @include for-desktop-up {
-    @include grid-child(11, 17, 1, 2);
+    padding-left: 1rem;
+    @include grid-child(10, 17, 1, 2);
   }
 }
 
-#videos .section-body .video:nth-of-type(even) .video-media {
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+
+  &.odd {
+    @include for-desktop-up {
+      @include grid-child(8, 17, 1, 2);
+    }
+  }
+
+  &.even {
+    @include for-desktop-up {
+      @include grid-child(1, 10, 1, 2);
+    }
+  }
+}
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#videos .section-body .video:nth-of-type(odd) iframe {
   @include for-desktop-up {
-    @include grid-child(1, 11, 1, 2);
+    right: 0;
+  }
+}
+
+#videos .section-body .video:nth-of-type(even) iframe {
+  @include for-desktop-up {
+    left: 0;
   }
 }
 
