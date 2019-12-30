@@ -499,8 +499,6 @@ export default {
 
   @include for-tablet-portrait-up {
     margin: 0;
-    width: 622px;
-    justify-self: center;
   }
 
   @include for-desktop-up {
