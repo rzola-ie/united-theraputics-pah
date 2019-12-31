@@ -571,7 +571,7 @@ export default {
 
   @include for-desktop-up {
     grid-template-columns: repeat(14, 1fr);
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
   }
 }
 
@@ -628,7 +628,7 @@ export default {
 
   @include for-desktop-up {
     @include grid-child(1, 9, 6, 7);
-    padding-left: 5.6vw;
+    padding-left: 4.6rem;
   }
 }
 
@@ -637,7 +637,7 @@ export default {
 
   @include for-desktop-up {
     @include grid-child(9, 17, 6, 7);
-    padding-right: 5.6vw;
+    padding-right: 4.6rem;
 
     & label {
       padding-left: 1.8rem;
@@ -650,7 +650,7 @@ export default {
 
   @include for-desktop-up {
     @include grid-child(1, 9, 7, 8);
-    padding-left: 5.6vw;
+    padding-left: 4.6rem;
   }
 }
 
@@ -659,7 +659,7 @@ export default {
 
   @include for-desktop-up {
     @include grid-child(9, 17, 7, 8);
-    padding-right: 5.6vw;
+    padding-right: 4.6rem;
 
     & label {
       padding-left: 1.8rem;
@@ -668,7 +668,8 @@ export default {
 }
 
 #mailing-list form .form-group label {
-  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   align-self: center;
   @include for-desktop-up {
     font-size: 1.2rem;
@@ -750,13 +751,14 @@ export default {
     grid-column-gap: 0;
     @include grid-child(1, 17, 1, 2);
     grid-template-columns: repeat(14, 1fr);
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
   }
 }
 
 #mailing-list form .legal .age label {
   font-size: 1.1rem;
-  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   margin-bottom: 1.3rem;
   @include grid-child(1, 15, 1, 2);
 
@@ -790,7 +792,7 @@ export default {
 
   @include for-desktop-up {
     @include grid-child(1, 17, 2, 3);
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
   }
 }
 
@@ -800,7 +802,7 @@ export default {
 
   @include for-desktop-up {
     @include grid-child(1, 17, 3, 4);
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
   }
 }
 
@@ -855,7 +857,8 @@ export default {
   align-items: center;
   background: $purple;
   border-radius: 4px;
-  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 1.3rem;
   cursor: pointer;
 }

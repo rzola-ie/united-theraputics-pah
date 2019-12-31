@@ -17,9 +17,6 @@ module.exports = {
   titleTemplate: '%s',
   head: {
     script: [
-      { src: 'gsap/TweenMax.js' },
-      { src: 'gsap/Draggable.js' },
-      { src: './vendor/gsap/umd/ThrowPropsPlugin.js' },
       { src: 'https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit', async: true, defer: true },
     ]
   },
@@ -35,5 +32,6 @@ module.exports = {
         `,
       }
     }
-  }
+  },
+  host: "0.0.0.0"
 }

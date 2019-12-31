@@ -196,7 +196,8 @@ export default {
 }
 
 #unsubscribe form .form-group label {
-  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   align-self: center;
   @include grid-child(2, 16, 1, 2);
 

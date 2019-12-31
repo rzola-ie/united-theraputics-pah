@@ -29,7 +29,8 @@ export default {
   @include for-desktop-up {
     min-height: 100vh;
     @include display-grid;
-    grid-template-rows: [header-start] auto [content-start] 1fr [footer-start] auto;
+    -ms-grid-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
   }
   margin: auto;
 }

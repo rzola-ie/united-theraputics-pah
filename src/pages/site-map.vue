@@ -84,14 +84,15 @@ export default {
     grid-template-rows: repeat(6, 45px);
     grid-template-columns: 1.65fr 1fr;
     @include grid-child(4, 14, 1, 2);
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
   }
 }
 
 #site-map .section-body a {
   display: block;
   color: black;
-  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   align-self: center;
 }
 </style>

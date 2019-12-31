@@ -368,7 +368,7 @@ export default {
 
   @include for-desktop-up {
     margin: 0 0 2.5rem 2.7rem;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(3, 13, 3, 4);
   }
 }
@@ -410,7 +410,7 @@ export default {
 
   @include for-desktop-up {
     margin: 2.5rem 2rem 2.5rem 4rem;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(4, 15, 2, 3);
   }
 }
@@ -508,7 +508,8 @@ export default {
 
 #pah-symptoms .section-body ul {
   padding-left: 1rem;
-  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 #pah-symptoms .section-body ul li {
@@ -627,7 +628,7 @@ export default {
   padding: 0 1rem;
 
   @include for-tablet-portrait-up {
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
   }
 
   @include for-desktop-up {
@@ -725,7 +726,7 @@ export default {
 
   @include for-desktop-up {
     margin: 2.5rem 2rem 2.5rem 4rem;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(4, 15, 2, 3);
   }
 }

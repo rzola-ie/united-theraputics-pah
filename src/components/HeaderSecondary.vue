@@ -124,7 +124,8 @@ export default {};
 .nav__link {
   height: 100%;
   padding: 0.5rem 0;
-  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   color: black;
   text-decoration: none;
   text-transform: uppercase;

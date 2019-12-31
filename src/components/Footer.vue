@@ -50,11 +50,12 @@ export default {};
 
 <style lang="scss" scoped>
 .footer {
+
   min-height: 120px;
   background-color: $purple;
   padding: 1rem;
-  display: flex;
-  align-items: center;
+  @include flexbox();
+  @include align-items(center);
 }
 
 .footer-inner {
@@ -62,33 +63,30 @@ export default {};
   max-width: 1440px;
   margin: 0 auto;
   @include display-grid;
+  -ms-grid-rows: auto auto;
+  -ms-grid-columns: auto;
   grid-template-rows: auto auto;
-  grid-gap: 1rem;
   text-align: center;
 
+  grid-gap: 1rem;
+
   @include for-desktop-up {
+    -ms-grid-rows: 40px auto;
     grid-template-rows: 40px auto;
   }
 }
 
 .footer-nav {
+  width: 100%;
   font-size: 0.9rem;
-  @include display-grid;
-  grid-template-rows: repeat(6, auto);
-  grid-template-columns: 1fr;
-  justify-items: center;
-  grid-gap: 0.8rem;
+  @include flexbox();
+  @include flex-direction(column);
+  @include align-items(center);
+
 
   @include for-desktop-up {
-    grid-template-rows: auto;
-    grid-template-columns: repeat(6, auto);
-    grid-gap: 0.2rem;
+    @include flex-direction(row);
     align-items: center;
-  }
-
-  @include for-big-desktop-up {
-    grid-template-columns: repeat(6, auto);
-    grid-gap: 2rem;
   }
 }
 
@@ -96,12 +94,13 @@ export default {};
   height: 40px;
   max-width: 150px;
   padding: 0 20px;
-  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   color: black;
   text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
   text-align: center;
 
   @include for-desktop-up {
@@ -140,5 +139,10 @@ export default {};
       transition: transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
     }
   }
+}
+
+.legal {
+  margin: auto;
+  @include grid-child(1, 2, 2, 3);
 }
 </style>
