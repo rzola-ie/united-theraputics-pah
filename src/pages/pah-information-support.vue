@@ -597,7 +597,7 @@ export default {
     grid-template-columns: repeat(10, 1fr);
     @include grid-child(4, 15, 2, 3);
     margin: 0 3.8rem 2.5rem 4rem;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
   }
 }
 
@@ -647,7 +647,7 @@ export default {
 
   @include for-desktop-up {
     margin: 0 0 2.5rem 2.7rem;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(3, 12, 3, 4);
   }
 }
@@ -706,7 +706,7 @@ export default {
     margin-bottom: 2.5rem;
     margin-right: 2rem;
     margin-left: 4rem;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(4, 15, 1, 2);
   }
 }
@@ -780,7 +780,7 @@ export default {
   @include for-desktop-up {
     display: block;
     margin: 2.5rem 0;
-    padding: 0 6.6vw 0 5.6vw;
+    padding: 0 6.6vw 0 4.6rem;
     @include grid-child(3, 12, 1, 2);
   }
 }
@@ -844,7 +844,7 @@ export default {
   @include for-desktop-up {
     display: block;
     margin: 2.5rem 3rem 2.5rem 0;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(5, 15, 1, 2);
   }
 }
@@ -907,7 +907,7 @@ export default {
   @include for-desktop-up {
     display: block;
     margin: 2.5rem 0;
-    padding: 0 3.5vw 0 5.6vw;
+    padding: 0 3.5vw 0 4.6rem;
     @include grid-child(3, 12, 1, 2);
   }
 }
@@ -964,7 +964,7 @@ export default {
   @include for-desktop-up {
     display: block;
     margin: 2.5rem 0;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(5, 14, 1, 2);
   }
 }

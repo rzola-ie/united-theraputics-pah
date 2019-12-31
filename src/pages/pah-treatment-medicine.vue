@@ -353,7 +353,7 @@ export default {
 
   @include for-desktop-up {
     margin: 0 0 2.5rem 2.7rem;
-    padding: 0 6.2vw 0 5.6vw;
+    padding: 0 6.2vw 0 4.6rem;
     @include grid-child(3, 13, 3, 4);
   }
 }
@@ -408,7 +408,7 @@ export default {
   @include for-desktop-up {
     margin-top: 2.5rem;
     margin-bottom: 0.5rem;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(4, 14, 2, 3);
   }
 }
@@ -424,7 +424,7 @@ export default {
 
   @include for-desktop-up {
     margin-top: 0;
-    padding-left: 5.6vw;
+    padding-left: 4.6rem;
     @include grid-child(4, 8, 3, 4);
   }
 }
@@ -456,13 +456,14 @@ export default {
 
 #medicines .section-body {
   @include for-desktop-up {
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(4, 14, 2, 3);
   }
 }
 
 #medicines .section-body ul li {
-  font-family: ProximaNova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 #medicines .section-image {
@@ -510,7 +511,7 @@ export default {
 
   @include for-desktop-up {
     margin: 2.5rem 0;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(4, 14, 2, 3);
   }
 }
@@ -548,7 +549,7 @@ export default {
 
   @include for-desktop-up {
     margin: 2.5rem 0 0;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(4, 14, 1, 2);
   }
 }
@@ -560,7 +561,7 @@ export default {
   @include for-desktop-up {
     margin-bottom: 2rem;
     margin-left: 1rem;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(4, 14, 3, 4);
   }
 }
@@ -601,7 +602,7 @@ export default {
 
   @include for-desktop-up {
     margin: 0 0 2.5rem 2.7rem;
-    padding: 0 5vw 0 5.6vw;
+    padding: 0 5vw 0 4.6rem;
     @include grid-child(3, 13, 3, 4);
   }
 }
@@ -632,7 +633,7 @@ export default {
 
   @include for-desktop-up {
     margin: 2.5rem 0;
-    padding: 0 7.5vw 0 5.6vw;
+    padding: 0 7.5vw 0 4.6rem;
     @include grid-child(4, 14, 2, 4);
   }
 }
@@ -643,7 +644,8 @@ export default {
 
 #getting-started .section-body ul {
   padding-left: 1rem;
-  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 #getting-started .section-body ul li {
@@ -691,7 +693,7 @@ export default {
 
   @include for-desktop-up {
     margin: 2.5rem 0 2.5rem 2rem;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(3, 13, 2, 3);
   }
 }
@@ -742,7 +744,7 @@ export default {
   margin: 1.5rem 0;
 
   @include for-tablet-portrait-up {
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(5, 15, 1, 2);
   }
 

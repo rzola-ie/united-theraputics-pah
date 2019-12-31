@@ -220,7 +220,7 @@ export default {
 
   @include for-desktop-up {
     margin: 2.5rem 2rem 2.5rem 0;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(5, 15, 2, 3);
   }
 }
@@ -291,7 +291,7 @@ export default {
   @include for-desktop-up {
     margin-left: 2.7rem;
     margin-bottom: 2.5rem;
-    padding: 0 5vw 0 5.6vw;
+    padding: 0 5vw 0 4.6rem;
     @include grid-child(3, 12, 3, 4);
   }
 }
@@ -342,7 +342,7 @@ export default {
 
   @include for-desktop-up {
     margin: 2.5rem 0;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(5, 14, 2, 3);
   }
 }

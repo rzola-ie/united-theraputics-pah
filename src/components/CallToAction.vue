@@ -17,7 +17,9 @@
 
 #cta-bottom {
   padding: 1rem 2rem;
-  grid-template-rows: repeat(1, auto);
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(16, 1fr);
 
   @include for-desktop-up {
@@ -27,7 +29,8 @@
 
 #cta-bottom p {
   text-align: center;
-  font-family: ProximaNovaBoldItalic, "Arial Narrow Bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 20px;
   line-height: 24px;
   @include grid-child(1, 17, 1, 2);

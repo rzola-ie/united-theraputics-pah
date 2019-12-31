@@ -877,7 +877,9 @@ export default {
 
 #risk-options .risk .text {
   font-size: 20px;
-  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-style: normal;
   fill: #5c5c5e;
   user-select: none;
   transition: fill 300ms ease-in-out;
@@ -897,7 +899,9 @@ export default {
   cursor: pointer;
   font-size: 38px;
   fill: #8f9194;
-  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* RANGES
@@ -905,7 +909,9 @@ export default {
 
 #ranges text {
   font-size: 27px;
-  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 #ranges .low {
@@ -936,7 +942,9 @@ export default {
 
 #static-text text {
   font-size: 27px;
-  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* RISK STATES

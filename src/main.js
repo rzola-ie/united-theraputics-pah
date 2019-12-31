@@ -34,6 +34,18 @@ export default function (Vue, { router, head, isClient }) {
 
   Vue.config.productionTip = false
 
+  head.script.push({
+    src: 'https://polyfill.io/v3/polyfill.min.js?features=fetch%2CArray.from',
+    body: true
+  })
+
+  head.script.push({
+    src: 'https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit',
+    body: true,
+    async: true,
+    defer: true
+  })
+
   head.meta.push({
     name: 'robots',
     content: 'index,follow'

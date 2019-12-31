@@ -344,7 +344,7 @@ export default {
   @include for-desktop-up {
     padding: 0 2rem 0 0;
     justify-self: end;
-    @include grid-child(12, 15, 1, 4);
+    @include grid-child(12, 15, 1, 3);
   }
 }
 
@@ -353,7 +353,7 @@ export default {
 
   @include for-desktop-up {
     margin: 0 0 2.5rem 2.7rem;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(3, 13, 3, 4);
   }
 }
@@ -406,7 +406,7 @@ export default {
 
 #risk-status p {
   @include for-desktop-up {
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
   }
 }
 
@@ -447,6 +447,7 @@ export default {
 
   &:before {
     content: "";
+    display: block;
     @include grid-child(1, 17, 1, 3);
     background: $purple;
     border-radius: 7px;
@@ -462,7 +463,7 @@ export default {
   @include grid-child(2, 17, 1, 2);
   @include for-desktop-up {
     margin: 2.5rem 0;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     font-family: ProximaNova, sans-serif;
     @include grid-child(1, 10, 1, 2);
   }
@@ -492,6 +493,7 @@ export default {
 
 #what-is-pah .section-icon {
   @include for-desktop-up {
+    max-height: 165px;
     padding: 0 0 0 2rem;
     justify-self: end;
     @include grid-child(10, 13, 1, 4);
@@ -556,6 +558,7 @@ export default {
 
 #managing-your-pah .section-icon {
   @include for-desktop-up {
+    max-height: 166px;
     padding: 0 3rem 0 0;
     margin-top: 15px;
     @include grid-child(5, 8, 1, 3);
@@ -585,7 +588,7 @@ export default {
   @include for-desktop-up {
     margin-left: 3rem;
     margin-bottom: 2rem;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(6, 13, 2, 3);
   }
 }
@@ -630,6 +633,7 @@ export default {
 
 #pah-pathways .section-icon {
   @include for-desktop-up {
+    max-height: 170px;
     padding: 0 0 0 2rem;
     justify-self: end;
     @include grid-child(10, 13, 1, 4);
@@ -696,6 +700,7 @@ export default {
   @include for-desktop-up {
     padding: 0 3rem 0 0;
     margin-top: 15px;
+    max-height: 154px;
     @include grid-child(5, 8, 1, 3);
   }
 }
@@ -723,7 +728,7 @@ export default {
   @include for-desktop-up {
     margin-left: 2.7rem;
     margin-bottom: 2rem;
-    padding: 0 5.6vw;
+    padding: 0 4.6rem;
     @include grid-child(6, 13, 2, 3);
   }
 }

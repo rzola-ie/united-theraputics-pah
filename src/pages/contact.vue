@@ -101,7 +101,8 @@ export default {
   text-align: center;
   font-size: 1.3rem;
   color: black;
-  font-family: ProximaNovaBold, "Arial Narrow Bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 
   @include for-desktop-up {
     font-size: 1.5rem;
