@@ -399,6 +399,7 @@ export default {
 
 #risk-status .section-icon {
   @include for-desktop-up {
+    max-height: 167px;
     padding: 0 2rem 0 0;
     @include grid-child(3, 6, 1, 3);
   }
