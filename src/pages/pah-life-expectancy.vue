@@ -376,6 +376,7 @@ export default {
 
 #managing-your-pah .section-icon {
   @include for-desktop-up {
+    max-height: 165px;
     padding: 0 2rem 0 0;
     justify-self: end;
     @include grid-child(12, 15, 1, 4);

@@ -50,12 +50,12 @@ export default {};
 
 <style lang="scss" scoped>
 .footer {
-
   min-height: 120px;
   background-color: $purple;
   padding: 1rem;
   @include flexbox();
   @include align-items(center);
+  @include grid-child(1, 2, 3, 4);
 }
 
 .footer-inner {

@@ -350,6 +350,7 @@ export default {
 
 #what-is-pah .section-icon {
   @include for-desktop-up {
+    max-height: 167px;
     padding: 0 2rem 0 0;
     justify-self: end;
     @include grid-child(12, 15, 1, 4);
@@ -392,6 +393,7 @@ export default {
 
 #pah-vs-ph .section-icon {
   @include for-desktop-up {
+    max-height: 163px;
     margin-top: 3rem;
     padding: 0 2rem 0 0;
     @include grid-child(3, 6, 1, 3);
@@ -599,6 +601,7 @@ export default {
 
 #pah-diagnosis .section-icon {
   @include for-desktop-up {
+    max-height: 164px;
     padding: 0 2rem 0 0;
     justify-self: end;
     @include grid-child(12, 15, 1, 4);
@@ -642,10 +645,10 @@ export default {
 
 #pah-diagnosis .section-body .tests {
   position: relative;
-  @include display-grid;
-  grid-template-rows: repeat(6, auto);
-  grid-template-columns: 1fr;
+  @include flexbox;
+  @include flex-direction(column);
   padding: 0 1rem;
+  z-index: 5;
 
   @include for-tablet-portrait-up {
     padding: 0 4.6rem;
@@ -659,6 +662,7 @@ export default {
     height: 100%;
     width: 100%;
     background: $grey;
+    z-index: -1;
   }
 }
 
@@ -708,6 +712,7 @@ export default {
 
 #other-considerations .section-icon {
   @include for-desktop-up {
+    max-height: 163px;
     padding: 0 2rem 0 0;
     @include grid-child(3, 6, 1, 3);
   }
@@ -797,6 +802,7 @@ export default {
 
 #managing-your-pah .section-icon {
   @include for-desktop-up {
+    max-height: 157px;
     justify-self: center;
     padding: 0 30px 0 10px;
     @include grid-child(4, 7, 1, 3);
