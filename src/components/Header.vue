@@ -29,10 +29,10 @@
         </g-link>
 
         <g-link class="nav__link newsletter" to="/pah-i-newsletter/">
-          sign up to recieve our newsletter
+          sign up to receive our newsletter
         </g-link>
       </nav>
-      <div class="sponsored">Sponsored by:<br />United Theraputics</div>
+      <div class="sponsored">Sponsored by:<br />United Therapeutics</div>
 
       <div class="hamburger" ref="hamburger" v-on:click="$emit('toggle')">
         <span></span>

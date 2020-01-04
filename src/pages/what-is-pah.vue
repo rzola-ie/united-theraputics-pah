@@ -230,7 +230,7 @@
 
       <div class="section-body">
         <P>
-          A doctor may also asses your <strong>6-minute walk distance</strong>,
+          A doctor may also assess your <strong>6-minute walk distance</strong>,
           or 6MWD, which tracks how far you can walk on a flat surface in 6
           minutes. This is one of the most common tests to determine your
           ability to exercise. It is an important test for people with PAH and
