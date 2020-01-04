@@ -62,23 +62,21 @@ export default {};
   height: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  @include display-grid;
-  -ms-grid-rows: auto auto;
-  -ms-grid-columns: auto;
-  grid-template-rows: auto auto;
+  @include flexbox;
+  @include flex-direction(column);
   text-align: center;
 
   grid-gap: 1rem;
 
   @include for-desktop-up {
-    -ms-grid-rows: 40px auto;
-    grid-template-rows: 40px auto;
+    
   }
 }
 
 .footer-nav {
   width: 100%;
   font-size: 0.9rem;
+  margin-bottom: 1rem;
   @include flexbox();
   @include flex-direction(column);
   @include align-items(center);
@@ -86,7 +84,7 @@ export default {};
 
   @include for-desktop-up {
     @include flex-direction(row);
-    align-items: center;
+    @include align-items(center);
   }
 }
 
