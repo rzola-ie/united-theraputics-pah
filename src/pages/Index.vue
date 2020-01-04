@@ -237,10 +237,12 @@ export default {
   min-height: 100%;
   padding: 0;
   margin: 0 auto;
+  -ms-grid-rows: 60px 42px 42px 42px 42px 42px 42px 42px 42px 42px 42px 42px;
   grid-template-rows: 60px repeat(11, 42px);
 
   @include for-desktop-up {
-    grid-template-rows: 80px repeat(11, 80px);
+    -ms-grid-rows: 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px;
+    grid-template-rows: repeat(12, 80px);
     padding: 0 1rem;
   }
 
@@ -254,9 +256,19 @@ export default {
   opacity: 0.9;
 
   @include for-tablet-portrait-up {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: block;
     width: 100%;
-    @include grid-child(2, 17, 1, 4);
+    height: 100%;
+    z-index: -1;
+
+
+    @supports(grid-gap: 1rem) {
+      position: static;
+      @include grid-child(1, 17, 1, 13);
+    }
   }
 }
 
@@ -322,6 +334,7 @@ export default {
 ====================================================== */
 #feel-better {
   @include for-desktop-up {
+    -ms-grid-rows: 40px auto auto;
     grid-template-rows: 40px repeat(2, auto);
   }
 

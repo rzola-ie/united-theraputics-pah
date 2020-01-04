@@ -31,7 +31,12 @@ export default {
     @include display-grid;
     -ms-grid-rows: auto 1fr auto;
     grid-template-rows: auto 1fr auto;
+    -ms-grid-columns: 1fr;
   }
   margin: auto;
+}
+
+main {
+  @include grid-child(1, 2, 2, 3);
 }
 </style>

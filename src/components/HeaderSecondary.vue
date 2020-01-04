@@ -57,9 +57,17 @@ export default {};
 
 <style lang="scss" scoped>
 .header {
+  height: 60px;
   min-height: 60px;
   width: 100%;
+  padding-top: 1rem;
   margin: auto;
+  @include grid-child(1, 2, 1, 2);
+  z-index: 9998;
+
+  @supports(grid-gap: 1rem) {
+    padding: 0;
+  }
 
   @include for-desktop-up {
     padding: 0 1rem;
@@ -68,22 +76,24 @@ export default {};
 }
 
 .header-inner {
-  height: 100%;
-  width: 100%;
   max-width: $max-width;
+  height: 100%;
   margin: auto;
   @include display-grid;
   padding: 0 1rem;
+  -ms-grid-columns: 30px 1fr 30px;
   grid-template-columns: 30px 1fr 30px;
   grid-template-rows: 60px;
-  align-items: center;
   justify-items: center;
+  align-items: center;
   grid-gap: 1rem;
 
   @include for-desktop-up {
     border-bottom: 2px solid $wine;
     align-items: center;
+    -ms-grid-columns: 140px 1fr 120px;
     grid-template-columns: 140px auto 110px;
+    -ms-grid-rows: 80px;
     grid-template-rows: 80px;
   }
 }
@@ -93,10 +103,12 @@ export default {};
 
   @include for-desktop-up {
     grid-column-start: 1;
+    grid-column-end: 2;
   }
 }
 
 .header-logo-img {
+  height: 31px;
   width: 140px;
 }
 
