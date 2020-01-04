@@ -64,6 +64,7 @@ export default {};
   margin: 0 auto;
   @include flexbox;
   @include flex-direction(column);
+  @include justify-content(center);
   text-align: center;
 
   grid-gap: 1rem;
@@ -76,7 +77,6 @@ export default {};
 .footer-nav {
   width: 100%;
   font-size: 0.9rem;
-  margin-bottom: 1rem;
   @include flexbox();
   @include flex-direction(column);
   @include align-items(center);
@@ -140,7 +140,7 @@ export default {};
 }
 
 .legal {
-  margin: auto;
+  margin: 0 auto;
   @include grid-child(1, 2, 2, 3);
 }
 </style>
