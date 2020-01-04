@@ -422,6 +422,7 @@ export default {
 
 #risk-prognosis .section-icon {
   @include for-desktop-up {
+    max-height: 167px;
     align-self: center;
     padding: 0 2rem 0 0;
     @include grid-child(3, 6, 1, 3);
@@ -505,6 +506,7 @@ export default {
 
 #risk-assessment .section-icon {
   @include for-desktop-up {
+    max-height: 170px;
     padding: 0 15px;
     @include grid-child(12, 15, 1, 4);
   }
@@ -568,6 +570,7 @@ export default {
 
 #treatment-goals .section-icon {
   @include for-desktop-up {
+    max-height: 170px;
     margin-top: 1.8rem;
     padding: 0 2rem 0 0;
     @include grid-child(3, 6, 1, 4);
@@ -616,6 +619,7 @@ export default {
 
 #best-advocate .section-icon {
   @include for-desktop-up {
+    max-height: 172px;
     justify-self: end;
     padding: 0 2rem 0 0;
     @include grid-child(12, 15, 1, 4);
@@ -661,6 +665,7 @@ export default {
 
 #find-a-specialist .section-icon {
   @include for-desktop-up {
+    max-height: 163px;
     padding: 0 2rem 0 0;
     @include grid-child(3, 6, 1, 3);
   }
@@ -713,6 +718,7 @@ export default {
 
 #make-the-most .section-icon {
   @include for-desktop-up {
+    max-height: 163px;
     justify-self: end;
     padding: 0 2rem 0 0;
     @include grid-child(12, 15, 1, 4);
@@ -757,6 +763,7 @@ export default {
 
 #build-your-network .section-icon {
   @include for-desktop-up {
+    max-height: 199px;
     padding: 30px 2rem 0 0;
     @include grid-child(3, 6, 1, 3);
   }
@@ -816,6 +823,7 @@ export default {
 
 #on-your-own .section-icon {
   @include for-desktop-up {
+    max-height: 192px;
     justify-self: end;
     padding: 0 2rem 0 10px;
     @include grid-child(12, 15, 1, 4);
@@ -863,6 +871,7 @@ export default {
 
 #pah-pathways .section-icon {
   @include for-desktop-up {
+    max-height: 167px;
     padding: 0 2rem 0 0;
     @include grid-child(4, 7, 1, 3);
   }
