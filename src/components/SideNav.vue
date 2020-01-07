@@ -48,9 +48,9 @@
           to="/pah-i-newsletter/"
           active-class
         >
-          sign up to recieve our newsletter
+          sign up to receive our newsletter
         </g-link>
-        <div class="drawer-sponsored">Sponsored by: United Theraputics</div>
+        <div class="drawer-sponsored">Sponsored by: United Therapeutics</div>
       </nav>
     </div>
   </div>
