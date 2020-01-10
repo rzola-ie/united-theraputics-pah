@@ -175,7 +175,9 @@ export default {
 #unsubscribe form {
   margin-bottom: 1.5rem;
   @include display-grid;
+  -ms-grid-rows: auto auto;
   grid-template-rows: auto auto;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(16, 1fr);
   @include grid-child(1, 17, 3, 4);
   @include for-desktop-up {
@@ -190,8 +192,10 @@ export default {
 #unsubscribe form .form-group {
   max-height: 300px;
   @include display-grid;
-  grid-template-columns: repeat(16, 1fr);
+  -ms-grid-rows: auto auto auto;
   grid-template-rows: repeat(3, auto);
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(16, 1fr);
   @include grid-child(1, 17, 1, 2);
 }
 

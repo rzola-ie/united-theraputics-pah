@@ -498,9 +498,11 @@ export default {
 
 <style lang="scss" scoped>
 #mailing-list {
+  -ms-grid-rows: auto auto auto auto auto auto;
   grid-template-rows: repeat(6, auto);
 
   @include for-desktop-up {
+    -ms-grid-rows: 30px auto auto auto auto auto auto;
     grid-template-rows: 30px repeat(6, auto);
   }
 
@@ -549,7 +551,9 @@ export default {
 #mailing-list form {
   @include display-grid;
   @include grid-child(1, 17, 5, 6);
+  -ms-grid-rows: auto auto;
   grid-template-rows: repeat(2, auto);
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(16, 1fr);
 
   @include for-desktop-up {
@@ -559,23 +563,28 @@ export default {
 
 #mailing-list form .form-group {
   @include display-grid;
+  -ms-grid-rows: auto auto auto;
   grid-template-rows: repeat(3, auto);
 
   @include for-desktop-up {
+    -ms-grid-rows: auto auto;
     grid-template-rows: auto auto;
   }
 }
 
 #mailing-list form .form-group.full {
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(14, 1fr);
 
   @include for-desktop-up {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(14, 1fr);
     padding: 0 4.6rem;
   }
 }
 
 #mailing-list form .form-group.half {
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(7, 1fr);
 }
 
@@ -730,6 +739,7 @@ export default {
   background: $grey;
   border-radius: 7px;
   @include display-grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
   grid-template-columns: repeat(16, 1fr);
 
   @include grid-child(1, 17, 11, 12);
@@ -742,7 +752,9 @@ export default {
 
 #mailing-list form .legal .age {
   @include display-grid;
+  -ms-grid-rows: auto auto auto;
   grid-template-rows: auto auto auto;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(16, 1fr);
   @include grid-child(2, 16, 1, 2);
   grid-column-gap: 0.8rem;
@@ -750,6 +762,7 @@ export default {
   @include for-desktop-up {
     grid-column-gap: 0;
     @include grid-child(1, 17, 1, 2);
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(14, 1fr);
     padding: 0 4.6rem;
   }
@@ -852,9 +865,9 @@ export default {
 #mailing-list form .legal .age .radio-group label {
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexbox;
+  @include justify-content(center);
+  @include align-items(center);
   background: $purple;
   border-radius: 4px;
   font-weight: 700;
@@ -871,10 +884,12 @@ export default {
 #mailing-list form .section-submit {
   margin: 2rem 0;
   @include display-grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(14, 1fr);
   @include grid-child(2, 16, 12, 13);
 
   @include for-desktop-up {
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(16, 1fr);
     margin: 5rem 0;
     @include grid-child(1, 17, 9, 10);

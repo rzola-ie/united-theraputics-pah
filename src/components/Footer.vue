@@ -70,7 +70,7 @@ export default {};
   grid-gap: 1rem;
 
   @include for-desktop-up {
-    
+    padding: 1.6rem;
   }
 }
 
@@ -83,6 +83,7 @@ export default {};
 
 
   @include for-desktop-up {
+    margin-bottom: 1rem;
     @include flex-direction(row);
     @include align-items(center);
   }

@@ -55,6 +55,7 @@ export default {
 #site-map {
   width: 100%;
   height: 300px;
+  -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
 
   @include for-desktop-up {
@@ -74,14 +75,18 @@ export default {
   margin: 1.5rem 0;
   @include display-grid;
   @include grid-child(2, 16, 1, 2);
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 40px 40px 40px 40px 40px 40px;
   grid-template-rows: repeat(6, 40px);
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 1rem;
 
   @include for-desktop-up {
     margin: 2.5rem 0;
     grid-gap: 0;
+    -ms-grid-rows: 45px 45px 45px 45px 45px 45px;
     grid-template-rows: repeat(6, 45px);
+    -ms-grid-columns: 1.65fr 1fr;
     grid-template-columns: 1.65fr 1fr;
     @include grid-child(4, 14, 1, 2);
     padding: 0 4.6rem;

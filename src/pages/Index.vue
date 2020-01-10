@@ -449,11 +449,14 @@ export default {
 
 #risk-status .section-body {
   @include display-grid;
+  -ms-grid-rows: 1fr;
   grid-template-rows: auto;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(16, 1fr);
   @include grid-child(1, 17, 4, 5);
 
   @include for-desktop-up {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(9, 1fr);
     margin: 2.5rem 2rem 0 4rem;
     @include grid-child(4, 15, 4, 5);

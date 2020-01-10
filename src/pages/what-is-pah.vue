@@ -337,6 +337,7 @@ export default {
 
 #what-is-pah {
   @include for-desktop-up {
+    -ms-grid-rows: 50px auto auto;
     grid-template-rows: 50px repeat(2, auto);
   }
 
@@ -429,9 +430,11 @@ export default {
 ====================================================== */
 
 #pah-symptoms {
+  -ms-grid-rows: auto auto auto auto;
   grid-template-rows: repeat(4, auto);
 
   @include for-desktop-up {
+    -ms-grid-rows: 30px auto auto auto;
     grid-template-rows: 30px repeat(3, auto);
   }
 
@@ -524,11 +527,8 @@ export default {
 ====================================================== */
 
 #impacts {
+  -ms-grid-rows: auto auto auto;
   grid-template-rows: repeat(4, auto);
-
-  @include for-desktop-up {
-    grid-template-rows: repeat(4, auto);
-  }
 
   &::before {
     @include grid-child(1, 17, 1, 5);
@@ -588,6 +588,7 @@ export default {
 
 #pah-diagnosis {
   @include for-desktop-up {
+    -ms-grid-rows: 40px auto auto auto;
     grid-template-rows: 40px repeat(3, auto);
   }
 
@@ -745,6 +746,7 @@ export default {
 
 #functional-class {
   @include for-desktop-up {
+    -ms-grid-rows: auto auto auto;
     grid-template-rows: repeat(3, auto);
   }
 
@@ -786,6 +788,7 @@ export default {
 
 #managing-your-pah {
   @include for-desktop-up {
+    -ms-grid-rows: auto auto;
     grid-template-rows: repeat(2, auto);
   }
 

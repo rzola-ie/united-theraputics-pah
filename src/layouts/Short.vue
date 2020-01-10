@@ -36,6 +36,7 @@ export default {
   @include for-desktop-up {
     min-height: 100vh;
     @include display-grid;
+    -ms-grid-rows: auto 1fr auto;
     grid-template-rows: auto 1fr auto;
   }
   margin: auto;
@@ -44,6 +45,7 @@ export default {
 .layout main {
   height: calc(100vh - 60px);
   @include display-grid;
+  -ms-grid-rows: 1fr auto;
   grid-template-rows: 1fr auto;
   align-items: center;
 
