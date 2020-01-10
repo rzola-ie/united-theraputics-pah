@@ -517,6 +517,7 @@ export default {
 
 #mailing-list .section-icon {
   @include for-desktop-up {
+    max-height: 152px;
     justify-self: center;
     padding: 0 20px;
     @include grid-child(13, 16, 1, 4);
@@ -884,12 +885,12 @@ export default {
 #mailing-list form .section-submit {
   margin: 2rem 0;
   @include display-grid;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(14, 1fr);
   @include grid-child(2, 16, 12, 13);
 
   @include for-desktop-up {
-    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(16, 1fr);
     margin: 5rem 0;
     @include grid-child(1, 17, 9, 10);
