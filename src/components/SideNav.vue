@@ -105,7 +105,9 @@ export default {
   background-size: 256px;
   background-repeat: repeat;
   @include display-grid;
+  -ms-grid-rows: 60px auto;
   grid-template-rows: 60px auto;
+  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   transition: right 250ms cubic-bezier(0.5, 0, 0.5, 1);
   box-shadow: -4px 0 8px 0 rgba(black, 0.2);
@@ -133,8 +135,10 @@ export default {
   height: 60px;
   align-items: center;
   @include display-grid;
-  grid-template-columns: 30px 1fr 30px;
+  -ms-grid-rows: 60px;
   grid-template-rows: 60px;
+  -ms-grid-columns: 30px 1fr 30px;
+  grid-template-columns: 30px 1fr 30px;
   @include grid-child(1, 2, 1, 2);
 }
 
@@ -152,6 +156,7 @@ export default {
 .drawer-nav {
   @include display-grid;
   grid-gap: 0.8rem;
+  -ms-grid-rows: 60px 60px 60px 60px 60px 60px 60px;
   grid-template-rows: repeat(7, 60px);
 }
 
@@ -172,9 +177,9 @@ export default {
   color: black;
   text-decoration: none;
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexbox;
+  @include justify-content(center);
+  @include align-items(center);
   text-align: center;
 
   &.newsletter {
@@ -194,17 +199,6 @@ export default {
   &:hover > span::before {
     transform: scaleX(1);
     transition: transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
-  }
-}
-
-.sponsored {
-  display: none;
-
-  @include for-desktop-up {
-    display: flex;
-    align-items: center;
-    font-size: 0.7rem;
-    text-align: center;
   }
 }
 </style>

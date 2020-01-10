@@ -203,6 +203,7 @@ export default {
 
 #pah-pathways .section-icon {
   @include for-desktop-up {
+    max-height: 192px;
     padding: 30px 2rem 0 0;
     @include grid-child(3, 6, 1, 3);
   }
@@ -252,10 +253,12 @@ export default {
 
 #therapies {
   @include for-tablet-portrait-up {
+    -ms-grid-rows: 50px auto;
     grid-template-rows: 50px auto;
   }
 
   @include for-desktop-up {
+    -ms-grid-rows: 50px auto auto;
     grid-template-rows: 50px repeat(2, auto);
   }
 
@@ -271,8 +274,9 @@ export default {
 
 #therapies .section-icon {
   @include for-desktop-up {
-    justify-self: end;
+    max-height: 164px;
     padding: 0 2rem 0 0;
+    justify-self: end;
     @include grid-child(12, 15, 1, 4);
   }
 }
@@ -317,6 +321,7 @@ export default {
 
 #fighting-pah {
   @include for-desktop-up {
+    -ms-grid-rows: 30px auto;
     grid-template-rows: 30px auto;
   }
 
@@ -331,6 +336,7 @@ export default {
 
 #fighting-pah .section-icon {
   @include for-desktop-up {
+    max-height: 165px;
     padding: 0 2rem 0 0;
     @include grid-child(3, 6, 1, 3);
   }
@@ -356,8 +362,8 @@ export default {
 ====================================================== */
 .two-buttons {
   margin: auto;
-  display: flex;
-  justify-content: center;
+  @include flexbox;
+  @include justify-content(center);
 
   & a {
     margin-right: 0.5rem;

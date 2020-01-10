@@ -138,9 +138,9 @@ export default {};
   color: black;
   text-decoration: none;
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexbox;
+  @include justify-content(center);
+  @include align-items(center);
   text-align: center;
   margin: 0 1rem;
 
@@ -182,8 +182,8 @@ export default {};
 
   @include for-desktop-up {
     @include grid-child(3, 4, 1, 2);
-    display: flex;
-    align-items: center;
+    @include flexbox;
+    @include align-items(center);
     grid-column: 3;
     font-size: 0.8rem;
     text-align: center;

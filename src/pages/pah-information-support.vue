@@ -57,10 +57,6 @@
         <h3>See how PAH affects blood vessels</h3>
 
         <div class="video">
-          <p class="video-text">
-            This video shows you how blood vessels in the lungs function
-            normally, compared with those affected by PAH.
-          </p>
           <div class="embed-container odd">
             <iframe
               class=" embed-responsive-item video-media section-image"
@@ -72,7 +68,10 @@
               data-ready="true"
             ></iframe>
           </div>
-        </div>
+          <p class="video-text">
+            This video shows you how blood vesels in the lungs function normaly, compared with those affected by PAH.
+          </p>
+        </div> <!-- video 1 -->
 
         <div class="video">
           <div class="embed-container even">
@@ -85,17 +84,11 @@
             ></iframe>
           </div>
           <p class="video-text">
-            Understand why treatment with more than one PAH medicine is
-            important.
+            Understand how your heart and lungs are affected with PAH.
           </p>
-        </div>
+        </div> <!-- video 2 -->
 
         <div class="video">
-          <p class="video-text">
-            Understand why treatment with more than one PAH medicine is
-            important.
-          </p>
-
           <div class="embed-container odd">
             <iframe
               class=" embed-responsive-item video-media section-image"
@@ -105,7 +98,11 @@
               allowfullscreen
             ></iframe>
           </div>
-        </div>
+          <p class="video-text">
+            Understand why treatment with more than one PAH medicine is
+            important.
+          </p>
+        </div> <!-- video 3 -->
 
         <div class="video">
           <div class="embed-container even">
@@ -121,7 +118,7 @@
             Understand why treatment with more than one PAH medicine is
             important.
           </p>
-        </div>
+        </div> <!-- video 4 -->
       </div>
     </section>
     <!-- videos -->
@@ -395,6 +392,7 @@ export default {
 
 #opt-in {
   @include for-desktop-up {
+    -ms-grid-rows: 30px auto auto;
     grid-template-rows: 30px auto auto;
   }
 
@@ -408,6 +406,7 @@ export default {
 
 #opt-in .section-icon {
   @include for-desktop-up {
+    max-height: 158px;
     padding: 0 2rem 0 0;
     @include grid-child(11, 14, 1, 4);
   }
@@ -480,6 +479,7 @@ export default {
 
 #videos .section-body .video {
   @include display-grid;
+  -ms-grid-rows: auto auto;
   grid-template-rows: repeat(2, auto);
   margin-bottom: 2rem;
 
@@ -488,7 +488,9 @@ export default {
   }
 
   @include for-desktop-up {
+    -ms-grid-rows: auto;
     grid-template-rows: auto;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(16, 1fr);
   }
 }
@@ -594,6 +596,7 @@ export default {
   margin-bottom: 1.5rem;
 
   @include for-desktop-up {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(10, 1fr);
     @include grid-child(4, 15, 2, 3);
     margin: 0 3.8rem 2.5rem 4rem;
@@ -616,6 +619,7 @@ export default {
 
 #discussion-guide {
   @include for-desktop-up {
+    -ms-grid-rows: 30px auto auto;
     grid-template-rows: 30px auto auto;
   }
 
@@ -629,6 +633,7 @@ export default {
 
 #discussion-guide .section-icon {
   @include for-desktop-up {
+    max-height: 163px;
     padding: 0 2rem 0 0;
     justify-self: end;
     @include grid-child(12, 15, 1, 4);
@@ -674,6 +679,7 @@ export default {
 
 #find-an-expert {
   @include for-desktop-up {
+    -ms-grid-rows: auto;
     grid-template-rows: auto;
   }
 
@@ -690,6 +696,7 @@ export default {
 
 #find-an-expert .section-icon {
   @include for-desktop-up {
+    max-height: 183px;
     padding: 15px 2rem 0 0;
     @include grid-child(3, 6, 1, 4);
   }
@@ -742,6 +749,7 @@ export default {
 
 #ph-association {
   @include for-desktop-up {
+    -ms-grid-rows: auto auto;
     grid-template-rows: repeat(2, auto);
   }
 
@@ -756,24 +764,22 @@ export default {
 }
 
 #ph-association .section-image {
+  margin: auto;
   border-radius: 7px;
-  margin-top: 1.5rem;
   @include grid-child(2, 16, 1, 2);
 
   @include for-desktop-up {
     max-width: 250px;
+    max-height: 114px;
     border: 2px solid $purple;
-    justify-self: end;
-    align-self: center;
-    margin-top: 0;
-    margin-right: 2rem;
     @include grid-child(11, 15, 1, 2);
   }
 }
 
 #ph-association .section-body {
   @include display-grid;
-  grid-template-rows: auto auto auto;
+  -ms-grid-rows: auto auto auto;
+  grid-template-rows: repeat(3, auto);
   @include grid-child(2, 16, 2, 3);
   margin: 1.2rem 0;
 
@@ -822,16 +828,15 @@ export default {
 }
 
 #ph-aware .section-image {
+  margin: auto;
   border-radius: 7px;
-  margin-top: 1.5rem;
   @include grid-child(2, 16, 1, 2);
 
   @include for-desktop-up {
-    width: 85%;
-    margin-top: 0;
+    max-height: 126px;
+    max-width: 208px;
+    margin-left: 0;
     border: 2px solid $purple;
-    border-radius: 7px;
-    align-self: center;
     @include grid-child(3, 6, 1, 2);
   }
 }
@@ -868,6 +873,7 @@ export default {
 
 #scleroderma-foundation {
   @include for-desktop-up {
+    -ms-grid-rows: auto auto;
     grid-template-rows: repeat(2, auto);
   }
 
@@ -882,18 +888,15 @@ export default {
 }
 
 #scleroderma-foundation .section-image {
+  margin: auto;
   border-radius: 7px;
-  margin-top: 1.5rem;
   @include grid-child(2, 16, 1, 2);
 
   @include for-desktop-up {
-    width: 85%;
-    margin-top: 0;
+    max-height: 146px;
+    max-width: 208px;
     margin-right: 3rem;
     border: 2px solid $purple;
-    align-self: center;
-    justify-self: end;
-
     @include grid-child(12, 15, 1, 2);
   }
 }
@@ -901,7 +904,8 @@ export default {
 #scleroderma-foundation .section-body {
   margin-bottom: 1.2rem;
   @include display-grid;
-  grid-template-rows: auto auto auto;
+  -ms-grid-rows: auto auto auto;
+  grid-template-rows: repeat(3, auto);
   @include grid-child(2, 16, 2, 3);
 
   @include for-desktop-up {
@@ -942,16 +946,15 @@ export default {
 }
 
 #ph-news .section-image {
+  margin: auto;
   border-radius: 7px;
-  margin-top: 1.5rem;
   @include grid-child(2, 16, 1, 2);
 
   @include for-desktop-up {
-    width: 85%;
-    margin-top: 0;
+    max-height: 104px;
+    max-width: 208px;
+    margin-left: 0;
     border: 2px solid $purple;
-    border-radius: 7px;
-    align-self: center;
     @include grid-child(3, 6, 1, 2);
   }
 }
@@ -984,8 +987,8 @@ export default {
 ====================================================== */
 .two-buttons {
   margin: auto;
-  display: flex;
-  justify-content: center;
+  @include flexbox;
+  @include justify-content(center);
 
   & a {
     margin-right: 0.5rem;

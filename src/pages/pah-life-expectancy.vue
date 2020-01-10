@@ -363,6 +363,7 @@ export default {
 
 #managing-your-pah {
   @include for-desktop-up {
+    -ms-grid-rows: 50px auto auto;
     grid-template-rows: 50px repeat(2, auto);
   }
 
@@ -407,6 +408,7 @@ export default {
 ====================================================== */
 
 #risk-prognosis {
+  -ms-grid-rows: auto auto auto;
   grid-template-rows: repeat(3, auto);
 
   &::before {
@@ -448,11 +450,14 @@ export default {
 
 #risk-prognosis .section-body {
   @include display-grid;
+  -ms-grid-rows: auto;
   grid-template-rows: auto;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(16, 1fr);
   @include grid-child(1, 17, 3, 4);
 
   @include for-desktop-up {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(10, 1fr);
     @include grid-child(4, 15, 4, 5);
   }
@@ -487,10 +492,12 @@ export default {
 
 #risk-assessment {
   @include for-tablet-portrait-up {
+    -ms-grid-rows: 50px auto;
     grid-template-rows: 50px auto;
   }
 
   @include for-desktop-up {
+    -ms-grid-rows: 50px auto auto;
     grid-template-rows: 50px repeat(2, auto);
   }
 
@@ -557,6 +564,7 @@ export default {
 ====================================================== */
 #treatment-goals {
   @include for-desktop-up {
+    -ms-grid-rows: auto auto auto;
     grid-template-rows: repeat(3, auto);
   }
 
@@ -605,6 +613,7 @@ export default {
 
 #best-advocate {
   @include for-desktop-up {
+    -ms-grid-rows: 40px auto auto;
     grid-template-rows: 40px repeat(2, auto);
   }
 
@@ -705,6 +714,7 @@ export default {
 
 #make-the-most {
   @include for-desktop-up {
+    -ms-grid-rows: 50px auto auto;
     grid-template-rows: 50px repeat(2, auto);
   }
 
@@ -811,6 +821,7 @@ export default {
 
 #on-your-own {
   @include for-desktop-up {
+    -ms-grid-rows: 50px auto auto;
     grid-template-rows: 50px repeat(2, auto);
   }
   &::before {
@@ -855,6 +866,7 @@ export default {
 
 #pah-pathways {
   @include for-desktop-up {
+    -ms-grid-rows: auto auto;
     grid-template-rows: auto auto;
   }
 

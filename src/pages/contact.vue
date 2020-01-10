@@ -83,10 +83,10 @@ export default {
   margin-bottom: 1.5rem;
   padding: 1rem;
   border-radius: 7px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
   @include grid-child(3, 15, 2, 3);
 
   @include for-desktop-up {

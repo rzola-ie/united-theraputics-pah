@@ -322,6 +322,7 @@ export default {
 
 #do-more {
   @include for-desktop-up {
+    -ms-grid-rows: 50px auto auto;
     grid-template-rows: 50px repeat(2, auto);
   }
 
@@ -335,6 +336,7 @@ export default {
 
 #do-more .section-icon {
   @include for-desktop-up {
+    max-height: 179px;
     padding: 0 2rem 0 0;
     justify-self: end;
     @include grid-child(12, 15, 1, 4);
@@ -367,6 +369,7 @@ export default {
 
 #what-is-prostacyclin {
   @include for-desktop-up {
+    -ms-grid-rows: auto auto auto auto 40px;
     grid-template-rows: repeat(4, auto) 40px;
   }
 
@@ -434,6 +437,7 @@ export default {
 
 #medicines {
   @include for-desktop-up {
+    -ms-grid-rows: auto auto auto auto;
     grid-template-rows: repeat(4, auto);
   }
 
@@ -484,6 +488,7 @@ export default {
 ====================================================== */
 
 #benefits {
+  -ms-grid-rows: auto auto auto;
   grid-template-rows: repeat(3, auto);
 
   &::before {
@@ -525,7 +530,9 @@ export default {
 
 #benefits .section-body.bottom {
   @include display-grid;
+  -ms-grid-rows: auto auto auto;
   grid-template-rows: repeat(3, auto);
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(16, 1fr);
   grid-column: 1 / 17;
   grid-row: 3;
@@ -571,6 +578,7 @@ export default {
 
 #side-effects {
   @include for-desktop-up {
+    -ms-grid-rows: 50px auto auto;
     grid-template-rows: 50px repeat(2, auto);
   }
 
@@ -584,6 +592,7 @@ export default {
 
 #side-effects .section-icon {
   @include for-desktop-up {
+    max-height: 192px;
     padding: 0 2rem 0 0;
     justify-self: end;
     @include grid-child(12, 15, 1, 4);
@@ -659,6 +668,7 @@ export default {
 
 #make-the-most {
   @include for-desktop-up {
+    -ms-grid-rows: 50px auto auto;
     grid-template-rows: 50px repeat(2, auto);
   }
 
@@ -678,8 +688,9 @@ export default {
 
 #make-the-most .section-icon {
   @include for-desktop-up {
-    justify-self: center;
+    max-height: 174px;
     padding: 0 50px 0 0;
+    justify-self: center;
     @include grid-child(12, 15, 1, 3);
   }
 }
@@ -714,8 +725,10 @@ export default {
 ====================================================== */
 
 #fighting-pah {
+  -ms-grid-rows: auto;
   grid-template-rows: auto;
   @include for-desktop-up {
+    -ms-grid-rows: 50px auto;
     grid-template-rows: 50px auto;
   }
 
@@ -735,6 +748,7 @@ export default {
 
 #fighting-pah .section-icon {
   @include for-desktop-up {
+    max-height: 164px;
     padding: 0 0 0 2rem;
     @include grid-child(3, 6, 1, 3);
   }
@@ -772,10 +786,12 @@ export default {
 
 #resources {
   @include for-tablet-portrait-up {
+    -ms-grid-rows: auto auto;
     grid-template-rows: auto auto;
   }
 
   @include for-desktop-up {
+    -ms-grid-rows: 40px auto auto;
     grid-template-rows: 40px auto auto;
   }
 
@@ -793,8 +809,9 @@ export default {
 
 #resources .section-icon {
   @include for-desktop-up {
-    justify-self: end;
+    max-height: 164px;
     padding: 0 2rem 0 0;
+    justify-self: end;
     @include grid-child(11, 14, 1, 4);
   }
 }
@@ -835,8 +852,8 @@ export default {
 ====================================================== */
 .two-buttons {
   margin: auto;
-  display: flex;
-  justify-content: center;
+  @include flexbox;
+  @include justify-content(center);
 
   & a,
   & button {
