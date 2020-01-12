@@ -82,7 +82,7 @@ export default {
   background-color: rgba(black, 0);
 
   pointer-events: none;
-  transition: background-color 200ms cubic-bezier(0.5, 0, 0.5, 1);
+  @include transition(background-color 200ms cubic-bezier(0.5, 0, 0.5, 1));
 
   &.open {
     background-color: rgba(black, 0.9);
@@ -109,21 +109,21 @@ export default {
   grid-template-rows: 60px auto;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  transition: right 250ms cubic-bezier(0.5, 0, 0.5, 1);
+  @include transition(right 250ms cubic-bezier(0.5, 0, 0.5, 1));
   box-shadow: -4px 0 8px 0 rgba(black, 0.2);
   z-index: 9998;
 
   & * {
-    opacity: 0;
-    transition: opacity 250ms cubic-bezier(0.5, 0, 0.5, 1);
+    @include opacity(0);
+    @include transition(opacity 250ms cubic-bezier(0.5, 0, 0.5, 1));
   }
 
   &.open {
     right: 0;
-    transition: right 250ms cubic-bezier(0.5, 0, 0.5, 1);
+    @include transition(right 250ms cubic-bezier(0.5, 0, 0.5, 1));
 
     & * {
-      opacity: 1;
+      @include opacity(1);
     }
   }
   @include for-desktop-up {
@@ -198,7 +198,7 @@ export default {
 
   &:hover > span::before {
     transform: scaleX(1);
-    transition: transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
+    @include transition(transform 300ms cubic-bezier(0.5, 0, 0.5, 1));
   }
 }
 </style>

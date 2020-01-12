@@ -253,7 +253,7 @@ export default {
 
 #hero .hero-image {
   display: none;
-  opacity: 0.9;
+  @include opacity(0.9);
 
   @include for-tablet-portrait-up {
     position: absolute;
@@ -275,7 +275,7 @@ export default {
 #hero .hero-image-mobile {
   display: block;
   width: 100%;
-  opacity: 0.9;
+  @include opacity(0.9);
   @include grid-child(1, 17, 1, 5);
 
   @include for-tablet-portrait-up {

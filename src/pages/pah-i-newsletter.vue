@@ -852,7 +852,7 @@ export default {
   position: absolute;
   top: -10px;
   left: -10px;
-  opacity: 0;
+  @include opacity(0);
   height: 0px;
   width: 0px;
 }
@@ -860,7 +860,7 @@ export default {
 #mailing-list form .legal .age .radio-group input:focus + label {
   outline: none;
   box-shadow: 0 0 0 0.2rem rgba($wine, 0.5);
-  transition: box-shadow 200ms;
+  @include transition(box-shadow 200ms);
 }
 
 #mailing-list form .legal .age .radio-group label {
