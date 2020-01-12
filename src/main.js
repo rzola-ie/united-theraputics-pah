@@ -19,9 +19,10 @@ import CallToAction from '~/components/CallToAction.vue';
 import Footer from '~/components/Footer.vue';
 import Header from '~/components/Header.vue';
 import HeaderSecondary from '~/components/HeaderSecondary.vue';
+import InteractiveTool from '~/components/InteractiveTool.vue';
 import Modal from '~/components/Modal.vue';
 import SideNav from '~/components/SideNav.vue';
-import InteractiveTool from '~/components/InteractiveTool.vue';
+import TopButton from '~/components/TopButton.vue';
 
 export default function (Vue, { router, head, isClient }) {
 
@@ -84,4 +85,5 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('InteractiveTool', InteractiveTool);
   Vue.component('CallToAction', CallToAction);
   Vue.component('Footer', Footer);
+  Vue.component('TopButton', TopButton);
 }
