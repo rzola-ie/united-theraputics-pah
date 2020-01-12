@@ -11,7 +11,7 @@ html {
 *:focus {
   outline: none;
   box-shadow: 0 0 0 0.2rem rgba($wine, 0.5);
-  transition: box-shadow 200ms;
+  @include transition(box-shadow 200ms);
 }
 
 body {
@@ -188,10 +188,7 @@ li {
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  @include transition(0.5s ease-in-out);
   cursor: pointer;
 
   @include for-desktop-up {
@@ -205,16 +202,13 @@ li {
   height: 2px;
   width: 100%;
   background: $wine;
-  opacity: 1;
+  @include opacity(1);
   left: 0;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
-  -o-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out;
+  @include transition(0.25s ease-in-out);
 }
 
 .hamburger span:nth-child(1) {
@@ -299,7 +293,7 @@ input[type="text"] {
 
     &:focus {
       box-shadow: 0 0 0 0.2rem rgba(red, 0.5);
-      transition: box-shadow 200ms;
+      @include transition(box-shadow 200ms);
     }
   }
 }
@@ -321,7 +315,7 @@ select {
 
     &:focus {
       box-shadow: 0 0 0 0.2rem rgba(red, 0.5);
-      transition: box-shadow 200ms;
+      @include transition(box-shadow 200ms);
     }
   }
 }

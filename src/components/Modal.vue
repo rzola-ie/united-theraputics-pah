@@ -44,7 +44,7 @@ export default {};
   background-color: rgba(black, 0.9);
   padding: 4rem 1rem 1rem;
   display: table;
-  transition: opacity 0.3s ease;
+  @include transition(opacity 0.3s ease);
 }
 
 .modal-mask.no-close-button .modal-container .modal-close-button {
@@ -95,7 +95,7 @@ export default {};
   background: $purple;
   border-radius: 7px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
-  transition: all 0.3s ease;
+  @include transition(all 0.3s ease);
 
   @include for-desktop-up {
     padding: 2rem 3rem;
@@ -146,11 +146,11 @@ export default {};
 ====================================================== */
 
 .modal-enter {
-  opacity: 0;
+  @include opacity(0);
 }
 
 .modal-leave-active {
-  opacity: 0;
+  @include opacity(0);
 }
 
 .modal-enter .modal-container,

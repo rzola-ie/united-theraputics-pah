@@ -1,3 +1,23 @@
+// Opacity
+// - applies opacity to elements
+// usage: @include opacity(0.8);
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Transition
+// - applies transitions
+// usage: @include transition(color .3s ease);
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
 // Flexbox display
 @mixin flexbox() {
     display: -webkit-box;
@@ -116,4 +136,38 @@
   grid-row-end: $row-end;
   grid-column: #{$col-start}/#{$col-end};
   grid-row: #{$row-start}/#{$row-end};
+}
+
+// Keyframes
+// usage:
+//  @include keyframes(animation-name) {
+//      0% { opacity: 1; }
+//      90% { opacity: 0; }
+//  }
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+// Animations
+// usage:  @include animation('animation-name 5s 3');
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
 }

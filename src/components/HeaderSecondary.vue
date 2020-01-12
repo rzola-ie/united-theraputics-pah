@@ -184,7 +184,7 @@ export default {};
 
   &:hover > span::before {
     transform: scaleX(1);
-    transition: transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
+    @include transition(transform 300ms cubic-bezier(0.5, 0, 0.5, 1));
   }
 }
 
@@ -200,7 +200,7 @@ export default {};
     transform: scaleX(0);
     transform-origin: center;
     background: $wine;
-    transition: transform 300ms cubic-bezier(0.5, 0, 0.5, 1);
+    @include transition(transform 300ms cubic-bezier(0.5, 0, 0.5, 1));
   }
 }
 

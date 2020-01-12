@@ -780,10 +780,10 @@ export default {
 
 [data-show-info],
 [data-show-risk] {
-  opacity: 0;
+  @include opacity(0);
 
   &[data-active] {
-    opacity: 1;
+    @include opacity(1);
   }
 }
 
@@ -795,17 +795,17 @@ export default {
 #ranges g,
 #ranges text,
 #key text {
-  transition: opacity 300ms ease-in-out;
+  @include transition(opacity 300ms ease-in-out);
 }
 
 #main-elements #outer,
 #titles .node {
-  transition: fill 300ms ease-in-out;
+  @include transition(fill 300ms ease-in-out);
 }
 
 #main-elements #outer #halo,
 #main-elements #outer #outer-ring {
-  transition: stroke 300ms ease-in-out;
+  @include transition(stroke 300ms ease-in-out);
 }
 
 /* ELEMENTS
@@ -821,7 +821,7 @@ export default {
   fill: none;
   stroke-width: 3px;
   stroke: #8f9194;
-  transition: fill 300ms ease-in-out;
+  @include transition(fill 300ms ease-in-out);
 }
 
 #main-elements #outer #halo {
@@ -833,7 +833,7 @@ export default {
 #main-elements #markers .dot {
   fill: #8f9194;
   pointer-events: none;
-  transition: fill 300ms ease-in-out;
+  @include transition(fill 300ms ease-in-out);
 }
 
 #main-elements #directional .direction {
@@ -846,7 +846,7 @@ export default {
 
 #main-elements #directional .direction .arrow {
   fill: #8f9194;
-  transition: fill 300ms ease-in-out;
+  @include transition(fill 300ms ease-in-out);
   pointer-events: none;
 }
 
@@ -859,7 +859,7 @@ export default {
 
 #arrow polygon {
   fill: #8f9194;
-  transition: fill 300ms ease-in-out;
+  @include transition(fill 300ms ease-in-out);
   cursor: pointer;
 }
 
@@ -872,7 +872,7 @@ export default {
 
 #risk-options .risk .bg {
   fill: #e7e7e9;
-  transition: fill 300ms ease-in-out;
+  @include transition(fill 300ms ease-in-out)
 }
 
 #risk-options .risk .text {
@@ -882,7 +882,7 @@ export default {
   font-style: normal;
   fill: #5c5c5e;
   user-select: none;
-  transition: fill 300ms ease-in-out;
+  @include transition(fill 300ms ease-in-out);
 }
 
 /* GUYS
