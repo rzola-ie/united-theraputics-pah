@@ -780,10 +780,10 @@ export default {
 
 [data-show-info],
 [data-show-risk] {
-  opacity: 0;
+  @include opacity(0);
 
   &[data-active] {
-    opacity: 1;
+    @include opacity(1);
   }
 }
 
@@ -795,7 +795,7 @@ export default {
 #ranges g,
 #ranges text,
 #key text {
-  transition: opacity 300ms ease-in-out;
+  @include transition(opacity 300ms ease-in-out);
 }
 
 #main-elements #outer,
