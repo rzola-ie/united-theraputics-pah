@@ -1,10 +1,6 @@
 <template>
   <SecondaryLayout>
-    <Modal
-      v-if="showSuccessModal"
-      class="no-close-button"
-      v-on:closeModal="dismissModal"
-    >
+    <Modal v-if="showSuccessModal" class="no-close-button" v-on:closeModal="dismissModal">
       <h2 slot="header">THANKS FOR SIGNING UP!</h2>
 
       <h3 slot="body">
@@ -574,13 +570,13 @@ export default {
 }
 
 #mailing-list form .form-group.full {
+  @include display-grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(14, 1fr);
 
   @include for-desktop-up {
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(14, 1fr);
-    padding: 0 4.6rem;
   }
 }
 
@@ -590,64 +586,47 @@ export default {
 }
 
 #mailing-list form .form-group.not-required {
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+
   margin-bottom: 2rem;
 }
 
 #mailing-list form .form-group:first-child {
   @include grid-child(2, 16, 1, 2);
-
-  @include for-desktop-up {
-    @include grid-child(1, 17, 1, 2);
-  }
 }
 
 #mailing-list form .form-group:nth-child(2) {
   @include grid-child(2, 16, 2, 3);
-
-  @include for-desktop-up {
-    @include grid-child(1, 17, 2, 3);
-  }
 }
 
 #mailing-list form .form-group:nth-child(3) {
   @include grid-child(2, 16, 3, 4);
-
-  @include for-desktop-up {
-    @include grid-child(1, 17, 3, 4);
-  }
 }
 
 #mailing-list form .form-group:nth-child(4) {
   @include grid-child(2, 16, 4, 5);
-
-  @include for-desktop-up {
-    @include grid-child(1, 17, 4, 5);
-  }
 }
 
 #mailing-list form .form-group:nth-child(5) {
   @include grid-child(2, 16, 5, 6);
-
-  @include for-desktop-up {
-    @include grid-child(1, 17, 5, 6);
-  }
 }
 
+// city
 #mailing-list form .form-group:nth-child(6) {
   @include grid-child(2, 16, 6, 7);
 
   @include for-desktop-up {
-    @include grid-child(1, 9, 6, 7);
-    padding-left: 4.6rem;
+    @include grid-child(2, 9, 6, 7);
   }
 }
 
+// state
 #mailing-list form .form-group:nth-child(7) {
   @include grid-child(2, 16, 7, 8);
 
   @include for-desktop-up {
-    @include grid-child(9, 17, 6, 7);
-    padding-right: 4.6rem;
+    @include grid-child(9, 16, 6, 7);
 
     & label {
       padding-left: 1.8rem;
@@ -655,21 +634,21 @@ export default {
   }
 }
 
+// zip
 #mailing-list form .form-group:nth-child(8) {
   @include grid-child(2, 16, 8, 9);
 
   @include for-desktop-up {
-    @include grid-child(1, 9, 7, 8);
-    padding-left: 4.6rem;
+    @include grid-child(2, 9, 7, 8);
   }
 }
 
+// phone
 #mailing-list form .form-group:nth-child(9) {
   @include grid-child(2, 16, 9, 10);
 
   @include for-desktop-up {
-    @include grid-child(9, 17, 7, 8);
-    padding-right: 4.6rem;
+    @include grid-child(9, 16, 7, 8);
 
     & label {
       padding-left: 1.8rem;
@@ -690,7 +669,7 @@ export default {
   @include grid-child(1, 15, 1, 2);
 
   @include for-desktop-up {
-    @include grid-child(1, 6, 1, 2);
+    @include grid-child(1, 5, 1, 2);
   }
 }
 
@@ -706,7 +685,7 @@ export default {
   @include grid-child(1, 15, 2, 3);
 
   @include for-desktop-up {
-    @include grid-child(5, 16, 1, 2);
+    @include grid-child(5, 15, 1, 2);
   }
 }
 
@@ -722,7 +701,7 @@ export default {
 #mailing-list form .form-group.full span {
   @include grid-child(1, 15, 3, 4);
   @include for-desktop-up {
-    @include grid-child(5, 16, 2, 3);
+    @include grid-child(5, 15, 2, 3);
   }
 }
 
@@ -762,10 +741,10 @@ export default {
 
   @include for-desktop-up {
     grid-column-gap: 0;
-    @include grid-child(1, 17, 1, 2);
+    @include grid-child(2, 16, 1, 2);
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(14, 1fr);
-    padding: 0 4.6rem;
+
   }
 }
 
@@ -792,7 +771,7 @@ export default {
   @include grid-child(1, 12, 3, 4);
 
   @include for-tablet-portrait-up {
-    @include grid-child(1, 17, 3, 4);
+    @include grid-child(1, 15, 3, 4);
   }
 
   @include for-desktop-up {

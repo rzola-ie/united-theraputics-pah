@@ -49,9 +49,9 @@ export default {
   right: 2rem;
   bottom: -1rem;
   color: $wine;
-  opacity: 0;
+  @include opacity(0);
   pointer-events: none;
-  transition: all 300ms ease-in-out;
+  @include transition(all 300ms ease-in-out);
   text-decoration: none;
 
   &:hover {
@@ -65,7 +65,7 @@ export default {
   @include for-desktop-up {
     &.show {
       bottom: 1rem;
-      opacity: 1;
+      @include opacity(1);
       pointer-events: all;
     }
   }
@@ -77,21 +77,20 @@ export default {
 
   #button {
     fill: $wine;
-    transition: fill 150ms ease-in-out;
+    @include transition(fill 150ms ease-in-out);
   }
 
   #arrow {
-    animation: arrow 1000ms ease-in-out infinite alternate;
+    @include animation('arrow 1000ms ease-in-out infinite alternate')
   }
 
-  @keyframes arrow {
+  @include keyframes(arrow) {
     from {
       transform: translate(0, -2px);
     }
     to {
       transform: translate(0, 2px);
     }
-    
   }
 }
 </style>

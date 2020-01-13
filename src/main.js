@@ -70,20 +70,22 @@ export default function (Vue, { router, head, isClient }) {
     ...rules.max
   })
 
+  // vee-validate Components
   Vue.component('ValidationProvider', ValidationProvider);
   Vue.component('ValidationObserver', ValidationObserver);
 
-  // Set default layout as a global component
+  //Layouts
   Vue.component('Layout', DefaultLayout)
   Vue.component('SecondaryLayout', SecondaryLayout)
   Vue.component('ShortLayout', Short)
 
+  // Components
+  Vue.component('Footer', Footer);
   Vue.component('Header', Header);
-  Vue.component('Modal', Modal);
-  Vue.component('SideNav', SideNav);
   Vue.component('HeaderSecondary', HeaderSecondary);
   Vue.component('InteractiveTool', InteractiveTool);
+  Vue.component('Modal', Modal);
+  Vue.component('SideNav', SideNav);
   Vue.component('CallToAction', CallToAction);
-  Vue.component('Footer', Footer);
   Vue.component('TopButton', TopButton);
 }
