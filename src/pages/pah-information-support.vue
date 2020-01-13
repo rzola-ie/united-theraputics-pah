@@ -545,6 +545,11 @@ export default {
   overflow: hidden;
   max-width: 100%;
   height: auto;
+  margin-bottom: 10px;
+
+  @supports(grid-gap: 1rem) {
+    margin-bottom: 0;
+  }
 
   &.odd {
     @include for-desktop-up {
