@@ -2,6 +2,7 @@
   <div class="layout">
     <slot />
     <Footer />
+    <TopButton />
   </div>
 </template>
 
