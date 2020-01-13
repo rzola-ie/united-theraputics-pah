@@ -59,7 +59,7 @@
         <div class="video">
           <div class="embed-container odd">
             <iframe
-              class=" embed-responsive-item video-media section-image"
+              class=" embed-responsive-item video-media"
               src="https://player.vimeo.com/video/240001664"
               frameborder="0"
               webkitallowfullscreen=""
@@ -76,7 +76,7 @@
         <div class="video">
           <div class="embed-container even">
             <iframe
-              class=" embed-responsive-item video-media section-image"
+              class=" embed-responsive-item video-media"
               src="https://player.vimeo.com/video/378797969"
               frameborder="0"
               allow="autoplay; fullscreen"
@@ -91,7 +91,7 @@
         <div class="video">
           <div class="embed-container odd">
             <iframe
-              class=" embed-responsive-item video-media section-image"
+              class=" embed-responsive-item video-media"
               src="https://player.vimeo.com/video/"
               frameborder="0"
               allow="autoplay; fullscreen"
@@ -99,15 +99,14 @@
             ></iframe>
           </div>
           <p class="video-text">
-            Understand why treatment with more than one PAH medicine is
-            important.
+            Learn why getting to a low-risk status is an important goal of treatment.
           </p>
         </div> <!-- video 3 -->
 
         <div class="video">
           <div class="embed-container even">
             <iframe
-              class=" embed-responsive-item video-media section-image"
+              class=" embed-responsive-item video-media"
               src="https://player.vimeo.com/video/378797835"
               frameborder="0"
               allow="autoplay; fullscreen"
@@ -297,6 +296,7 @@
       />
     </section>
     <!-- ph news -->
+
     <CallToAction>
       <p>
         You can accept feeling okay, or you can ask about feeling better. Ask
@@ -478,20 +478,30 @@ export default {
 }
 
 #videos .section-body .video {
-  @include display-grid;
-  -ms-grid-rows: auto auto;
-  grid-template-rows: repeat(2, auto);
   margin-bottom: 2rem;
+  display: block;
+
+  @supports(grid-gap: 1rem) {
+    @include display-grid;
+    -ms-grid-rows: auto auto;
+    grid-template-rows: repeat(2, auto);
+  }
 
   &:last-child {
     margin-bottom: 0;
   }
 
   @include for-desktop-up {
-    -ms-grid-rows: auto;
-    grid-template-rows: auto;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: repeat(16, 1fr);
+    @include flexbox;
+    @include flex-direction(column);
+
+    @supports(grid-gap: 1rem) {
+      @include display-grid;
+      -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(16, 1fr);
+    }
   }
 }
 
@@ -510,8 +520,10 @@ export default {
 
 #videos .section-body .video:nth-of-type(odd) .video-text {
   @include for-desktop-up {
-    @include grid-child(1, 8, 1, 2);
-    padding-right: 1rem;
+    @supports(grid-gap: 1rem) {
+      @include grid-child(1, 8, 1, 2);
+      padding-right: 1rem;
+    }
   }
 }
 
@@ -519,8 +531,10 @@ export default {
   @include grid-child(1, 2, 1, 2);
 
   @include for-desktop-up {
-    padding-left: 1rem;
-    @include grid-child(10, 17, 1, 2);
+    @supports(grid-gap: 1rem) {
+      padding-left: 1rem;
+      @include grid-child(10, 17, 1, 2);
+    }
   }
 }
 
