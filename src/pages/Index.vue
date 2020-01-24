@@ -146,7 +146,7 @@
 
       <div class="section-body">
         <h2>Want to learn about how you can do more about your PAH?</h2>
-        <g-link class="button" to="/managing-your-pah/">Take Action</g-link>
+        <g-link class="button" to="/pah-life-expectancy/">Take Action</g-link>
       </div>
     </section>
     <!-- managing your pah -->
